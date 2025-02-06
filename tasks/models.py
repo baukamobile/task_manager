@@ -26,7 +26,7 @@ class Task(models.Model):
     ]
     task_name = models.CharField(max_length=100)
     description = models.TextField()
-    project_id = models.ForeignKey('Projects', on_delete=models.SET_NULL, null=True, blank=True)
+    project_id = models.ManyToManyField('Projects', blank=True)
     asigned_id = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()

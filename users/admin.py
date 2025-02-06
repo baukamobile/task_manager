@@ -21,7 +21,7 @@ from users.models import User
 @admin.register(User)
 class MyUserAdmin(UserAdmin):
     model = User
-    list_display = ('id', 'email', 'phone_number', 'telegram_id', 'name', 'is_active', 'is_superuser')
+    list_display = ('id', 'email', 'phone_number', 'telegram_id', 'first_name','last_name', 'is_active', 'is_superuser')
     search_fields = ('email', 'phone_number', 'name')
     list_filter = ('is_active', 'is_superuser',)
     ordering = ('email',)
@@ -30,7 +30,7 @@ class MyUserAdmin(UserAdmin):
     # Override the fieldsets to remove references to non-existent fields
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
-        ('Personal Info', {'fields': ('name', 'phone_number', 'telegram_id', 'date_of_birth', 'address', 'status', 'position', 'department', 'company', 'image')}),
+        ('Personal Info', {'fields': ('first_name','last_name', 'phone_number', 'telegram_id', 'date_of_birth', 'address', 'status', 'position', 'department', 'company', 'image')}),
         ('Permissions', {'fields': ('is_active', 'is_verified', 'on_vacation', 'is_superuser', 'is_owner')}),
         ('Important Dates', {'fields': ('date_joined',)}),
     )
@@ -50,3 +50,5 @@ class MyUserAdmin(UserAdmin):
 #     search_fields = ('phone_number', 'name', 'email')
 #
 # admin.site.register(User, UserAdmin)
+
+

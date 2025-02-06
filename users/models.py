@@ -65,7 +65,8 @@ class User(AbstractUser):
     ]
 
     phone_number = models.CharField(max_length=15, unique=True, null=True, blank=True)  # Можно оставить телефон, но как дополнительный параметр
-    name = models.CharField(max_length=40)
+    first_name = models.CharField(max_length=40)
+    last_name = models.CharField(max_length=40)
     email = models.EmailField(unique=True)  # Сделаем email обязательным и уникальным
     status = models.CharField(max_length=50,choices=STATUS_CHOICES, null=True, blank=True)
     position = models.ForeignKey("Positions", on_delete=models.SET_NULL, null=True, blank=True)
@@ -83,12 +84,12 @@ class User(AbstractUser):
     date_joined = models.DateTimeField(default=timezone.now)
 
     USERNAME_FIELD = 'email'  # Используем email для входа
-    REQUIRED_FIELDS = ['phone_number', 'name']  # Добавляем только необходимые поля
+    REQUIRED_FIELDS = ['phone_number', 'first_name']  # Добавляем только необходимые поля
 
     objects = UserCustomManager()
 
     def __str__(self):
-        return self.name
+        return self.first_name
 
     class Meta:
         verbose_name = 'user'
