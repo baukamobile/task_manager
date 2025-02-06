@@ -38,6 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users',
+    'tasks',
+    'chat',
+    'news',
+    'reports',
+    'notifications',
+    'event_calendar',
 ]
 
 AUTH_USER_MODEL = 'users.User'
@@ -79,8 +85,8 @@ WSGI_APPLICATION = 'taskmanager.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'taskmanager',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'manager',
         'USER': 'postgres',
         'PASSWORD': '4444',
     }

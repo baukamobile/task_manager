@@ -1,26 +1,99 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.base_user import BaseUserManager
+from django.contrib.auth.models import AbstractUser
+from django.db import models
+from django.utils import timezone
 # Create your models here.
 class RolesUser(models.Model):
     role_name = models.CharField(max_length=120)
     description = models.TextField()
     def __str__(self):
         return self.role_name
+class Permissions(models.Model):
+    role_id = models.ForeignKey(RolesUser, on_delete=models.CASCADE)
+    permission_name = models.CharField(max_length=120)
+    permission_description = models.TextField()
+    def __str__(self):
+        return self.permission_name
+# class CustomUser(models.Model):
+#     status = models.CharField(max_length=50, null=True, blank=True)  # Статус пользователя
+#     # position = models.ForeignKey("Positions", on_delete=models.SET_NULL, null=True)  # Связь с должностью
+#     date_of_birth = models.DateField(null=True, blank=True)  # Дата рождения
+#     address = models.TextField(null=True, blank=True)  # Адрес
+#     # department = models.ForeignKey("Department", on_delete=models.SET_NULL, null=True)  # Связь с отделом
+#     phone_number = models.CharField(max_length=20, unique=True, null=True, blank=True)  # Телефон
+#     # telegram_id = models.CharField(max_length=20, unique=True, null=True, blank=True) #telegrma
+#     is_verified = models.BooleanField(default=False)  # Подтвержден ли пользователь
+#     on_vacation = models.BooleanField(default=False)  # В отпуске ли пользователь
+#     # company = models.ForeignKey("Company",max_length=255, null=True, blank=True, on_delete=models.SET_NULL)  # Название компании
+
+class UserCustomManager(BaseUserManager):
+    use_in_migrations = True
+
+    def _create_user(self, phone_number, password, **extra_fields):
+        if not phone_number:
+            raise ValueError('The given phone number must be set')
+        user = self.model(phone_number=phone_number, **extra_fields)
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
+
+    def create_user(self, phone_number, password=None, **extra_fields):
+        extra_fields.setdefault('is_staff', False)
+        extra_fields.setdefault('is_superuser', False)
+        return self._create_user(phone_number, password, **extra_fields)
+
+    def create_superuser(self, phone_number, password=None, **extra_fields):
+        extra_fields.setdefault('is_staff', True)
+        extra_fields.setdefault('is_superuser', True)
+        if not extra_fields.get('is_staff'):
+            raise ValueError('Superuser must have is_staff=True.')
+        if not extra_fields.get('is_superuser'):
+            raise ValueError('Superuser must have is_superuser=True.')
+        return self._create_user(phone_number, password, **extra_fields)
+
 class User(AbstractUser):
-    status = models.CharField(max_length=50, null=True, blank=True)  # Статус пользователя
-    position = models.ForeignKey("Positions", on_delete=models.SET_NULL, null=True)  # Связь с должностью
-    date_of_birth = models.DateField(null=True, blank=True)  # Дата рождения
-    address = models.TextField(null=True, blank=True)  # Адрес
-    department = models.ForeignKey("Department", on_delete=models.SET_NULL, null=True)  # Связь с отделом
-    phone_number = models.CharField(max_length=20, unique=True, null=True, blank=True)  # Телефон
-    # telegram_id = models.CharField(max_length=20, unique=True, null=True, blank=True) #telegrma
-    is_verified = models.BooleanField(default=False)  # Подтвержден ли пользователь
-    on_vacation = models.BooleanField(default=False)  # В отпуске ли пользователь
-    company = models.ForeignKey("Company",max_length=255, null=True, blank=True, on_delete=models.SET_NULL)  # Название компании
+    username = None  # Убираем username
+    first_name = None  # Убираем first_name
+    last_name = None  # Убираем last_name
+    ACTIVE = 'active'
+    FIRED = 'fired' #STATUS USER
+    STATUS_CHOICES = [
+        (ACTIVE, 'АКТИВЕН'),
+        (FIRED, 'УВОЛЕН'),
+    ]
+
+    phone_number = models.CharField(max_length=15, unique=True, null=True, blank=True)  # Можно оставить телефон, но как дополнительный параметр
+    name = models.CharField(max_length=40)
+    email = models.EmailField(unique=True)  # Сделаем email обязательным и уникальным
+    status = models.CharField(max_length=50,choices=STATUS_CHOICES, null=True, blank=True)
+    position = models.ForeignKey("Positions", on_delete=models.SET_NULL, null=True, blank=True)
+    date_of_birth = models.DateField(null=True, blank=True)
+    address = models.TextField(null=True, blank=True)
+    department = models.ForeignKey("Department", on_delete=models.SET_NULL, null=True, blank=True)
+    telegram_id = models.CharField(max_length=20, unique=True, null=True, blank=True)
+    is_verified = models.BooleanField(default=False)
+    on_vacation = models.BooleanField(default=False)
+    company = models.ForeignKey("Company", on_delete=models.SET_NULL, null=True, blank=True)
+    is_superuser = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
+    is_owner = models.BooleanField(default=False)
+    image = models.ImageField(blank=True, null=True)
+    date_joined = models.DateTimeField(default=timezone.now)
+
+    USERNAME_FIELD = 'email'  # Используем email для входа
+    REQUIRED_FIELDS = ['phone_number', 'name']  # Добавляем только необходимые поля
+
+    objects = UserCustomManager()
+
+    def __str__(self):
+        return self.name
 
     class Meta:
-        verbose_name = "Пользователь"
-        verbose_name_plural = "Пользователи"
+        verbose_name = 'user'
+        verbose_name_plural = 'users'
+
 
 
 class Company(models.Model):
@@ -39,3 +112,8 @@ class Department(models.Model):
     department_head = models.CharField(max_length=120)
     def __str__(self):
         return self.department_name
+
+#
+# SELECT pg_terminate_backend(pg_stat_activity.pid)
+# FROM pg_stat_activity
+# WHERE pg_stat_activity.datname = 'manager';
