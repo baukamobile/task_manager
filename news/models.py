@@ -1,5 +1,6 @@
 from django.db import models
 from users.models import User
+from simple_history.models import HistoricalRecords
 # Create your models here.
 class News(models.Model):
 
@@ -7,6 +8,8 @@ class News(models.Model):
     content = models.TextField()
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
+    history = HistoricalRecords()
+
     def __str__(self):
         return self.title
 
@@ -15,5 +18,7 @@ class News_comments(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     comment_text = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
+    history = HistoricalRecords()
+
     def __str__(self):
         return self.comment_text

@@ -4,6 +4,7 @@ from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils import timezone
+from simple_history.models import HistoricalRecords
 # Create your models here.
 class RolesUser(models.Model):
     role_name = models.CharField(max_length=120)
@@ -82,6 +83,7 @@ class User(AbstractUser):
     is_owner = models.BooleanField(default=False)
     image = models.ImageField(blank=True, null=True)
     date_joined = models.DateTimeField(default=timezone.now)
+    history = HistoricalRecords()
 
     USERNAME_FIELD = 'email'  # Используем email для входа
     REQUIRED_FIELDS = ['phone_number', 'first_name']  # Добавляем только необходимые поля

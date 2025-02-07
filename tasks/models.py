@@ -1,6 +1,7 @@
 from django.db import models
 from users.models import User,Department
 import logging
+from simple_history.models import HistoricalRecords
 
 logger = logging.getLogger(__name__)
 
@@ -37,6 +38,7 @@ class Task(models.Model):
     status = models.CharField(choices=STATUS_CHOICES, max_length=100, default=ACTIVE)
     priority = models.CharField(choices=PRIORITY_CHOISES, max_length=100)
     department = models.ForeignKey('users.Department', on_delete=models.CASCADE)
+    history = HistoricalRecords()
 
     def __str__(self):
         logger.debug('shows task_name {}'.format(self.task_name))
@@ -49,6 +51,7 @@ class Projects(models.Model):
     department = models.ForeignKey('users.Department', on_delete=models.CASCADE)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
+    history = HistoricalRecords()
 
     def __str__(self):
         return self.project_name
@@ -63,5 +66,7 @@ class Task_comments(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.SET_NULL,null=True)
     comment = models.TextField()
     created_at = models.DateTimeField()
+    history = HistoricalRecords()
+
     def __str__(self):
         return self.comment

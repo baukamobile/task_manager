@@ -1,7 +1,7 @@
 from django.db import models
 
 from users.models import User
-
+from simple_history.models import HistoricalRecords
 
 # Create your models here.
 class Event(models.Model):
@@ -21,5 +21,7 @@ class Event(models.Model):
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
     description = models.TextField()
+    history = HistoricalRecords()
+
     def __str__(self):
         return self.event_type
