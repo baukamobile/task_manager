@@ -1,5 +1,8 @@
 from django.db import models
 from users.models import User,Department
+import logging
+
+logger = logging.getLogger(__name__)
 
 # Create your models here.
 class Task(models.Model):
@@ -26,8 +29,9 @@ class Task(models.Model):
     ]
     task_name = models.CharField(max_length=100)
     description = models.TextField()
+    tags = models.CharField(max_length=100)
     project_id = models.ManyToManyField('Projects', blank=True)
-    asigned_id = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    assigned_id = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
     status = models.CharField(choices=STATUS_CHOICES, max_length=100, default=ACTIVE)
@@ -35,13 +39,14 @@ class Task(models.Model):
     department = models.ForeignKey('users.Department', on_delete=models.CASCADE)
 
     def __str__(self):
+        logger.debug('shows task_name {}'.format(self.task_name))
         return self.task_name
 
 
 class Projects(models.Model):
     project_name = models.CharField(max_length=100)
     description = models.TextField()
-    departement = models.ForeignKey('users.Department', on_delete=models.CASCADE)
+    department = models.ForeignKey('users.Department', on_delete=models.CASCADE)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
 
@@ -53,9 +58,9 @@ class Projects(models.Model):
 #     department_name = models.CharField(max_length=100)
 #     department_head = models.CharField(max_length=100)
 
-class taskcomments(models.Model):
-    task_id = models.ForeignKey(Task, on_delete=models.CASCADE,null=True)
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE,null=True)
+class Task_comments(models.Model):
+    task_id = models.ForeignKey(Task, on_delete=models.SET_NULL,null=True)
+    user_id = models.ForeignKey(User, on_delete=models.SET_NULL,null=True)
     comment = models.TextField()
     created_at = models.DateTimeField()
     def __str__(self):
