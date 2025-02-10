@@ -30,12 +30,12 @@ class Task(models.Model):
     ]
     task_name = models.CharField(max_length=100)
     description = models.TextField()
-    tags = models.CharField(max_length=100)
-    project_id = models.ManyToManyField('Projects', blank=True)
-    assigned_id = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+    tags = models.TextField(blank=True, null=True)
+    projects = models.ManyToManyField('Projects', blank=True)
+    assigned = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,db_index=True)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
-    status = models.CharField(choices=STATUS_CHOICES, max_length=100, default=ACTIVE)
+    status = models.CharField(choices=STATUS_CHOICES, max_length=100, default=ACTIVE,db_index=True)
     priority = models.CharField(choices=PRIORITY_CHOISES, max_length=100)
     department = models.ForeignKey('users.Department', on_delete=models.CASCADE)
     history = HistoricalRecords()
@@ -46,7 +46,7 @@ class Task(models.Model):
 
 
 class Projects(models.Model):
-    project_name = models.CharField(max_length=100)
+    project_name = models.CharField(max_length=100,db_index=True)
     description = models.TextField()
     department = models.ForeignKey('users.Department', on_delete=models.CASCADE)
     start_date = models.DateTimeField()
@@ -56,14 +56,9 @@ class Projects(models.Model):
     def __str__(self):
         return self.project_name
 
-
-# class Departments(models.Model):
-#     department_name = models.CharField(max_length=100)
-#     department_head = models.CharField(max_length=100)
-
 class Task_comments(models.Model):
-    task_id = models.ForeignKey(Task, on_delete=models.SET_NULL,null=True)
-    user_id = models.ForeignKey(User, on_delete=models.SET_NULL,null=True)
+    task = models.ForeignKey(Task, on_delete=models.SET_NULL,null=True)
+    user = models.ForeignKey(User, on_delete=models.SET_NULL,null=True)
     comment = models.TextField()
     created_at = models.DateTimeField()
     history = HistoricalRecords()

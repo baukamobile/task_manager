@@ -71,6 +71,7 @@ class User(AbstractUser):
     email = models.EmailField(unique=True)  # Сделаем email обязательным и уникальным
     status = models.CharField(max_length=50,choices=STATUS_CHOICES, null=True, blank=True)
     position = models.ForeignKey("Positions", on_delete=models.SET_NULL, null=True, blank=True)
+    role_user = models.ForeignKey(RolesUser, on_delete=models.SET_NULL, null=True, blank=True)
     date_of_birth = models.DateField(null=True, blank=True)
     address = models.TextField(null=True, blank=True)
     department = models.ForeignKey("Department", on_delete=models.SET_NULL, null=True, blank=True)

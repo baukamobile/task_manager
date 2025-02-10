@@ -30,7 +30,7 @@ class MyUserAdmin(UserAdmin):
     # Override the fieldsets to remove references to non-existent fields
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
-        ('Personal Info', {'fields': ('first_name','last_name', 'phone_number', 'telegram_id', 'date_of_birth', 'address', 'status', 'position', 'department', 'company', 'image')}),
+        ('Personal Info', {'fields': ('first_name','last_name', 'phone_number', 'telegram_id', 'date_of_birth', 'address', 'status', 'position','role_user', 'department', 'company', 'image')}),
         ('Permissions', {'fields': ('is_active', 'is_verified', 'on_vacation', 'is_superuser', 'is_owner')}),
         ('Important Dates', {'fields': ('date_joined',)}),
     )
@@ -39,7 +39,7 @@ class MyUserAdmin(UserAdmin):
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('email', 'phone_number', 'password1', 'password2'),
+            'fields': ('email', 'first_name', 'password1', 'password2'),
         }),
     )
 
