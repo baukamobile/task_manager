@@ -83,6 +83,7 @@ class User(AbstractUser):
     is_active = models.BooleanField(default=True)
     is_owner = models.BooleanField(default=False)
     image = models.ImageField(blank=True, null=True)
+    background_profile_image = models.ImageField(blank=True, null=True)
     date_joined = models.DateTimeField(default=timezone.now)
     history = HistoricalRecords()
 
