@@ -11,3 +11,5 @@ class Reports(models.Model):
     department = models.ManyToManyField('users.Department',blank=True)
     def __str__(self):
         return self.reports_name
+    class Meta:
+        verbose_name_plural='Reports'

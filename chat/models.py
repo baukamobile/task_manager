@@ -24,6 +24,8 @@ class Messages(models.Model):
 
     def __str__(self):
         return self.message_text
+    class Meta:
+        verbose_name_plural='Messages'
 
 class MessageHistory(models.Model):
     chat_id = models.ForeignKey(Chat, on_delete=models.CASCADE)
@@ -34,3 +36,5 @@ class MessageHistory(models.Model):
 
     def __str__(self):
         return self.message_text
+    class Meta:
+        verbose_name_plural='Message Histories'

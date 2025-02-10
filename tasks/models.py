@@ -43,6 +43,9 @@ class Task(models.Model):
     def __str__(self):
         logger.debug('shows task_name {}'.format(self.task_name))
         return self.task_name
+    class Meta:
+        verbose_name_plural='Task'
+        ordering = ['-start_date']
 
 
 class Projects(models.Model):
@@ -55,6 +58,8 @@ class Projects(models.Model):
 
     def __str__(self):
         return self.project_name
+    class Meta:
+        verbose_name_plural='Projects'
 
 class Task_comments(models.Model):
     task = models.ForeignKey(Task, on_delete=models.SET_NULL,null=True)
@@ -65,3 +70,5 @@ class Task_comments(models.Model):
 
     def __str__(self):
         return self.comment
+    class Meta:
+        verbose_name_plural='Task Comments'

@@ -105,11 +105,15 @@ class Company(models.Model):
     has_admin = models.BooleanField(default=False)
     def __str__(self):
         return self.company_name
+    class Meta:
+        verbose_name_plural='Company'
 
 class Positions(models.Model):
     position_name = models.CharField(max_length=120)
     def __str__(self):
         return self.position_name
+    class Meta:
+        verbose_name_plural='Positions'
 
 class Department(models.Model):
     department_name = models.CharField(max_length=120)
