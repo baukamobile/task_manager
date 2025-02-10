@@ -23,4 +23,4 @@ class Event(models.Model):
     history = HistoricalRecords()
 
     def __str__(self):
-        return self.event_type
+        return f'Имя пользователя: {self.user_id} Тип мерориятии: {self.event_type}'

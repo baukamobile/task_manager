@@ -26,15 +26,15 @@ class Messages(models.Model):
         return self.message_text
     class Meta:
         verbose_name_plural='Messages'
-
-class MessageHistory(models.Model):
-    chat_id = models.ForeignKey(Chat, on_delete=models.CASCADE)
-    sender_id = models.ForeignKey(User, on_delete=models.CASCADE)  # foreign key from user id
-    message_text = models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    history = HistoricalRecords()
-
-    def __str__(self):
-        return self.message_text
-    class Meta:
-        verbose_name_plural='Message Histories'
+#из за повторении пришлось убрать
+# class MessageHistory(models.Model):
+#     chat_id = models.ForeignKey(Chat, on_delete=models.CASCADE)
+#     sender_id = models.ForeignKey(User, on_delete=models.CASCADE)  # foreign key from user id
+#     message_text = models.TextField()
+#     created_at = models.DateTimeField(auto_now_add=True)
+#     history = HistoricalRecords()
+#
+#     def __str__(self):
+#         return self.message_text
+#     class Meta:
+#         verbose_name_plural='Message Histories'

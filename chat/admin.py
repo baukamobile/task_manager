@@ -5,7 +5,6 @@ from chat.models import *
 
 
 admin.site.register(Chat)
-admin.site.register(MessageHistory)
 admin.site.register(Messages)
 
 

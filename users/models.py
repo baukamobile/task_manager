@@ -64,7 +64,6 @@ class User(AbstractUser):
         (ACTIVE, 'АКТИВЕН'),
         (FIRED, 'УВОЛЕН'),
     ]
-
     phone_number = models.CharField(max_length=15, unique=True, null=True, blank=True)  # Можно оставить телефон, но как дополнительный параметр
     first_name = models.CharField(max_length=40)
     last_name = models.CharField(max_length=40)
@@ -85,8 +84,7 @@ class User(AbstractUser):
     image = models.ImageField(blank=True, null=True)
     background_profile_image = models.ImageField(blank=True, null=True)
     date_joined = models.DateTimeField(default=timezone.now)
-    history = HistoricalRecords()
-
+    history = HistoricalRecords() #simple history
     USERNAME_FIELD = 'email'  # Используем email для входа
     REQUIRED_FIELDS = ['phone_number', 'first_name']  # Добавляем только необходимые поля
 
@@ -94,9 +92,9 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.first_name
-
+    
     class Meta:
-        verbose_name = 'user'
+        ordering = ['-date_joined']
         verbose_name_plural = 'users'
 
 

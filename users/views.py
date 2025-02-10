@@ -12,5 +12,5 @@ def index(request):
     tasks = Task.objects.all()
     return render(request,'index.html',context={
         'users':users,
-    'departments':departments,
-    'tasks':tasks,})
+        'departments':departments,
+        'tasks':tasks,})
