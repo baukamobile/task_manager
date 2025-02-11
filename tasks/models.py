@@ -1,8 +1,8 @@
 from django.db import models
 from users.models import User,Department
-import logging
+# import logging
 from simple_history.models import HistoricalRecords
-logger = logging.getLogger(__name__)
+# logger = logging.getLogger(__name__)
 
 # Create your models here.
 class Task(models.Model):
@@ -41,7 +41,7 @@ class Task(models.Model):
     history = HistoricalRecords()
 
     def __str__(self):
-        logger.debug('shows task_name {}'.format(self.task_name))
+        # logger.debug('shows task_name {}'.format(self.task_name))
         return self.task_name
     class Meta:
         verbose_name_plural='Task'
