@@ -8,10 +8,14 @@ class News(models.Model):
     content = models.TextField()
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
+    documents = models.FileField(null=True, blank=True)
+    tags = models.TextField(null=True)
     history = HistoricalRecords()
 
     def __str__(self):
         return self.title
+    class Meta:
+        verbose_name_plural='News'
 
 class News_comments(models.Model):
     news_id = models.ForeignKey(News, on_delete=models.CASCADE)
@@ -22,3 +26,5 @@ class News_comments(models.Model):
 
     def __str__(self):
         return self.comment_text
+    class Meta:
+        verbose_name_plural='News Comments'
