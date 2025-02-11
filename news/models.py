@@ -8,6 +8,7 @@ class News(models.Model):
     content = models.TextField()
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
+    documents = models.FileField(null=True, blank=True)
     tags = models.TextField(null=True)
     history = HistoricalRecords()
 
