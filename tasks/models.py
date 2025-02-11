@@ -2,7 +2,6 @@ from django.db import models
 from users.models import User,Department
 import logging
 from simple_history.models import HistoricalRecords
-
 logger = logging.getLogger(__name__)
 
 # Create your models here.
@@ -10,7 +9,6 @@ class Task(models.Model):
     ACTIVE= 'АКТИВЕН'
     IN_PROCESS= 'В ПРОЦЕССЕ'
     COMPLETED= 'ЗАКОНЧЕН'
-
     STATUS_CHOICES = [
         (ACTIVE, 'АКТИВЕН'),
         (IN_PROCESS, 'В ПРОЦЕССЕ'),
@@ -31,6 +29,8 @@ class Task(models.Model):
     task_name = models.CharField(max_length=100)
     description = models.TextField()
     tags = models.TextField(blank=True, null=True)
+    # files = models.ForeignKey(Files, on_delete=models.SET_NULL, null=True,blank=True)
+    documents = models.FileField(null=True, blank=True)
     projects = models.ManyToManyField('Projects', blank=True)
     assigned = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,db_index=True)
     start_date = models.DateTimeField()
@@ -65,6 +65,7 @@ class Task_comments(models.Model):
     task = models.ForeignKey(Task, on_delete=models.SET_NULL,null=True)
     user = models.ForeignKey(User, on_delete=models.SET_NULL,null=True)
     comment = models.TextField()
+    documents = models.FileField(null=True, blank=True)
     created_at = models.DateTimeField()
     history = HistoricalRecords()
 

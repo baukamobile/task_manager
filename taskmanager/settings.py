@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'event_calendar',
     'simple_history',
 
+
 ]
 
 AUTH_USER_MODEL = 'users.User'
