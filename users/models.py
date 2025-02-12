@@ -5,21 +5,16 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils import timezone
 from simple_history.models import HistoricalRecords
+from django.contrib.auth.models import Permission
 
 # Create your models here.
 class RolesUser(models.Model):
     role_name = models.CharField(max_length=120)
     description = models.TextField()
-    # permissions = models.ManyToManyField('Permissions', blank=True)
+    permissions = models.ManyToManyField(Permission, blank=True)
     def __str__(self):
         return self.role_name
 
-class Permissions(models.Model):
-    role_id = models.ForeignKey(RolesUser, on_delete=models.CASCADE)
-    permission_name = models.CharField(max_length=120)
-    permission_description = models.TextField()
-    def __str__(self):
-        return self.permission_name
 class UserCustomManager(BaseUserManager):
     use_in_migrations = True
 

@@ -1,12 +1,11 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
-from users.models import RolesUser, Positions, Company, Department, Permissions
+from users.models import RolesUser, Positions, Company, Department
 
 # Register your models here.
 
 admin.site.register(RolesUser)
 admin.site.register(Positions)
-admin.site.register(Permissions)
 admin.site.register(Company)
 admin.site.register(User)
 admin.site.register(Department)
