@@ -4,7 +4,7 @@ from simple_history.models import HistoricalRecords
 
 class News(models.Model):
     title = models.CharField(max_length=100)
-    content = models.TextField()
+    content = models.TextField(blank=True,null=True)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     documents = models.FileField(null=True, blank=True) #можно создать отделный модель пока так

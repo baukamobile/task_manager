@@ -9,31 +9,30 @@ class Task(models.Model):
     ACTIVE= 'АКТИВЕН'
     IN_PROCESS= 'В ПРОЦЕССЕ'
     COMPLETED= 'ЗАКОНЧЕН'
-    STATUS_CHOICES = [
-        (ACTIVE, 'АКТИВЕН'),
-        (IN_PROCESS, 'В ПРОЦЕССЕ'),
-        (COMPLETED, 'ЗАКОНЧЕН')
-    ]
-    Technical_Debt = 'Tехнический долг'
-    Low='Низкий'
-    Medium = 'Средний'
-    High='Высокий'
-    Critical='Критический'
+    NON_ACTIVE='НЕ АКТИВЕН'
+    TO_DELETE = 'К УДАЛЕНИЮ'
+    STATUS_CHOICES = [(ACTIVE, 'АКТИВЕН'),(IN_PROCESS, 'В ПРОЦЕССЕ'),(COMPLETED, 'ЗАКОНЧЕН'),(NON_ACTIVE,'НЕ АКТИВЕН'),(TO_DELETE,'К УДАЛЕНИЮ')]
+    TECHNICAL_DEBT = 'ТЕХНИЧЕСКИЙ ДОЛГ'
+    LOW='НИЗКИЙ'
+    MEDIUM = 'СРЕДНИЙ'
+    HIGH='ВЫСОКИЙ'
+    CRITICAL='КРИТИЧЕСКИЙ'
+
     PRIORITY_CHOISES = [
-        ( Low,'Низкий'),
-        (Medium, 'Средний'),
-        (High,'Высокий'),
-        (Critical,'Критический'),
-        (Technical_Debt,'Tехнический долг')
+        (LOW,'НИЗКИЙ'),
+        (MEDIUM, 'СРЕДНИЙ'),
+        (HIGH,'ВЫСОКИЙ'),
+        (CRITICAL,'КРИТИЧЕСКИЙ'),
+        (TECHNICAL_DEBT,'ТЕХНИЧЕСКИЙ ДОЛГ')
     ]
     task_name = models.CharField(max_length=100)
-    description = models.TextField()
+    description = models.TextField(null=True,blank=True)
     tags = models.TextField(blank=True, null=True)
     # files = models.ForeignKey(Files, on_delete=models.SET_NULL, null=True,blank=True)
     documents = models.FileField(null=True, blank=True)
-    projects = models.ManyToManyField('Projects', blank=True)
+    projects = models.ForeignKey('Projects',default=1,on_delete=models.SET_DEFAULT, blank=True, related_name='tasks')
     assigned = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,db_index=True)
-    start_date = models.DateTimeField()
+    start_date = models.DateTimeField(auto_now_add=True)
     end_date = models.DateTimeField()
     status = models.CharField(choices=STATUS_CHOICES, max_length=100, default=ACTIVE,db_index=True)
     priority = models.CharField(choices=PRIORITY_CHOISES, max_length=100)
@@ -50,9 +49,9 @@ class Task(models.Model):
 
 class Projects(models.Model):
     project_name = models.CharField(max_length=100,db_index=True)
-    description = models.TextField()
+    description = models.TextField(null=True,blank=True)
     department = models.ForeignKey('users.Department', on_delete=models.CASCADE)
-    start_date = models.DateTimeField()
+    start_date = models.DateTimeField(auto_now_add=True)
     end_date = models.DateTimeField()
     history = HistoricalRecords()
 

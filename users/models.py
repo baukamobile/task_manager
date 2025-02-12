@@ -5,12 +5,15 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils import timezone
 from simple_history.models import HistoricalRecords
+
 # Create your models here.
 class RolesUser(models.Model):
     role_name = models.CharField(max_length=120)
     description = models.TextField()
+    # permissions = models.ManyToManyField('Permissions', blank=True)
     def __str__(self):
         return self.role_name
+
 class Permissions(models.Model):
     role_id = models.ForeignKey(RolesUser, on_delete=models.CASCADE)
     permission_name = models.CharField(max_length=120)
@@ -92,7 +95,17 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.first_name
-    
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        if self.role_user:
+            self.set_permissions_from_role()
+
+    def set_permissions_from_role(self):
+        # права юзер к ролью
+        if self.role_user:
+            self.user_permissions.set(self.role_user.permissions.all())
+
     class Meta:
         ordering = ['-date_joined']
         verbose_name_plural = 'users'

@@ -16,7 +16,7 @@ class Chat(models.Model):
 class Messages(models.Model):
     chat_id = models.ForeignKey(Chat, on_delete=models.CASCADE)
     sender_id = models.ForeignKey(User, on_delete=models.CASCADE)  # foreign key user id
-    message_text = models.TextField()
+    message_text = models.TextField(blank=True,null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     # sent_by = models.ForeignKey(User, on_delete=models.SET_NULL,null=True)
     sent_at = models.DateTimeField(auto_now=True)

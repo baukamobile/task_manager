@@ -19,7 +19,7 @@ class Event(models.Model):
     event_type = models.CharField(max_length=100,choices=EVENT_TYPES,null=True)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
-    description = models.TextField()
+    description = models.TextField(blank=True,null=True)
     history = HistoricalRecords()
 
     def __str__(self):
