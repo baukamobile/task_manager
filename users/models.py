@@ -119,18 +119,19 @@ class Department(models.Model):
     department_name = models.CharField(max_length=120)
     department_head = models.CharField(max_length=120)
     deactivate = models.BooleanField(default=False)
+    objects = models.Manager()
     activate = ActiveDepartmentManager()
     def __str__(self):
         return self.department_name
     def save(self, *args, **kwargs):
         # if self.deactivate:
         #     User.objects.filter(department=self).update(is_active=False)
-        # super().save(*args,**kwargs)
         if self.deactivate:
             User.objects.filter(department=self).update(is_active=False)  # Выключаем всех
         else:
             User.objects.filter(department=self, status=User.ACTIVE).update(
                 is_active=True) #только активныз
+        super().save(*args, **kwargs)
 
 # FROM pg_stat_activity
 # WHERE pg_stat_activity.datname = 'manager';

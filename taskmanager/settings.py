@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
+    'channels',
     'jazzmin',
     # 'jet',
     'django.contrib.admin',
@@ -47,10 +49,15 @@ INSTALLED_APPS = [
     'notifications',
     'event_calendar',
     'simple_history',
+    'rest_framework',
+    'celery',
+    "drf_spectacular",
+    "drf_spectacular_sidecar",
 
 
 ]
-
+ASGI_APPLICATION = 'taskmanager.asgi.application'
+# CHANNEL_LAYERS = {}
 AUTH_USER_MODEL = 'users.User'
 
 MIDDLEWARE = [
