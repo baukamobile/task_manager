@@ -133,5 +133,6 @@ class Department(models.Model):
                 is_active=True) #только активныз
         super().save(*args, **kwargs)
 
+
 # FROM pg_stat_activity
 # WHERE pg_stat_activity.datname = 'manager';

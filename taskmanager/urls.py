@@ -20,5 +20,12 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
-    path('',include('users.urls')),
+    path('users/',include('users.urls')),
+    path('tasks/',include('tasks.urls')),
+    path('chat/',include('chat.urls')),
+    path('news/',include('news.urls')),
+    path('reports/',include('reports.urls')),
+    path('notifications/',include('notifications.urls')),
+    # path('chat/',include('chat.urls')),
+    # path('news/',include('news.urls')),
 ]

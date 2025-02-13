@@ -1,11 +1,10 @@
 from django.shortcuts import render
-
-from users.models import *
+from rest_framework.generics import ListAPIView
 from tasks.models import *
-from news.models import *
+from users.serializers import *
 
 
-# Create your views here.
+
 def index(request):
     users = User.objects.all()
     departments = Department.objects.all()
@@ -14,3 +13,9 @@ def index(request):
         'users':users,
         'departments':departments,
         'tasks':tasks,})
+
+class UserList(ListAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+
