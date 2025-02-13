@@ -6,6 +6,7 @@ from django.db import models
 from django.utils import timezone
 from django.utils.translation.trans_null import deactivate
 from simple_history.models import HistoricalRecords
+import logging
 from django.contrib.auth.models import Permission
 
 # Create your models here.
@@ -21,6 +22,7 @@ class UserCustomManager(BaseUserManager):
 
     def _create_user(self, phone_number, password, **extra_fields):
         if not phone_number:
+            # logger.warning("No phone number provided")
             raise ValueError('The given phone number must be set')
         user = self.model(phone_number=phone_number, **extra_fields)
         user.set_password(password)
