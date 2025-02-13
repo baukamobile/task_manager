@@ -4,6 +4,7 @@ from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils import timezone
+from django.utils.translation.trans_null import deactivate
 from simple_history.models import HistoricalRecords
 from django.contrib.auth.models import Permission
 
@@ -41,9 +42,9 @@ class UserCustomManager(BaseUserManager):
         return self._create_user(phone_number, password, **extra_fields)
 
 class User(AbstractUser):
-    username = None  # Убираем username
-    first_name = None  # Убираем first_name
-    last_name = None  # Убираем last_name
+    username = None
+    first_name = None
+    last_name = None
     ACTIVE = 'active'
     FIRED = 'fired' #STATUS USER
     STATUS_CHOICES = [
@@ -110,13 +111,26 @@ class Positions(models.Model):
     class Meta:
         verbose_name_plural='Positions'
 
+class ActiveDepartmentManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(deactivate=False)
+
 class Department(models.Model):
     department_name = models.CharField(max_length=120)
     department_head = models.CharField(max_length=120)
+    deactivate = models.BooleanField(default=False)
+    activate = ActiveDepartmentManager()
     def __str__(self):
         return self.department_name
+    def save(self, *args, **kwargs):
+        # if self.deactivate:
+        #     User.objects.filter(department=self).update(is_active=False)
+        # super().save(*args,**kwargs)
+        if self.deactivate:
+            User.objects.filter(department=self).update(is_active=False)  # Выключаем всех
+        else:
+            User.objects.filter(department=self, status=User.ACTIVE).update(
+                is_active=True) #только активныз
 
-#
-# SELECT pg_terminate_backend(pg_stat_activity.pid)
 # FROM pg_stat_activity
 # WHERE pg_stat_activity.datname = 'manager';
