@@ -86,22 +86,6 @@ class LoginView(APIView):
         return response
 
 
-class userget(APIView):
-    def get(self,request):
-        token = request.COOKIES.get('jwt')
-        if not token:
-            raise AuthenticationFailed('unauthenticated')
-
-        try:
-            payload = jwt.decode(token,'secret',algorithms=['HS256'])
-        except jwt.ExpiredSignatureError:
-            raise AuthenticationFailed('unauthenticated')
-
-        user = User.objects.filter(id=payload['id']).first()
-        serializer = UserSerializer(user)
-
-        return Response(serializer.data)
-
 class LogoutView(APIView):
     def post(self,request):
         token = request.COOKIES.get('jwt')

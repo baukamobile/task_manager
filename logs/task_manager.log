@@ -735,3 +735,7 @@ WARNING 2025-02-13 17:28:05,676 log Method Not Allowed: /users/api/login/
 WARNING 2025-02-13 17:28:05,677 runserver HTTP GET /users/api/login/ 405 [0.11, 127.0.0.1:55393]
 WARNING 2025-02-13 17:28:56,086 log Forbidden: /users/api/login/
 WARNING 2025-02-13 17:28:56,086 runserver HTTP POST /users/api/login/ 403 [0.01, 127.0.0.1:55398]
+WARNING 2025-02-14 09:19:06,166 log Not Found: /
+WARNING 2025-02-14 09:19:06,167 runserver HTTP GET / 404 [0.06, 127.0.0.1:56109]
+WARNING 2025-02-14 09:19:06,301 log Not Found: /favicon.ico
+WARNING 2025-02-14 09:19:06,302 runserver HTTP GET /favicon.ico 404 [0.01, 127.0.0.1:56109]
