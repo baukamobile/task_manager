@@ -10,7 +10,7 @@ import logging
 from django.contrib.auth.models import Permission
 
 # Create your models here.
-class RolesUser(models.Model):
+class RolesUser(models.Model): #роли пользователи
     role_name = models.CharField(max_length=120)
     description = models.TextField()
     permissions = models.ManyToManyField(Permission, blank=True)
@@ -100,6 +100,9 @@ class User(AbstractUser):
 
 class Company(models.Model):
     company_name = models.CharField(max_length=120)
+    company_head = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True) #директор
+    def __str__(self):
+        return self.company_name
     has_admin = models.BooleanField(default=False)
     def __str__(self):
         return self.company_name
@@ -136,5 +139,3 @@ class Department(models.Model):
         super().save(*args, **kwargs)
 
 
-# FROM pg_stat_activity
-# WHERE pg_stat_activity.datname = 'manager';

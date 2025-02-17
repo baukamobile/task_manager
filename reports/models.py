@@ -15,7 +15,7 @@ class Reports(models.Model):
         return self.reports_name
 
     def clean(self):
-        if self.start_date and self.end_date and self.start_date >= end_date:
+        if self.start_date and self.end_date and self.start_date >= self.end_date: #
             raise ValidationError('Дата окончание не должно быть раьше чем дата начало')
     class Meta:
         verbose_name_plural='Reports'

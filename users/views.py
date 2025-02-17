@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.generics import ListAPIView
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.views import APIView
 from tasks.models import *
 from users.serializers import *
@@ -24,7 +25,8 @@ def index(request):
         'departments':departments,
         'tasks':tasks,})
 
-class UserList(ListAPIView):
+class UserList(ListAPIView): #Если рлдбзователь адин
+    permission_classes = [IsAdminUser]
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
