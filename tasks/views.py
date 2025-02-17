@@ -12,7 +12,9 @@ class TaskListView(ListAPIView): #если пользователь админ
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
 
-
+def taskpage(request):
+    tasks = Task.objects.all()
+    return render(request, 'tasks/task.html',context={'tasks':tasks})
 
 
 

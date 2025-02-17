@@ -811,3 +811,1102 @@ Traceback (most recent call last):
                                                                 ^^^^^^^^
 NameError: name 'end_date' is not defined. Did you mean: 'self.end_date'?
 ERROR 2025-02-17 09:15:34,211 runserver HTTP POST /admin/reports/reports/add/ 500 [0.23, 127.0.0.1:49688]
+WARNING 2025-02-17 10:32:05,134 log Not Found: /
+WARNING 2025-02-17 10:32:05,136 runserver HTTP GET / 404 [0.06, 127.0.0.1:47602]
+ERROR 2025-02-17 10:32:11,211 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'users/team_view.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: users/team_view.html
+ERROR 2025-02-17 10:32:11,231 runserver HTTP GET /users/ 500 [0.31, 127.0.0.1:47602]
+ERROR 2025-02-17 10:32:18,804 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'users/team_view.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: users/team_view.html
+ERROR 2025-02-17 10:32:18,807 runserver HTTP GET /users/ 500 [0.03, 127.0.0.1:47602]
+ERROR 2025-02-17 10:32:32,989 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'users/team-view.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: users/team-view.html
+ERROR 2025-02-17 10:32:32,993 runserver HTTP GET /users/ 500 [0.22, 127.0.0.1:47614]
+ERROR 2025-02-17 10:32:33,889 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'users/team-view.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: users/team-view.html
+ERROR 2025-02-17 10:32:33,895 runserver HTTP GET /users/ 500 [0.04, 127.0.0.1:47614]
+ERROR 2025-02-17 10:33:30,058 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'users/team-view.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: users/team-view.html
+ERROR 2025-02-17 10:33:30,062 runserver HTTP GET /users/ 500 [0.04, 127.0.0.1:47614]
+ERROR 2025-02-17 10:34:09,682 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'users/team-view.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: users/team-view.html
+ERROR 2025-02-17 10:34:09,686 runserver HTTP GET /users/ 500 [0.03, 127.0.0.1:47614]
+WARNING 2025-02-17 10:34:12,505 log Not Found: /
+WARNING 2025-02-17 10:34:12,506 runserver HTTP GET / 404 [0.01, 127.0.0.1:47614]
+ERROR 2025-02-17 10:34:16,476 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'users/team-view.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: users/team-view.html
+ERROR 2025-02-17 10:34:16,480 runserver HTTP GET /users/ 500 [0.03, 127.0.0.1:47614]
+ERROR 2025-02-17 10:34:25,786 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'users/team_view.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: users/team_view.html
+ERROR 2025-02-17 10:34:25,791 runserver HTTP GET /users/ 500 [0.10, 127.0.0.1:47623]
+ERROR 2025-02-17 10:35:01,403 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'users/team_view.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: users/team_view.html
+ERROR 2025-02-17 10:35:01,407 runserver HTTP GET /users/ 500 [0.10, 127.0.0.1:47645]
+ERROR 2025-02-17 10:35:29,234 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'team_view.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: team_view.html
+ERROR 2025-02-17 10:35:29,238 runserver HTTP GET /users/ 500 [0.25, 127.0.0.1:47654]
+ERROR 2025-02-17 10:35:39,636 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'templates/users/team_view.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: templates/users/team_view.html
+ERROR 2025-02-17 10:35:39,641 runserver HTTP GET /users/ 500 [0.23, 127.0.0.1:47661]
+ERROR 2025-02-17 10:38:03,868 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'users/team_view.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: users/team_view.html
+ERROR 2025-02-17 10:38:03,872 runserver HTTP GET /users/ 500 [0.11, 127.0.0.1:47711]
+ERROR 2025-02-17 10:38:35,650 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'base.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2025-02-17 10:38:35,654 runserver HTTP GET /users/ 500 [0.09, 127.0.0.1:47722]
+ERROR 2025-02-17 10:38:35,969 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'base.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2025-02-17 10:38:35,972 runserver HTTP GET /users/ 500 [0.03, 127.0.0.1:47722]
+ERROR 2025-02-17 10:38:36,301 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'base.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2025-02-17 10:38:36,305 runserver HTTP GET /users/ 500 [0.05, 127.0.0.1:47722]
+WARNING 2025-02-17 10:40:05,368 log Not Found: /
+WARNING 2025-02-17 10:40:05,369 runserver HTTP GET / 404 [0.01, 127.0.0.1:47746]
+ERROR 2025-02-17 10:40:17,758 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'base.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2025-02-17 10:40:17,762 runserver HTTP GET /users/ 500 [0.03, 127.0.0.1:47746]
+ERROR 2025-02-17 10:40:53,609 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'templates/base.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: templates/base.html
+ERROR 2025-02-17 10:40:53,613 runserver HTTP GET /users/ 500 [0.23, 127.0.0.1:47756]
+ERROR 2025-02-17 10:40:54,530 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'templates/base.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: templates/base.html
+ERROR 2025-02-17 10:40:54,533 runserver HTTP GET /users/ 500 [0.03, 127.0.0.1:47756]
+ERROR 2025-02-17 10:40:55,076 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'templates/base.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: templates/base.html
+ERROR 2025-02-17 10:40:55,079 runserver HTTP GET /users/ 500 [0.03, 127.0.0.1:47756]
+ERROR 2025-02-17 10:42:01,945 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'templates/base.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: templates/base.html
+ERROR 2025-02-17 10:42:01,948 runserver HTTP GET /users/ 500 [0.03, 127.0.0.1:47770]
+ERROR 2025-02-17 10:42:14,184 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'taskmanager/templates/base.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: taskmanager/templates/base.html
+ERROR 2025-02-17 10:42:14,188 runserver HTTP GET /users/ 500 [0.13, 127.0.0.1:47778]
+ERROR 2025-02-17 10:42:14,933 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'taskmanager/templates/base.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: taskmanager/templates/base.html
+ERROR 2025-02-17 10:42:14,937 runserver HTTP GET /users/ 500 [0.04, 127.0.0.1:47778]
+WARNING 2025-02-17 10:47:13,058 log Not Found: /
+WARNING 2025-02-17 10:47:13,059 runserver HTTP GET / 404 [0.02, 127.0.0.1:47809]
+ERROR 2025-02-17 10:47:17,265 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'users/team_view.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: users/team_view.html
+ERROR 2025-02-17 10:47:17,270 runserver HTTP GET /users/ 500 [0.21, 127.0.0.1:47809]
+ERROR 2025-02-17 10:47:17,904 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'users/team_view.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: users/team_view.html
+ERROR 2025-02-17 10:47:17,910 runserver HTTP GET /users/ 500 [0.04, 127.0.0.1:47809]
+ERROR 2025-02-17 10:47:53,560 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'users/team.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: users/team.html
+ERROR 2025-02-17 10:47:53,564 runserver HTTP GET /users/ 500 [0.11, 127.0.0.1:47820]
+ERROR 2025-02-17 10:48:02,503 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'team.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: team.html
+ERROR 2025-02-17 10:48:02,508 runserver HTTP GET /users/ 500 [0.13, 127.0.0.1:47828]
+ERROR 2025-02-17 10:48:03,258 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'team.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: team.html
+ERROR 2025-02-17 10:48:03,262 runserver HTTP GET /users/ 500 [0.04, 127.0.0.1:47828]
+ERROR 2025-02-17 10:48:38,678 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'team.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: team.html
+ERROR 2025-02-17 10:48:38,680 basehttp "GET /users/ HTTP/1.1" 500 85618
+WARNING 2025-02-17 10:51:08,096 log Not Found: /
+WARNING 2025-02-17 10:51:08,096 basehttp "GET / HTTP/1.1" 404 3064
+ERROR 2025-02-17 10:51:14,226 log Internal Server Error: /tasks/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\tasks\views.py", line 17, in taskpage
+    return render(request, 'tasks/task.html')
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: tasks/task.html
+ERROR 2025-02-17 10:51:14,228 basehttp "GET /tasks/ HTTP/1.1" 500 83498
+ERROR 2025-02-17 10:53:10,023 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endfir'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'users/team.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+        (
+    ...<2 lines>...
+        )
+    )
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\base.py", line 563, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 14: 'endfir', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+ERROR 2025-02-17 10:53:10,028 basehttp "GET /users/ HTTP/1.1" 500 154801
+ERROR 2025-02-17 10:53:39,554 log Internal Server Error: /users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 23, in index
+    return render(request,'users/team.html',context={'users':users, 'departments':departments, 'tasks':tasks})
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\base.py", line 573, in invalid_block_tag
+    raise self.error(
+    ...<3 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 12: 'endblock'. Did you forget to register or load this tag?
+ERROR 2025-02-17 10:53:39,557 basehttp "GET /users/ HTTP/1.1" 500 137240
+ERROR 2025-02-17 10:55:08,274 log Internal Server Error: /tasks/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\tasks\views.py", line 17, in taskpage
+    return render(request, 'tasks/task.html')
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: tasks/task.html
+ERROR 2025-02-17 10:55:08,275 basehttp "GET /tasks/ HTTP/1.1" 500 83994
+ERROR 2025-02-17 10:55:38,754 log Internal Server Error: /tasks/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\tasks\views.py", line 17, in taskpage
+    return render(request, 'tasks/task.html')
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: tasks/task.html
+ERROR 2025-02-17 10:55:38,755 basehttp "GET /tasks/ HTTP/1.1" 500 83994
+WARNING 2025-02-17 10:59:40,348 log Not Found: /base
+WARNING 2025-02-17 10:59:40,348 basehttp "GET /base HTTP/1.1" 404 3094
+ERROR 2025-02-17 10:59:52,633 log Internal Server Error: /users/base/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 18, in basepage
+    return render(request,'base.html')
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2025-02-17 10:59:52,635 basehttp "GET /users/base/ HTTP/1.1" 500 85599

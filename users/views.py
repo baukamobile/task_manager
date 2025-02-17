@@ -14,16 +14,14 @@ import logging
 
 logger = logging.getLogger('authorization')
 
-
+def basepage(request):
+    return render(request,'base.html')
 
 def index(request):
     users = User.objects.all()
     departments = Department.objects.all()
     tasks = Task.objects.all()
-    return render(request,'index.html',context={
-        'users':users,
-        'departments':departments,
-        'tasks':tasks,})
+    return render(request,'users/team.html',context={'users':users, 'departments':departments, 'tasks':tasks})
 
 class UserList(ListAPIView): #Если рлдбзователь адин
     permission_classes = [IsAdminUser]

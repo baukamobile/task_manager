@@ -58,7 +58,7 @@ class User(AbstractUser):
     last_name = models.CharField(max_length=40)
     email = models.EmailField(unique=True)  # Сделаем email обязательным и уникальным
     status = models.CharField(max_length=50,choices=STATUS_CHOICES, null=True, blank=True)
-    position = models.ForeignKey("Positions", on_delete=models.SET_NULL, null=True, blank=True)
+    position = models.ForeignKey("Positions", on_delete=models.SET_NULL, null=True, blank=True,related_name="user")
     role_user = models.ForeignKey(RolesUser, on_delete=models.SET_NULL, null=True, blank=True)
     date_of_birth = models.DateField(null=True, blank=True)
     address = models.TextField(null=True, blank=True)
@@ -108,7 +108,7 @@ class Company(models.Model):
         verbose_name_plural='Company'
 
 class Positions(models.Model):
-    position_name = models.CharField(max_length=120)
+    position_name = models.CharField(max_length=120,unique=True)
     def __str__(self):
         return self.position_name
     class Meta:
