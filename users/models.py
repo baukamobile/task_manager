@@ -66,7 +66,7 @@ class User(AbstractUser):
     telegram_id = models.CharField(max_length=20, unique=True, null=True, blank=True)
     is_verified = models.BooleanField(default=False)
     on_vacation = models.BooleanField(default=False)
-    company = models.ForeignKey("Company", on_delete=models.SET_NULL, null=True, blank=True)
+    company = models.ForeignKey("Company", on_delete=models.SET_NULL, null=True, blank=True,related_name='employees')
     is_superuser = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     is_owner = models.BooleanField(default=False)
@@ -96,11 +96,9 @@ class User(AbstractUser):
         ordering = ['-date_joined']
         verbose_name_plural = 'users'
 
-
-
 class Company(models.Model):
     company_name = models.CharField(max_length=120)
-    company_head = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True) #директор
+    director = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name='director_company') #директор
     def __str__(self):
         return self.company_name
     has_admin = models.BooleanField(default=False)
