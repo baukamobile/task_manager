@@ -1910,3 +1910,5 @@ Traceback (most recent call last):
     raise TemplateDoesNotExist(template_name, chain=chain)
 django.template.exceptions.TemplateDoesNotExist: base.html
 ERROR 2025-02-17 10:59:52,635 basehttp "GET /users/base/ HTTP/1.1" 500 85599
+WARNING 2025-02-17 11:20:26,091 log Not Found: /
+WARNING 2025-02-17 11:20:26,093 basehttp "GET / HTTP/1.1" 404 3064
