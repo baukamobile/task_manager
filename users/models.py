@@ -6,6 +6,8 @@ from django.db import models
 from django.utils import timezone
 from django.utils.translation.trans_null import deactivate
 from simple_history.models import HistoricalRecords
+
+
 import logging
 from django.contrib.auth.models import Permission
 
@@ -156,13 +158,12 @@ class Department(models.Model):
     def __str__(self):
         return self.department_name
     def save(self, *args, **kwargs):
-        # if self.deactivate:
-        #     User.objects.filter(department=self).update(is_active=False)
-        if self.deactivate:
-            User.objects.filter(department=self).update(is_active=False)  # Выключаем всех
-        else:
-            User.objects.filter(department=self, status=User.ACTIVE).update(
+        first_save=self.pk is None #проверяем объект новый?
+        super().save(*args, **kwargs) #Сначала сохраняем в Department
+        if not first_save: #обновляем пользователей если это не первое сохранение
+            if self.deactivate: #
+                User.objects.filter(department=self).update(is_active=False)  # Выключаем всех
+            else:
+                User.objects.filter(department=self, status=User.ACTIVE).update(
                 is_active=True) #только активныз
-        super().save(*args, **kwargs)
-
 

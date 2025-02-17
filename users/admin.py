@@ -35,11 +35,11 @@ class MyUserAdmin(UserAdmin):
         ('Important Dates', {'fields': ('date_joined',)}),
     )
 
-    # Add fieldsets for adding users without first_name, last_name, and username
+    # необходимые поля чтобы добавить пользователя
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('email', 'first_name', 'password1', 'password2'),
+            'fields': ('email', 'first_name','phone_number','telegram_id', 'password1', 'password2'),
         }),
     )
 
