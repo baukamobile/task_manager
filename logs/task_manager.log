@@ -1912,3 +1912,7 @@ django.template.exceptions.TemplateDoesNotExist: base.html
 ERROR 2025-02-17 10:59:52,635 basehttp "GET /users/base/ HTTP/1.1" 500 85599
 WARNING 2025-02-17 11:20:26,091 log Not Found: /
 WARNING 2025-02-17 11:20:26,093 basehttp "GET / HTTP/1.1" 404 3064
+WARNING 2025-02-17 11:51:39,537 log Not Found: /
+WARNING 2025-02-17 11:51:39,539 basehttp "GET / HTTP/1.1" 404 3064
+WARNING 2025-02-17 12:04:44,046 log Not Found: /
+WARNING 2025-02-17 12:04:44,047 basehttp "GET / HTTP/1.1" 404 3064
