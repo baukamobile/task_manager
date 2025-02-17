@@ -47,7 +47,7 @@ class Task(models.Model):
         ordering = ['-start_date']
 
 
-class Projects(models.Model):
+class Projects(models.Model): #название проекта
     project_name = models.CharField(max_length=100,db_index=True)
     description = models.TextField(null=True,blank=True)
     department = models.ForeignKey('users.Department', on_delete=models.CASCADE)

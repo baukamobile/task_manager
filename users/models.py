@@ -18,30 +18,59 @@ class RolesUser(models.Model): #роли пользователи
         return self.role_name
 
 class UserCustomManager(BaseUserManager):
+    # Указываем, что этот менеджер будет использоваться при миграциях
     use_in_migrations = True
 
     def _create_user(self, phone_number, password, **extra_fields):
+        """
+        Вспомогательная функция для создания пользователя с паролем и телефонным номером.
+        Проверяет наличие телефонного номера, создает нового пользователя с переданными
+        дополнительными полями и сохраняет его в базе данных.
+        :param phone_number: Телефонный номер пользователя (обязателен).
+        :param password: Пароль пользователя (обязателен).
+        :param extra_fields: Дополнительные поля, передаваемые для создания пользователя.
+        :return: Сохранённый объект пользователя.
+        """
         if not phone_number:
-            # logger.warning("No phone number provided")
-            raise ValueError('The given phone number must be set')
-        user = self.model(phone_number=phone_number, **extra_fields)
-        user.set_password(password)
-        user.save(using=self._db)
+            raise ValueError('The given phone number must be set')  # Проверка на обязательность телефонного номера
+        user = self.model(phone_number=phone_number, **extra_fields)  # Создаём пользователя с дополнительными полями
+        user.set_password(password)  # Устанавливаем пароль с хешированием
+        user.save(using=self._db)  # Сохраняем пользователя в базе данных
         return user
 
     def create_user(self, phone_number, password=None, **extra_fields):
-        extra_fields.setdefault('is_staff', False)
-        extra_fields.setdefault('is_superuser', False)
-        return self._create_user(phone_number, password, **extra_fields)
+        """
+        Создаёт обычного пользователя с переданным телефонным номером и паролем.
+        По умолчанию назначаются флаги `is_staff=False` и `is_superuser=False`.
+
+        :param phone_number: Телефонный номер пользователя (обязателен).
+        :param password: Пароль пользователя (необязателен).
+        :param extra_fields: Дополнительные поля, передаваемые для создания пользователя.
+        :return: Объект созданного пользователя.
+        """
+        extra_fields.setdefault('is_staff', False)  # Если не указано, считаем, что пользователь не является сотрудником
+        extra_fields.setdefault('is_superuser', False)  # Если не указано, считаем, что пользователь не является суперпользователем
+        return self._create_user(phone_number, password, **extra_fields)  # Создаём пользователя через вспомогательную функцию
 
     def create_superuser(self, phone_number, password=None, **extra_fields):
-        extra_fields.setdefault('is_staff', True)
-        extra_fields.setdefault('is_superuser', True)
+        """
+        Создаёт суперпользователя с переданным телефонным номером и паролем.
+        По умолчанию назначаются флаги `is_staff=True` и `is_superuser=True`.
+
+        :param phone_number: Телефонный номер суперпользователя (обязателен).
+        :param password: Пароль суперпользователя (необязателен).
+        :param extra_fields: Дополнительные поля, передаваемые для создания суперпользователя.
+        :raises ValueError: Если `is_staff` или `is_superuser` не установлены в `True`, генерируется исключение.
+        :return: Объект созданного суперпользователя.
+        """
+        extra_fields.setdefault('is_staff', True)  # Суперпользователь обязательно является сотрудником
+        extra_fields.setdefault('is_superuser', True)  # Суперпользователь обязательно является суперпользователем
         if not extra_fields.get('is_staff'):
-            raise ValueError('Superuser must have is_staff=True.')
+            raise ValueError('Superuser must have is_staff=True.')  # Ошибка, если не установлен флаг is_staff
         if not extra_fields.get('is_superuser'):
-            raise ValueError('Superuser must have is_superuser=True.')
-        return self._create_user(phone_number, password, **extra_fields)
+            raise ValueError('Superuser must have is_superuser=True.')  # Ошибка, если не установлен флаг is_superuser
+        return self._create_user(phone_number, password, **extra_fields)  # Создаём суперпользователя через вспомогательную функцию
+
 
 class User(AbstractUser):
     username = None
@@ -64,12 +93,12 @@ class User(AbstractUser):
     address = models.TextField(null=True, blank=True)
     department = models.ForeignKey("Department", on_delete=models.SET_NULL, null=True, blank=True)
     telegram_id = models.CharField(max_length=20, unique=True, null=True, blank=True)
-    is_verified = models.BooleanField(default=False)
-    on_vacation = models.BooleanField(default=False)
+    is_verified = models.BooleanField(default=False) #пользователь подвержден?
+    on_vacation = models.BooleanField(default=False) #в отпуске?
     company = models.ForeignKey("Company", on_delete=models.SET_NULL, null=True, blank=True,related_name='employees')
     is_superuser = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
-    is_owner = models.BooleanField(default=False)
+    is_owner = models.BooleanField(default=False) #владееть компании?
     image = models.ImageField(blank=True, null=True)
     background_profile_image = models.ImageField(blank=True, null=True)
     date_joined = models.DateTimeField(default=timezone.now)
