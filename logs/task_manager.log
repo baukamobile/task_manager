@@ -2904,3 +2904,5 @@ Traceback (most recent call last):
     value = attr()
 TypeError: Company.get_employees() missing 1 required positional argument: 'obj'
 ERROR 2025-02-18 14:16:18,167 basehttp "GET /admin/users/company/ HTTP/1.1" 500 430970
+WARNING 2025-02-18 14:45:54,513 log Not Found: /admin/users/department/
+WARNING 2025-02-18 14:45:54,513 basehttp "GET /admin/users/department/ HTTP/1.1" 404 9072

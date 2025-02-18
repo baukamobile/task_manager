@@ -1,37 +1,34 @@
 from django.contrib import admin
 # from django.contrib.auth.models import User
 from users.models import RolesUser, Positions, Company, Department
+from users.models import User
+from django.contrib.auth.admin import UserAdmin
 
 # Register your models here.
 
 class GetEmployeesMixin:
+    #функция чтобы вывести список сотрудников
     def get_emplyees(self,obj):
         return ', '.join([user.first_name for user in obj.employees.all()])
     get_emplyees.short_description = "Employee name"
-
+# get_emp = GetEmployees()
+# get_emp.get_emplyees()
 
 admin.site.register(RolesUser)
 admin.site.register(Positions)
 
 # admin.site.register(User)
-admin.site.register(Department)
 
 class DepartmentAdmin(admin.ModelAdmin,GetEmployeesMixin):
-    list_displays = ('department_name','department_head','get_emplyees')
-
-
-from django.contrib.auth.admin import UserAdmin
-
-
-# Here you have to import the User model from your app!
-from users.models import User
+    list_display = ['department_name','department_head','get_emplyees']
 
 
 class CompanyAdmin(admin.ModelAdmin,GetEmployeesMixin):
-    list_display = ('company_name','director','has_admin','get_emplyees')
+    list_display = ['company_name','director','has_admin','get_emplyees']
 
-
+admin.site.register(Department,DepartmentAdmin)
 admin.site.register(Company,CompanyAdmin)
+
 @admin.register(User)
 class MyUserAdmin(UserAdmin):
     model = User

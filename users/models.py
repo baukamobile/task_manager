@@ -171,6 +171,6 @@ class Department(models.Model):
                 User.objects.filter(department=self).update(is_active=False)  # Выключаем всех
             else:
                 User.objects.filter(department=self, status=User.ACTIVE).update(
-                is_active=True) #только активныз
+                is_active=True) #только активныx
 
 
