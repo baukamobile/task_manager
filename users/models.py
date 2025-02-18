@@ -138,6 +138,11 @@ class Company(models.Model):
     class Meta:
         verbose_name_plural='Company'
 
+    @property
+    def employees(self):
+        return self.employees.all()
+
+
 class Positions(models.Model):
     position_name = models.CharField(max_length=120,unique=True)
     def __str__(self):
@@ -166,4 +171,5 @@ class Department(models.Model):
             else:
                 User.objects.filter(department=self, status=User.ACTIVE).update(
                 is_active=True) #только активныз
+
 

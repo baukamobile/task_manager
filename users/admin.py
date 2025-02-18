@@ -6,7 +6,7 @@ from users.models import RolesUser, Positions, Company, Department
 
 admin.site.register(RolesUser)
 admin.site.register(Positions)
-admin.site.register(Company)
+
 admin.site.register(User)
 admin.site.register(Department)
 # admin.site.register(UserCustomManager)
@@ -17,11 +17,18 @@ from django.contrib.auth.admin import UserAdmin
 # Here you have to import the User model from your app!
 from users.models import User
 
-#
+
+class CompanyAdmin(admin.ModelAdmin):
+    list_display = ('company_name','director','has_admin','get_employees')
+    def get_employees(self,obj):
+        return ", ".join([user.first_name for user in obj.employees.all()])
+    get_employees.short_description = "Employees"
+
+admin.site.register(Company,CompanyAdmin)
 @admin.register(User)
 class MyUserAdmin(UserAdmin):
     model = User
-    list_display = ('id', 'email', 'phone_number', 'telegram_id', 'first_name','last_name', 'is_active', 'is_superuser')
+    list_display = ('id', 'email', 'phone_number', 'company_id', 'first_name','last_name', 'is_active', 'is_superuser')
     search_fields = ('email', 'phone_number', 'name')
     list_filter = ('is_active', 'is_superuser',)
     ordering = ('email',)
