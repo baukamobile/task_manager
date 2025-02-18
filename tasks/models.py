@@ -52,6 +52,7 @@ class Projects(models.Model): #название проекта
     description = models.TextField(null=True,blank=True)
     department = models.ForeignKey('users.Department', on_delete=models.CASCADE)
     start_date = models.DateTimeField(auto_now_add=True)
+    assigned = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,db_index=True)
     end_date = models.DateTimeField()
     history = HistoricalRecords()
 

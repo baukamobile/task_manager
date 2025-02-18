@@ -5,7 +5,7 @@ from users.admin import GetEmployeesMixin
 
 
 class TaskAdmin(admin.ModelAdmin):
-    list_display = ['task_name','tags','projects','start_date','end_date']
+    list_display = ['task_name','assigned','projects','start_date','end_date']
 admin.site.register(Task,TaskAdmin)
 
 
