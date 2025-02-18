@@ -12,7 +12,7 @@ admin.site.register(Task,TaskAdmin)
 
 class TaskCommentAdmin(admin.ModelAdmin):
     list_display = ['task', 'user', 'short_comment', 'created_at']
-    def short_comment(self, obj):
+    def short_comment(self, obj): #функция сокращает длину комменарий
         return obj.comment[:10] + '...' if len(obj.comment) > 10 else obj.comment
 
     short_comment.short_description = "Comment"

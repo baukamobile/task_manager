@@ -1,6 +1,6 @@
 from django.contrib import admin
 # from django.contrib.auth.models import User
-from users.models import RolesUser, Positions, Company, Department
+from users.models import Roles, Positions, Company, Department
 from users.models import User
 from django.contrib.auth.admin import UserAdmin
 
@@ -14,7 +14,7 @@ class GetEmployeesMixin:
 # get_emp = GetEmployees()
 # get_emp.get_emplyees()
 
-admin.site.register(RolesUser)
+admin.site.register(Roles)
 admin.site.register(Positions)
 
 # admin.site.register(User)
