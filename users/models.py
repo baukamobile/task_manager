@@ -92,8 +92,8 @@ class User(AbstractUser):
     last_name = models.CharField(max_length=40)
     email = models.EmailField(unique=True)  # Сделаем email обязательным и уникальным
     status = models.CharField(max_length=50,choices=STATUS_CHOICES, null=True, blank=True)
-    position = models.ForeignKey("Positions", on_delete=models.SET_NULL, null=True, blank=True,related_name="user")
-    role_user = models.ForeignKey(Roles, on_delete=models.SET_NULL, null=True, blank=True)
+    position = models.ForeignKey("Positions", on_delete=models.SET_NULL, null=True, blank=True,related_name="employees")
+    role_user = models.ForeignKey(Roles, on_delete=models.SET_NULL, null=True, blank=True,related_name='employees')
     date_of_birth = models.DateField(null=True, blank=True)
     address = models.TextField(null=True, blank=True)
     department = models.ForeignKey("Department", on_delete=models.SET_NULL, null=True, blank=True,related_name='employees')

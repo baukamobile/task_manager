@@ -11,11 +11,14 @@ class GetEmployeesMixin:
     def get_emplyees(self,obj):
         return ', '.join([user.first_name for user in obj.employees.all()])
     get_emplyees.short_description = "Employee name"
-# get_emp = GetEmployees()
-# get_emp.get_emplyees()
+class RolesAdmin(admin.ModelAdmin,GetEmployeesMixin):
+    list_display = ['role_name','get_emplyees']
+admin.site.register(Roles,RolesAdmin)
+class PostitionAdmin(admin.ModelAdmin,GetEmployeesMixin):
+    list_display = ['position_name','get_emplyees']
 
-admin.site.register(Roles)
-admin.site.register(Positions)
+admin.site.register(Positions,PostitionAdmin)
+
 
 # admin.site.register(User)
 
