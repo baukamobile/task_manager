@@ -8,7 +8,7 @@ class TaskAdmin(admin.ModelAdmin):
     list_display = ['task_name','tags','projects','start_date','end_date']
 admin.site.register(Task,TaskAdmin)
 
-# admin.site.register(Departments)
+
 
 class TaskCommentAdmin(admin.ModelAdmin):
     list_display = ['task', 'user', 'short_comment', 'created_at']
