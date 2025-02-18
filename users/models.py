@@ -93,7 +93,7 @@ class User(AbstractUser):
     role_user = models.ForeignKey(RolesUser, on_delete=models.SET_NULL, null=True, blank=True)
     date_of_birth = models.DateField(null=True, blank=True)
     address = models.TextField(null=True, blank=True)
-    department = models.ForeignKey("Department", on_delete=models.SET_NULL, null=True, blank=True)
+    department = models.ForeignKey("Department", on_delete=models.SET_NULL, null=True, blank=True,related_name='employees')
     telegram_id = models.CharField(max_length=20, unique=True, null=True, blank=True)
     is_verified = models.BooleanField(default=False) #пользователь подвержден?
     on_vacation = models.BooleanField(default=False) #в отпуске?
@@ -138,9 +138,10 @@ class Company(models.Model):
     class Meta:
         verbose_name_plural='Company'
 
-    @property
-    def employees(self):
-        return self.employees.all()
+    # @property
+    # def employees(self):
+    #     return self.employees.all()
+
 
 
 class Positions(models.Model):

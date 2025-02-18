@@ -1,15 +1,24 @@
 from django.contrib import admin
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from users.models import RolesUser, Positions, Company, Department
 
 # Register your models here.
 
+class GetEmployeesMixin:
+    def get_emplyees(self,obj):
+        return ', '.join([user.first_name for user in obj.employees.all()])
+    get_emplyees.short_description = "Employee name"
+
+
 admin.site.register(RolesUser)
 admin.site.register(Positions)
 
-admin.site.register(User)
+# admin.site.register(User)
 admin.site.register(Department)
-# admin.site.register(UserCustomManager)
+
+class DepartmentAdmin(admin.ModelAdmin,GetEmployeesMixin):
+    list_displays = ('department_name','department_head','get_emplyees')
+
 
 from django.contrib.auth.admin import UserAdmin
 
@@ -18,11 +27,9 @@ from django.contrib.auth.admin import UserAdmin
 from users.models import User
 
 
-class CompanyAdmin(admin.ModelAdmin):
-    list_display = ('company_name','director','has_admin','get_employees')
-    def get_employees(self,obj):
-        return ", ".join([user.first_name for user in obj.employees.all()])
-    get_employees.short_description = "Employees"
+class CompanyAdmin(admin.ModelAdmin,GetEmployeesMixin):
+    list_display = ('company_name','director','has_admin','get_emplyees')
+
 
 admin.site.register(Company,CompanyAdmin)
 @admin.register(User)
