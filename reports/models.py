@@ -23,4 +23,3 @@ class Reports(models.Model):
             raise ValidationError('Дата окончание не должно быть раьше чем дата начало')
     class Meta:
         verbose_name_plural='Reports'
-        #Wh7do2uU
