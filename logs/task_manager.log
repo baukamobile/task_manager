@@ -3007,3 +3007,28 @@ WARNING 2025-02-19 09:10:06,222 log Not Found: /
 WARNING 2025-02-19 09:10:06,223 basehttp "GET / HTTP/1.1" 404 3064
 WARNING 2025-02-19 09:10:06,577 log Not Found: /favicon.ico
 WARNING 2025-02-19 09:10:06,577 basehttp "GET /favicon.ico HTTP/1.1" 404 3115
+ERROR 2025-02-19 09:57:35,256 exception Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2025-02-19 09:57:35,427 log Bad Request: /
+WARNING 2025-02-19 09:57:35,428 basehttp "GET / HTTP/1.1" 400 71742
+WARNING 2025-02-19 09:58:01,277 log Not Found: /
+WARNING 2025-02-19 09:58:01,277 basehttp "GET / HTTP/1.1" 404 3064
+WARNING 2025-02-19 09:59:02,118 log Not Found: /user/api/users
+WARNING 2025-02-19 09:59:02,118 basehttp "GET /user/api/users HTTP/1.1" 404 3124
+WARNING 2025-02-19 09:59:11,056 log Not Found: /user/
+WARNING 2025-02-19 09:59:11,056 basehttp "GET /user/ HTTP/1.1" 404 3097
+WARNING 2025-02-19 09:59:22,817 log Method Not Allowed: /users/api/login/
+WARNING 2025-02-19 09:59:22,817 basehttp "GET /users/api/login/ HTTP/1.1" 405 5598
+WARNING 2025-02-19 09:59:26,071 log Not Found: /users/api/
+WARNING 2025-02-19 09:59:26,072 basehttp "GET /users/api/ HTTP/1.1" 404 4446
+WARNING 2025-02-19 10:05:59,211 log Not Found: /
+WARNING 2025-02-19 10:05:59,212 basehttp "GET / HTTP/1.1" 404 3064
