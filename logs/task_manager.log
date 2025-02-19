@@ -3032,3 +3032,44 @@ WARNING 2025-02-19 09:59:26,071 log Not Found: /users/api/
 WARNING 2025-02-19 09:59:26,072 basehttp "GET /users/api/ HTTP/1.1" 404 4446
 WARNING 2025-02-19 10:05:59,211 log Not Found: /
 WARNING 2025-02-19 10:05:59,212 basehttp "GET / HTTP/1.1" 404 3064
+ERROR 2025-02-19 10:12:01,808 exception Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2025-02-19 10:12:01,831 log Bad Request: /users/api/users/
+WARNING 2025-02-19 10:12:01,832 basehttp "GET /users/api/users/ HTTP/1.1" 400 72242
+ERROR 2025-02-19 10:12:02,720 exception Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2025-02-19 10:12:02,741 log Bad Request: /users/api/users/
+WARNING 2025-02-19 10:12:02,741 basehttp "GET /users/api/users/ HTTP/1.1" 400 72242
+ERROR 2025-02-19 10:12:16,027 exception Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2025-02-19 10:12:16,052 log Bad Request: /
+WARNING 2025-02-19 10:12:16,052 basehttp "GET / HTTP/1.1" 400 71831
+WARNING 2025-02-19 10:12:43,212 log Not Found: /
+WARNING 2025-02-19 10:12:43,213 basehttp "GET / HTTP/1.1" 404 3064
