@@ -2999,3 +2999,11 @@ WARNING 2025-02-18 19:59:35,432 log Not Found: /admin/users/rolesuser/3/change/
 WARNING 2025-02-18 19:59:35,432 basehttp "GET /admin/users/rolesuser/3/change/ HTTP/1.1" 404 9348
 WARNING 2025-02-18 19:59:40,709 log Not Found: /admin/users/rolesuser/
 WARNING 2025-02-18 19:59:40,709 basehttp "GET /admin/users/rolesuser/ HTTP/1.1" 404 9321
+WARNING 2025-02-18 20:52:20,716 log Not Found: /
+WARNING 2025-02-18 20:52:20,718 basehttp "GET / HTTP/1.1" 404 3064
+WARNING 2025-02-18 20:52:21,047 log Not Found: /favicon.ico
+WARNING 2025-02-18 20:52:21,048 basehttp "GET /favicon.ico HTTP/1.1" 404 3115
+WARNING 2025-02-19 09:10:06,222 log Not Found: /
+WARNING 2025-02-19 09:10:06,223 basehttp "GET / HTTP/1.1" 404 3064
+WARNING 2025-02-19 09:10:06,577 log Not Found: /favicon.ico
+WARNING 2025-02-19 09:10:06,577 basehttp "GET /favicon.ico HTTP/1.1" 404 3115
