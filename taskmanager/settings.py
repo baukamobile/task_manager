@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
+from logging import StreamHandler
 from pathlib import Path
 import os
 import environ
@@ -177,6 +177,11 @@ LOGGING = {
             'filename': BASE_DIR / 'logs' / 'task_manager_debug.log',  # Лог для отладки
             'formatter': 'verbose',
         },
+'console':{
+            'level': 'DEBUG',
+            'class':'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
     },
     'loggers': {
         'django': {
@@ -184,8 +189,9 @@ LOGGING = {
             'level': 'WARNING',
             'propagate': True,
         },
+
         'taskmanager': {
-            'handlers': ['debug_file'],  # Теперь debug_file реально существует
+            'handlers': ['debug_file'],  # debug_file
             'level': 'DEBUG',
             'propagate': False,
         },
