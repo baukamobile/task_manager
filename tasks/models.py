@@ -62,7 +62,7 @@ class Projects(models.Model): #название проекта
         verbose_name_plural='Projects'
 
 class Task_comments(models.Model):
-    task = models.ForeignKey(Task, on_delete=models.SET_NULL,null=True)
+    task = models.ForeignKey(Task, on_delete=models.SET_NULL,null=True,related_name='comments')
     user = models.ForeignKey(User, on_delete=models.SET_NULL,null=True)
     comment = models.TextField()
     documents = models.FileField(null=True, blank=True)

@@ -3221,3 +3221,7 @@ WARNING 2025-02-20 16:40:15,495 log Not Found: /
 WARNING 2025-02-20 16:40:15,495 basehttp "GET / HTTP/1.1" 404 3064
 WARNING 2025-02-20 16:40:46,861 log Method Not Allowed: /users/api/register/
 WARNING 2025-02-20 16:40:46,861 basehttp "GET /users/api/register/ HTTP/1.1" 405 5625
+WARNING 2025-02-21 09:12:43,274 log Not Found: /
+WARNING 2025-02-21 09:12:43,275 basehttp "GET / HTTP/1.1" 404 3064
+WARNING 2025-02-21 09:12:43,665 log Not Found: /favicon.ico
+WARNING 2025-02-21 09:12:43,665 basehttp "GET /favicon.ico HTTP/1.1" 404 3115
