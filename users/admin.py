@@ -36,7 +36,7 @@ admin.site.register(Company,CompanyAdmin)
 @admin.register(User)
 class MyUserAdmin(UserAdmin):
     model = User
-    list_display = ('id', 'email', 'phone_number', 'company_id', 'first_name','last_name', 'is_active', 'is_superuser')
+    list_display = ('id', 'email','first_name','last_name', 'phone_number', 'company','department','address','date_of_birth', 'is_active', 'is_superuser')
     search_fields = ('email', 'phone_number', 'name')
     list_filter = ('is_active', 'is_superuser',)
     ordering = ('email',)

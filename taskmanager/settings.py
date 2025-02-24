@@ -19,7 +19,10 @@ environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+# import os
 
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # путь до корня проекта
+PROJECT_DIR = BASE_DIR
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -40,8 +43,9 @@ INSTALLED_APPS = [
     # 'daphne',
     'channels',
     # 'jazzmin',
-    'jet',
-'jet.dashboard',
+    # 'jet',
+# 'jet.dashboard',
+'admin_berry.apps.AdminBerryConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -63,6 +67,14 @@ INSTALLED_APPS = [
 
 
 ]
+
+JET_DEFAULT_THEME = 'green'
+JET_SIDE_MENU_COMPACT = True
+    # 'light-violet'
+# JET_INDEX_DASHBOARD = 'jet.dashboard.dashboard.DefaultIndexDashboard'
+JET_MODULE_GOOGLE_ANALYTICS_CLIENT_SECRETS_FILE = os.path.join(PROJECT_DIR, 'client_secrets.json')
+
+
 ASGI_APPLICATION = 'taskmanager.asgi.application'
 # CHANNEL_LAYERS = {}
 AUTH_USER_MODEL = 'users.User'

@@ -16,13 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-
+# from jet.dashboard.dashboard_modules import google_analytics_views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
-    path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS
+    # path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
+    # path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS
     path('users/',include('users.urls')),
-
+    path("", include('admin_berry.urls')),
     path('tasks/',include('tasks.urls')),
     path('chat/',include('chat.urls')),
     path('news/',include('news.urls')),
