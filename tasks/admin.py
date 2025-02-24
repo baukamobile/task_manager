@@ -9,7 +9,10 @@ class GetCommentMixin:
         #Склеиваем их в строку, обрезая те, которые длиннее 10 символов
 
         return ', '.join(comment[:20] + '...' if len(comment) > 10 else comment for comment in comments)
-
+    def get_tasks_name(self,obj):
+        task_name= [task.task_name for task in obj.tasks.all()]
+        # return task_name
+        return ', '.join(comment[:8]+ '...' if len(comment) > 10 else comment for comment in task_name)
 
 
 
@@ -30,4 +33,9 @@ class TaskCommentAdmin(admin.ModelAdmin):
 
 admin.site.register(Task_comments,TaskCommentAdmin)
 
-admin.site.register(Projects)
+class ProjectAdmin(GetCommentMixin,admin.ModelAdmin):
+    list_display = ['project_name','get_tasks_name','department','start_date','assigned','end_date']
+
+
+
+admin.site.register(Projects,ProjectAdmin)
