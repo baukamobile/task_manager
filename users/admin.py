@@ -11,6 +11,7 @@ class GetEmployeesMixin:
     def get_employees(self,obj):
         return ', '.join([user.first_name for user in obj.employees.all()])
     get_employees.short_description = "Employee name"
+
 class RolesAdmin(admin.ModelAdmin,GetEmployeesMixin):
     list_display = ['role_name','get_employees']
 admin.site.register(Roles,RolesAdmin)

@@ -3,9 +3,20 @@ from tasks.models import *
 # Register your models here.
 from users.admin import GetEmployeesMixin
 
+class GetCommentMixin:
+    def get_comments(self, obj):
+        comments = [task.comment for task in obj.comments.all()]  # обявляем переменную коментарий задаем длину
+        #Склеиваем их в строку, обрезая те, которые длиннее 10 символов
 
-class TaskAdmin(admin.ModelAdmin):
-    list_display = ['task_name','assigned','projects','start_date','end_date']
+        return ', '.join(comment[:20] + '...' if len(comment) > 10 else comment for comment in comments)
+
+
+
+
+class TaskAdmin(admin.ModelAdmin,GetCommentMixin):
+    list_display = ['task_name','assigned','projects','start_date','end_date','get_comments']
+
+
 admin.site.register(Task,TaskAdmin)
 
 
