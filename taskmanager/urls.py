@@ -16,12 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+import logging
+logger = logging.getLogger('admin')
 # from jet.dashboard.dashboard_modules import google_analytics_views
 urlpatterns = [
 
     # path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
     # path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS
     path('admin/', admin.site.urls),
+
 
     path('users/',include('users.urls')),
     # path("", include('admin_berry.urls')),
@@ -32,3 +35,4 @@ urlpatterns = [
     path('notifications/',include('notifications.urls')),
 
 ]
+
