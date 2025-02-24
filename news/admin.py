@@ -11,12 +11,13 @@ class GetNewsInfoMixin:
     # get_news_comments.short_description = "Комментарии"
 
 class NewsAdmin(GetNewsInfoMixin, admin.ModelAdmin):
-    list_display = ['title','Comments']
+    list_display = ['title','created_by','created_at','Comments']
 
-
+class NewsCommentsAdmin(GetNewsInfoMixin, admin.ModelAdmin):
+    list_display = ['news','user','created_at','comment_text']
 
 admin.site.register(News,NewsAdmin)
-admin.site.register(NewsComment)
+admin.site.register(NewsComment,NewsCommentsAdmin)
 admin.site.register(Tag)
 
 
