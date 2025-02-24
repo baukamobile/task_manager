@@ -15,7 +15,7 @@ class Event(models.Model):
         (ACHIEVEMENT, 'ДОСТИЖЕНИЕ'),
         (AWARD,'НАГРАДА')
     ]
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     event_type = models.CharField(max_length=100,choices=EVENT_TYPES,null=True)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
