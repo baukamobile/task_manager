@@ -42,9 +42,9 @@ ALLOWED_HOSTS = [os.getenv('ALLOWED_HOST'),'127.0.0.1']
 INSTALLED_APPS = [
     # 'daphne',
     'channels',
-    # 'jazzmin',
-    'jet',
-    'jet.dashboard',
+    'jazzmin',
+    # 'jet',
+    # 'jet.dashboard',
 # 'admin_berry.apps.AdminBerryConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -64,13 +64,15 @@ INSTALLED_APPS = [
     # 'celery',
     "drf_spectacular",
     "drf_spectacular_sidecar",
-    'dashboard',
+
 
 
 ]
 
-JET_DEFAULT_THEME = 'green'
-JET_SIDE_MENU_COMPACT = True
+JAZZMIN_UI_TWEAKS = {
+    "theme": "darkly",
+    # "dark_mode_theme": "darkly",
+}
     # 'light-violet'
 # JET_INDEX_DASHBOARD = 'jet.dashboard.dashboard.DefaultIndexDashboard'
 JET_MODULE_GOOGLE_ANALYTICS_CLIENT_SECRETS_FILE = os.path.join(PROJECT_DIR, 'client_secrets.json')
