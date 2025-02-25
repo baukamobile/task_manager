@@ -1,6 +1,8 @@
 from django.contrib import admin
+from django.utils.safestring import mark_safe
+
 # from django.contrib.auth.models import User
-from users.models import Roles, Positions, Company, Department
+from users.models import Roles, Positions, Company, Department,GrafanaDashboard
 from users.models import User
 from django.contrib.auth.admin import UserAdmin
 
@@ -66,4 +68,21 @@ class MyUserAdmin(UserAdmin):
 #
 # admin.site.register(User, UserAdmin)
 
+class GrafanaAdmin(admin.ModelAdmin):
+    def grafana_dashboard(self, obj):
+        base_url = "http://localhost:3000/d"
 
+        # Если указан panel_id, значит, это solo-график
+        if obj.panel_id:
+            base_url += "-solo"
+            url = f"{base_url}/{obj.dashboard_uid}?panelId={obj.panel_id}&orgId=1&from=now-1h&to=now&kiosk"
+        else:
+            url = f"{base_url}/{obj.dashboard_uid}?orgId=1&from=now-1h&to=now"
+
+        return mark_safe(f'<iframe src="{url}" width="800" height="400" frameborder="0"></iframe>')
+
+    grafana_dashboard.short_description = "Grafana Dashboard"
+
+    list_display = ("name", "dashboard_uid", "panel_id", "grafana_dashboard")
+
+admin.site.register(GrafanaDashboard,GrafanaAdmin)

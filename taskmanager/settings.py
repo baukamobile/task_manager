@@ -15,9 +15,9 @@ import os
 import environ
 env = environ.Env()
 environ.Env.read_env()
-from django.core.management.utils import get_random_secret_key
-
-print(get_random_secret_key())
+# from django.core.management.utils import get_random_secret_key
+#
+# print(get_random_secret_key())
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -73,7 +73,7 @@ INSTALLED_APPS = [
 ]
 
 JAZZMIN_UI_TWEAKS = {
-    "theme": "darkly",
+    "theme": "slate",
     # "dark_mode_theme": "darkly",
 }
     # 'light-violet'

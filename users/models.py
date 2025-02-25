@@ -177,3 +177,11 @@ class Department(models.Model):
                 is_active=True) #только активныx
 
 
+
+
+class GrafanaDashboard(models.Model):
+    name = models.CharField(max_length=255)  # Название дашборда
+    dashboard_uid = models.CharField(max_length=100, unique=True)  # UID дашборда в Grafana
+    panel_id = models.IntegerField(null=True,blank=True)
+    def __str__(self):
+        return self.name
