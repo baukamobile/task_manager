@@ -70,7 +70,7 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 CORS_ORIGIN_ALLOW_ALL = True
-
+CORS_ALLOWED_ORIGINS = ['http://localhost:5173']
 JAZZMIN_UI_TWEAKS = {
     "theme": "slate",
     # "theme": "cerulean",

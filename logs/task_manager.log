@@ -10062,3 +10062,33 @@ Traceback (most recent call last):
 psycopg2.errors.InvalidCursorName: ОШИБКА:  курсор "_django_curs_12784_sync_1" не существует
 
 ERROR 2025-02-26 16:39:11,090 basehttp "GET /admin/tasks/task/add/ HTTP/1.1" 500 742467
+WARNING 2025-02-26 17:05:30,566 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:05:30,567 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+WARNING 2025-02-26 17:07:53,900 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:07:53,901 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+WARNING 2025-02-26 17:07:55,453 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:07:55,454 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+WARNING 2025-02-26 17:20:48,047 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:20:48,048 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+WARNING 2025-02-26 17:22:25,259 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:22:25,260 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+WARNING 2025-02-26 17:22:50,469 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:22:50,470 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+WARNING 2025-02-26 17:33:03,724 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:33:03,725 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+WARNING 2025-02-26 17:33:38,474 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:33:38,475 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+WARNING 2025-02-26 17:33:42,424 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:33:42,425 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+WARNING 2025-02-26 17:33:43,718 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:33:43,719 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+WARNING 2025-02-26 17:40:01,290 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:40:01,291 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+WARNING 2025-02-26 17:40:02,902 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:40:02,902 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+WARNING 2025-02-26 17:40:42,726 log Not Found: /tasks/tasks//
+WARNING 2025-02-26 17:40:42,726 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
+WARNING 2025-02-26 17:40:44,813 log Not Found: /tasks/tasks//
+WARNING 2025-02-26 17:40:44,815 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
+WARNING 2025-02-26 17:41:10,897 log Not Found: /tasks/tasks//
+WARNING 2025-02-26 17:41:10,898 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731

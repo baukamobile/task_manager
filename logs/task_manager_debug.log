@@ -1055,3 +1055,77 @@ INFO 2025-02-26 16:40:08,181 autoreload C:\Users\User\Desktop\docs\taskmanager\t
 INFO 2025-02-26 16:40:08,785 autoreload Watching for file changes with StatReloader
 INFO 2025-02-26 16:41:32,736 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\models.py changed, reloading.
 INFO 2025-02-26 16:41:33,421 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 16:42:10,313 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 16:42:14,521 basehttp "GET /admin/tasks/task/add/ HTTP/1.1" 200 37735
+INFO 2025-02-26 16:42:14,649 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 16:42:49,709 basehttp "POST /admin/tasks/task/add/ HTTP/1.1" 302 0
+INFO 2025-02-26 16:42:49,794 basehttp "GET /admin/tasks/task/add/ HTTP/1.1" 200 38420
+INFO 2025-02-26 16:42:49,866 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 16:43:15,792 basehttp "POST /admin/tasks/task/add/ HTTP/1.1" 302 0
+INFO 2025-02-26 16:43:15,886 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 28295
+INFO 2025-02-26 16:43:15,905 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-02-26 16:43:15,965 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 16:43:17,888 basehttp "GET /admin/tasks/task/add/ HTTP/1.1" 200 37735
+INFO 2025-02-26 16:43:17,962 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 16:43:48,211 basehttp "POST /admin/tasks/task/add/ HTTP/1.1" 302 0
+INFO 2025-02-26 16:43:48,290 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 29118
+INFO 2025-02-26 16:43:48,366 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 16:43:52,731 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 28480
+INFO 2025-02-26 16:43:52,898 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 16:44:13,079 basehttp "GET /tasks/status/ HTTP/1.1" 200 5714
+INFO 2025-02-26 17:01:53,894 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-02-26 17:01:53,899 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-02-26 17:01:54,802 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 17:01:54,802 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 17:02:20,293 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-02-26 17:02:20,308 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-02-26 17:02:20,963 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 17:02:20,977 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 17:02:39,846 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-02-26 17:02:39,856 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-02-26 17:02:40,499 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 17:02:40,499 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 17:02:46,621 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-02-26 17:02:46,637 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-02-26 17:02:47,300 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 17:03:12,639 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-02-26 17:03:12,650 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-02-26 17:03:13,298 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 17:03:13,298 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 17:04:23,054 basehttp "GET /tasks/status/ HTTP/1.1" 200 204
+INFO 2025-02-26 17:04:24,369 basehttp "GET /tasks/status/ HTTP/1.1" 200 204
+INFO 2025-02-26 17:05:00,415 basehttp "GET /tasks/status/ HTTP/1.1" 200 204
+WARNING 2025-02-26 17:05:30,566 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:05:30,567 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+INFO 2025-02-26 17:05:39,628 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8191
+WARNING 2025-02-26 17:07:53,900 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:07:53,901 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+WARNING 2025-02-26 17:07:55,453 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:07:55,454 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+INFO 2025-02-26 17:12:05,908 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 17:12:21,352 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8191
+WARNING 2025-02-26 17:20:48,047 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:20:48,048 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+WARNING 2025-02-26 17:22:25,259 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:22:25,260 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+WARNING 2025-02-26 17:22:50,469 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:22:50,470 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+WARNING 2025-02-26 17:33:03,724 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:33:03,725 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+WARNING 2025-02-26 17:33:38,474 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:33:38,475 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+WARNING 2025-02-26 17:33:42,424 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:33:42,425 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+WARNING 2025-02-26 17:33:43,718 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:33:43,719 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+INFO 2025-02-26 17:34:06,751 basehttp "GET /tasks/status/ HTTP/1.1" 200 5714
+WARNING 2025-02-26 17:40:01,290 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:40:01,291 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+WARNING 2025-02-26 17:40:02,902 log Forbidden: /tasks/tasks/
+WARNING 2025-02-26 17:40:02,902 basehttp "GET /tasks/tasks/ HTTP/1.1" 403 58
+WARNING 2025-02-26 17:40:42,726 log Not Found: /tasks/tasks//
+WARNING 2025-02-26 17:40:42,726 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
+WARNING 2025-02-26 17:40:44,813 log Not Found: /tasks/tasks//
+WARNING 2025-02-26 17:40:44,815 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
+WARNING 2025-02-26 17:41:10,897 log Not Found: /tasks/tasks//
+WARNING 2025-02-26 17:41:10,898 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
