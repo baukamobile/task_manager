@@ -9378,3 +9378,5 @@ AttributeError: 'NoneType' object has no attribute 'email'
 ERROR 2025-02-26 09:49:41,190 basehttp "POST /users/api/login/ HTTP/1.1" 500 97006
 WARNING 2025-02-26 09:49:51,752 log Method Not Allowed: /users/api/login/
 WARNING 2025-02-26 09:49:51,752 basehttp "GET /users/api/login/ HTTP/1.1" 405 5598
+WARNING 2025-02-26 10:12:21,838 log Method Not Allowed: /users/api/login/
+WARNING 2025-02-26 10:12:21,838 basehttp "GET /users/api/login/ HTTP/1.1" 405 5598

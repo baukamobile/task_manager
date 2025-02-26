@@ -67,3 +67,134 @@ INFO 2025-02-26 09:51:25,277 views Ползователь пытается войти
 INFO 2025-02-26 09:51:25,927 views Ползователь с test21@gmail.com вошел на сайт 13
 INFO 2025-02-26 09:51:25,927 views Ползователь с test21@gmail.com вошел на сайт 13
 INFO 2025-02-26 09:51:25,959 basehttp "POST /users/api/login/ HTTP/1.1" 200 5682
+INFO 2025-02-26 10:07:50,796 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 10:07:51,846 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 27213
+INFO 2025-02-26 10:07:51,952 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:08:30,725 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\admin.py changed, reloading.
+INFO 2025-02-26 10:08:31,588 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 10:08:58,081 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 10:10:02,534 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\admin.py changed, reloading.
+INFO 2025-02-26 10:10:03,225 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 10:10:28,575 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\admin.py changed, reloading.
+INFO 2025-02-26 10:10:29,839 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 10:11:03,627 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\admin.py changed, reloading.
+INFO 2025-02-26 10:11:04,834 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 10:11:08,540 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 31137
+INFO 2025-02-26 10:11:08,657 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:11:12,430 basehttp "GET /admin/tasks/task/?priority__exact=%D0%A1%D0%A0%D0%95%D0%94%D0%9D%D0%98%D0%99 HTTP/1.1" 200 24982
+INFO 2025-02-26 10:11:12,501 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:11:16,628 basehttp "GET /admin/tasks/task/?priority__exact=%D0%9A%D0%A0%D0%98%D0%A2%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%98%D0%99 HTTP/1.1" 200 25022
+INFO 2025-02-26 10:11:16,701 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:11:19,115 basehttp "GET /admin/tasks/task/?priority__exact=%D0%92%D0%AB%D0%A1%D0%9E%D0%9A%D0%98%D0%99 HTTP/1.1" 200 24982
+INFO 2025-02-26 10:11:19,286 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:11:21,426 basehttp "GET /admin/tasks/task/?priority__exact=%D0%A1%D0%A0%D0%95%D0%94%D0%9D%D0%98%D0%99 HTTP/1.1" 200 24982
+INFO 2025-02-26 10:11:21,500 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:11:24,093 basehttp "GET /admin/tasks/task/? HTTP/1.1" 200 31137
+INFO 2025-02-26 10:11:24,168 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:11:28,094 basehttp "GET /admin/tasks/task/?status__exact=%D0%90%D0%9A%D0%A2%D0%98%D0%92%D0%95%D0%9D HTTP/1.1" 200 32047
+INFO 2025-02-26 10:11:28,167 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:11:31,374 basehttp "GET /admin/tasks/task/?status__exact=%D0%92+%D0%9F%D0%A0%D0%9E%D0%A6%D0%95%D0%A1%D0%A1%D0%95 HTTP/1.1" 200 25003
+INFO 2025-02-26 10:11:31,451 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:11:34,143 basehttp "GET /admin/tasks/task/? HTTP/1.1" 200 31137
+INFO 2025-02-26 10:11:34,323 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:11:35,641 basehttp "GET /admin/tasks/task/1/change/ HTTP/1.1" 200 37364
+INFO 2025-02-26 10:11:35,724 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:11:46,316 basehttp "POST /admin/tasks/task/1/change/ HTTP/1.1" 302 0
+INFO 2025-02-26 10:11:46,399 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 31696
+INFO 2025-02-26 10:11:46,469 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:11:49,998 basehttp "GET /admin/tasks/task/?priority__exact=%D0%9A%D0%A0%D0%98%D0%A2%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%98%D0%99 HTTP/1.1" 200 29937
+INFO 2025-02-26 10:11:50,186 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:11:55,112 basehttp "GET /admin/tasks/task/?status__exact=%D0%92+%D0%9F%D0%A0%D0%9E%D0%A6%D0%95%D0%A1%D0%A1%D0%95&priority__exact=%D0%9A%D0%A0%D0%98%D0%A2%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%98%D0%99 HTTP/1.1" 200 30614
+INFO 2025-02-26 10:11:55,291 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:11:57,476 basehttp "GET /admin/tasks/task/?status__exact=%D0%92+%D0%9F%D0%A0%D0%9E%D0%A6%D0%95%D0%A1%D0%A1%D0%95 HTTP/1.1" 200 29821
+INFO 2025-02-26 10:11:57,653 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:12:01,711 basehttp "GET /admin/tasks/task/?status__exact=%D0%90%D0%9A%D0%A2%D0%98%D0%92%D0%95%D0%9D HTTP/1.1" 200 31568
+INFO 2025-02-26 10:12:01,786 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:12:05,583 basehttp "GET /admin/tasks/task/? HTTP/1.1" 200 31137
+INFO 2025-02-26 10:12:05,661 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2025-02-26 10:12:21,838 log Method Not Allowed: /users/api/login/
+WARNING 2025-02-26 10:12:21,838 basehttp "GET /users/api/login/ HTTP/1.1" 405 5598
+INFO 2025-02-26 10:12:46,054 basehttp "GET /admin/chat/chat/ HTTP/1.1" 200 22770
+INFO 2025-02-26 10:12:46,132 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:12:55,193 basehttp "GET /admin/tasks/task_comments/ HTTP/1.1" 200 25462
+INFO 2025-02-26 10:12:55,270 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:13:02,605 basehttp "GET /admin/tasks/projects/ HTTP/1.1" 200 26582
+INFO 2025-02-26 10:13:02,682 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:14:00,584 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\admin.py changed, reloading.
+INFO 2025-02-26 10:14:01,500 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 10:14:02,343 basehttp "GET /admin/tasks/projects/ HTTP/1.1" 200 27460
+INFO 2025-02-26 10:14:02,521 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:14:15,897 basehttp "GET /admin/event_calendar/event/ HTTP/1.1" 200 23015
+INFO 2025-02-26 10:14:15,983 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:15:54,538 autoreload C:\Users\User\Desktop\docs\taskmanager\event_calendar\admin.py changed, reloading.
+INFO 2025-02-26 10:15:55,197 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 10:15:56,053 basehttp "GET /admin/event_calendar/event/ HTTP/1.1" 200 23015
+INFO 2025-02-26 10:15:56,138 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:21:04,726 basehttp "GET /admin/event_calendar/event/ HTTP/1.1" 200 23015
+INFO 2025-02-26 10:21:04,818 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:21:20,323 basehttp "GET /admin/event_calendar/event/ HTTP/1.1" 200 23015
+INFO 2025-02-26 10:21:20,430 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:21:20,699 autoreload C:\Users\User\Desktop\docs\taskmanager\event_calendar\admin.py changed, reloading.
+INFO 2025-02-26 10:21:21,629 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 10:21:22,476 basehttp "GET /admin/event_calendar/event/ HTTP/1.1" 200 25214
+INFO 2025-02-26 10:21:22,545 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:21:28,053 basehttp "GET /admin/event_calendar/event/?event_type__exact=%D0%9C%D0%95%D0%A0%D0%9E%D0%9F%D0%A0%D0%98%D0%AF%D0%A2%D0%98%D0%95 HTTP/1.1" 200 25475
+INFO 2025-02-26 10:21:28,125 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:21:40,507 autoreload C:\Users\User\Desktop\docs\taskmanager\event_calendar\admin.py changed, reloading.
+INFO 2025-02-26 10:21:41,486 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 10:21:42,401 basehttp "GET /admin/event_calendar/event/?event_type__exact=%D0%9C%D0%95%D0%A0%D0%9E%D0%9F%D0%A0%D0%98%D0%AF%D0%A2%D0%98%D0%95 HTTP/1.1" 200 26928
+INFO 2025-02-26 10:21:42,472 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:24:06,008 basehttp "GET /admin/news/news/ HTTP/1.1" 200 26819
+INFO 2025-02-26 10:24:06,099 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:24:42,383 basehttp "GET /admin/news/news/ HTTP/1.1" 200 26819
+INFO 2025-02-26 10:24:42,445 autoreload C:\Users\User\Desktop\docs\taskmanager\news\admin.py changed, reloading.
+INFO 2025-02-26 10:24:43,134 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 10:24:43,958 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:24:45,043 basehttp "GET /admin/news/news/ HTTP/1.1" 200 30427
+INFO 2025-02-26 10:24:45,233 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:25:00,626 basehttp "GET /admin/notifications/notification/ HTTP/1.1" 200 22419
+INFO 2025-02-26 10:25:00,710 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:25:36,248 autoreload C:\Users\User\Desktop\docs\taskmanager\notifications\admin.py changed, reloading.
+INFO 2025-02-26 10:25:36,988 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 10:25:57,965 autoreload C:\Users\User\Desktop\docs\taskmanager\notifications\admin.py changed, reloading.
+INFO 2025-02-26 10:25:58,576 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 10:26:06,473 autoreload C:\Users\User\Desktop\docs\taskmanager\notifications\admin.py changed, reloading.
+INFO 2025-02-26 10:26:07,125 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 10:26:08,167 basehttp "GET /admin/notifications/notification/ HTTP/1.1" 200 22419
+INFO 2025-02-26 10:26:08,275 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:26:29,136 autoreload C:\Users\User\Desktop\docs\taskmanager\notifications\admin.py changed, reloading.
+INFO 2025-02-26 10:26:29,885 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 10:26:30,715 basehttp "GET /admin/notifications/notification/ HTTP/1.1" 200 22419
+INFO 2025-02-26 10:26:30,896 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:26:33,388 basehttp "GET /admin/notifications/notification/ HTTP/1.1" 200 22419
+INFO 2025-02-26 10:26:33,457 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:26:35,363 basehttp "GET /admin/notifications/notification/1/change/ HTTP/1.1" 200 26327
+INFO 2025-02-26 10:26:35,536 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:26:42,817 basehttp "GET /admin/notifications/notification/ HTTP/1.1" 200 22419
+INFO 2025-02-26 10:26:42,988 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:26:48,438 basehttp "GET /admin/notifications/notification/ HTTP/1.1" 200 22419
+INFO 2025-02-26 10:26:48,607 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:26:48,768 autoreload C:\Users\User\Desktop\docs\taskmanager\notifications\admin.py changed, reloading.
+INFO 2025-02-26 10:26:49,371 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 10:26:50,107 basehttp "GET /admin/notifications/notification/ HTTP/1.1" 200 22874
+INFO 2025-02-26 10:26:50,178 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:27:20,913 autoreload C:\Users\User\Desktop\docs\taskmanager\notifications\admin.py changed, reloading.
+INFO 2025-02-26 10:27:21,604 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 10:27:30,826 autoreload C:\Users\User\Desktop\docs\taskmanager\notifications\admin.py changed, reloading.
+INFO 2025-02-26 10:27:31,656 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 10:27:37,751 autoreload C:\Users\User\Desktop\docs\taskmanager\notifications\admin.py changed, reloading.
+INFO 2025-02-26 10:27:38,641 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 10:27:39,633 basehttp "GET /admin/notifications/notification/ HTTP/1.1" 200 24210
+INFO 2025-02-26 10:27:39,765 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:27:44,288 basehttp "GET /admin/notifications/notification/?notification_type__exact=%D0%94%D0%9E%D0%A1%D0%A2%D0%98%D0%96%D0%95%D0%9D%D0%98%D0%95 HTTP/1.1" 200 22533
+INFO 2025-02-26 10:27:44,360 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:27:51,433 basehttp "GET /admin/chat/chat/ HTTP/1.1" 200 22770
+INFO 2025-02-26 10:27:51,506 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:27:55,472 basehttp "GET /admin/chat/messages/ HTTP/1.1" 200 25380
+INFO 2025-02-26 10:27:55,551 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:27:58,743 basehttp "GET /admin/event_calendar/event/ HTTP/1.1" 200 26638
+INFO 2025-02-26 10:27:58,817 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-26 10:28:28,374 autoreload C:\Users\User\Desktop\docs\taskmanager\event_calendar\admin.py changed, reloading.
+INFO 2025-02-26 10:28:28,997 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 10:28:29,945 basehttp "GET /admin/event_calendar/event/ HTTP/1.1" 200 28642
+INFO 2025-02-26 10:28:30,016 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342

@@ -12,6 +12,7 @@ class GetNewsInfoMixin:
 
 class NewsAdmin(GetNewsInfoMixin, admin.ModelAdmin):
     list_display = ['title','created_by','created_at','Comments']
+    list_filter = ['created_at','created_by']
 
 class NewsCommentsAdmin(GetNewsInfoMixin, admin.ModelAdmin):
     list_display = ['news','user','created_at','comment_text']

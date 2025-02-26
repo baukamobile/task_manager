@@ -18,7 +18,7 @@ class GetCommentMixin:
 
 class TaskAdmin(admin.ModelAdmin,GetCommentMixin):
     list_display = ['task_name','assigned','projects','start_date','end_date','get_comments']
-
+    list_filter = ['task_name','status','priority']
 
 admin.site.register(Task,TaskAdmin)
 
@@ -35,7 +35,7 @@ admin.site.register(Task_comments,TaskCommentAdmin)
 
 class ProjectAdmin(GetCommentMixin,admin.ModelAdmin):
     list_display = ['project_name','get_tasks_name','department','start_date','assigned','end_date']
-
+    list_filter = ['department']
 
 
 admin.site.register(Projects,ProjectAdmin)
