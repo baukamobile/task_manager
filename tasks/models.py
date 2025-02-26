@@ -4,27 +4,15 @@ from users.models import User,Department
 from simple_history.models import HistoricalRecords
 # logger = logging.getLogger(__name__)
 
-# Create your models here.
-class Task(models.Model):
-    ACTIVE= 'АКТИВЕН'
-    IN_PROCESS= 'В ПРОЦЕССЕ'
-    COMPLETED= 'ЗАКОНЧЕН'
-    NON_ACTIVE='НЕ АКТИВЕН'
-    TO_DELETE = 'К УДАЛЕНИЮ'
-    STATUS_CHOICES = [(ACTIVE, 'АКТИВЕН'),(IN_PROCESS, 'В ПРОЦЕССЕ'),(COMPLETED, 'ЗАКОНЧЕН'),(NON_ACTIVE,'НЕ АКТИВЕН'),(TO_DELETE,'К УДАЛЕНИЮ')]
-    TECHNICAL_DEBT = 'ТЕХНИЧЕСКИЙ ДОЛГ'
-    LOW='НИЗКИЙ'
-    MEDIUM = 'СРЕДНИЙ'
-    HIGH='ВЫСОКИЙ'
-    CRITICAL='КРИТИЧЕСКИЙ'
 
-    PRIORITY_CHOISES = [
-        (LOW,'НИЗКИЙ'),
-        (MEDIUM, 'СРЕДНИЙ'),
-        (HIGH,'ВЫСОКИЙ'),
-        (CRITICAL,'КРИТИЧЕСКИЙ'),
-        (TECHNICAL_DEBT,'ТЕХНИЧЕСКИЙ ДОЛГ')
-    ]
+
+# ACTIVE= 'АКТИВЕН' IN_PROCESS= 'В ПРОЦЕССЕ' COMPLETED= 'ЗАКОНЧЕН'NON_ACTIVE='НЕ АКТИВЕН'TO_DELETE = 'К УДАЛЕНИЮ'STATUS_CHOICES = [(ACTIVE, 'АКТИВЕН'),(IN_PROCESS, 'В ПРОЦЕССЕ'),(COMPLETED, 'ЗАКОНЧЕН'),(NON_ACTIVE,'НЕ АКТИВЕН'),(TO_DELETE,'К УДАЛЕНИЮ')]
+# TECHNICAL_DEBT = 'ТЕХНИЧЕСКИЙ ДОЛГ'LOW='НИЗКИЙ'MEDIUM = 'СРЕДНИЙ'HIGH='ВЫСОКИЙ'CRITICAL='КРИТИЧЕСКИЙ'
+
+# PRIORITY_CHOISES = [(LOW,'НИЗКИЙ'),(MEDIUM, 'СРЕДНИЙ'),(HIGH,'ВЫСОКИЙ'),(CRITICAL,'КРИТИЧЕСКИЙ'),(TECHNICAL_DEBT,'ТЕХНИЧЕСКИЙ ДОЛГ')]
+
+
+class Task(models.Model):
     task_name = models.CharField(max_length=100)
     description = models.TextField(null=True,blank=True)
     tags = models.TextField(blank=True, null=True)
@@ -34,8 +22,8 @@ class Task(models.Model):
     assigned = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,db_index=True)
     start_date = models.DateTimeField(auto_now_add=True)
     end_date = models.DateTimeField()
-    status = models.CharField(choices=STATUS_CHOICES, max_length=100, default=ACTIVE,db_index=True)
-    priority = models.CharField(choices=PRIORITY_CHOISES, max_length=100)
+    status = models.ForeignKey('Status',on_delete=models.SET_NULL,null=True,blank=True,related_name='tasks')
+    priority = models.ForeignKey('Priority', on_delete=models.SET_NULL, null=True, blank=True,related_name='tasks')
     agreed_with_managers = models.BooleanField(default=False)
     department = models.ForeignKey('users.Department', on_delete=models.CASCADE)
     history = HistoricalRecords()
@@ -47,6 +35,22 @@ class Task(models.Model):
         verbose_name_plural='Task'
         ordering = ['-start_date']
 
+class Status(models.Model):
+    status_name = models.CharField(max_length=100)
+    user = models.ForeignKey(User,on_delete=models.CASCADE,related_name='statususers')
+    def __str__(self):
+        return self.status_name
+    class Meta:
+        verbose_name_plural='Status'
+
+
+class Priority(models.Model):
+    priority_name = models.CharField(max_length=100)
+    user = models.ForeignKey(User,on_delete=models.CASCADE,related_name='priorityusers')
+    def __str__(self):
+        return self.priority_name
+    class Meta:
+        verbose_name_plural='Priority'
 
 class Projects(models.Model): #название проекта
     project_name = models.CharField(max_length=100,db_index=True)

@@ -67,10 +67,9 @@ INSTALLED_APPS = [
     # 'celery',
     "drf_spectacular",
     "drf_spectacular_sidecar",
-
-
-
+    'corsheaders',
 ]
+CORS_ORIGIN_ALLOW_ALL = True
 
 JAZZMIN_UI_TWEAKS = {
     "theme": "slate",
@@ -102,6 +101,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'simple_history.middleware.HistoryRequestMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'taskmanager.urls'

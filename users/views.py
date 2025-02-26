@@ -11,8 +11,11 @@ import jwt
 from django.contrib.auth import authenticate
 from django.conf import settings
 import logging
+import json
+
 
 logger = logging.getLogger('taskmanager')
+
 
 def basepage(request):
     return render(request,'base.html')
