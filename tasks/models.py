@@ -36,6 +36,7 @@ class Task(models.Model):
     end_date = models.DateTimeField()
     status = models.CharField(choices=STATUS_CHOICES, max_length=100, default=ACTIVE,db_index=True)
     priority = models.CharField(choices=PRIORITY_CHOISES, max_length=100)
+    agreed_with_managers = models.BooleanField(default=False)
     department = models.ForeignKey('users.Department', on_delete=models.CASCADE)
     history = HistoricalRecords()
 
