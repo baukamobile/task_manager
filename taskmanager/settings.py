@@ -74,8 +74,16 @@ INSTALLED_APPS = [
 
 JAZZMIN_UI_TWEAKS = {
     "theme": "slate",
+    # "theme": "cerulean",
+
+
     # "dark_mode_theme": "darkly",
 }
+'''
+cerulean,cosmo ,flatly ,journal ,
+litera ,lumen ,lux ,materia ,minty ,
+pulse ,sandstone ,simplex ,sketchy ,spacelab ,united ,yeti preview
+'''
     # 'light-violet'
 # JET_INDEX_DASHBOARD = 'jet.dashboard.dashboard.DefaultIndexDashboard'
 JET_MODULE_GOOGLE_ANALYTICS_CLIENT_SECRETS_FILE = os.path.join(PROJECT_DIR, 'client_secrets.json')

@@ -9086,3 +9086,13 @@ WARNING 2025-02-25 14:07:52,316 log Not Found: /
 WARNING 2025-02-25 14:07:52,317 basehttp "GET / HTTP/1.1" 404 3064
 WARNING 2025-02-25 14:07:52,652 log Not Found: /favicon.ico
 WARNING 2025-02-25 14:07:52,652 basehttp "GET /favicon.ico HTTP/1.1" 404 3115
+WARNING 2025-02-25 16:16:05,872 log Not Found: /
+WARNING 2025-02-25 16:16:05,873 basehttp "GET / HTTP/1.1" 404 3064
+WARNING 2025-02-25 16:16:06,309 log Not Found: /favicon.ico
+WARNING 2025-02-25 16:16:06,309 basehttp "GET /favicon.ico HTTP/1.1" 404 3115
+WARNING 2025-02-25 16:35:24,300 log Not Found: /admin/news/tag/
+WARNING 2025-02-25 16:35:24,301 basehttp "GET /admin/news/tag/ HTTP/1.1" 404 9394
+WARNING 2025-02-25 16:35:24,594 log Not Found: /favicon.ico
+WARNING 2025-02-25 16:35:24,595 basehttp "GET /favicon.ico HTTP/1.1" 404 9382
+WARNING 2025-02-25 16:35:27,445 log Not Found: /admin/
+WARNING 2025-02-25 16:35:27,445 basehttp "GET /admin/ HTTP/1.1" 404 9367
