@@ -9265,3 +9265,116 @@ Traceback (most recent call last):
             ^^^^^^^^^^
 AttributeError: module 'jwt' has no attribute 'encode'
 ERROR 2025-02-26 09:15:58,184 basehttp "POST /users/api/login/ HTTP/1.1" 500 96937
+WARNING 2025-02-26 09:16:43,804 log Method Not Allowed: /users/api/login/
+WARNING 2025-02-26 09:16:43,804 basehttp "GET /users/api/login/ HTTP/1.1" 405 5598
+ERROR 2025-02-26 09:16:49,406 log Internal Server Error: /users/api/login/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 79, in post
+    token = jwt.encode(payload, SECRET, algorithm='HS256')
+            ^^^^^^^^^^
+AttributeError: module 'jwt' has no attribute 'encode'
+ERROR 2025-02-26 09:16:49,409 basehttp "POST /users/api/login/ HTTP/1.1" 500 96937
+WARNING 2025-02-26 09:17:12,106 log Method Not Allowed: /users/api/login/
+WARNING 2025-02-26 09:17:12,106 basehttp "GET /users/api/login/ HTTP/1.1" 405 5598
+ERROR 2025-02-26 09:17:18,028 log Internal Server Error: /users/api/login/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 79, in post
+    token = jwt.encode(payload, SECRET, algorithm='HS256')
+            ^^^^^^^^^^
+AttributeError: module 'jwt' has no attribute 'encode'
+ERROR 2025-02-26 09:17:18,030 basehttp "POST /users/api/login/ HTTP/1.1" 500 96935
+WARNING 2025-02-26 09:21:45,145 log Not Found: /
+WARNING 2025-02-26 09:21:45,145 basehttp "GET / HTTP/1.1" 404 3064
+WARNING 2025-02-26 09:22:01,870 log Not Found: /users/
+WARNING 2025-02-26 09:22:01,871 basehttp "GET /users/ HTTP/1.1" 404 4195
+WARNING 2025-02-26 09:22:20,113 log Method Not Allowed: /users/api/login/
+WARNING 2025-02-26 09:22:20,113 basehttp "GET /users/api/login/ HTTP/1.1" 405 5598
+WARNING 2025-02-26 09:28:09,763 log Method Not Allowed: /users/api/login/
+WARNING 2025-02-26 09:28:09,763 basehttp "GET /users/api/login/ HTTP/1.1" 405 5598
+WARNING 2025-02-26 09:28:44,718 log Bad Request: /users/api/login/
+WARNING 2025-02-26 09:28:44,718 basehttp "POST /users/api/login/ HTTP/1.1" 400 5616
+WARNING 2025-02-26 09:28:52,333 log Forbidden: /users/api/login/
+WARNING 2025-02-26 09:28:52,334 basehttp "POST /users/api/login/ HTTP/1.1" 403 3891
+WARNING 2025-02-26 09:30:44,686 log Method Not Allowed: /users/api/login/
+WARNING 2025-02-26 09:30:44,686 basehttp "GET /users/api/login/ HTTP/1.1" 405 5598
+WARNING 2025-02-26 09:31:02,667 log Forbidden: /users/api/login/
+WARNING 2025-02-26 09:31:02,668 basehttp "POST /users/api/login/ HTTP/1.1" 403 3891
+WARNING 2025-02-26 09:31:11,871 log Method Not Allowed: /users/api/login/
+WARNING 2025-02-26 09:31:11,872 basehttp "GET /users/api/login/ HTTP/1.1" 405 5598
+WARNING 2025-02-26 09:31:35,167 log Forbidden: /users/api/login/
+WARNING 2025-02-26 09:31:35,168 basehttp "POST /users/api/login/ HTTP/1.1" 403 3891
+WARNING 2025-02-26 09:31:47,690 log Method Not Allowed: /users/api/login/
+WARNING 2025-02-26 09:31:47,690 basehttp "GET /users/api/login/ HTTP/1.1" 405 5598
+WARNING 2025-02-26 09:33:01,221 log Bad Request: /users/api/register/
+WARNING 2025-02-26 09:33:01,222 basehttp "POST /users/api/register/ HTTP/1.1" 400 125
+WARNING 2025-02-26 09:33:32,491 log Unauthorized: /users/api/logout/
+WARNING 2025-02-26 09:33:32,492 basehttp "POST /users/api/logout/ HTTP/1.1" 401 27
+WARNING 2025-02-26 09:36:53,336 log Unauthorized: /users/api/logout/
+WARNING 2025-02-26 09:36:53,336 basehttp "POST /users/api/logout/ HTTP/1.1" 401 27
+WARNING 2025-02-26 09:39:53,722 log Unauthorized: /users/api/logout/
+WARNING 2025-02-26 09:39:53,722 basehttp "POST /users/api/logout/ HTTP/1.1" 401 27
+WARNING 2025-02-26 09:47:12,204 log Method Not Allowed: /users/api/login/
+WARNING 2025-02-26 09:47:12,204 basehttp "GET /users/api/login/ HTTP/1.1" 405 5598
+ERROR 2025-02-26 09:49:41,187 log Internal Server Error: /users/api/login/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 71, in post
+    logger.warning(f'Неудачный вход {user.email} неверные данные')
+                                     ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'email'
+ERROR 2025-02-26 09:49:41,190 basehttp "POST /users/api/login/ HTTP/1.1" 500 97006
+WARNING 2025-02-26 09:49:51,752 log Method Not Allowed: /users/api/login/
+WARNING 2025-02-26 09:49:51,752 basehttp "GET /users/api/login/ HTTP/1.1" 405 5598

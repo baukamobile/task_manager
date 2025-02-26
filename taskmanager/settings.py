@@ -199,27 +199,27 @@ LOGGING = {
             'formatter': 'verbose',
         },
         'debug_file': {
-            'level': 'DEBUG',
+            'level': 'INFO',
             'class': 'logging.FileHandler',
             'filename': BASE_DIR / 'logs' / 'task_manager_debug.log',  # Лог для отладки
             'formatter': 'verbose',
         },
 'console':{
-            'level': 'DEBUG',
+            'level': 'INFO',
             'class':'logging.StreamHandler',
             'formatter': 'verbose',
         },
     },
     'loggers': {
         'django': {
-            'handlers': ['file'],
-            'level': 'WARNING',
+            'handlers': ['file','debug_file','console'],
+            'level': 'INFO',
             'propagate': True,
         },
 
         'taskmanager': {
             'handlers': ['debug_file'],  # debug_file
-            'level': 'DEBUG',
+            'level': 'INFO',
             'propagate': False,
         },
     },

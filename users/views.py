@@ -12,7 +12,7 @@ from django.contrib.auth import authenticate
 from django.conf import settings
 import logging
 
-logger = logging.getLogger('authorization')
+logger = logging.getLogger('taskmanager')
 
 def basepage(request):
     return render(request,'base.html')
@@ -48,7 +48,7 @@ class RegisterView(APIView):
             is_active=serializer.validated_data.get('is_active', True),
             is_superuser=serializer.validated_data.get('is_superuser', False),
         )
-        logger.info(f'Ползователь {user.email} пароль {user.password} прошел регистрацию успешно')
+        logger.info(f'Ползователь {user.email} прошел регистрацию успешно')
 
         return Response(UserSerializer(user).data)
 
@@ -57,16 +57,19 @@ class RegisterView(APIView):
 class LoginView(APIView):
     def post(self, request):
         logger.info("Ползователь пытается войти")
+        # print('Ползователь пытается войти')
         email = request.data.get('email')
         password = request.data.get('password')
 
         if not email or not password:
             logger.warning("Попытка входа без почты и пароля")
+            # print("Попытка входа без почты и пароля")
             raise AuthenticationFailed('Email and password are required')
 
         user = authenticate(username=email, password=password)
         if user is None:
             logger.warning(f'Неудачный вход {user.email} неверные данные')
+            # print(f'Неудачный вход {user.email} неверные данные')
             raise AuthenticationFailed('Invalid credentials')
 
         payload = {
@@ -77,13 +80,15 @@ class LoginView(APIView):
 
         SECRET = getattr(settings, 'JWT_SECRET_KEY', settings.SECRET_KEY)
         token = jwt.encode(payload, SECRET, algorithm='HS256')
-        logger.info(f'Ползователь с {user.email} паролем {user.password} вошел на сайт {user.id}')
-
+        logger.info(f'Ползователь с {user.email} вошел на сайт {user.id}')
+        # print(f'Ползователь с {user.email} паролем {user.password} вошел на сайт {user.id}')
         response = Response()
         response.set_cookie(key='jwt', value=token, httponly=True)
         response.data = {'jwt': token}
-
+        logger.info(f'Ползователь с {user.email} вошел на сайт {user.id}')
+        print(f'Ползователь с {user.email} вошел на сайт {user.id}')
         return response
+
 
 
 class LogoutView(APIView):

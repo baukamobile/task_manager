@@ -1,0 +1,69 @@
+INFO 2025-02-26 09:38:44,359 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 09:39:35,420 basehttp "POST /users/api/login/ HTTP/1.1" 200 5682
+WARNING 2025-02-26 09:39:53,722 log Unauthorized: /users/api/logout/
+WARNING 2025-02-26 09:39:53,722 basehttp "POST /users/api/logout/ HTTP/1.1" 401 27
+INFO 2025-02-26 09:40:05,904 basehttp "POST /users/api/login/ HTTP/1.1" 200 149
+INFO 2025-02-26 09:45:28,036 autoreload C:\Users\User\Desktop\docs\taskmanager\users\views.py changed, reloading.
+INFO 2025-02-26 09:45:28,636 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 09:45:36,399 views Ползователь пытается войти
+INFO 2025-02-26 09:45:37,037 views Ползователь с test21@gmail.com паролем pbkdf2_sha256$870000$fpkE532rQqi8NV6QDwUFIb$ZPFFqngBrY7jV9gbPi2MYRXLOJBrMO1ctt1YaRDQMKw= вошел на сайт 13
+INFO 2025-02-26 09:45:37,037 views Ползователь с test21@gmail.com паролем pbkdf2_sha256$870000$fpkE532rQqi8NV6QDwUFIb$ZPFFqngBrY7jV9gbPi2MYRXLOJBrMO1ctt1YaRDQMKw= вошел на сайт 13
+INFO 2025-02-26 09:45:37,065 basehttp "POST /users/api/login/ HTTP/1.1" 200 5682
+INFO 2025-02-26 09:47:01,988 autoreload C:\Users\User\Desktop\docs\taskmanager\users\views.py changed, reloading.
+INFO 2025-02-26 09:47:02,651 autoreload Watching for file changes with StatReloader
+WARNING 2025-02-26 09:47:12,204 log Method Not Allowed: /users/api/login/
+WARNING 2025-02-26 09:47:12,204 basehttp "GET /users/api/login/ HTTP/1.1" 405 5598
+INFO 2025-02-26 09:47:31,083 views Ползователь пытается войти
+INFO 2025-02-26 09:47:31,739 views Ползователь с test21@gmail.com вошел на сайт 13
+INFO 2025-02-26 09:47:31,739 views Ползователь с test21@gmail.com вошел на сайт 13
+INFO 2025-02-26 09:47:31,742 basehttp "POST /users/api/login/ HTTP/1.1" 200 5682
+INFO 2025-02-26 09:49:40,507 views Ползователь пытается войти
+ERROR 2025-02-26 09:49:41,187 log Internal Server Error: /users/api/login/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 71, in post
+    logger.warning(f'Неудачный вход {user.email} неверные данные')
+                                     ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'email'
+ERROR 2025-02-26 09:49:41,190 basehttp "POST /users/api/login/ HTTP/1.1" 500 97006
+WARNING 2025-02-26 09:49:51,752 log Method Not Allowed: /users/api/login/
+WARNING 2025-02-26 09:49:51,752 basehttp "GET /users/api/login/ HTTP/1.1" 405 5598
+INFO 2025-02-26 09:49:57,785 views Ползователь пытается войти
+INFO 2025-02-26 09:49:58,434 views Ползователь с test21@gmail.com вошел на сайт 13
+INFO 2025-02-26 09:49:58,434 views Ползователь с test21@gmail.com вошел на сайт 13
+INFO 2025-02-26 09:49:58,437 basehttp "POST /users/api/login/ HTTP/1.1" 200 5682
+INFO 2025-02-26 09:50:38,051 autoreload C:\Users\User\Desktop\docs\taskmanager\users\views.py changed, reloading.
+INFO 2025-02-26 09:50:38,846 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 09:50:47,792 views Ползователь пытается войти
+INFO 2025-02-26 09:50:48,449 views Ползователь с test21@gmail.com вошел на сайт 13
+INFO 2025-02-26 09:50:48,449 views Ползователь с test21@gmail.com вошел на сайт 13
+INFO 2025-02-26 09:50:48,474 basehttp "POST /users/api/login/ HTTP/1.1" 200 5682
+INFO 2025-02-26 09:51:03,435 autoreload C:\Users\User\Desktop\docs\taskmanager\users\views.py changed, reloading.
+INFO 2025-02-26 09:51:04,094 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 09:51:10,116 views Ползователь пытается войти
+INFO 2025-02-26 09:51:10,782 views Ползователь с test21@gmail.com вошел на сайт 13
+INFO 2025-02-26 09:51:10,782 views Ползователь с test21@gmail.com вошел на сайт 13
+INFO 2025-02-26 09:51:10,809 basehttp "POST /users/api/login/ HTTP/1.1" 200 5682
+INFO 2025-02-26 09:51:20,087 autoreload C:\Users\User\Desktop\docs\taskmanager\users\views.py changed, reloading.
+INFO 2025-02-26 09:51:20,761 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 09:51:25,277 views Ползователь пытается войти
+INFO 2025-02-26 09:51:25,927 views Ползователь с test21@gmail.com вошел на сайт 13
+INFO 2025-02-26 09:51:25,927 views Ползователь с test21@gmail.com вошел на сайт 13
+INFO 2025-02-26 09:51:25,959 basehttp "POST /users/api/login/ HTTP/1.1" 200 5682
