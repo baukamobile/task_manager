@@ -9096,3 +9096,172 @@ WARNING 2025-02-25 16:35:24,594 log Not Found: /favicon.ico
 WARNING 2025-02-25 16:35:24,595 basehttp "GET /favicon.ico HTTP/1.1" 404 9382
 WARNING 2025-02-25 16:35:27,445 log Not Found: /admin/
 WARNING 2025-02-25 16:35:27,445 basehttp "GET /admin/ HTTP/1.1" 404 9367
+WARNING 2025-02-26 09:02:38,740 log Not Found: /users/api/users
+WARNING 2025-02-26 09:02:38,741 basehttp "GET /users/api/users HTTP/1.1" 404 9394
+WARNING 2025-02-26 09:02:39,019 log Not Found: /favicon.ico
+WARNING 2025-02-26 09:02:39,019 basehttp "GET /favicon.ico HTTP/1.1" 404 9382
+WARNING 2025-02-26 09:02:41,629 log Not Found: /users/api/users/
+WARNING 2025-02-26 09:02:41,630 basehttp "GET /users/api/users/ HTTP/1.1" 404 9397
+WARNING 2025-02-26 09:03:17,902 log Not Found: /users/api/users/
+WARNING 2025-02-26 09:03:17,902 basehttp "GET /users/api/users/ HTTP/1.1" 404 9397
+WARNING 2025-02-26 09:03:38,288 log Not Found: /roles/
+WARNING 2025-02-26 09:03:38,288 basehttp "GET /roles/ HTTP/1.1" 404 9367
+WARNING 2025-02-26 09:03:47,806 log Not Found: /users/api/
+WARNING 2025-02-26 09:03:47,806 basehttp "GET /users/api/ HTTP/1.1" 404 9379
+WARNING 2025-02-26 09:03:53,682 log Not Found: /users/users
+WARNING 2025-02-26 09:03:53,682 basehttp "GET /users/users HTTP/1.1" 404 9382
+WARNING 2025-02-26 09:03:56,683 log Not Found: /users/users/
+WARNING 2025-02-26 09:03:56,683 basehttp "GET /users/users/ HTTP/1.1" 404 9385
+WARNING 2025-02-26 09:04:07,343 log Not Found: /users/users/
+WARNING 2025-02-26 09:04:07,343 basehttp "GET /users/users/ HTTP/1.1" 404 4213
+WARNING 2025-02-26 09:04:45,564 log Not Found: /
+WARNING 2025-02-26 09:04:45,564 basehttp "GET / HTTP/1.1" 404 3064
+WARNING 2025-02-26 09:04:54,821 log Forbidden: /users/api/users/
+WARNING 2025-02-26 09:04:54,821 basehttp "GET /users/api/users/ HTTP/1.1" 403 4949
+WARNING 2025-02-26 09:05:19,633 log Method Not Allowed: /users/api/register/
+WARNING 2025-02-26 09:05:19,633 basehttp "GET /users/api/register/ HTTP/1.1" 405 5625
+WARNING 2025-02-26 09:08:53,565 log Bad Request: /users/api/register/
+WARNING 2025-02-26 09:08:53,565 basehttp "POST /users/api/register/ HTTP/1.1" 400 5626
+WARNING 2025-02-26 09:09:13,854 log Bad Request: /users/api/register/
+WARNING 2025-02-26 09:09:13,855 basehttp "POST /users/api/register/ HTTP/1.1" 400 5626
+WARNING 2025-02-26 09:10:02,032 log Bad Request: /users/api/register/
+WARNING 2025-02-26 09:10:02,032 basehttp "POST /users/api/register/ HTTP/1.1" 400 5626
+WARNING 2025-02-26 09:10:43,774 log Bad Request: /users/api/register/
+WARNING 2025-02-26 09:10:43,775 basehttp "POST /users/api/register/ HTTP/1.1" 400 50
+WARNING 2025-02-26 09:11:54,178 log Bad Request: /users/api/register/
+WARNING 2025-02-26 09:11:54,178 basehttp "POST /users/api/register/ HTTP/1.1" 400 131
+ERROR 2025-02-26 09:12:06,843 log Internal Server Error: /users/api/login/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 79, in post
+    token = jwt.encode(payload, SECRET, algorithm='HS256')
+            ^^^^^^^^^^
+AttributeError: module 'jwt' has no attribute 'encode'
+ERROR 2025-02-26 09:12:06,847 basehttp "POST /users/api/login/ HTTP/1.1" 500 94488
+WARNING 2025-02-26 09:12:19,981 log Unauthorized: /users/api/logout/
+WARNING 2025-02-26 09:12:19,981 basehttp "POST /users/api/logout/ HTTP/1.1" 401 27
+WARNING 2025-02-26 09:12:52,897 log Method Not Allowed: /users/api/login/
+WARNING 2025-02-26 09:12:52,898 basehttp "GET /users/api/login/ HTTP/1.1" 405 40
+ERROR 2025-02-26 09:12:58,003 log Internal Server Error: /users/api/login/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 79, in post
+    token = jwt.encode(payload, SECRET, algorithm='HS256')
+            ^^^^^^^^^^
+AttributeError: module 'jwt' has no attribute 'encode'
+ERROR 2025-02-26 09:12:58,005 basehttp "POST /users/api/login/ HTTP/1.1" 500 94490
+WARNING 2025-02-26 09:13:32,721 log Unauthorized: /users/api/logout/
+WARNING 2025-02-26 09:13:32,721 basehttp "POST /users/api/logout/ HTTP/1.1" 401 27
+ERROR 2025-02-26 09:13:37,265 log Internal Server Error: /users/api/login/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 79, in post
+    token = jwt.encode(payload, SECRET, algorithm='HS256')
+            ^^^^^^^^^^
+AttributeError: module 'jwt' has no attribute 'encode'
+ERROR 2025-02-26 09:13:37,267 basehttp "POST /users/api/login/ HTTP/1.1" 500 94490
+WARNING 2025-02-26 09:13:49,532 log Method Not Allowed: /users/api/login/
+WARNING 2025-02-26 09:13:49,532 basehttp "GET /users/api/login/ HTTP/1.1" 405 5598
+ERROR 2025-02-26 09:13:53,326 log Internal Server Error: /users/api/login/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 79, in post
+    token = jwt.encode(payload, SECRET, algorithm='HS256')
+            ^^^^^^^^^^
+AttributeError: module 'jwt' has no attribute 'encode'
+ERROR 2025-02-26 09:13:53,328 basehttp "POST /users/api/login/ HTTP/1.1" 500 96937
+WARNING 2025-02-26 09:15:50,168 log Method Not Allowed: /users/api/login/
+WARNING 2025-02-26 09:15:50,168 basehttp "GET /users/api/login/ HTTP/1.1" 405 5598
+ERROR 2025-02-26 09:15:58,182 log Internal Server Error: /users/api/login/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\users\views.py", line 79, in post
+    token = jwt.encode(payload, SECRET, algorithm='HS256')
+            ^^^^^^^^^^
+AttributeError: module 'jwt' has no attribute 'encode'
+ERROR 2025-02-26 09:15:58,184 basehttp "POST /users/api/login/ HTTP/1.1" 500 96937

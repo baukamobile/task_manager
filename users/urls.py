@@ -4,7 +4,7 @@ from users.views import index, UserList, RegisterView, LoginView, LogoutView,bas
 urlpatterns = [
     # path('admin/', admin.site.urls),
     # path('',include('users.urls')),
-    path('',index),
+    # path('',index),
     path('base/',basepage),
     path('api/users/', UserList.as_view()),
     path('api/register/', RegisterView.as_view()),
