@@ -3,8 +3,8 @@ from rest_framework.generics import ListAPIView
 from django.shortcuts import render
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
-from tasks.models import Task
-from tasks.serializers import TaskSerializer
+from tasks.models import Task,Status
+from tasks.serializers import TaskSerializer, StatusSerializer
 
 
 class TaskListView(ListAPIView): #если пользователь админ
@@ -17,8 +17,10 @@ def taskpage(request):
     return render(request, 'tasks/task.html',context={'tasks':tasks})
 
 
-
-
+class StatusListView(ListAPIView):
+    # permission_classes = [IsAdminUser]
+    queryset = Status.objects.all()
+    serializer_class = StatusSerializer
 
 
 

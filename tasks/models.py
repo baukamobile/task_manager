@@ -15,7 +15,7 @@ from simple_history.models import HistoricalRecords
 class Task(models.Model):
     task_name = models.CharField(max_length=100)
     description = models.TextField(null=True,blank=True)
-    tags = models.TextField(blank=True, null=True)
+    # tags = models.ForeignKey('Tags',on_delete=models.SET_NULL,null=True,blank=True)
     # files = models.ForeignKey(Files, on_delete=models.SET_NULL, null=True,blank=True)
     documents = models.FileField(null=True, blank=True)
     projects = models.ForeignKey('Projects',default=1,on_delete=models.SET_DEFAULT, blank=True, related_name='tasks')
@@ -34,6 +34,9 @@ class Task(models.Model):
     class Meta:
         verbose_name_plural='Task'
         ordering = ['-start_date']
+
+
+
 
 class Status(models.Model):
     status_name = models.CharField(max_length=100)
