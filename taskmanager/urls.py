@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 import logging
+from django.views.generic import TemplateView
 logger = logging.getLogger('admin')
 # from jet.dashboard.dashboard_modules import google_analytics_views
 urlpatterns = [
@@ -25,7 +26,7 @@ urlpatterns = [
     # path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS
     path('admin/', admin.site.urls),
 
-
+    path('', TemplateView.as_view(template_name="index.html")),
     path('users/',include('users.urls')),
     # path("", include('admin_berry.urls')),
     path('tasks/',include('tasks.urls')),

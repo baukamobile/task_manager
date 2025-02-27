@@ -2521,3 +2521,199 @@ INFO 2025-02-27 17:23:35,754 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
 INFO 2025-02-27 17:23:35,810 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
 INFO 2025-02-27 17:25:00,891 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\admin.py changed, reloading.
 INFO 2025-02-27 17:25:01,955 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 17:30:52,807 basehttp "OPTIONS /tasks/tasks/12/ HTTP/1.1" 200 0
+INFO 2025-02-27 17:30:52,884 basehttp "PATCH /tasks/tasks/12/ HTTP/1.1" 200 367
+INFO 2025-02-27 17:30:54,664 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 200 903
+INFO 2025-02-27 17:36:28,849 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 200 903
+INFO 2025-02-27 17:36:29,909 basehttp "PATCH /tasks/tasks/12/ HTTP/1.1" 200 367
+INFO 2025-02-27 17:36:31,089 basehttp "PATCH /tasks/tasks/12/ HTTP/1.1" 200 367
+INFO 2025-02-27 17:36:32,109 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 200 903
+INFO 2025-02-27 17:36:34,335 basehttp "PATCH /tasks/tasks/12/ HTTP/1.1" 200 367
+INFO 2025-02-27 17:36:34,984 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 200 903
+INFO 2025-02-27 17:36:35,798 basehttp "PATCH /tasks/tasks/12/ HTTP/1.1" 200 367
+INFO 2025-02-27 17:36:37,467 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 200 903
+INFO 2025-02-27 17:36:38,544 basehttp "PATCH /tasks/tasks/12/ HTTP/1.1" 200 367
+INFO 2025-02-27 17:36:54,847 basehttp "GET /admin/ HTTP/1.1" 200 53067
+INFO 2025-02-27 17:36:54,878 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+WARNING 2025-02-27 17:36:57,417 log Not Found: /
+WARNING 2025-02-27 17:36:57,418 basehttp "GET / HTTP/1.1" 404 3064
+INFO 2025-02-27 17:37:49,239 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-27 17:37:49,406 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-27 17:38:49,623 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-27 17:38:49,689 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-27 17:39:20,333 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-27 17:39:20,489 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-27 17:39:28,188 autoreload Watching for file changes with StatReloader
+WARNING 2025-02-27 17:39:31,477 log Not Found: /
+WARNING 2025-02-27 17:39:31,478 basehttp "GET / HTTP/1.1" 404 3064
+INFO 2025-02-27 17:43:10,736 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\urls.py changed, reloading.
+INFO 2025-02-27 17:43:11,506 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 17:43:24,234 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\urls.py changed, reloading.
+INFO 2025-02-27 17:43:24,995 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 17:43:31,129 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\urls.py changed, reloading.
+INFO 2025-02-27 17:43:31,717 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 17:43:46,045 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\urls.py changed, reloading.
+INFO 2025-02-27 17:43:46,839 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 17:44:10,489 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\urls.py changed, reloading.
+INFO 2025-02-27 17:44:11,105 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 17:45:47,993 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\urls.py changed, reloading.
+INFO 2025-02-27 17:45:48,651 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 17:47:52,374 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\urls.py changed, reloading.
+INFO 2025-02-27 17:47:53,113 autoreload Watching for file changes with StatReloader
+ERROR 2025-02-27 17:47:55,637 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: vue/index.html
+ERROR 2025-02-27 17:47:55,640 basehttp "GET / HTTP/1.1" 500 87275
+INFO 2025-02-27 17:48:12,274 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\urls.py changed, reloading.
+INFO 2025-02-27 17:48:12,992 autoreload Watching for file changes with StatReloader
+ERROR 2025-02-27 17:48:14,248 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: vue/dist/index.html
+ERROR 2025-02-27 17:48:14,251 basehttp "GET / HTTP/1.1" 500 87592
+INFO 2025-02-27 17:56:30,909 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\urls.py changed, reloading.
+INFO 2025-02-27 17:56:31,853 autoreload Watching for file changes with StatReloader
+ERROR 2025-02-27 17:56:35,290 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR 2025-02-27 17:56:35,293 basehttp "GET / HTTP/1.1" 500 87268
+INFO 2025-02-27 17:58:33,575 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-02-27 17:58:34,374 autoreload Watching for file changes with StatReloader
+ERROR 2025-02-27 17:58:35,743 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR 2025-02-27 17:58:35,746 basehttp "GET / HTTP/1.1" 500 87319
+ERROR 2025-02-27 17:58:37,439 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR 2025-02-27 17:58:37,440 basehttp "GET / HTTP/1.1" 500 87319
+INFO 2025-02-27 17:59:07,608 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-27 17:59:07,668 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-27 18:00:09,014 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-02-27 18:00:09,908 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 18:00:10,936 basehttp "GET / HTTP/1.1" 200 1226
+WARNING 2025-02-27 18:00:10,961 log Not Found: /vue-task-manager/assets/index-CegevDD2.css
+WARNING 2025-02-27 18:00:10,964 log Not Found: /vue-task-manager/assets/index-Dpz3KcAm.js
+WARNING 2025-02-27 18:00:10,965 basehttp "GET /vue-task-manager/assets/index-CegevDD2.css HTTP/1.1" 404 3351
+WARNING 2025-02-27 18:00:10,966 basehttp "GET /vue-task-manager/assets/index-Dpz3KcAm.js HTTP/1.1" 404 3348
+WARNING 2025-02-27 18:00:11,183 log Not Found: /vue-task-manager/favicon.ico
+WARNING 2025-02-27 18:00:11,184 basehttp "GET /vue-task-manager/favicon.ico HTTP/1.1" 404 3309
+INFO 2025-02-27 18:04:55,336 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-27 18:04:55,497 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+WARNING 2025-02-27 18:06:13,569 log Not Found: /vue-task-manager/assets/index-CegevDD2.css
+WARNING 2025-02-27 18:06:13,570 basehttp "GET /vue-task-manager/assets/index-CegevDD2.css HTTP/1.1" 404 3351
+WARNING 2025-02-27 18:06:17,035 log Not Found: /vue-task-manager/assets/index-CegevDD2.css
+WARNING 2025-02-27 18:06:17,036 basehttp "GET /vue-task-manager/assets/index-CegevDD2.css HTTP/1.1" 404 3351
+INFO 2025-02-27 18:07:33,081 basehttp "GET / HTTP/1.1" 200 1223
+WARNING 2025-02-27 18:07:33,109 basehttp "GET /static/vue/dist/assets/index-CaVEL3aJ.js HTTP/1.1" 404 1913
+WARNING 2025-02-27 18:07:33,109 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 404 1916
+WARNING 2025-02-27 18:07:33,345 basehttp "GET /static/vue/dist/favicon.ico HTTP/1.1" 404 1874
+INFO 2025-02-27 18:07:40,561 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 18:07:42,988 basehttp "GET / HTTP/1.1" 200 1223
+WARNING 2025-02-27 18:07:43,012 basehttp "GET /static/vue/dist/assets/index-CaVEL3aJ.js HTTP/1.1" 404 1913
+WARNING 2025-02-27 18:07:43,018 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 404 1916
+WARNING 2025-02-27 18:07:45,688 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 404 1916
+INFO 2025-02-27 18:10:19,594 basehttp "GET / HTTP/1.1" 200 1223
+WARNING 2025-02-27 18:10:19,724 basehttp "GET /static/vue/dist/assets/index-CaVEL3aJ.js HTTP/1.1" 404 1913
+WARNING 2025-02-27 18:10:19,775 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 404 1916
+INFO 2025-02-27 18:10:21,822 basehttp "GET / HTTP/1.1" 200 1223
+WARNING 2025-02-27 18:10:21,896 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 404 1916
+WARNING 2025-02-27 18:10:21,954 basehttp "GET /static/vue/dist/assets/index-CaVEL3aJ.js HTTP/1.1" 404 1913
+INFO 2025-02-27 18:11:57,139 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 18:12:04,661 basehttp "GET / HTTP/1.1" 200 1223
+WARNING 2025-02-27 18:12:04,691 basehttp "GET /static/vue/dist/assets/index-CaVEL3aJ.js HTTP/1.1" 404 1913
+WARNING 2025-02-27 18:12:04,693 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 404 1916
+INFO 2025-02-27 18:15:58,010 basehttp "GET / HTTP/1.1" 200 1223
+WARNING 2025-02-27 18:15:58,035 basehttp "GET /static/vue/dist/assets/index-CaVEL3aJ.js HTTP/1.1" 404 1913
+WARNING 2025-02-27 18:15:58,036 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 404 1916
+INFO 2025-02-27 18:18:20,343 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-27 18:18:20,515 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-27 18:18:29,915 basehttp "PATCH /tasks/tasks/12/ HTTP/1.1" 200 367
+INFO 2025-02-27 18:18:31,027 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 200 903
+INFO 2025-02-27 18:18:38,124 basehttp "GET / HTTP/1.1" 200 1223
+WARNING 2025-02-27 18:18:38,149 basehttp "GET /static/vue/dist/assets/index-CaVEL3aJ.js HTTP/1.1" 404 1913
+WARNING 2025-02-27 18:18:38,154 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 404 1916
+WARNING 2025-02-27 18:18:52,042 basehttp "GET /static/vue/dist HTTP/1.1" 404 1838
+WARNING 2025-02-27 18:19:13,506 basehttp "GET /static/vue/dist/index.html HTTP/1.1" 404 1871
+WARNING 2025-02-27 18:19:18,278 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 404 1916
+INFO 2025-02-27 18:19:22,143 basehttp "GET / HTTP/1.1" 200 1223
+WARNING 2025-02-27 18:19:22,169 basehttp "GET /static/vue/dist/assets/index-CaVEL3aJ.js HTTP/1.1" 404 1913
+WARNING 2025-02-27 18:19:22,173 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 404 1916
+INFO 2025-02-27 18:19:25,445 basehttp "GET /admin/ HTTP/1.1" 200 53067
+INFO 2025-02-27 18:19:25,781 basehttp "GET /static/vendor/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 200 187646
+INFO 2025-02-27 18:19:25,782 basehttp "GET /static/vendor/adminlte/js/adminlte.min.js.map HTTP/1.1" 200 129651
+INFO 2025-02-27 18:19:25,821 basehttp "GET /static/vendor/adminlte/css/adminlte.min.css.map HTTP/1.1" 200 3783134
+WARNING 2025-02-27 18:19:27,826 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 404 1916
+INFO 2025-02-27 18:22:56,640 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-02-27 18:22:57,415 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 18:23:04,874 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-02-27 18:23:45,030 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 18:24:10,884 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-02-27 18:24:11,527 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 18:24:31,090 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-02-27 18:24:31,862 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 18:26:54,021 autoreload Watching for file changes with StatReloader
