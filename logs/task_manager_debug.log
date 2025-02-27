@@ -1129,3 +1129,198 @@ WARNING 2025-02-26 17:40:44,813 log Not Found: /tasks/tasks//
 WARNING 2025-02-26 17:40:44,815 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
 WARNING 2025-02-26 17:41:10,897 log Not Found: /tasks/tasks//
 WARNING 2025-02-26 17:41:10,898 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
+INFO 2025-02-27 09:10:59,742 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 09:11:21,751 autoreload Watching for file changes with StatReloader
+WARNING 2025-02-27 09:11:25,187 log Not Found: /
+WARNING 2025-02-27 09:11:25,191 basehttp "GET / HTTP/1.1" 404 3064
+WARNING 2025-02-27 09:11:25,623 log Not Found: /favicon.ico
+WARNING 2025-02-27 09:11:25,624 basehttp "GET /favicon.ico HTTP/1.1" 404 3115
+INFO 2025-02-27 09:11:31,728 basehttp "GET /admin/ HTTP/1.1" 200 52594
+INFO 2025-02-27 09:11:31,748 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-02-27 09:11:35,557 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 28480
+INFO 2025-02-27 09:11:35,596 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-02-27 09:11:35,597 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-02-27 09:11:35,603 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-02-27 09:11:35,603 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-02-27 09:11:35,608 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-02-27 09:11:35,611 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-02-27 09:11:35,622 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2025-02-27 09:11:35,623 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-02-27 09:11:35,624 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-02-27 09:11:35,758 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 09:11:57,323 autoreload C:\Users\User\Desktop\docs\taskmanager\users\views.py changed, reloading.
+INFO 2025-02-27 09:11:58,239 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 09:12:17,468 basehttp "GET /users/api/users HTTP/1.1" 301 0
+INFO 2025-02-27 09:12:17,690 basehttp "GET /users/api/users/ HTTP/1.1" 200 11950
+INFO 2025-02-27 09:12:40,309 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-02-27 09:12:41,101 autoreload Watching for file changes with StatReloader
+WARNING 2025-02-27 09:12:42,062 log Not Found: /tasks/tasks//
+WARNING 2025-02-27 09:12:42,063 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
+INFO 2025-02-27 09:13:01,012 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8191
+WARNING 2025-02-27 09:13:43,236 log Not Found: /tasks/tasks//
+WARNING 2025-02-27 09:13:43,237 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
+WARNING 2025-02-27 09:15:18,694 log Not Found: /tasks/tasks//
+WARNING 2025-02-27 09:15:18,695 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
+INFO 2025-02-27 09:16:32,751 basehttp "GET /tasks/status/ HTTP/1.1" 200 5714
+WARNING 2025-02-27 09:16:50,649 log Not Found: /tasks/tasks//
+WARNING 2025-02-27 09:16:50,649 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
+WARNING 2025-02-27 09:17:03,172 log Not Found: /tasks/tasks//
+WARNING 2025-02-27 09:17:03,172 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
+WARNING 2025-02-27 09:17:04,615 log Not Found: /tasks/tasks//
+WARNING 2025-02-27 09:17:04,616 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
+WARNING 2025-02-27 09:17:44,446 log Not Found: /tasks/tasks//
+WARNING 2025-02-27 09:17:44,447 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
+WARNING 2025-02-27 09:19:52,963 log Not Found: /tasks/tasks//
+WARNING 2025-02-27 09:19:52,964 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
+WARNING 2025-02-27 09:20:01,998 log Not Found: /tasks/tasks//
+WARNING 2025-02-27 09:20:01,998 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
+WARNING 2025-02-27 09:20:12,662 log Not Found: /tasks/tasks//
+WARNING 2025-02-27 09:20:12,662 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
+WARNING 2025-02-27 09:20:17,936 log Not Found: /tasks/tasks//
+WARNING 2025-02-27 09:20:17,936 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
+INFO 2025-02-27 09:20:45,523 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:21:53,500 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:22:06,930 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:24:50,505 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:25:32,433 basehttp "GET /admin/tasks/task/8/change/ HTTP/1.1" 200 39192
+INFO 2025-02-27 09:25:32,460 basehttp "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+INFO 2025-02-27 09:25:32,460 basehttp "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+INFO 2025-02-27 09:25:32,468 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-02-27 09:25:32,493 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-02-27 09:25:32,521 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-02-27 09:25:32,527 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-02-27 09:25:32,532 basehttp "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+INFO 2025-02-27 09:25:32,536 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-02-27 09:25:32,558 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 09:25:35,418 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 28480
+INFO 2025-02-27 09:25:35,508 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 09:25:36,474 basehttp "GET /admin/tasks/task/7/change/ HTTP/1.1" 200 39094
+INFO 2025-02-27 09:25:36,563 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 09:25:38,898 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 28480
+INFO 2025-02-27 09:25:38,988 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 09:25:40,254 basehttp "GET /admin/tasks/task/6/change/ HTTP/1.1" 200 38854
+INFO 2025-02-27 09:25:40,342 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 09:26:47,983 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:26:49,683 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:27:23,998 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:27:24,009 basehttp "GET /tasks/status HTTP/1.1" 301 0
+INFO 2025-02-27 09:29:00,176 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-02-27 09:29:00,894 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 09:29:02,118 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:29:10,413 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-02-27 09:29:11,060 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 09:29:14,681 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:30:25,302 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:31:21,820 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:31:24,639 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:32:57,531 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:32:57,592 basehttp "GET /tasks/status/ HTTP/1.1" 200 204
+INFO 2025-02-27 09:33:32,664 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:34:03,377 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:34:03,435 basehttp "GET /tasks/status/ HTTP/1.1" 200 204
+INFO 2025-02-27 09:34:05,914 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:34:05,976 basehttp "GET /tasks/status/ HTTP/1.1" 200 204
+INFO 2025-02-27 09:34:48,558 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:34:48,722 basehttp "GET /tasks/status/ HTTP/1.1" 200 204
+INFO 2025-02-27 09:38:19,996 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:38:20,056 basehttp "GET /tasks/status/ HTTP/1.1" 200 204
+INFO 2025-02-27 09:38:29,697 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:38:29,753 basehttp "GET /tasks/status/ HTTP/1.1" 200 204
+INFO 2025-02-27 09:39:06,951 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:39:07,019 basehttp "GET /tasks/status/ HTTP/1.1" 200 204
+INFO 2025-02-27 09:39:11,983 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:39:12,041 basehttp "GET /tasks/status/ HTTP/1.1" 200 204
+INFO 2025-02-27 09:45:21,681 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:45:21,769 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:45:21,775 basehttp "GET /tasks/status/ HTTP/1.1" 200 204
+INFO 2025-02-27 09:45:21,874 basehttp "GET /tasks/status/ HTTP/1.1" 200 204
+INFO 2025-02-27 09:47:02,527 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:47:02,598 basehttp "GET /tasks/status/ HTTP/1.1" 200 204
+INFO 2025-02-27 09:49:38,266 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:49:38,427 basehttp "GET /tasks/status/ HTTP/1.1" 200 204
+INFO 2025-02-27 09:59:31,947 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 09:59:32,014 basehttp "GET /tasks/status/ HTTP/1.1" 200 204
+INFO 2025-02-27 10:00:23,548 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 10:00:23,618 basehttp "GET /tasks/status/ HTTP/1.1" 200 204
+INFO 2025-02-27 10:03:43,740 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 10:03:43,842 basehttp "GET /tasks/status/ HTTP/1.1" 200 204
+INFO 2025-02-27 10:09:14,558 basehttp "GET /admin/tasks/status/ HTTP/1.1" 200 24401
+INFO 2025-02-27 10:09:14,673 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:09:18,254 basehttp "GET /admin/tasks/status/4/change/ HTTP/1.1" 200 25012
+INFO 2025-02-27 10:09:18,349 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:09:42,467 basehttp "POST /admin/tasks/status/4/change/ HTTP/1.1" 302 0
+INFO 2025-02-27 10:09:42,645 basehttp "GET /admin/tasks/status/ HTTP/1.1" 200 24997
+INFO 2025-02-27 10:09:42,737 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:10:31,862 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\admin.py changed, reloading.
+INFO 2025-02-27 10:10:33,580 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 10:10:46,121 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\admin.py changed, reloading.
+INFO 2025-02-27 10:10:47,381 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 10:10:55,890 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\admin.py changed, reloading.
+INFO 2025-02-27 10:10:56,904 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 10:10:57,951 basehttp "GET /admin/tasks/status/ HTTP/1.1" 200 25483
+INFO 2025-02-27 10:10:58,059 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:11:02,706 basehttp "GET /admin/tasks/status/?id=1 HTTP/1.1" 200 24683
+INFO 2025-02-27 10:11:02,792 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:11:04,239 basehttp "GET /admin/tasks/status/1/change/?_changelist_filters=id%3D1 HTTP/1.1" 200 25103
+INFO 2025-02-27 10:11:04,343 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:11:11,666 basehttp "POST /admin/tasks/status/1/change/?_changelist_filters=id%3D1 HTTP/1.1" 302 0
+INFO 2025-02-27 10:11:11,852 basehttp "GET /admin/tasks/status/?id=1 HTTP/1.1" 200 25269
+INFO 2025-02-27 10:11:11,948 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:11:16,162 basehttp "GET /admin/tasks/status/1/change/?_changelist_filters=id%3D1 HTTP/1.1" 200 25111
+INFO 2025-02-27 10:11:16,283 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:11:28,989 basehttp "POST /admin/tasks/status/1/change/?_changelist_filters=id%3D1 HTTP/1.1" 302 0
+INFO 2025-02-27 10:11:29,063 basehttp "GET /admin/tasks/status/?id=1 HTTP/1.1" 200 25335
+INFO 2025-02-27 10:11:29,181 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:11:35,418 basehttp "GET /admin/tasks/status/?id=1 HTTP/1.1" 200 24735
+INFO 2025-02-27 10:11:35,511 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:11:41,628 basehttp "GET /admin/tasks/status/ HTTP/1.1" 200 25535
+INFO 2025-02-27 10:11:41,713 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:11:45,038 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 10:11:45,131 basehttp "GET /tasks/status/ HTTP/1.1" 200 239
+INFO 2025-02-27 10:12:17,992 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\admin.py changed, reloading.
+INFO 2025-02-27 10:12:19,120 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 10:12:20,309 basehttp "GET /admin/tasks/status/ HTTP/1.1" 200 25417
+INFO 2025-02-27 10:12:20,399 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:12:28,838 basehttp "GET /admin/tasks/status/ HTTP/1.1" 200 25417
+INFO 2025-02-27 10:12:28,930 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:12:30,218 basehttp "GET /admin/tasks/status/? HTTP/1.1" 200 25417
+INFO 2025-02-27 10:12:30,312 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:12:42,186 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\admin.py changed, reloading.
+INFO 2025-02-27 10:12:43,235 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 10:12:44,285 basehttp "GET /admin/tasks/status/? HTTP/1.1" 200 26040
+INFO 2025-02-27 10:12:44,472 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:12:50,534 basehttp "GET /admin/tasks/status/2/change/ HTTP/1.1" 200 25016
+INFO 2025-02-27 10:12:50,636 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:12:54,351 basehttp "GET /admin/tasks/status/ HTTP/1.1" 200 26040
+INFO 2025-02-27 10:12:54,451 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:12:55,755 basehttp "GET /admin/tasks/status/1/change/ HTTP/1.1" 200 25074
+INFO 2025-02-27 10:12:55,863 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:13:02,682 basehttp "POST /admin/tasks/status/1/change/ HTTP/1.1" 302 0
+INFO 2025-02-27 10:13:02,761 basehttp "GET /admin/tasks/status/ HTTP/1.1" 200 26574
+INFO 2025-02-27 10:13:02,855 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:13:06,020 basehttp "GET /admin/tasks/status/2/change/ HTTP/1.1" 200 25016
+INFO 2025-02-27 10:13:06,116 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:13:09,048 basehttp "POST /admin/tasks/status/2/change/ HTTP/1.1" 302 0
+INFO 2025-02-27 10:13:09,124 basehttp "GET /admin/tasks/status/ HTTP/1.1" 200 26654
+INFO 2025-02-27 10:13:09,300 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:13:12,156 basehttp "GET /admin/tasks/status/3/change/ HTTP/1.1" 200 25012
+INFO 2025-02-27 10:13:12,244 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:13:20,685 basehttp "POST /admin/tasks/status/3/change/ HTTP/1.1" 302 0
+INFO 2025-02-27 10:13:20,764 basehttp "GET /admin/tasks/status/ HTTP/1.1" 200 26626
+INFO 2025-02-27 10:13:20,862 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:13:28,105 basehttp "GET /admin/tasks/status/4/change/ HTTP/1.1" 200 25030
+INFO 2025-02-27 10:13:28,248 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:13:38,769 basehttp "POST /admin/tasks/status/4/change/ HTTP/1.1" 302 0
+INFO 2025-02-27 10:13:38,955 basehttp "GET /admin/tasks/status/add/ HTTP/1.1" 200 24939
+INFO 2025-02-27 10:13:39,049 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:13:51,433 basehttp "POST /admin/tasks/status/add/ HTTP/1.1" 302 0
+INFO 2025-02-27 10:13:51,510 basehttp "GET /admin/tasks/status/add/ HTTP/1.1" 200 24920
+INFO 2025-02-27 10:13:51,608 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:14:03,800 basehttp "POST /admin/tasks/status/add/ HTTP/1.1" 302 0
+INFO 2025-02-27 10:14:03,985 basehttp "GET /admin/tasks/status/add/ HTTP/1.1" 200 24928
+INFO 2025-02-27 10:14:04,077 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:14:14,205 basehttp "POST /admin/tasks/status/add/ HTTP/1.1" 302 0
+INFO 2025-02-27 10:14:14,280 basehttp "GET /admin/tasks/status/ HTTP/1.1" 200 28316
+INFO 2025-02-27 10:14:14,380 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-27 10:14:18,462 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 2151
+INFO 2025-02-27 10:14:18,522 basehttp "GET /tasks/status/ HTTP/1.1" 200 420

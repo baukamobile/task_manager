@@ -8,7 +8,7 @@ from tasks.serializers import TaskSerializer, StatusSerializer
 
 
 class TaskListView(ListAPIView): #если пользователь админ
-    permission_classes = [IsAdminUser]
+    # permission_classes = [IsAdminUser]
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
 

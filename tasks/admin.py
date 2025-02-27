@@ -21,7 +21,11 @@ class TaskAdmin(admin.ModelAdmin,GetCommentMixin):
     # list_filter = ['task_name','status','priority','agreed_with_managers']
 
 admin.site.register(Task,TaskAdmin)
-admin.site.register(Status)
+
+class StatusAdmin(admin.ModelAdmin):
+    list_filter = ['id']
+    list_display = ['id','status_name']
+admin.site.register(Status,StatusAdmin)
 admin.site.register(Priority)
 
 

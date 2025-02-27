@@ -70,7 +70,7 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOWED_ORIGINS = ['http://localhost:5173']
+
 JAZZMIN_UI_TWEAKS = {
     "theme": "slate",
     # "theme": "cerulean",
@@ -103,7 +103,7 @@ MIDDLEWARE = [
     'simple_history.middleware.HistoryRequestMiddleware',
     'corsheaders.middleware.CorsMiddleware',
 ]
-
+CORS_ALLOWED_ORIGINS = ['http://localhost:5173']
 ROOT_URLCONF = 'taskmanager.urls'
 
 TEMPLATES = [

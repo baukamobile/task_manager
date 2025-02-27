@@ -27,7 +27,7 @@ def index(request):
     return render(request,'users/team.html',context={'users':users, 'departments':departments, 'tasks':tasks})
 
 class UserList(ListAPIView): #Если рлдбзователь адин
-    permission_classes = [IsAdminUser]
+    # permission_classes = [IsAdminUser]
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
