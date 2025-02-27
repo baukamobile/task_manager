@@ -10118,3 +10118,255 @@ WARNING 2025-02-27 09:20:12,662 log Not Found: /tasks/tasks//
 WARNING 2025-02-27 09:20:12,662 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
 WARNING 2025-02-27 09:20:17,936 log Not Found: /tasks/tasks//
 WARNING 2025-02-27 09:20:17,936 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
+WARNING 2025-02-27 10:47:34,088 log Not Found: /tasks/status7/
+WARNING 2025-02-27 10:47:34,089 basehttp "PATCH /tasks/status7/ HTTP/1.1" 404 3736
+WARNING 2025-02-27 10:47:49,732 log Not Found: /tasks/status6/
+WARNING 2025-02-27 10:47:49,732 basehttp "PATCH /tasks/status6/ HTTP/1.1" 404 3736
+WARNING 2025-02-27 10:48:36,980 log Not Found: /tasks/status/7/
+WARNING 2025-02-27 10:48:36,981 basehttp "PATCH /tasks/status/7/ HTTP/1.1" 404 3739
+WARNING 2025-02-27 10:48:49,540 log Not Found: /tasks/status/7/
+WARNING 2025-02-27 10:48:49,540 basehttp "GET /tasks/status/7/ HTTP/1.1" 404 3737
+WARNING 2025-02-27 10:49:09,723 log Not Found: /tasks/status/6
+WARNING 2025-02-27 10:49:09,723 basehttp "GET /tasks/status/6 HTTP/1.1" 404 3734
+WARNING 2025-02-27 10:49:14,272 log Not Found: /tasks/status/6/
+WARNING 2025-02-27 10:49:14,273 basehttp "GET /tasks/status/6/ HTTP/1.1" 404 3737
+WARNING 2025-02-27 10:49:25,972 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-27 10:49:25,973 basehttp "GET /tasks/tasks/7/ HTTP/1.1" 404 3734
+WARNING 2025-02-27 10:49:38,794 log Not Found: /users/api/users/1/
+WARNING 2025-02-27 10:49:38,795 basehttp "GET /users/api/users/1/ HTTP/1.1" 404 4231
+WARNING 2025-02-27 10:51:23,454 log Not Found: /tasks/status/5¹
+WARNING 2025-02-27 10:51:23,455 basehttp "GET /tasks/status/5%E2%84%96 HTTP/1.1" 404 3749
+WARNING 2025-02-27 10:51:27,872 log Not Found: /tasks/status/5/
+WARNING 2025-02-27 10:51:27,873 basehttp "GET /tasks/status/5/ HTTP/1.1" 404 3737
+WARNING 2025-02-27 10:54:37,496 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-27 10:54:37,497 basehttp "GET /tasks/tasks/7/ HTTP/1.1" 404 3749
+WARNING 2025-02-27 10:56:50,815 log Not Found: /users/api/users/1/
+WARNING 2025-02-27 10:56:50,816 basehttp "GET /users/api/users/1/ HTTP/1.1" 404 4231
+WARNING 2025-02-27 10:56:57,024 log Not Found: /tasks/tasks/
+WARNING 2025-02-27 10:56:57,025 basehttp "GET /tasks/tasks/ HTTP/1.1" 404 3758
+WARNING 2025-02-27 10:56:58,180 log Not Found: /tasks/tasks/
+WARNING 2025-02-27 10:56:58,185 basehttp "GET /tasks/tasks/ HTTP/1.1" 404 3758
+WARNING 2025-02-27 10:57:12,691 log Not Found: /tasks/tasks/
+WARNING 2025-02-27 10:57:12,692 basehttp "GET /tasks/tasks/ HTTP/1.1" 404 3758
+WARNING 2025-02-27 10:57:23,100 log Not Found: /tasks/tasks/
+WARNING 2025-02-27 10:57:23,101 basehttp "GET /tasks/tasks/ HTTP/1.1" 404 3758
+WARNING 2025-02-27 10:57:24,757 log Not Found: /tasks/tasks/
+WARNING 2025-02-27 10:57:24,757 basehttp "GET /tasks/tasks/ HTTP/1.1" 404 3758
+WARNING 2025-02-27 10:57:28,782 log Not Found: /tasks/tasks/
+WARNING 2025-02-27 10:57:28,783 basehttp "GET /tasks/tasks/ HTTP/1.1" 404 3758
+WARNING 2025-02-27 10:58:44,960 log Not Found: /tasks/status/
+WARNING 2025-02-27 10:58:44,961 basehttp "GET /tasks/status/ HTTP/1.1" 404 3761
+WARNING 2025-02-27 10:58:45,137 log Not Found: /tasks/status/
+WARNING 2025-02-27 10:58:45,138 basehttp "GET /tasks/status/ HTTP/1.1" 404 3761
+WARNING 2025-02-27 11:00:37,781 log Not Found: /tasks/tasks/
+WARNING 2025-02-27 11:00:37,782 basehttp "GET /tasks/tasks/ HTTP/1.1" 404 3758
+WARNING 2025-02-27 11:00:39,231 log Not Found: /tasks/tasks/
+WARNING 2025-02-27 11:00:39,232 basehttp "GET /tasks/tasks/ HTTP/1.1" 404 3758
+WARNING 2025-02-27 11:00:44,491 log Not Found: /tasks/tasks/
+WARNING 2025-02-27 11:00:44,497 basehttp "GET /tasks/tasks/ HTTP/1.1" 404 3758
+WARNING 2025-02-27 11:01:25,332 log Not Found: /tasks/tasks/
+WARNING 2025-02-27 11:01:25,333 basehttp "GET /tasks/tasks/ HTTP/1.1" 404 3758
+WARNING 2025-02-27 11:01:25,593 log Not Found: /tasks/tasks/
+WARNING 2025-02-27 11:01:25,595 basehttp "GET /tasks/tasks/ HTTP/1.1" 404 3758
+ERROR 2025-02-27 11:03:35,628 log Internal Server Error: /tasks/status/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\generics.py", line 212, in get
+    return self.retrieve(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\generics.py", line 92, in get_object
+    assert lookup_url_kwarg in self.kwargs, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Expected view StatusListView to be called with a URL keyword argument named "pk". Fix your URL conf, or set the `.lookup_field` attribute on the view correctly.
+ERROR 2025-02-27 11:03:35,631 basehttp "GET /tasks/status/ HTTP/1.1" 500 105771
+ERROR 2025-02-27 11:03:50,497 log Internal Server Error: /tasks/status/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\generics.py", line 212, in get
+    return self.retrieve(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\generics.py", line 92, in get_object
+    assert lookup_url_kwarg in self.kwargs, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Expected view StatusListView to be called with a URL keyword argument named "pk". Fix your URL conf, or set the `.lookup_field` attribute on the view correctly.
+ERROR 2025-02-27 11:03:50,500 basehttp "GET /tasks/status/ HTTP/1.1" 500 105771
+ERROR 2025-02-27 11:03:57,607 log Internal Server Error: /tasks/status/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\generics.py", line 212, in get
+    return self.retrieve(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\generics.py", line 92, in get_object
+    assert lookup_url_kwarg in self.kwargs, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Expected view StatusListView to be called with a URL keyword argument named "pk". Fix your URL conf, or set the `.lookup_field` attribute on the view correctly.
+ERROR 2025-02-27 11:03:57,612 basehttp "GET /tasks/status/ HTTP/1.1" 500 105771
+ERROR 2025-02-27 11:04:18,164 log Internal Server Error: /tasks/status/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\generics.py", line 212, in get
+    return self.retrieve(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\generics.py", line 92, in get_object
+    assert lookup_url_kwarg in self.kwargs, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Expected view StatusListView to be called with a URL keyword argument named "pk". Fix your URL conf, or set the `.lookup_field` attribute on the view correctly.
+ERROR 2025-02-27 11:04:18,167 basehttp "GET /tasks/status/ HTTP/1.1" 500 105908
+ERROR 2025-02-27 11:04:18,485 log Internal Server Error: /tasks/status/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\generics.py", line 212, in get
+    return self.retrieve(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\generics.py", line 92, in get_object
+    assert lookup_url_kwarg in self.kwargs, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Expected view StatusListView to be called with a URL keyword argument named "pk". Fix your URL conf, or set the `.lookup_field` attribute on the view correctly.
+ERROR 2025-02-27 11:04:18,488 basehttp "GET /tasks/status/ HTTP/1.1" 500 105634
+WARNING 2025-02-27 11:11:39,816 log Method Not Allowed: /tasks/status/7/
+WARNING 2025-02-27 11:11:39,816 basehttp "PATCH /tasks/status/7/ HTTP/1.1" 405 42
+WARNING 2025-02-27 11:16:11,129 log Not Found: /tasks/status/8/
+WARNING 2025-02-27 11:16:11,129 basehttp "PATCH /tasks/status/8/ HTTP/1.1" 404 47
+WARNING 2025-02-27 11:16:12,708 log Not Found: /tasks/status/8/
+WARNING 2025-02-27 11:16:12,709 basehttp "PATCH /tasks/status/8/ HTTP/1.1" 404 47
+WARNING 2025-02-27 11:17:01,320 log Not Found: /tasks/status/8/
+WARNING 2025-02-27 11:17:01,321 basehttp "PATCH /tasks/status/8/ HTTP/1.1" 404 47
+WARNING 2025-02-27 11:17:25,575 log Not Found: /tasks/status/8/
+WARNING 2025-02-27 11:17:25,576 basehttp "PATCH /tasks/status/8/ HTTP/1.1" 404 47
+WARNING 2025-02-27 11:17:36,468 log Not Found: /tasks/status/8/
+WARNING 2025-02-27 11:17:36,469 basehttp "GET /tasks/status/8/ HTTP/1.1" 404 10013
+WARNING 2025-02-27 11:18:29,551 log Not Found: /tasks/status/8/
+WARNING 2025-02-27 11:18:29,552 basehttp "PATCH /tasks/status/8/ HTTP/1.1" 404 47
+WARNING 2025-02-27 11:19:24,852 log Not Found: /tasks/status/8/
+WARNING 2025-02-27 11:19:24,853 basehttp "PUT /tasks/status/8/ HTTP/1.1" 404 10013
+WARNING 2025-02-27 11:19:30,668 log Not Found: /tasks/status/8/
+WARNING 2025-02-27 11:19:30,669 basehttp "GET /tasks/status/8/ HTTP/1.1" 404 10013
+WARNING 2025-02-27 11:30:27,654 log Method Not Allowed: /tasks/tasks/7/
+WARNING 2025-02-27 11:30:27,654 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 405 42
+WARNING 2025-02-27 11:30:29,117 log Method Not Allowed: /tasks/tasks/7/
+WARNING 2025-02-27 11:30:29,117 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 405 42
+WARNING 2025-02-27 11:30:31,358 log Method Not Allowed: /tasks/tasks/7/
+WARNING 2025-02-27 11:30:31,358 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 405 42
+WARNING 2025-02-27 11:31:11,702 log Method Not Allowed: /tasks/tasks/7/
+WARNING 2025-02-27 11:31:11,702 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 405 42
+WARNING 2025-02-27 11:31:13,782 log Method Not Allowed: /tasks/tasks/7/
+WARNING 2025-02-27 11:31:13,782 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 405 42
+WARNING 2025-02-27 11:31:15,639 log Method Not Allowed: /tasks/tasks/6/
+WARNING 2025-02-27 11:31:15,639 basehttp "PATCH /tasks/tasks/6/ HTTP/1.1" 405 42
+WARNING 2025-02-27 11:31:19,621 log Method Not Allowed: /tasks/tasks/7/
+WARNING 2025-02-27 11:31:19,621 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 405 42
+WARNING 2025-02-27 11:31:25,789 log Method Not Allowed: /tasks/tasks/7/
+WARNING 2025-02-27 11:31:25,790 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 405 42
+WARNING 2025-02-27 11:31:26,716 log Method Not Allowed: /tasks/tasks/6/
+WARNING 2025-02-27 11:31:26,717 basehttp "PATCH /tasks/tasks/6/ HTTP/1.1" 405 42
+WARNING 2025-02-27 11:31:39,573 log Method Not Allowed: /tasks/tasks/7/
+WARNING 2025-02-27 11:31:39,573 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 405 42
+WARNING 2025-02-27 12:01:26,623 log Not Found: /
+WARNING 2025-02-27 12:01:26,624 basehttp "GET / HTTP/1.1" 404 3064
+WARNING 2025-02-27 12:23:59,096 log Not Found: /tasks/tasks/NaN/
+WARNING 2025-02-27 12:23:59,096 basehttp "PATCH /tasks/tasks/NaN/ HTTP/1.1" 404 4292
+WARNING 2025-02-27 12:28:55,188 log Not Found: /tasks/tasks/NaN/
+WARNING 2025-02-27 12:28:55,189 basehttp "PATCH /tasks/tasks/NaN/ HTTP/1.1" 404 4292
+WARNING 2025-02-27 13:59:35,891 log Not Found: /tasks/task/
+WARNING 2025-02-27 13:59:35,892 basehttp "GET /tasks/task/ HTTP/1.1" 404 4275
+WARNING 2025-02-27 14:04:41,064 log Not Found: /tasks/tasks/NaN/
+WARNING 2025-02-27 14:04:41,064 basehttp "PATCH /tasks/tasks/NaN/ HTTP/1.1" 404 4292
+WARNING 2025-02-27 14:04:44,121 log Not Found: /tasks/tasks/NaN/
+WARNING 2025-02-27 14:04:44,122 basehttp "PATCH /tasks/tasks/NaN/ HTTP/1.1" 404 4292
+WARNING 2025-02-27 14:07:06,734 log Not Found: /
+WARNING 2025-02-27 14:07:06,737 basehttp "GET / HTTP/1.1" 404 3064

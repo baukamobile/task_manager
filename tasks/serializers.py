@@ -8,6 +8,7 @@ class StatusSerializer(serializers.ModelSerializer):
     # status = serializers.SlugRelatedField(read_only=True, slug_field='name')
     # class Meta:
     #     model = Status
+    priority_name = serializers.CharField(source='priority.name',read_only=True)
     class Meta:
         model = Status
         fields = '__all__'

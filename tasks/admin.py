@@ -26,7 +26,9 @@ class StatusAdmin(admin.ModelAdmin):
     list_filter = ['id']
     list_display = ['id','status_name']
 admin.site.register(Status,StatusAdmin)
-admin.site.register(Priority)
+class PriorityAdmin(admin.ModelAdmin):
+    list_display = ['id','priority_name']
+admin.site.register(Priority,PriorityAdmin)
 
 
 
@@ -43,6 +45,7 @@ admin.site.register(Task_comments,TaskCommentAdmin)
 class ProjectAdmin(GetCommentMixin,admin.ModelAdmin):
     list_display = ['project_name','get_tasks_name','department','start_date','assigned','end_date']
     list_filter = ['department']
+
 
 
 admin.site.register(Projects,ProjectAdmin)
