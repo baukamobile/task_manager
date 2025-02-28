@@ -11,14 +11,12 @@ from tasks.serializers import TaskSerializer, StatusSerializer,ProjectSerializer
 class TaskViewSet(ModelViewSet):  # Отдаёт список всех задач
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
+    http_method_names = ['get','post','put','patch','delete']
 
 # class TaskDetailView(RetrieveUpdateAPIView):  # Отдаёт конкретную задачу
 #     queryset = Task.objects.all()
 #     serializer_class = TaskSerializer
-#
-# class TaskAddView(CreateAPIView):
-#     queryset = Task.objects.all()
-#     serializer_class = TaskSerializer
+
 
 class StatusViewSet(ModelViewSet):
     # permission_classes = [IsAdminUser]
@@ -30,14 +28,9 @@ class StatusViewSet(ModelViewSet):
 #     queryset = Status.objects.all()
 #     serializer_class = StatusSerializer
 
-# class StatusAddView(CreateAPIView):
-#     queryset = Status.objects.all()
-#     serializer_class = StatusSerializer
+
 
 class ProjectViewSet(ModelViewSet):
     queryset = Projects.objects.all()
     serializer_class = ProjectSerializer
 
-# class ProjectAddView(CreateAPIView):
-#     queryset = Projects.objects.all()
-#     serializer_class = ProjectSerializer

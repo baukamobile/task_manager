@@ -10598,3 +10598,81 @@ WARNING 2025-02-28 16:28:08,186 log Not Found: /tasks/projects
 WARNING 2025-02-28 16:28:08,187 basehttp "GET /tasks/projects HTTP/1.1" 404 4992
 WARNING 2025-02-28 16:28:11,628 log Not Found: /tasks/
 WARNING 2025-02-28 16:28:11,629 basehttp "GET /tasks/ HTTP/1.1" 404 4968
+WARNING 2025-02-28 16:35:04,882 log Not Found: /tasks/ופûכû/1/
+WARNING 2025-02-28 16:35:04,883 basehttp "GET /tasks/%D0%B5%D1%84%D1%8B%D0%BB%D1%8B/1/ HTTP/1.1" 404 8495
+WARNING 2025-02-28 16:35:10,279 log Not Found: /tasks/tasks/1/
+WARNING 2025-02-28 16:35:10,280 basehttp "GET /tasks/tasks/1/ HTTP/1.1" 404 15364
+WARNING 2025-02-28 16:39:38,851 log Not Found: /tasks/tasks/3/
+WARNING 2025-02-28 16:39:38,851 basehttp "GET /tasks/tasks/3/ HTTP/1.1" 404 15364
+WARNING 2025-02-28 16:40:36,122 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:40:36,122 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 404 15366
+WARNING 2025-02-28 16:40:46,844 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:40:46,845 basehttp "PUT /tasks/tasks/7/ HTTP/1.1" 404 15364
+WARNING 2025-02-28 16:40:54,612 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:40:54,612 basehttp "PUT /tasks/tasks/7/ HTTP/1.1" 404 15364
+WARNING 2025-02-28 16:41:19,492 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:41:19,493 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 404 15366
+WARNING 2025-02-28 16:41:27,322 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:41:27,323 basehttp "PUT /tasks/tasks/7/ HTTP/1.1" 404 15364
+WARNING 2025-02-28 16:42:58,189 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:42:58,190 basehttp "GET /tasks/tasks/7/ HTTP/1.1" 404 15096
+WARNING 2025-02-28 16:43:04,206 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:43:04,207 basehttp "PUT /tasks/tasks/7/ HTTP/1.1" 404 15096
+WARNING 2025-02-28 16:43:12,336 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:43:12,337 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 404 15098
+WARNING 2025-02-28 16:44:26,722 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:44:26,723 basehttp "GET /tasks/tasks/7/ HTTP/1.1" 404 15096
+WARNING 2025-02-28 16:44:28,577 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:44:28,577 basehttp "GET /tasks/tasks/7/?format=json HTTP/1.1" 404 45
+WARNING 2025-02-28 16:44:33,950 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:44:33,951 basehttp "GET /tasks/tasks/7/?format=json HTTP/1.1" 404 45
+WARNING 2025-02-28 16:44:40,358 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:44:40,359 basehttp "GET /tasks/tasks/7/ HTTP/1.1" 404 15096
+WARNING 2025-02-28 16:44:56,244 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:44:56,244 basehttp "PUT /tasks/tasks/7/ HTTP/1.1" 404 15096
+WARNING 2025-02-28 16:46:18,366 log Bad Request: /tasks/tasks/
+WARNING 2025-02-28 16:46:18,366 basehttp "POST /tasks/tasks/ HTTP/1.1" 400 14267
+WARNING 2025-02-28 16:46:46,438 log Bad Request: /tasks/tasks/
+WARNING 2025-02-28 16:46:46,439 basehttp "POST /tasks/tasks/ HTTP/1.1" 400 13800
+WARNING 2025-02-28 16:47:15,292 log Bad Request: /tasks/tasks/
+WARNING 2025-02-28 16:47:15,292 basehttp "POST /tasks/tasks/ HTTP/1.1" 400 13800
+WARNING 2025-02-28 16:47:44,271 log Bad Request: /tasks/tasks/
+WARNING 2025-02-28 16:47:44,272 basehttp "POST /tasks/tasks/ HTTP/1.1" 400 13800
+WARNING 2025-02-28 16:47:59,250 log Bad Request: /tasks/tasks/
+WARNING 2025-02-28 16:47:59,251 basehttp "POST /tasks/tasks/ HTTP/1.1" 400 13800
+WARNING 2025-02-28 17:07:39,640 log Not Found: /tasks/status/${status_id}/
+WARNING 2025-02-28 17:07:39,640 basehttp "GET /tasks/status/$%7Bstatus_id%7D/ HTTP/1.1" 404 11303
+WARNING 2025-02-28 17:14:41,332 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:14:41,332 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+WARNING 2025-02-28 17:28:04,424 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:28:04,425 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+WARNING 2025-02-28 17:28:05,207 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:28:05,208 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+WARNING 2025-02-28 17:28:05,455 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:28:05,456 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+WARNING 2025-02-28 17:28:06,384 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:28:06,385 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+WARNING 2025-02-28 17:28:07,535 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:28:07,536 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+WARNING 2025-02-28 17:28:55,098 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:28:55,098 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+WARNING 2025-02-28 17:29:14,911 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:29:14,911 basehttp "GET /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 11400
+WARNING 2025-02-28 17:30:24,161 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:30:24,162 basehttp "DELETE /tasks/status/%5Bobject%20PointerEvent%5D/ HTTP/1.1" 404 11403
+WARNING 2025-02-28 17:32:47,656 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:32:47,657 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+WARNING 2025-02-28 17:32:48,423 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:32:48,423 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+WARNING 2025-02-28 17:32:48,639 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:32:48,639 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+WARNING 2025-02-28 17:32:48,896 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:32:48,896 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+WARNING 2025-02-28 17:35:10,826 log Not Found: /tasks/status/15/
+WARNING 2025-02-28 17:35:10,826 basehttp "DELETE /tasks/status/15/ HTTP/1.1" 404 47
+WARNING 2025-02-28 17:35:11,464 log Not Found: /tasks/status/15/
+WARNING 2025-02-28 17:35:11,464 basehttp "DELETE /tasks/status/15/ HTTP/1.1" 404 47
+WARNING 2025-02-28 17:35:12,052 log Not Found: /tasks/status/15/
+WARNING 2025-02-28 17:35:12,052 basehttp "DELETE /tasks/status/15/ HTTP/1.1" 404 47
+WARNING 2025-02-28 17:35:16,099 log Not Found: /tasks/status/13/
+WARNING 2025-02-28 17:35:16,100 basehttp "DELETE /tasks/status/13/ HTTP/1.1" 404 47

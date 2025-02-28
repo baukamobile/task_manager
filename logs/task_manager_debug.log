@@ -3271,3 +3271,270 @@ WARNING 2025-02-28 16:35:04,883 basehttp "GET /tasks/%D0%B5%D1%84%D1%8B%D0%BB%D1
 WARNING 2025-02-28 16:35:10,279 log Not Found: /tasks/tasks/1/
 WARNING 2025-02-28 16:35:10,280 basehttp "GET /tasks/tasks/1/ HTTP/1.1" 404 15364
 INFO 2025-02-28 16:35:13,365 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 21086
+INFO 2025-02-28 16:36:33,860 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 16:36:33,933 basehttp "GET /tasks/status/ HTTP/1.1" 200 527
+INFO 2025-02-28 16:36:34,780 basehttp "OPTIONS /tasks/tasks/14/ HTTP/1.1" 200 0
+INFO 2025-02-28 16:36:34,845 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 364
+INFO 2025-02-28 16:36:36,004 basehttp "PATCH /tasks/tasks/9/ HTTP/1.1" 200 515
+INFO 2025-02-28 16:36:36,828 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 364
+INFO 2025-02-28 16:36:38,577 basehttp "PATCH /tasks/tasks/6/ HTTP/1.1" 200 550
+INFO 2025-02-28 16:37:36,713 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 364
+INFO 2025-02-28 16:37:38,004 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 364
+INFO 2025-02-28 16:39:38,766 basehttp "GET /tasks/tasks/3 HTTP/1.1" 301 0
+WARNING 2025-02-28 16:39:38,851 log Not Found: /tasks/tasks/3/
+WARNING 2025-02-28 16:39:38,851 basehttp "GET /tasks/tasks/3/ HTTP/1.1" 404 15364
+INFO 2025-02-28 16:39:43,551 basehttp "GET /tasks/tasks/7 HTTP/1.1" 301 0
+INFO 2025-02-28 16:39:43,637 basehttp "GET /tasks/tasks/7/ HTTP/1.1" 200 17377
+INFO 2025-02-28 16:40:12,441 basehttp "DELETE /tasks/tasks/7/ HTTP/1.1" 200 15296
+WARNING 2025-02-28 16:40:36,122 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:40:36,122 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 404 15366
+WARNING 2025-02-28 16:40:46,844 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:40:46,845 basehttp "PUT /tasks/tasks/7/ HTTP/1.1" 404 15364
+WARNING 2025-02-28 16:40:54,612 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:40:54,612 basehttp "PUT /tasks/tasks/7/ HTTP/1.1" 404 15364
+WARNING 2025-02-28 16:41:19,492 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:41:19,493 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 404 15366
+WARNING 2025-02-28 16:41:27,322 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:41:27,323 basehttp "PUT /tasks/tasks/7/ HTTP/1.1" 404 15364
+INFO 2025-02-28 16:42:55,044 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-02-28 16:42:55,717 autoreload Watching for file changes with StatReloader
+WARNING 2025-02-28 16:42:58,189 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:42:58,190 basehttp "GET /tasks/tasks/7/ HTTP/1.1" 404 15096
+WARNING 2025-02-28 16:43:04,206 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:43:04,207 basehttp "PUT /tasks/tasks/7/ HTTP/1.1" 404 15096
+WARNING 2025-02-28 16:43:12,336 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:43:12,337 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 404 15098
+WARNING 2025-02-28 16:44:26,722 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:44:26,723 basehttp "GET /tasks/tasks/7/ HTTP/1.1" 404 15096
+WARNING 2025-02-28 16:44:28,577 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:44:28,577 basehttp "GET /tasks/tasks/7/?format=json HTTP/1.1" 404 45
+WARNING 2025-02-28 16:44:33,950 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:44:33,951 basehttp "GET /tasks/tasks/7/?format=json HTTP/1.1" 404 45
+WARNING 2025-02-28 16:44:40,358 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:44:40,359 basehttp "GET /tasks/tasks/7/ HTTP/1.1" 404 15096
+WARNING 2025-02-28 16:44:56,244 log Not Found: /tasks/tasks/7/
+WARNING 2025-02-28 16:44:56,244 basehttp "PUT /tasks/tasks/7/ HTTP/1.1" 404 15096
+INFO 2025-02-28 16:45:20,569 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-02-28 16:45:21,741 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 16:45:34,521 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 11089
+INFO 2025-02-28 16:45:53,927 basehttp "GET /tasks/ HTTP/1.1" 200 5590
+INFO 2025-02-28 16:45:59,865 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 11089
+INFO 2025-02-28 16:46:09,072 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-02-28 16:46:09,781 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 16:46:10,747 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 19809
+WARNING 2025-02-28 16:46:18,366 log Bad Request: /tasks/tasks/
+WARNING 2025-02-28 16:46:18,366 basehttp "POST /tasks/tasks/ HTTP/1.1" 400 14267
+INFO 2025-02-28 16:46:40,518 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 19809
+WARNING 2025-02-28 16:46:46,438 log Bad Request: /tasks/tasks/
+WARNING 2025-02-28 16:46:46,439 basehttp "POST /tasks/tasks/ HTTP/1.1" 400 13800
+WARNING 2025-02-28 16:47:15,292 log Bad Request: /tasks/tasks/
+WARNING 2025-02-28 16:47:15,292 basehttp "POST /tasks/tasks/ HTTP/1.1" 400 13800
+WARNING 2025-02-28 16:47:44,271 log Bad Request: /tasks/tasks/
+WARNING 2025-02-28 16:47:44,272 basehttp "POST /tasks/tasks/ HTTP/1.1" 400 13800
+WARNING 2025-02-28 16:47:59,250 log Bad Request: /tasks/tasks/
+WARNING 2025-02-28 16:47:59,251 basehttp "POST /tasks/tasks/ HTTP/1.1" 400 13800
+INFO 2025-02-28 16:48:41,088 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3762
+INFO 2025-02-28 16:48:41,253 basehttp "GET /tasks/status/ HTTP/1.1" 200 527
+INFO 2025-02-28 16:48:42,277 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 364
+INFO 2025-02-28 16:48:43,913 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 364
+INFO 2025-02-28 16:48:44,885 basehttp "PATCH /tasks/tasks/10/ HTTP/1.1" 200 407
+INFO 2025-02-28 16:48:45,836 basehttp "PATCH /tasks/tasks/9/ HTTP/1.1" 200 515
+INFO 2025-02-28 16:48:46,618 basehttp "OPTIONS /tasks/tasks/13/ HTTP/1.1" 200 0
+INFO 2025-02-28 16:48:46,677 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 367
+INFO 2025-02-28 16:48:47,468 basehttp "PATCH /tasks/tasks/6/ HTTP/1.1" 200 550
+INFO 2025-02-28 16:48:48,651 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 200 903
+INFO 2025-02-28 16:48:50,122 basehttp "OPTIONS /tasks/tasks/12/ HTTP/1.1" 200 0
+INFO 2025-02-28 16:48:50,184 basehttp "PATCH /tasks/tasks/12/ HTTP/1.1" 200 367
+INFO 2025-02-28 16:48:53,594 basehttp "OPTIONS /tasks/tasks/11/ HTTP/1.1" 200 0
+INFO 2025-02-28 16:48:53,762 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 200 280
+INFO 2025-02-28 16:48:56,918 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 200 280
+INFO 2025-02-28 16:49:04,042 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 19809
+INFO 2025-02-28 16:49:46,570 basehttp "POST /tasks/tasks/ HTTP/1.1" 201 14869
+INFO 2025-02-28 16:49:57,605 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4314
+INFO 2025-02-28 16:49:57,659 basehttp "GET /tasks/status/ HTTP/1.1" 200 527
+INFO 2025-02-28 16:50:10,679 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 367
+INFO 2025-02-28 16:50:12,730 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 367
+INFO 2025-02-28 16:51:38,311 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 364
+INFO 2025-02-28 16:54:18,382 basehttp "GET /admin/ HTTP/1.1" 200 53039
+INFO 2025-02-28 16:54:18,589 basehttp "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 103009
+INFO 2025-02-28 16:54:18,590 basehttp "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 200 1382975
+INFO 2025-02-28 16:54:18,603 basehttp "GET /static/jazzmin/css/main.css HTTP/1.1" 200 16969
+INFO 2025-02-28 16:54:18,604 basehttp "GET /static/vendor/bootswatch/slate/bootstrap.min.css HTTP/1.1" 200 171632
+INFO 2025-02-28 16:54:18,608 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 296030
+INFO 2025-02-28 16:54:18,698 basehttp "GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 25392
+INFO 2025-02-28 16:54:18,699 basehttp "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 156400
+INFO 2025-02-28 16:54:21,777 basehttp "GET /admin/tasks/status/ HTTP/1.1" 200 28858
+INFO 2025-02-28 16:54:21,806 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 8280
+INFO 2025-02-28 16:54:21,806 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 8056
+INFO 2025-02-28 16:54:21,807 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 355
+INFO 2025-02-28 16:54:21,807 basehttp "GET /static/vendor/select2/css/select2.min.css HTTP/1.1" 200 16264
+INFO 2025-02-28 16:54:21,809 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 6392
+INFO 2025-02-28 16:54:21,814 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 0
+INFO 2025-02-28 16:54:21,821 basehttp "GET /static/vendor/select2/js/select2.min.js HTTP/1.1" 200 73170
+INFO 2025-02-28 16:54:21,823 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 331297
+INFO 2025-02-28 16:54:21,823 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1574
+INFO 2025-02-28 16:54:21,829 basehttp "GET /static/jazzmin/js/change_list.js HTTP/1.1" 200 2252
+INFO 2025-02-28 16:54:21,933 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-28 16:54:30,179 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 200 280
+INFO 2025-02-28 16:54:34,960 basehttp "GET /admin/tasks/status/2/change/ HTTP/1.1" 200 25078
+INFO 2025-02-28 16:54:34,985 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 383
+INFO 2025-02-28 16:54:34,986 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 622
+INFO 2025-02-28 16:54:34,986 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 601
+INFO 2025-02-28 16:54:35,001 basehttp "GET /static/jazzmin/js/change_form.js HTTP/1.1" 200 6052
+INFO 2025-02-28 16:54:35,008 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 334
+INFO 2025-02-28 16:54:35,012 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 584
+INFO 2025-02-28 16:54:35,142 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-28 16:54:44,977 basehttp "PATCH /tasks/tasks/12/ HTTP/1.1" 200 367
+INFO 2025-02-28 16:54:46,523 basehttp "PATCH /tasks/tasks/10/ HTTP/1.1" 200 407
+INFO 2025-02-28 16:54:48,323 basehttp "PATCH /tasks/tasks/9/ HTTP/1.1" 200 515
+INFO 2025-02-28 16:54:55,493 basehttp "GET /admin/tasks/status/2/delete/ HTTP/1.1" 200 20581
+INFO 2025-02-28 16:54:55,516 basehttp "GET /static/admin/js/cancel.js HTTP/1.1" 200 913
+INFO 2025-02-28 16:54:57,960 basehttp "POST /admin/tasks/status/2/delete/ HTTP/1.1" 302 0
+INFO 2025-02-28 16:54:58,040 basehttp "GET /admin/tasks/status/ HTTP/1.1" 200 28806
+INFO 2025-02-28 16:54:58,147 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-28 16:55:01,971 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 16:55:02,042 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 16:59:10,369 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 16:59:10,440 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 16:59:31,256 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 16:59:31,420 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 16:59:41,365 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 16:59:41,522 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 16:59:46,062 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 16:59:46,127 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 16:59:53,045 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 16:59:53,131 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:00:08,995 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:00:09,052 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:00:20,463 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:00:20,514 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:01:04,502 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:01:04,572 basehttp - Broken pipe from ('127.0.0.1', 36499)
+INFO 2025-02-28 17:01:05,390 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:01:05,452 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:01:52,208 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:01:52,265 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:02:24,206 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:02:24,262 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:03:08,328 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:03:08,391 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:03:13,722 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:03:13,772 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:04:41,501 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:04:41,671 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:04:48,025 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:04:48,082 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:07:39,405 basehttp "GET /tasks/status/$%7Bstatus_id%7D HTTP/1.1" 301 0
+WARNING 2025-02-28 17:07:39,640 log Not Found: /tasks/status/${status_id}/
+WARNING 2025-02-28 17:07:39,640 basehttp "GET /tasks/status/$%7Bstatus_id%7D/ HTTP/1.1" 404 11303
+INFO 2025-02-28 17:07:39,706 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:07:39,805 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:07:45,360 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:07:45,517 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:08:09,752 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:08:09,918 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:08:11,102 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:08:11,159 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:10:57,651 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:10:57,709 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:12:26,805 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:12:26,865 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:12:28,163 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:12:28,218 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:12:58,099 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:12:58,256 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:13:35,732 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:13:35,792 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:14:21,280 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:14:21,335 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:14:39,304 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:14:39,468 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:14:40,620 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:14:40,676 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+INFO 2025-02-28 17:14:41,327 basehttp "OPTIONS /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 200 0
+WARNING 2025-02-28 17:14:41,332 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:14:41,332 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+INFO 2025-02-28 17:27:58,405 basehttp "PATCH /tasks/tasks/12/ HTTP/1.1" 200 367
+INFO 2025-02-28 17:27:59,170 basehttp "PATCH /tasks/tasks/12/ HTTP/1.1" 200 367
+INFO 2025-02-28 17:28:00,649 basehttp "PATCH /tasks/tasks/10/ HTTP/1.1" 200 407
+WARNING 2025-02-28 17:28:04,424 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:28:04,425 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+WARNING 2025-02-28 17:28:05,207 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:28:05,208 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+WARNING 2025-02-28 17:28:05,455 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:28:05,456 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+WARNING 2025-02-28 17:28:06,384 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:28:06,385 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+WARNING 2025-02-28 17:28:07,535 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:28:07,536 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+INFO 2025-02-28 17:28:52,635 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4320
+INFO 2025-02-28 17:28:52,699 basehttp "GET /tasks/status/ HTTP/1.1" 200 447
+WARNING 2025-02-28 17:28:55,098 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:28:55,098 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+WARNING 2025-02-28 17:29:14,911 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:29:14,911 basehttp "GET /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 11400
+WARNING 2025-02-28 17:30:24,161 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:30:24,162 basehttp "DELETE /tasks/status/%5Bobject%20PointerEvent%5D/ HTTP/1.1" 404 11403
+INFO 2025-02-28 17:32:19,947 basehttp "OPTIONS /tasks/status/4/ HTTP/1.1" 200 0
+INFO 2025-02-28 17:32:20,023 basehttp "DELETE /tasks/status/4/ HTTP/1.1" 204 0
+INFO 2025-02-28 17:32:24,257 basehttp "OPTIONS /tasks/status/3/ HTTP/1.1" 200 0
+INFO 2025-02-28 17:32:24,320 basehttp "DELETE /tasks/status/3/ HTTP/1.1" 204 0
+INFO 2025-02-28 17:32:30,960 basehttp "OPTIONS /tasks/status/5/ HTTP/1.1" 200 0
+INFO 2025-02-28 17:32:31,020 basehttp "DELETE /tasks/status/5/ HTTP/1.1" 204 0
+INFO 2025-02-28 17:32:33,440 basehttp "OPTIONS /tasks/status/6/ HTTP/1.1" 200 0
+INFO 2025-02-28 17:32:33,500 basehttp "DELETE /tasks/status/6/ HTTP/1.1" 204 0
+INFO 2025-02-28 17:32:34,656 basehttp "OPTIONS /tasks/status/9/ HTTP/1.1" 200 0
+INFO 2025-02-28 17:32:34,716 basehttp "DELETE /tasks/status/9/ HTTP/1.1" 204 0
+WARNING 2025-02-28 17:32:47,656 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:32:47,657 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+WARNING 2025-02-28 17:32:48,423 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:32:48,423 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+WARNING 2025-02-28 17:32:48,639 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:32:48,639 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+WARNING 2025-02-28 17:32:48,896 log Not Found: /tasks/status/[object PointerEvent]/
+WARNING 2025-02-28 17:32:48,896 basehttp "DELETE /tasks/status/[object%20PointerEvent]/ HTTP/1.1" 404 23
+INFO 2025-02-28 17:35:08,708 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4329
+INFO 2025-02-28 17:35:08,772 basehttp "GET /tasks/status/ HTTP/1.1" 200 166
+INFO 2025-02-28 17:35:10,768 basehttp "OPTIONS /tasks/status/15/ HTTP/1.1" 200 0
+WARNING 2025-02-28 17:35:10,826 log Not Found: /tasks/status/15/
+WARNING 2025-02-28 17:35:10,826 basehttp "DELETE /tasks/status/15/ HTTP/1.1" 404 47
+WARNING 2025-02-28 17:35:11,464 log Not Found: /tasks/status/15/
+WARNING 2025-02-28 17:35:11,464 basehttp "DELETE /tasks/status/15/ HTTP/1.1" 404 47
+WARNING 2025-02-28 17:35:12,052 log Not Found: /tasks/status/15/
+WARNING 2025-02-28 17:35:12,052 basehttp "DELETE /tasks/status/15/ HTTP/1.1" 404 47
+INFO 2025-02-28 17:35:16,041 basehttp "OPTIONS /tasks/status/13/ HTTP/1.1" 200 0
+WARNING 2025-02-28 17:35:16,099 log Not Found: /tasks/status/13/
+WARNING 2025-02-28 17:35:16,100 basehttp "DELETE /tasks/status/13/ HTTP/1.1" 404 47
+INFO 2025-02-28 17:35:32,617 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4329
+INFO 2025-02-28 17:35:32,670 basehttp "GET /tasks/status/ HTTP/1.1" 200 166
+INFO 2025-02-28 17:35:35,616 basehttp "OPTIONS /tasks/tasks/15/ HTTP/1.1" 200 0
+INFO 2025-02-28 17:35:35,693 basehttp "DELETE /tasks/tasks/15/ HTTP/1.1" 204 0
+INFO 2025-02-28 17:36:01,951 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3777
+INFO 2025-02-28 17:36:02,008 basehttp "GET /tasks/status/ HTTP/1.1" 200 166
+INFO 2025-02-28 17:36:03,391 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3777
+INFO 2025-02-28 17:36:03,559 basehttp "GET /tasks/status/ HTTP/1.1" 200 166
+INFO 2025-02-28 17:36:05,712 basehttp "DELETE /tasks/tasks/6/ HTTP/1.1" 204 0
+INFO 2025-02-28 17:36:18,136 basehttp "OPTIONS /tasks/status/8/ HTTP/1.1" 200 0
+INFO 2025-02-28 17:36:18,192 basehttp "DELETE /tasks/status/8/ HTTP/1.1" 204 0
+INFO 2025-02-28 17:36:45,120 basehttp "GET /admin/tasks/status/ HTTP/1.1" 200 24895
+INFO 2025-02-28 17:36:45,241 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-28 17:36:47,517 basehttp "GET /admin/tasks/status/add/ HTTP/1.1" 200 24321
+INFO 2025-02-28 17:36:47,706 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-28 17:36:51,543 basehttp "POST /admin/tasks/status/add/ HTTP/1.1" 302 0
+INFO 2025-02-28 17:36:51,625 basehttp "GET /admin/tasks/status/add/ HTTP/1.1" 200 24913
+INFO 2025-02-28 17:36:51,722 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-28 17:36:55,321 basehttp "POST /admin/tasks/status/add/ HTTP/1.1" 302 0
+INFO 2025-02-28 17:36:55,400 basehttp "GET /admin/tasks/status/add/ HTTP/1.1" 200 24917
+INFO 2025-02-28 17:36:55,494 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-28 17:37:16,654 basehttp "POST /admin/tasks/status/add/ HTTP/1.1" 302 0
+INFO 2025-02-28 17:37:16,828 basehttp "GET /admin/tasks/status/add/ HTTP/1.1" 200 24922
+INFO 2025-02-28 17:37:16,935 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-28 17:37:20,413 basehttp "POST /admin/tasks/status/add/ HTTP/1.1" 302 0
+INFO 2025-02-28 17:37:20,593 basehttp "GET /admin/tasks/status/ HTTP/1.1" 200 27610
+INFO 2025-02-28 17:37:20,692 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-02-28 17:37:23,926 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3226
+INFO 2025-02-28 17:37:23,981 basehttp "GET /tasks/status/ HTTP/1.1" 200 288
+INFO 2025-02-28 17:37:31,928 basehttp "OPTIONS /tasks/status/10/ HTTP/1.1" 200 0
+INFO 2025-02-28 17:37:32,094 basehttp "DELETE /tasks/status/10/ HTTP/1.1" 204 0
+INFO 2025-02-28 17:39:41,702 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-02-28 17:39:42,716 autoreload Watching for file changes with StatReloader
