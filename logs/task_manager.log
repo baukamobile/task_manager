@@ -3517,6 +3517,7 @@ LINE 1: SELECT "jet_pinnedapplication"."app_label" FROM "jet_pinneda...
 ERROR 2025-02-21 16:13:46,194 basehttp "GET /admin/ HTTP/1.1" 500 488016
 WARNING 2025-02-21 16:17:49,539 log Not Found: /
 WARNING 2025-02-21 16:17:49,539 basehttp "GET / HTTP/1.1" 404 3368
+<<<<<<< HEAD
 WARNING 2025-02-24 09:16:57,804 log Not Found: /
 WARNING 2025-02-24 09:16:57,805 basehttp "GET / HTTP/1.1" 404 3368
 WARNING 2025-02-24 09:16:58,132 log Not Found: /favicon.ico
@@ -10092,6 +10093,7 @@ WARNING 2025-02-26 17:40:44,813 log Not Found: /tasks/tasks//
 WARNING 2025-02-26 17:40:44,815 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
 WARNING 2025-02-26 17:41:10,897 log Not Found: /tasks/tasks//
 WARNING 2025-02-26 17:41:10,898 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
+<<<<<<< HEAD
 WARNING 2025-02-27 09:11:25,187 log Not Found: /
 WARNING 2025-02-27 09:11:25,191 basehttp "GET / HTTP/1.1" 404 3064
 WARNING 2025-02-27 09:11:25,623 log Not Found: /favicon.ico
@@ -10676,3 +10678,11 @@ WARNING 2025-02-28 17:35:12,052 log Not Found: /tasks/status/15/
 WARNING 2025-02-28 17:35:12,052 basehttp "DELETE /tasks/status/15/ HTTP/1.1" 404 47
 WARNING 2025-02-28 17:35:16,099 log Not Found: /tasks/status/13/
 WARNING 2025-02-28 17:35:16,100 basehttp "DELETE /tasks/status/13/ HTTP/1.1" 404 47
+=======
+=======
+WARNING 2025-02-21 13:42:02,569 base Session data corrupted
+WARNING 2025-02-21 13:42:02,655 base Session data corrupted
+WARNING 2025-02-21 13:42:15,664 base Session data corrupted
+WARNING 2025-02-21 13:42:35,998 base Session data corrupted
+>>>>>>> 2eba7d2 (pulled succesfully)
+>>>>>>> 55d61a8 (pulled)
