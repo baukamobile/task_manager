@@ -10501,3 +10501,48 @@ WARNING 2025-02-27 18:19:18,278 basehttp "GET /static/vue/dist/assets/index-Cege
 WARNING 2025-02-27 18:19:22,169 basehttp "GET /static/vue/dist/assets/index-CaVEL3aJ.js HTTP/1.1" 404 1913
 WARNING 2025-02-27 18:19:22,173 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 404 1916
 WARNING 2025-02-27 18:19:27,826 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 404 1916
+WARNING 2025-02-27 18:27:03,085 log Forbidden: /tasks/tasks/11/
+WARNING 2025-02-27 18:27:03,085 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:04,945 log Forbidden: /tasks/tasks/11/
+WARNING 2025-02-27 18:27:04,946 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:06,033 log Forbidden: /tasks/tasks/11/
+WARNING 2025-02-27 18:27:06,033 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:07,976 log Forbidden: /tasks/tasks/12/
+WARNING 2025-02-27 18:27:07,977 basehttp "PATCH /tasks/tasks/12/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:11,382 log Forbidden: /tasks/tasks/8/
+WARNING 2025-02-27 18:27:11,383 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:17,787 log Forbidden: /tasks/tasks/10/
+WARNING 2025-02-27 18:27:17,787 basehttp "PATCH /tasks/tasks/10/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:21,572 log Forbidden: /tasks/tasks/10/
+WARNING 2025-02-27 18:27:21,573 basehttp "PATCH /tasks/tasks/10/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:26,272 log Forbidden: /tasks/tasks/8/
+WARNING 2025-02-27 18:27:26,272 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:28,599 log Forbidden: /tasks/tasks/9/
+WARNING 2025-02-27 18:27:28,600 basehttp "PATCH /tasks/tasks/9/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:29,827 log Forbidden: /tasks/tasks/12/
+WARNING 2025-02-27 18:27:29,828 basehttp "PATCH /tasks/tasks/12/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:36,110 log Forbidden: /tasks/tasks/11/
+WARNING 2025-02-27 18:27:36,111 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:37,496 log Forbidden: /tasks/tasks/11/
+WARNING 2025-02-27 18:27:37,497 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:39,418 log Forbidden: /tasks/tasks/9/
+WARNING 2025-02-27 18:27:39,419 basehttp "PATCH /tasks/tasks/9/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:40,851 log Forbidden: /tasks/tasks/9/
+WARNING 2025-02-27 18:27:40,852 basehttp "PATCH /tasks/tasks/9/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:28:02,510 log Forbidden: /tasks/tasks/11/
+WARNING 2025-02-27 18:28:02,510 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 403 45
+WARNING 2025-02-28 09:11:14,235 log Not Found: /users/department
+WARNING 2025-02-28 09:11:14,237 basehttp "GET /users/department HTTP/1.1" 404 4368
+WARNING 2025-02-28 09:11:14,558 log Not Found: /favicon.ico
+WARNING 2025-02-28 09:11:14,559 basehttp "GET /favicon.ico HTTP/1.1" 404 3258
+WARNING 2025-02-28 10:41:07,385 log Not Found: /tasksstatus/
+WARNING 2025-02-28 10:41:07,544 log Not Found: /taskstasks/
+WARNING 2025-02-28 10:43:22,328 log Not Found: /favicon.ico
+WARNING 2025-02-28 10:43:22,329 basehttp "GET /favicon.ico HTTP/1.1" 404 3258
+WARNING 2025-02-28 10:43:30,702 log Not Found: /favicon.ico
+WARNING 2025-02-28 10:43:30,703 basehttp "GET /favicon.ico HTTP/1.1" 404 3258
+WARNING 2025-02-28 10:43:34,448 log Not Found: /favicon.ico
+WARNING 2025-02-28 10:43:34,449 basehttp "GET /favicon.ico HTTP/1.1" 404 3258
+WARNING 2025-02-28 10:48:35,362 log Not Found: /tasks/
+WARNING 2025-02-28 10:48:35,362 basehttp "GET /tasks/ HTTP/1.1" 404 4164
+WARNING 2025-02-28 10:50:17,355 log Not Found: /tasks/

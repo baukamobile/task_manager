@@ -1,13 +1,13 @@
 from django.core.exceptions import ValidationError
 from django.test import TestCase
-from users.models import User,Positions,RolesUser,Department,Company
+from users.models import User,Positions,Roles,Department,Company
 # Create your tests here.
 from django.utils.timezone import now
 
 class UserTests(TestCase):
     def setUp(self):
         self.position = Positions.objects.create(position_name="Cashier")
-        self.role = RolesUser.objects.create(role_name="Исполнитель")
+        self.role = Roles.objects.create(role_name="Исполнитель")
         self.department = Department.objects.create(department_name='Guidejet')
         self.company = Company.objects.create(company_name='Onay')
 

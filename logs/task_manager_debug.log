@@ -2717,3 +2717,209 @@ INFO 2025-02-27 18:24:11,527 autoreload Watching for file changes with StatReloa
 INFO 2025-02-27 18:24:31,090 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
 INFO 2025-02-27 18:24:31,862 autoreload Watching for file changes with StatReloader
 INFO 2025-02-27 18:26:54,021 autoreload Watching for file changes with StatReloader
+INFO 2025-02-27 18:26:56,816 basehttp "GET / HTTP/1.1" 200 1223
+INFO 2025-02-27 18:26:56,911 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 200 38766
+INFO 2025-02-27 18:26:56,921 basehttp "GET /static/vue/dist/assets/index-CaVEL3aJ.js HTTP/1.1" 200 1549384
+INFO 2025-02-27 18:26:57,129 basehttp "GET /static/vue/dist/assets/PageFooter-i6VBsyFT.js HTTP/1.1" 200 749
+INFO 2025-02-27 18:26:57,130 basehttp "GET /static/vue/dist/assets/DashboardLayout-B3rshA3m.js HTTP/1.1" 200 49116
+INFO 2025-02-27 18:26:57,133 basehttp "GET /static/vue/dist/assets/_plugin-vue_export-helper-DlAUqK2U.js HTTP/1.1" 200 91
+INFO 2025-02-27 18:26:57,134 basehttp "GET /static/vue/dist/assets/Index-BS3FHTIh.css HTTP/1.1" 200 1847
+INFO 2025-02-27 18:26:57,135 basehttp "GET /static/vue/dist/assets/PageWrapper-DS28kFj-.js HTTP/1.1" 200 527
+INFO 2025-02-27 18:26:57,139 basehttp "GET /static/vue/dist/assets/Index-5_JBARpf.js HTTP/1.1" 200 38141
+INFO 2025-02-27 18:26:57,407 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-27 18:26:57,526 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+WARNING 2025-02-27 18:27:03,085 log Forbidden: /tasks/tasks/11/
+WARNING 2025-02-27 18:27:03,085 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:04,945 log Forbidden: /tasks/tasks/11/
+WARNING 2025-02-27 18:27:04,946 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:06,033 log Forbidden: /tasks/tasks/11/
+WARNING 2025-02-27 18:27:06,033 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:07,976 log Forbidden: /tasks/tasks/12/
+WARNING 2025-02-27 18:27:07,977 basehttp "PATCH /tasks/tasks/12/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:11,382 log Forbidden: /tasks/tasks/8/
+WARNING 2025-02-27 18:27:11,383 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:17,787 log Forbidden: /tasks/tasks/10/
+WARNING 2025-02-27 18:27:17,787 basehttp "PATCH /tasks/tasks/10/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:21,572 log Forbidden: /tasks/tasks/10/
+WARNING 2025-02-27 18:27:21,573 basehttp "PATCH /tasks/tasks/10/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:26,272 log Forbidden: /tasks/tasks/8/
+WARNING 2025-02-27 18:27:26,272 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:28,599 log Forbidden: /tasks/tasks/9/
+WARNING 2025-02-27 18:27:28,600 basehttp "PATCH /tasks/tasks/9/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:29,827 log Forbidden: /tasks/tasks/12/
+WARNING 2025-02-27 18:27:29,828 basehttp "PATCH /tasks/tasks/12/ HTTP/1.1" 403 45
+INFO 2025-02-27 18:27:30,996 basehttp "GET /? HTTP/1.1" 200 1223
+INFO 2025-02-27 18:27:31,379 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-27 18:27:31,477 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-27 18:27:32,729 basehttp "GET /static/vue/dist/assets/Chat-DBq3oLYq.js HTTP/1.1" 200 418
+INFO 2025-02-27 18:27:32,734 basehttp "GET /static/vue/dist/assets/apexcharts.common-XJ_S8PLJ.js HTTP/1.1" 200 491374
+INFO 2025-02-27 18:27:33,128 basehttp "GET /static/vue/dist/assets/calendar-DnuAaIRy.js HTTP/1.1" 200 556
+INFO 2025-02-27 18:27:33,128 basehttp "GET /static/vue/dist/assets/calendar-BxkT-kmF.css HTTP/1.1" 200 77
+INFO 2025-02-27 18:27:33,617 basehttp "GET /static/vue/dist/assets/news-DPlVVwt1.js HTTP/1.1" 200 424
+INFO 2025-02-27 18:27:34,395 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-27 18:27:34,459 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+WARNING 2025-02-27 18:27:36,110 log Forbidden: /tasks/tasks/11/
+WARNING 2025-02-27 18:27:36,111 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:37,496 log Forbidden: /tasks/tasks/11/
+WARNING 2025-02-27 18:27:37,497 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:39,418 log Forbidden: /tasks/tasks/9/
+WARNING 2025-02-27 18:27:39,419 basehttp "PATCH /tasks/tasks/9/ HTTP/1.1" 403 45
+WARNING 2025-02-27 18:27:40,851 log Forbidden: /tasks/tasks/9/
+WARNING 2025-02-27 18:27:40,852 basehttp "PATCH /tasks/tasks/9/ HTTP/1.1" 403 45
+INFO 2025-02-27 18:27:58,545 basehttp "GET / HTTP/1.1" 200 1223
+INFO 2025-02-27 18:27:58,993 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-27 18:27:59,068 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+WARNING 2025-02-27 18:28:02,510 log Forbidden: /tasks/tasks/11/
+WARNING 2025-02-27 18:28:02,510 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 403 45
+INFO 2025-02-27 18:36:11,378 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-27 18:36:11,441 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-27 18:36:13,969 basehttp "OPTIONS /tasks/tasks/11/ HTTP/1.1" 200 0
+INFO 2025-02-27 18:36:14,046 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 200 280
+INFO 2025-02-27 18:36:16,286 basehttp "OPTIONS /tasks/tasks/9/ HTTP/1.1" 200 0
+INFO 2025-02-27 18:36:16,350 basehttp "PATCH /tasks/tasks/9/ HTTP/1.1" 200 515
+INFO 2025-02-27 18:36:17,591 basehttp "OPTIONS /tasks/tasks/7/ HTTP/1.1" 200 0
+INFO 2025-02-27 18:36:17,649 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 200 724
+INFO 2025-02-27 18:36:18,702 basehttp "OPTIONS /tasks/tasks/6/ HTTP/1.1" 200 0
+INFO 2025-02-27 18:36:18,761 basehttp "PATCH /tasks/tasks/6/ HTTP/1.1" 200 550
+INFO 2025-02-27 18:36:22,096 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 200 280
+INFO 2025-02-27 18:36:23,170 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 200 724
+INFO 2025-02-28 08:54:50,105 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 08:54:53,857 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 08:54:53,914 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 08:54:55,460 basehttp "OPTIONS /tasks/tasks/11/ HTTP/1.1" 200 0
+INFO 2025-02-28 08:54:55,640 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 200 280
+INFO 2025-02-28 08:55:01,915 basehttp "OPTIONS /tasks/tasks/7/ HTTP/1.1" 200 0
+INFO 2025-02-28 08:55:02,083 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 200 724
+INFO 2025-02-28 08:55:05,235 basehttp "OPTIONS /tasks/tasks/12/ HTTP/1.1" 200 0
+INFO 2025-02-28 08:55:05,300 basehttp "PATCH /tasks/tasks/12/ HTTP/1.1" 200 367
+INFO 2025-02-28 08:55:06,515 basehttp "OPTIONS /tasks/tasks/9/ HTTP/1.1" 200 0
+INFO 2025-02-28 08:55:06,574 basehttp "PATCH /tasks/tasks/9/ HTTP/1.1" 200 515
+INFO 2025-02-28 08:55:08,291 basehttp "OPTIONS /tasks/tasks/8/ HTTP/1.1" 200 0
+INFO 2025-02-28 08:55:08,350 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 200 903
+INFO 2025-02-28 08:57:19,596 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 200 280
+INFO 2025-02-28 08:57:23,462 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 08:57:23,519 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 08:57:24,643 basehttp "OPTIONS /tasks/tasks/11/ HTTP/1.1" 200 0
+INFO 2025-02-28 08:57:24,725 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 200 280
+INFO 2025-02-28 08:57:25,494 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 200 280
+INFO 2025-02-28 08:57:26,378 basehttp "OPTIONS /tasks/tasks/9/ HTTP/1.1" 200 0
+INFO 2025-02-28 08:57:26,436 basehttp "PATCH /tasks/tasks/9/ HTTP/1.1" 200 515
+INFO 2025-02-28 08:57:27,256 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 08:57:27,311 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 08:58:59,401 basehttp "PATCH /tasks/tasks/9/ HTTP/1.1" 200 515
+INFO 2025-02-28 08:59:02,696 basehttp "PATCH /tasks/tasks/9/ HTTP/1.1" 200 515
+INFO 2025-02-28 08:59:19,385 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 08:59:19,440 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 08:59:21,526 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 08:59:21,580 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 08:59:24,581 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 08:59:24,642 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 09:09:06,023 basehttp "OPTIONS /tasks/tasks/12/ HTTP/1.1" 200 0
+INFO 2025-02-28 09:09:06,231 basehttp "PATCH /tasks/tasks/12/ HTTP/1.1" 200 367
+WARNING 2025-02-28 09:11:14,235 log Not Found: /users/department
+WARNING 2025-02-28 09:11:14,237 basehttp "GET /users/department HTTP/1.1" 404 4368
+WARNING 2025-02-28 09:11:14,558 log Not Found: /favicon.ico
+WARNING 2025-02-28 09:11:14,559 basehttp "GET /favicon.ico HTTP/1.1" 404 3258
+INFO 2025-02-28 09:15:01,572 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 09:15:01,630 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 09:15:02,349 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 09:15:02,425 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 09:15:04,386 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 09:15:04,449 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 09:15:05,160 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 09:15:05,217 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 09:15:05,954 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 09:15:06,013 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 09:15:07,711 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 09:15:07,769 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 09:15:09,312 basehttp "PATCH /tasks/tasks/9/ HTTP/1.1" 200 515
+INFO 2025-02-28 09:15:10,293 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 09:15:10,445 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 09:16:27,086 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 09:16:27,144 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 09:16:28,383 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 09:16:28,545 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 09:16:44,324 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 09:16:44,487 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 09:17:01,300 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 09:17:01,358 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 09:25:13,316 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 09:25:13,480 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 09:26:02,419 basehttp "PATCH /tasks/tasks/12/ HTTP/1.1" 200 367
+INFO 2025-02-28 09:26:04,118 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 200 280
+INFO 2025-02-28 09:26:33,950 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 09:26:34,013 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 09:28:15,338 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 09:28:15,394 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 09:28:17,220 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 09:28:17,280 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 09:28:18,554 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 09:28:18,614 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 09:28:20,067 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 09:28:20,126 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 09:28:28,401 basehttp "OPTIONS /tasks/tasks/10/ HTTP/1.1" 200 0
+INFO 2025-02-28 09:28:28,462 basehttp "PATCH /tasks/tasks/10/ HTTP/1.1" 200 407
+INFO 2025-02-28 09:28:32,616 basehttp "PATCH /tasks/tasks/12/ HTTP/1.1" 200 367
+INFO 2025-02-28 09:28:35,083 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 200 280
+INFO 2025-02-28 09:44:46,794 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\models.py changed, reloading.
+INFO 2025-02-28 09:44:48,526 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 09:52:30,241 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 10:31:53,653 basehttp "PATCH /tasks/tasks/12/ HTTP/1.1" 200 367
+WARNING 2025-02-28 10:41:07,385 log Not Found: /tasksstatus/
+WARNING 2025-02-28 10:41:07,544 log Not Found: /taskstasks/
+INFO 2025-02-28 10:43:21,833 basehttp "GET /tasks/status/5/ HTTP/1.1" 200 10105
+INFO 2025-02-28 10:43:22,045 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3929
+INFO 2025-02-28 10:43:22,047 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3663
+INFO 2025-02-28 10:43:22,048 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1846
+INFO 2025-02-28 10:43:22,052 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39685
+INFO 2025-02-28 10:43:22,053 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13660
+INFO 2025-02-28 10:43:22,053 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87535
+INFO 2025-02-28 10:43:22,059 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 62
+INFO 2025-02-28 10:43:22,059 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1315
+INFO 2025-02-28 10:43:22,064 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 846
+INFO 2025-02-28 10:43:22,067 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1234
+INFO 2025-02-28 10:43:22,069 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121462
+INFO 2025-02-28 10:43:22,083 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2025-02-28 10:43:22,328 log Not Found: /favicon.ico
+WARNING 2025-02-28 10:43:22,329 basehttp "GET /favicon.ico HTTP/1.1" 404 3258
+INFO 2025-02-28 10:43:25,093 basehttp "GET /tasks/status/ HTTP/1.1" 200 6304
+INFO 2025-02-28 10:43:30,561 basehttp "GET /tasks/status/ HTTP/1.1" 200 6304
+INFO 2025-02-28 10:43:30,581 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3663
+INFO 2025-02-28 10:43:30,581 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 846
+INFO 2025-02-28 10:43:30,583 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3929
+INFO 2025-02-28 10:43:30,584 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1234
+INFO 2025-02-28 10:43:30,589 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87535
+INFO 2025-02-28 10:43:30,593 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1846
+INFO 2025-02-28 10:43:30,595 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121462
+INFO 2025-02-28 10:43:30,596 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13660
+INFO 2025-02-28 10:43:30,597 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 62
+INFO 2025-02-28 10:43:30,598 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39685
+INFO 2025-02-28 10:43:30,600 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1315
+INFO 2025-02-28 10:43:30,606 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2025-02-28 10:43:30,702 log Not Found: /favicon.ico
+WARNING 2025-02-28 10:43:30,703 basehttp "GET /favicon.ico HTTP/1.1" 404 3258
+INFO 2025-02-28 10:43:34,304 basehttp "GET /tasks/status/ HTTP/1.1" 200 6304
+INFO 2025-02-28 10:43:34,323 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3663
+INFO 2025-02-28 10:43:34,324 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 846
+INFO 2025-02-28 10:43:34,325 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1234
+INFO 2025-02-28 10:43:34,325 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3929
+INFO 2025-02-28 10:43:34,334 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1846
+INFO 2025-02-28 10:43:34,334 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13660
+INFO 2025-02-28 10:43:34,335 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1315
+INFO 2025-02-28 10:43:34,339 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121462
+INFO 2025-02-28 10:43:34,340 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39685
+INFO 2025-02-28 10:43:34,343 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87535
+INFO 2025-02-28 10:43:34,343 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 62
+INFO 2025-02-28 10:43:34,349 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2025-02-28 10:43:34,448 log Not Found: /favicon.ico
+WARNING 2025-02-28 10:43:34,449 basehttp "GET /favicon.ico HTTP/1.1" 404 3258
+INFO 2025-02-28 10:48:08,471 basehttp "GET /tasks/ HTTP/1.1" 200 940
+INFO 2025-02-28 10:48:33,877 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\urls.py changed, reloading.
+INFO 2025-02-28 10:48:34,622 autoreload Watching for file changes with StatReloader
+WARNING 2025-02-28 10:48:35,362 log Not Found: /tasks/
+WARNING 2025-02-28 10:48:35,362 basehttp "GET /tasks/ HTTP/1.1" 404 4164
+INFO 2025-02-28 10:48:39,114 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 10954
+WARNING 2025-02-28 10:50:17,355 log Not Found: /tasks/
+INFO 2025-02-28 10:51:46,979 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 10:52:35,245 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 10954
+INFO 2025-02-28 11:03:07,358 basehttp "GET /tasks/status/ HTTP/1.1" 200 6304

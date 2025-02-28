@@ -10,5 +10,5 @@ urlpatterns = [
     path('status/', StatusListView.as_view(), name='status'),
     path('status/<int:pk>/', StatusDetailView.as_view(), name='status'),
 
-    path('',taskpage),
+    # path('',taskpage),
 ]
