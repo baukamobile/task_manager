@@ -76,7 +76,7 @@ class TaskApiTest(APITestCase):
         response = self.client.get('/tasks/tasks/')  # Убедись, что URL правильный
         print("📢 Ответ API:", response.json())  # Посмотреть, что реально возвращается
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.json()), 1)  # Теперь в базе есть 1 задача
+        self.assertEqual(len(response.json()), 1)  # Теперь в базе 1 задача
 
 
 class StatusApitTest(APITestCase):
