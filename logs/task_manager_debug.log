@@ -3000,3 +3000,274 @@ WARNING 2025-02-28 14:39:14,074 log Method Not Allowed: /tasks/project/add/
 WARNING 2025-02-28 14:39:14,075 basehttp "GET /tasks/project/add/ HTTP/1.1" 405 9725
 INFO 2025-02-28 14:39:33,926 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
 INFO 2025-02-28 14:39:34,744 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 14:41:12,367 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 200 903
+INFO 2025-02-28 14:41:14,499 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 364
+INFO 2025-02-28 14:41:19,412 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 14:41:19,478 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+WARNING 2025-02-28 14:51:40,560 log Method Not Allowed: /tasks/project/add/
+WARNING 2025-02-28 14:51:40,560 basehttp "GET /tasks/project/add/ HTTP/1.1" 405 9725
+INFO 2025-02-28 14:59:57,682 basehttp - Broken pipe from ('127.0.0.1', 34581)
+INFO 2025-02-28 14:59:57,881 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 14:59:58,050 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 14:59:59,388 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 364
+INFO 2025-02-28 15:00:00,338 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 364
+INFO 2025-02-28 15:00:01,500 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:00:01,558 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:00:02,799 basehttp "OPTIONS /tasks/tasks/13/ HTTP/1.1" 200 0
+INFO 2025-02-28 15:00:02,861 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 367
+INFO 2025-02-28 15:00:04,023 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 364
+INFO 2025-02-28 15:01:15,228 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:01:15,287 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:01:22,171 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:01:22,234 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:01:27,879 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:01:27,931 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:01:30,878 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:01:30,931 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:01:38,895 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:01:38,953 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:02:24,084 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:02:24,136 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:03:34,058 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:03:34,112 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:03:41,874 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:03:42,027 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:03:48,878 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:03:48,933 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:03:59,887 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:04:00,056 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:04:02,876 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:04:02,930 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:04:10,978 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:04:11,033 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:04:37,887 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:04:37,944 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:05:19,038 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:05:19,089 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:08:37,434 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:08:37,495 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:08:39,061 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:08:39,116 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:08:40,724 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 364
+INFO 2025-02-28 15:08:42,550 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 367
+INFO 2025-02-28 15:09:06,859 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:09:07,002 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:09:08,617 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 364
+INFO 2025-02-28 15:09:10,017 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 364
+INFO 2025-02-28 15:09:11,923 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:09:12,092 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:09:13,848 basehttp "PATCH /tasks/tasks/6/ HTTP/1.1" 200 550
+INFO 2025-02-28 15:09:15,248 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 200 724
+INFO 2025-02-28 15:09:18,224 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:09:18,519 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:09:36,928 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:09:37,444 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:16:36,415 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:16:36,476 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:16:37,386 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 364
+INFO 2025-02-28 15:16:38,504 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 364
+INFO 2025-02-28 15:16:39,547 basehttp "OPTIONS /tasks/tasks/10/ HTTP/1.1" 200 0
+INFO 2025-02-28 15:16:39,605 basehttp "PATCH /tasks/tasks/10/ HTTP/1.1" 200 407
+INFO 2025-02-28 15:16:40,359 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 364
+INFO 2025-02-28 15:16:41,439 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 364
+INFO 2025-02-28 15:17:09,378 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:17:09,431 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:17:11,121 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:17:11,177 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:17:13,120 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:17:13,173 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:17:14,680 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:17:14,736 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:17:54,698 basehttp "PATCH /tasks/tasks/6/ HTTP/1.1" 200 550
+INFO 2025-02-28 15:18:51,668 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:18:51,726 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:18:53,106 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:18:53,264 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:18:54,753 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:18:54,805 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:22:11,389 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:22:11,452 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:22:12,772 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:22:12,828 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:23:59,320 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:23:59,476 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:24:08,889 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:24:08,943 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:24:12,060 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:24:12,113 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:25:44,136 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:25:44,191 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:26:12,619 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:26:12,672 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:28:55,742 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 15:28:59,649 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:28:59,710 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:31:41,105 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:31:41,263 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:31:42,899 basehttp "PATCH /tasks/tasks/9/ HTTP/1.1" 200 515
+INFO 2025-02-28 15:31:44,174 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 200 903
+INFO 2025-02-28 15:31:45,188 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 364
+INFO 2025-02-28 15:31:46,152 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 200 724
+INFO 2025-02-28 15:35:16,998 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:35:17,065 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:35:18,597 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:35:18,661 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:37:23,266 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:37:23,320 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:37:42,484 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:37:42,644 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:38:06,330 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:38:06,396 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:38:09,233 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:38:09,286 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:38:11,831 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 364
+INFO 2025-02-28 15:38:46,036 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:38:46,088 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+WARNING 2025-02-28 15:43:52,660 log Not Found: /api/tasks/
+WARNING 2025-02-28 15:43:52,661 basehttp "GET /api/tasks/ HTTP/1.1" 404 3255
+WARNING 2025-02-28 15:43:54,958 log Not Found: /api/tasks/
+WARNING 2025-02-28 15:43:54,959 basehttp "GET /api/tasks/ HTTP/1.1" 404 3255
+WARNING 2025-02-28 15:43:58,827 log Not Found: /api/tasks/
+WARNING 2025-02-28 15:43:58,827 basehttp "GET /api/tasks/ HTTP/1.1" 404 3255
+INFO 2025-02-28 15:47:49,872 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:47:49,930 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:47:51,301 basehttp "OPTIONS /tasks/tasks/7/ HTTP/1.1" 200 0
+INFO 2025-02-28 15:47:51,363 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 200 724
+INFO 2025-02-28 15:47:52,293 basehttp "OPTIONS /tasks/tasks/6/ HTTP/1.1" 200 0
+INFO 2025-02-28 15:47:52,454 basehttp "PATCH /tasks/tasks/6/ HTTP/1.1" 200 550
+INFO 2025-02-28 15:48:23,280 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:48:23,434 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:48:24,812 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:48:24,864 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:48:26,867 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 200 724
+INFO 2025-02-28 15:48:28,803 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:48:28,971 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:50:29,640 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:50:29,696 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:50:40,333 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:50:40,390 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:53:36,418 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:53:36,583 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:54:38,469 basehttp "OPTIONS /tasks/tasks/9/ HTTP/1.1" 200 0
+INFO 2025-02-28 15:54:38,544 basehttp "PATCH /tasks/tasks/9/ HTTP/1.1" 200 515
+INFO 2025-02-28 15:56:17,355 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:56:17,411 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:56:20,693 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:56:20,747 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:56:27,454 basehttp "OPTIONS /tasks/tasks/NaN/ HTTP/1.1" 200 0
+WARNING 2025-02-28 15:56:27,474 log Not Found: /tasks/tasks/NaN/
+WARNING 2025-02-28 15:56:27,474 basehttp "PATCH /tasks/tasks/NaN/ HTTP/1.1" 404 5264
+WARNING 2025-02-28 15:56:32,258 log Not Found: /tasks/tasks/NaN/
+WARNING 2025-02-28 15:56:32,259 basehttp "PATCH /tasks/tasks/NaN/ HTTP/1.1" 404 5264
+WARNING 2025-02-28 15:56:33,063 log Not Found: /tasks/tasks/NaN/
+WARNING 2025-02-28 15:56:33,064 basehttp "PATCH /tasks/tasks/NaN/ HTTP/1.1" 404 5264
+INFO 2025-02-28 15:56:37,954 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:56:38,013 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:56:39,556 basehttp "OPTIONS /tasks/tasks/10/ HTTP/1.1" 200 0
+INFO 2025-02-28 15:56:39,715 basehttp "PATCH /tasks/tasks/10/ HTTP/1.1" 200 407
+INFO 2025-02-28 15:56:41,284 basehttp "OPTIONS /tasks/tasks/8/ HTTP/1.1" 200 0
+INFO 2025-02-28 15:56:41,342 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 200 903
+INFO 2025-02-28 15:56:47,390 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 15:56:47,444 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 15:56:49,303 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 200 903
+INFO 2025-02-28 15:56:51,129 basehttp "PATCH /tasks/tasks/9/ HTTP/1.1" 200 515
+WARNING 2025-02-28 16:12:47,331 log Not Found: /api/statuses/
+WARNING 2025-02-28 16:12:47,333 basehttp "GET /api/statuses/ HTTP/1.1" 404 3264
+INFO 2025-02-28 16:13:10,420 basehttp "OPTIONS /api/statuses/ HTTP/1.1" 200 0
+WARNING 2025-02-28 16:13:10,424 log Not Found: /api/statuses/
+WARNING 2025-02-28 16:13:10,424 basehttp "POST /api/statuses/ HTTP/1.1" 404 3265
+WARNING 2025-02-28 16:14:10,950 log Not Found: /api/statuses/
+WARNING 2025-02-28 16:14:10,950 basehttp "POST /api/statuses/ HTTP/1.1" 404 3265
+WARNING 2025-02-28 16:14:29,494 log Not Found: /api/statuses/
+WARNING 2025-02-28 16:14:29,495 basehttp "POST /api/statuses/ HTTP/1.1" 404 3265
+INFO 2025-02-28 16:14:35,219 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 16:14:35,278 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+WARNING 2025-02-28 16:14:44,714 log Not Found: /api/statuses/
+WARNING 2025-02-28 16:14:44,715 basehttp "GET /api/statuses/ HTTP/1.1" 404 3264
+WARNING 2025-02-28 16:14:46,694 log Not Found: /api/statuses/
+WARNING 2025-02-28 16:14:46,695 basehttp "POST /api/statuses/ HTTP/1.1" 404 3265
+WARNING 2025-02-28 16:15:03,839 log Not Found: /api/statuses/
+WARNING 2025-02-28 16:15:03,840 basehttp "POST /api/statuses/ HTTP/1.1" 404 3265
+INFO 2025-02-28 16:15:24,298 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 16:15:36,539 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 16:15:36,698 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+WARNING 2025-02-28 16:15:48,054 log Not Found: /api/statuses/
+WARNING 2025-02-28 16:15:48,055 basehttp "POST /api/statuses/ HTTP/1.1" 404 3265
+INFO 2025-02-28 16:16:17,268 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 16:16:18,219 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 16:16:25,796 basehttp "OPTIONS /tasks/status/add/ HTTP/1.1" 200 0
+INFO 2025-02-28 16:16:25,972 basehttp "POST /tasks/status/add/ HTTP/1.1" 201 52
+INFO 2025-02-28 16:16:26,036 basehttp "GET /tasks/status/ HTTP/1.1" 200 527
+INFO 2025-02-28 16:16:31,525 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 16:16:31,605 basehttp "GET /tasks/status/ HTTP/1.1" 200 527
+INFO 2025-02-28 16:19:09,906 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 16:19:09,964 basehttp "GET /tasks/status/ HTTP/1.1" 200 527
+INFO 2025-02-28 16:19:31,812 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 16:19:31,888 basehttp "GET /tasks/status/ HTTP/1.1" 200 527
+INFO 2025-02-28 16:19:32,246 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 16:19:32,403 basehttp "GET /tasks/status/ HTTP/1.1" 200 527
+WARNING 2025-02-28 16:19:51,235 log Not Found: /favicon.ico
+WARNING 2025-02-28 16:19:51,235 basehttp "GET /favicon.ico HTTP/1.1" 404 3258
+INFO 2025-02-28 16:19:54,723 basehttp "GET /tasks/project/ HTTP/1.1" 200 9132
+INFO 2025-02-28 16:21:34,813 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-02-28 16:21:35,784 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 16:22:04,090 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-02-28 16:22:04,795 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 16:23:20,425 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-02-28 16:23:21,121 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 16:24:06,928 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-02-28 16:24:07,681 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 16:24:24,841 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 16:24:45,424 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-02-28 16:24:46,246 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 16:24:58,906 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 16:25:25,570 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 16:26:02,861 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\urls.py changed, reloading.
+INFO 2025-02-28 16:26:03,556 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 16:26:12,577 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-02-28 16:26:13,263 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 16:26:25,348 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\urls.py changed, reloading.
+INFO 2025-02-28 16:26:26,060 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 16:26:36,272 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\urls.py changed, reloading.
+INFO 2025-02-28 16:26:36,907 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 16:27:53,932 autoreload Watching for file changes with StatReloader
+WARNING 2025-02-28 16:27:56,056 log Not Found: /tasks/project/
+WARNING 2025-02-28 16:27:56,057 basehttp "GET /tasks/project/ HTTP/1.1" 404 4992
+WARNING 2025-02-28 16:27:57,235 log Not Found: /tasks/project/
+WARNING 2025-02-28 16:27:57,235 basehttp "GET /tasks/project/ HTTP/1.1" 404 4992
+WARNING 2025-02-28 16:27:58,186 log Not Found: /tasks/project/
+WARNING 2025-02-28 16:27:58,187 basehttp "GET /tasks/project/ HTTP/1.1" 404 4992
+WARNING 2025-02-28 16:28:00,525 log Not Found: /tasks/projects/
+WARNING 2025-02-28 16:28:00,526 basehttp "GET /tasks/projects/ HTTP/1.1" 404 4995
+WARNING 2025-02-28 16:28:08,186 log Not Found: /tasks/projects
+WARNING 2025-02-28 16:28:08,187 basehttp "GET /tasks/projects HTTP/1.1" 404 4992
+WARNING 2025-02-28 16:28:11,628 log Not Found: /tasks/
+WARNING 2025-02-28 16:28:11,629 basehttp "GET /tasks/ HTTP/1.1" 404 4968
+INFO 2025-02-28 16:28:34,771 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\urls.py changed, reloading.
+INFO 2025-02-28 16:28:35,802 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 16:28:47,090 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\urls.py changed, reloading.
+INFO 2025-02-28 16:28:47,699 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 16:28:57,742 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\urls.py changed, reloading.
+INFO 2025-02-28 16:28:58,400 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 16:29:02,168 basehttp "GET /tasks/projects HTTP/1.1" 301 0
+INFO 2025-02-28 16:29:02,481 basehttp "GET /tasks/projects/ HTTP/1.1" 200 14867
+INFO 2025-02-28 16:29:14,003 basehttp "GET /tasks/projects/4 HTTP/1.1" 301 0
+INFO 2025-02-28 16:29:14,078 basehttp "GET /tasks/projects/4/ HTTP/1.1" 200 12910
+INFO 2025-02-28 16:30:04,610 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-02-28 16:30:05,352 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 16:31:18,161 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\urls.py changed, reloading.
+INFO 2025-02-28 16:31:18,931 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 16:31:22,976 basehttp "GET /tasks/status/ HTTP/1.1" 200 11056
+INFO 2025-02-28 16:31:28,442 basehttp "GET /tasks/status/1 HTTP/1.1" 301 0
+INFO 2025-02-28 16:31:28,515 basehttp "GET /tasks/status/1/ HTTP/1.1" 200 11305
+INFO 2025-02-28 16:31:36,983 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\urls.py changed, reloading.
+INFO 2025-02-28 16:31:37,791 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 16:34:33,652 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 16:34:33,703 basehttp "GET /tasks/status/ HTTP/1.1" 200 527
+INFO 2025-02-28 16:34:56,830 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\urls.py changed, reloading.
+INFO 2025-02-28 16:34:57,512 autoreload Watching for file changes with StatReloader
+WARNING 2025-02-28 16:35:04,882 log Not Found: /tasks/ופûכû/1/
+WARNING 2025-02-28 16:35:04,883 basehttp "GET /tasks/%D0%B5%D1%84%D1%8B%D0%BB%D1%8B/1/ HTTP/1.1" 404 8495
+WARNING 2025-02-28 16:35:10,279 log Not Found: /tasks/tasks/1/
+WARNING 2025-02-28 16:35:10,280 basehttp "GET /tasks/tasks/1/ HTTP/1.1" 404 15364
+INFO 2025-02-28 16:35:13,365 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 21086
