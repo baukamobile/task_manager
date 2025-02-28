@@ -1,10 +1,10 @@
-from rest_framework.generics import ListAPIView,RetrieveAPIView,RetrieveUpdateAPIView
+from rest_framework.generics import ListAPIView,RetrieveAPIView,RetrieveUpdateAPIView,CreateAPIView
 
 from django.shortcuts import render
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
-from tasks.models import Task,Status
-from tasks.serializers import TaskSerializer, StatusSerializer
+from tasks.models import Task, Status, Projects
+from tasks.serializers import TaskSerializer, StatusSerializer,ProjectSerializer
 
 
 class TaskListView(ListAPIView):  # Отдаёт список всех задач
@@ -15,10 +15,9 @@ class TaskDetailView(RetrieveUpdateAPIView):  # Отдаёт конкретну�
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
 
-def taskpage(request):
-    tasks = Task.objects.all()
-    return render(request, 'tasks/task.html',context={'tasks':tasks})
-
+class TaskAddView(CreateAPIView):
+    queryset = Task.objects.all()
+    serializer_class = TaskSerializer
 
 class StatusListView(ListAPIView):
     # permission_classes = [IsAdminUser]
@@ -30,7 +29,14 @@ class StatusDetailView(RetrieveUpdateAPIView):
     queryset = Status.objects.all()
     serializer_class = StatusSerializer
 
+class StatusAddView(CreateAPIView):
+    queryset = Status.objects.all()
+    serializer_class = StatusSerializer
 
+class ProjectListView(ListAPIView):
+    queryset = Projects.objects.all()
+    serializer_class = ProjectSerializer
 
-
-
+class ProjectAddView(CreateAPIView):
+    queryset = Projects.objects.all()
+    serializer_class = ProjectSerializer

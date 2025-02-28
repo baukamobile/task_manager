@@ -2923,3 +2923,80 @@ WARNING 2025-02-28 10:50:17,355 log Not Found: /tasks/
 INFO 2025-02-28 10:51:46,979 autoreload Watching for file changes with StatReloader
 INFO 2025-02-28 10:52:35,245 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 10954
 INFO 2025-02-28 11:03:07,358 basehttp "GET /tasks/status/ HTTP/1.1" 200 6304
+INFO 2025-02-28 11:38:58,591 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 11:38:58,652 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 11:39:08,771 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 11:39:08,822 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 11:39:09,963 basehttp "OPTIONS /tasks/tasks/8/ HTTP/1.1" 200 0
+INFO 2025-02-28 11:39:10,056 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 200 903
+INFO 2025-02-28 11:39:11,657 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 11:39:11,712 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 11:39:13,233 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 11:39:13,404 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 14:08:46,380 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 14:08:46,558 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 14:08:47,764 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 14:08:47,818 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 14:08:49,058 basehttp "OPTIONS /tasks/tasks/9/ HTTP/1.1" 200 0
+INFO 2025-02-28 14:08:49,135 basehttp "PATCH /tasks/tasks/9/ HTTP/1.1" 200 515
+INFO 2025-02-28 14:08:50,187 basehttp "OPTIONS /tasks/tasks/7/ HTTP/1.1" 200 0
+INFO 2025-02-28 14:08:50,248 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 200 724
+INFO 2025-02-28 14:08:52,210 basehttp "OPTIONS /tasks/tasks/6/ HTTP/1.1" 200 0
+INFO 2025-02-28 14:08:52,272 basehttp "PATCH /tasks/tasks/6/ HTTP/1.1" 200 550
+INFO 2025-02-28 14:08:53,802 basehttp "OPTIONS /tasks/tasks/8/ HTTP/1.1" 200 0
+INFO 2025-02-28 14:08:53,966 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 200 903
+INFO 2025-02-28 14:10:00,861 basehttp "PATCH /tasks/tasks/7/ HTTP/1.1" 200 724
+INFO 2025-02-28 14:10:03,997 basehttp "PATCH /tasks/tasks/6/ HTTP/1.1" 200 550
+INFO 2025-02-28 14:13:28,498 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 14:13:28,555 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 14:13:29,565 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 14:13:29,617 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 14:14:18,754 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-02-28 14:14:19,739 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 14:14:56,959 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-02-28 14:14:57,566 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 14:16:00,278 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-02-28 14:16:01,035 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 14:16:39,453 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-02-28 14:16:40,147 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 14:18:18,037 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-02-28 14:18:18,769 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 14:18:27,360 basehttp "GET / HTTP/1.1" 200 1223
+INFO 2025-02-28 14:18:27,435 basehttp "GET /static/vue/dist/assets/index-CaVEL3aJ.js HTTP/1.1" 304 0
+INFO 2025-02-28 14:18:27,435 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 304 0
+INFO 2025-02-28 14:18:27,687 basehttp "GET /static/vue/dist/assets/DashboardLayout-B3rshA3m.js HTTP/1.1" 304 0
+INFO 2025-02-28 14:18:27,687 basehttp "GET /static/vue/dist/assets/PageFooter-i6VBsyFT.js HTTP/1.1" 304 0
+INFO 2025-02-28 14:18:27,692 basehttp "GET /static/vue/dist/assets/_plugin-vue_export-helper-DlAUqK2U.js HTTP/1.1" 304 0
+INFO 2025-02-28 14:18:27,695 basehttp "GET /static/vue/dist/assets/Index-BS3FHTIh.css HTTP/1.1" 304 0
+INFO 2025-02-28 14:18:27,695 basehttp "GET /static/vue/dist/assets/Index-5_JBARpf.js HTTP/1.1" 304 0
+INFO 2025-02-28 14:18:27,696 basehttp "GET /static/vue/dist/assets/PageWrapper-DS28kFj-.js HTTP/1.1" 304 0
+INFO 2025-02-28 14:18:27,961 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3754
+INFO 2025-02-28 14:18:27,992 basehttp "GET /static/vue/dist/favicon.ico HTTP/1.1" 200 33310
+INFO 2025-02-28 14:18:28,028 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+WARNING 2025-02-28 14:18:34,952 log Not Found: /tasks/add
+WARNING 2025-02-28 14:18:34,953 basehttp "GET /tasks/add HTTP/1.1" 404 4438
+INFO 2025-02-28 14:18:41,788 basehttp "GET /tasks/tasks/add HTTP/1.1" 301 0
+WARNING 2025-02-28 14:18:42,017 log Method Not Allowed: /tasks/tasks/add/
+WARNING 2025-02-28 14:18:42,017 basehttp "GET /tasks/tasks/add/ HTTP/1.1" 405 12705
+INFO 2025-02-28 14:19:27,537 basehttp "POST /tasks/tasks/add/ HTTP/1.1" 201 13387
+INFO 2025-02-28 14:19:42,431 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4122
+INFO 2025-02-28 14:19:42,484 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 14:20:33,461 basehttp "POST /tasks/tasks/add/ HTTP/1.1" 201 13381
+INFO 2025-02-28 14:20:39,248 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4487
+INFO 2025-02-28 14:20:39,300 basehttp "GET /tasks/status/ HTTP/1.1" 200 474
+INFO 2025-02-28 14:20:43,707 basehttp "OPTIONS /tasks/tasks/14/ HTTP/1.1" 200 0
+INFO 2025-02-28 14:20:43,770 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 364
+INFO 2025-02-28 14:20:44,883 basehttp "PATCH /tasks/tasks/9/ HTTP/1.1" 200 515
+INFO 2025-02-28 14:33:38,604 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\urls.py changed, reloading.
+INFO 2025-02-28 14:33:39,472 autoreload Watching for file changes with StatReloader
+WARNING 2025-02-28 14:33:45,051 log Method Not Allowed: /tasks/status/add/
+WARNING 2025-02-28 14:33:45,052 basehttp "GET /tasks/status/add/ HTTP/1.1" 405 8608
+INFO 2025-02-28 14:38:51,884 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\urls.py changed, reloading.
+INFO 2025-02-28 14:38:52,697 autoreload Watching for file changes with StatReloader
+INFO 2025-02-28 14:38:58,559 basehttp "GET /tasks/project/add/ HTTP/1.1" 200 9267
+INFO 2025-02-28 14:39:12,527 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\urls.py changed, reloading.
+INFO 2025-02-28 14:39:13,166 autoreload Watching for file changes with StatReloader
+WARNING 2025-02-28 14:39:14,074 log Method Not Allowed: /tasks/project/add/
+WARNING 2025-02-28 14:39:14,075 basehttp "GET /tasks/project/add/ HTTP/1.1" 405 9725
+INFO 2025-02-28 14:39:33,926 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-02-28 14:39:34,744 autoreload Watching for file changes with StatReloader

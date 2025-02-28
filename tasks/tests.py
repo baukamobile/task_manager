@@ -92,3 +92,4 @@ class StatusApitTest(APITestCase):
 
         self.assertEqual(len(response.data),1)
         print("📢 Status API:", response.json())
+

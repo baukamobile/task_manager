@@ -10546,3 +10546,11 @@ WARNING 2025-02-28 10:43:34,449 basehttp "GET /favicon.ico HTTP/1.1" 404 3258
 WARNING 2025-02-28 10:48:35,362 log Not Found: /tasks/
 WARNING 2025-02-28 10:48:35,362 basehttp "GET /tasks/ HTTP/1.1" 404 4164
 WARNING 2025-02-28 10:50:17,355 log Not Found: /tasks/
+WARNING 2025-02-28 14:18:34,952 log Not Found: /tasks/add
+WARNING 2025-02-28 14:18:34,953 basehttp "GET /tasks/add HTTP/1.1" 404 4438
+WARNING 2025-02-28 14:18:42,017 log Method Not Allowed: /tasks/tasks/add/
+WARNING 2025-02-28 14:18:42,017 basehttp "GET /tasks/tasks/add/ HTTP/1.1" 405 12705
+WARNING 2025-02-28 14:33:45,051 log Method Not Allowed: /tasks/status/add/
+WARNING 2025-02-28 14:33:45,052 basehttp "GET /tasks/status/add/ HTTP/1.1" 405 8608
+WARNING 2025-02-28 14:39:14,074 log Method Not Allowed: /tasks/project/add/
+WARNING 2025-02-28 14:39:14,075 basehttp "GET /tasks/project/add/ HTTP/1.1" 405 9725
