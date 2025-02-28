@@ -10684,5 +10684,21 @@ WARNING 2025-02-21 13:42:02,569 base Session data corrupted
 WARNING 2025-02-21 13:42:02,655 base Session data corrupted
 WARNING 2025-02-21 13:42:15,664 base Session data corrupted
 WARNING 2025-02-21 13:42:35,998 base Session data corrupted
+<<<<<<< HEAD
 >>>>>>> 2eba7d2 (pulled succesfully)
+<<<<<<< HEAD
 >>>>>>> 55d61a8 (pulled)
+=======
+=======
+WARNING 2025-02-21 13:46:26,661 log Not Found: /
+WARNING 2025-02-21 13:46:26,661 basehttp "GET / HTTP/1.1" 404 3368
+>>>>>>> 220ffc8 (n)
+WARNING 2025-02-26 13:19:52,656 log Not Found: /
+WARNING 2025-02-26 13:19:52,657 basehttp "GET / HTTP/1.1" 404 3064
+WARNING 2025-02-26 13:19:52,806 log Not Found: /apple-touch-icon-precomposed.png
+WARNING 2025-02-26 13:19:52,806 basehttp "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 3178
+WARNING 2025-02-26 13:19:52,815 log Not Found: /apple-touch-icon.png
+WARNING 2025-02-26 13:19:52,815 basehttp "GET /apple-touch-icon.png HTTP/1.1" 404 3142
+WARNING 2025-02-27 14:35:03,125 log Not Found: /
+WARNING 2025-02-27 14:35:03,126 basehttp "GET / HTTP/1.1" 404 3064
+>>>>>>> 7035979 (n)

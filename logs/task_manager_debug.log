@@ -1129,6 +1129,7 @@ WARNING 2025-02-26 17:40:44,813 log Not Found: /tasks/tasks//
 WARNING 2025-02-26 17:40:44,815 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
 WARNING 2025-02-26 17:41:10,897 log Not Found: /tasks/tasks//
 WARNING 2025-02-26 17:41:10,898 basehttp "GET /tasks/tasks// HTTP/1.1" 404 3731
+<<<<<<< HEAD
 INFO 2025-02-27 09:10:59,742 autoreload Watching for file changes with StatReloader
 INFO 2025-02-27 09:11:21,751 autoreload Watching for file changes with StatReloader
 WARNING 2025-02-27 09:11:25,187 log Not Found: /
@@ -3585,3 +3586,28 @@ INFO 2025-02-28 18:05:11,798 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.
 INFO 2025-02-28 18:05:11,803 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
 INFO 2025-02-28 18:05:11,841 basehttp "GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
 INFO 2025-02-28 18:05:11,841 basehttp "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+=======
+INFO 2025-02-26 13:19:39,165 autoreload Watching for file changes with StatReloader
+INFO 2025-02-26 13:19:51,584 autoreload Watching for file changes with StatReloader
+WARNING 2025-02-26 13:19:52,656 log Not Found: /
+WARNING 2025-02-26 13:19:52,657 basehttp "GET / HTTP/1.1" 404 3064
+WARNING 2025-02-26 13:19:52,806 log Not Found: /apple-touch-icon-precomposed.png
+WARNING 2025-02-26 13:19:52,806 basehttp "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 3178
+WARNING 2025-02-26 13:19:52,815 log Not Found: /apple-touch-icon.png
+WARNING 2025-02-26 13:19:52,815 basehttp "GET /apple-touch-icon.png HTTP/1.1" 404 3142
+INFO 2025-02-26 13:19:55,464 basehttp "GET /admin/ HTTP/1.1" 200 45930
+INFO 2025-02-26 13:19:55,484 basehttp "GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+INFO 2025-02-26 13:19:55,485 basehttp "GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 304 0
+INFO 2025-02-26 13:19:55,486 basehttp "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+INFO 2025-02-26 13:19:55,487 basehttp "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-02-26 13:19:55,487 basehttp "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+INFO 2025-02-26 13:19:55,488 basehttp "GET /static/jazzmin/js/main.js HTTP/1.1" 304 0
+INFO 2025-02-26 13:19:55,488 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-02-26 13:19:55,489 basehttp "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2025-02-26 13:19:55,489 basehttp "GET /static/vendor/bootswatch/slate/bootstrap.min.css HTTP/1.1" 200 171632
+INFO 2025-02-26 13:19:55,934 basehttp "GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
+INFO 2025-02-26 13:19:55,934 basehttp "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+INFO 2025-02-27 14:35:01,396 autoreload Watching for file changes with StatReloader
+WARNING 2025-02-27 14:35:03,125 log Not Found: /
+WARNING 2025-02-27 14:35:03,126 basehttp "GET / HTTP/1.1" 404 3064
+>>>>>>> 7035979 (n)
