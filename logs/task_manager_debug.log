@@ -4442,3 +4442,22 @@ INFO 2025-03-02 22:18:31,948 basehttp "POST /news/newscomments/ HTTP/1.1" 201 14
 INFO 2025-03-02 22:18:38,093 basehttp "GET /news/tags/ HTTP/1.1" 200 13232
 INFO 2025-03-02 22:18:43,063 basehttp "POST /news/tags/ HTTP/1.1" 201 13305
 INFO 2025-03-02 22:18:45,270 basehttp "POST /news/tags/ HTTP/1.1" 201 13309
+INFO 2025-03-02 22:22:03,691 autoreload /Users/001/PycharmProjects/task_manager/notifications/urls.py changed, reloading.
+INFO 2025-03-02 22:22:04,157 autoreload Watching for file changes with StatReloader
+INFO 2025-03-02 22:22:20,977 autoreload /Users/001/PycharmProjects/task_manager/notifications/views.py changed, reloading.
+INFO 2025-03-02 22:22:21,350 autoreload Watching for file changes with StatReloader
+INFO 2025-03-02 22:22:24,435 basehttp "GET / HTTP/1.1" 200 1223
+INFO 2025-03-02 22:22:24,691 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3601
+INFO 2025-03-02 22:22:24,726 basehttp "GET /tasks/status/ HTTP/1.1" 200 2
+WARNING 2025-03-02 22:22:32,216 log Not Found: /notification
+WARNING 2025-03-02 22:22:32,216 basehttp "GET /notification HTTP/1.1" 404 3411
+INFO 2025-03-02 22:22:33,804 basehttp "GET /notifications HTTP/1.1" 301 0
+INFO 2025-03-02 22:22:33,897 basehttp "GET /notifications/ HTTP/1.1" 200 10168
+INFO 2025-03-02 22:22:39,965 basehttp "GET /notifications/notifications HTTP/1.1" 301 0
+INFO 2025-03-02 22:22:40,041 basehttp "GET /notifications/notifications/ HTTP/1.1" 200 15116
+INFO 2025-03-02 22:22:44,705 basehttp "POST /notifications/notifications/ HTTP/1.1" 201 15438
+INFO 2025-03-02 22:22:50,186 basehttp "POST /notifications/notifications/ HTTP/1.1" 201 15450
+INFO 2025-03-02 22:22:56,052 basehttp "POST /notifications/notifications/ HTTP/1.1" 201 15452
+INFO 2025-03-02 22:22:57,588 basehttp "POST /notifications/notifications/ HTTP/1.1" 201 15452
+INFO 2025-03-02 22:23:04,830 basehttp "GET /notifications/ HTTP/1.1" 200 10168
+INFO 2025-03-02 22:23:08,816 basehttp "GET /notifications/notifications/ HTTP/1.1" 200 16428

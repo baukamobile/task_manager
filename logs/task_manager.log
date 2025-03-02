@@ -10994,3 +10994,5 @@ WARNING 2025-03-02 22:18:01,549 log Bad Request: /news/newscomments/
 WARNING 2025-03-02 22:18:01,550 basehttp "POST /news/newscomments/ HTTP/1.1" 400 14494
 WARNING 2025-03-02 22:18:13,705 log Bad Request: /news/newscomments/
 WARNING 2025-03-02 22:18:13,706 basehttp "POST /news/newscomments/ HTTP/1.1" 400 14476
+WARNING 2025-03-02 22:22:32,216 log Not Found: /notification
+WARNING 2025-03-02 22:22:32,216 basehttp "GET /notification HTTP/1.1" 404 3411
