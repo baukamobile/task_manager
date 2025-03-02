@@ -3,7 +3,7 @@ from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.generics import ListAPIView
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.views import APIView
-from tasks.models import *
+from rest_framework.viewsets import ModelViewSet
 from users.serializers import *
 import datetime
 from rest_framework.response import Response
@@ -17,16 +17,8 @@ import json
 logger = logging.getLogger('taskmanager')
 
 
-def basepage(request):
-    return render(request,'base.html')
 
-def index(request):
-    users = User.objects.all()
-    departments = Department.objects.all()
-    tasks = Task.objects.all()
-    return render(request,'users/team.html',context={'users':users, 'departments':departments, 'tasks':tasks})
-
-class UserList(ListAPIView): #Если рлдбзователь адин
+class UserViewSet(ModelViewSet): #Если рлдбзователь адинTaskViewSet
     # permission_classes = [IsAdminUser]
     queryset = User.objects.all()
     serializer_class = UserSerializer
