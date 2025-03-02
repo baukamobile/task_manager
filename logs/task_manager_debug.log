@@ -4392,3 +4392,53 @@ INFO 2025-03-02 22:01:07,368 basehttp "GET /reports/reports HTTP/1.1" 301 0
 INFO 2025-03-02 22:01:07,441 basehttp "GET /reports/reports/ HTTP/1.1" 200 15083
 WARNING 2025-03-02 22:01:43,323 log Bad Request: /reports/reports/
 WARNING 2025-03-02 22:01:43,324 basehttp "POST /reports/reports/ HTTP/1.1" 400 15177
+WARNING 2025-03-02 22:06:10,003 log Not Found: /event/event
+WARNING 2025-03-02 22:06:10,004 basehttp "GET /event/event HTTP/1.1" 404 3258
+WARNING 2025-03-02 22:07:02,156 log Not Found: /event/event
+WARNING 2025-03-02 22:07:02,156 basehttp "GET /event/event HTTP/1.1" 404 3258
+INFO 2025-03-02 22:07:02,174 autoreload /Users/001/PycharmProjects/task_manager/taskmanager/urls.py changed, reloading.
+INFO 2025-03-02 22:07:02,611 autoreload Watching for file changes with StatReloader
+WARNING 2025-03-02 22:07:03,338 log Not Found: /event/event
+WARNING 2025-03-02 22:07:03,339 basehttp "GET /event/event HTTP/1.1" 404 3408
+INFO 2025-03-02 22:07:11,117 basehttp "GET /events HTTP/1.1" 301 0
+INFO 2025-03-02 22:07:11,211 basehttp "GET /events/ HTTP/1.1" 200 10088
+INFO 2025-03-02 22:07:14,300 basehttp "GET /events/event HTTP/1.1" 301 0
+INFO 2025-03-02 22:07:14,382 basehttp "GET /events/event/ HTTP/1.1" 200 15230
+WARNING 2025-03-02 22:08:15,586 log Bad Request: /events/event/
+WARNING 2025-03-02 22:08:15,587 basehttp "POST /events/event/ HTTP/1.1" 400 15306
+INFO 2025-03-02 22:09:00,780 basehttp "POST /events/event/ HTTP/1.1" 201 15684
+INFO 2025-03-02 22:14:23,598 autoreload /Users/001/PycharmProjects/task_manager/news/urls.py changed, reloading.
+INFO 2025-03-02 22:14:24,061 autoreload Watching for file changes with StatReloader
+INFO 2025-03-02 22:15:49,122 autoreload /Users/001/PycharmProjects/task_manager/news/views.py changed, reloading.
+INFO 2025-03-02 22:15:49,508 autoreload Watching for file changes with StatReloader
+INFO 2025-03-02 22:15:58,067 basehttp "GET / HTTP/1.1" 200 1223
+INFO 2025-03-02 22:15:58,536 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3601
+INFO 2025-03-02 22:15:58,574 basehttp "GET /tasks/status/ HTTP/1.1" 200 2
+INFO 2025-03-02 22:16:04,839 basehttp "GET /news HTTP/1.1" 301 0
+INFO 2025-03-02 22:16:04,919 basehttp "GET /news/ HTTP/1.1" 200 10353
+INFO 2025-03-02 22:16:08,120 basehttp "GET /news/news HTTP/1.1" 301 0
+INFO 2025-03-02 22:16:08,191 basehttp "GET /news/news/ HTTP/1.1" 200 14699
+WARNING 2025-03-02 22:16:18,747 log Bad Request: /news/news/
+WARNING 2025-03-02 22:16:18,748 basehttp "POST /news/news/ HTTP/1.1" 400 14938
+INFO 2025-03-02 22:16:49,753 autoreload /Users/001/PycharmProjects/task_manager/news/models.py changed, reloading.
+INFO 2025-03-02 22:16:50,214 autoreload Watching for file changes with StatReloader
+INFO 2025-03-02 22:17:03,092 autoreload Watching for file changes with StatReloader
+WARNING 2025-03-02 22:17:05,048 log Bad Request: /news/news/
+WARNING 2025-03-02 22:17:05,048 basehttp "POST /news/news/ HTTP/1.1" 400 14938
+INFO 2025-03-02 22:17:10,104 basehttp "GET /news/ HTTP/1.1" 200 10353
+INFO 2025-03-02 22:17:12,216 basehttp "GET /news/news/ HTTP/1.1" 200 14699
+INFO 2025-03-02 22:17:19,766 basehttp "POST /news/news/ HTTP/1.1" 201 15004
+INFO 2025-03-02 22:17:33,484 basehttp "POST /news/news/ HTTP/1.1" 201 15002
+WARNING 2025-03-02 22:17:42,184 log Not Found: /news/newscomment/
+WARNING 2025-03-02 22:17:42,185 basehttp "GET /news/newscomment/ HTTP/1.1" 404 8610
+INFO 2025-03-02 22:17:52,651 basehttp "GET /news/newscomments HTTP/1.1" 301 0
+INFO 2025-03-02 22:17:52,701 basehttp "GET /news/newscomments/ HTTP/1.1" 200 14400
+WARNING 2025-03-02 22:18:01,549 log Bad Request: /news/newscomments/
+WARNING 2025-03-02 22:18:01,550 basehttp "POST /news/newscomments/ HTTP/1.1" 400 14494
+WARNING 2025-03-02 22:18:13,705 log Bad Request: /news/newscomments/
+WARNING 2025-03-02 22:18:13,706 basehttp "POST /news/newscomments/ HTTP/1.1" 400 14476
+INFO 2025-03-02 22:18:19,100 basehttp "POST /news/newscomments/ HTTP/1.1" 201 14625
+INFO 2025-03-02 22:18:31,948 basehttp "POST /news/newscomments/ HTTP/1.1" 201 14629
+INFO 2025-03-02 22:18:38,093 basehttp "GET /news/tags/ HTTP/1.1" 200 13232
+INFO 2025-03-02 22:18:43,063 basehttp "POST /news/tags/ HTTP/1.1" 201 13305
+INFO 2025-03-02 22:18:45,270 basehttp "POST /news/tags/ HTTP/1.1" 201 13309

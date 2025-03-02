@@ -10976,3 +10976,21 @@ WARNING 2025-03-02 21:52:07,394 log Not Found: /users/department/
 WARNING 2025-03-02 21:52:07,395 basehttp "GET /users/department/ HTTP/1.1" 404 10766
 WARNING 2025-03-02 22:01:43,323 log Bad Request: /reports/reports/
 WARNING 2025-03-02 22:01:43,324 basehttp "POST /reports/reports/ HTTP/1.1" 400 15177
+WARNING 2025-03-02 22:06:10,003 log Not Found: /event/event
+WARNING 2025-03-02 22:06:10,004 basehttp "GET /event/event HTTP/1.1" 404 3258
+WARNING 2025-03-02 22:07:02,156 log Not Found: /event/event
+WARNING 2025-03-02 22:07:02,156 basehttp "GET /event/event HTTP/1.1" 404 3258
+WARNING 2025-03-02 22:07:03,338 log Not Found: /event/event
+WARNING 2025-03-02 22:07:03,339 basehttp "GET /event/event HTTP/1.1" 404 3408
+WARNING 2025-03-02 22:08:15,586 log Bad Request: /events/event/
+WARNING 2025-03-02 22:08:15,587 basehttp "POST /events/event/ HTTP/1.1" 400 15306
+WARNING 2025-03-02 22:16:18,747 log Bad Request: /news/news/
+WARNING 2025-03-02 22:16:18,748 basehttp "POST /news/news/ HTTP/1.1" 400 14938
+WARNING 2025-03-02 22:17:05,048 log Bad Request: /news/news/
+WARNING 2025-03-02 22:17:05,048 basehttp "POST /news/news/ HTTP/1.1" 400 14938
+WARNING 2025-03-02 22:17:42,184 log Not Found: /news/newscomment/
+WARNING 2025-03-02 22:17:42,185 basehttp "GET /news/newscomment/ HTTP/1.1" 404 8610
+WARNING 2025-03-02 22:18:01,549 log Bad Request: /news/newscomments/
+WARNING 2025-03-02 22:18:01,550 basehttp "POST /news/newscomments/ HTTP/1.1" 400 14494
+WARNING 2025-03-02 22:18:13,705 log Bad Request: /news/newscomments/
+WARNING 2025-03-02 22:18:13,706 basehttp "POST /news/newscomments/ HTTP/1.1" 400 14476

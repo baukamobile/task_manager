@@ -33,6 +33,7 @@ urlpatterns = [
     path('chat/',include('chat.urls')),
     path('news/',include('news.urls')),
     path('reports/',include('reports.urls')),
+    path('events/',include('event_calendar.urls')),
     path('notifications/',include('notifications.urls')),
 
 ]
