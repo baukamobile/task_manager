@@ -10974,3 +10974,5 @@ WARNING 2025-03-02 21:51:18,388 log Not Found: /users/department/
 WARNING 2025-03-02 21:51:18,389 basehttp "GET /users/department/ HTTP/1.1" 404 10766
 WARNING 2025-03-02 21:52:07,394 log Not Found: /users/department/
 WARNING 2025-03-02 21:52:07,395 basehttp "GET /users/department/ HTTP/1.1" 404 10766
+WARNING 2025-03-02 22:01:43,323 log Bad Request: /reports/reports/
+WARNING 2025-03-02 22:01:43,324 basehttp "POST /reports/reports/ HTTP/1.1" 400 15177

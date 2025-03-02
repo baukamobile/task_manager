@@ -4384,3 +4384,11 @@ INFO 2025-03-02 21:54:30,425 basehttp "POST /users/department/ HTTP/1.1" 201 141
 INFO 2025-03-02 21:54:38,669 basehttp "POST /users/department/ HTTP/1.1" 201 14136
 INFO 2025-03-02 21:54:53,849 autoreload /Users/001/PycharmProjects/task_manager/users/urls.py changed, reloading.
 INFO 2025-03-02 21:54:54,220 autoreload Watching for file changes with StatReloader
+INFO 2025-03-02 22:00:52,383 autoreload /Users/001/PycharmProjects/task_manager/reports/urls.py changed, reloading.
+INFO 2025-03-02 22:00:52,777 autoreload Watching for file changes with StatReloader
+INFO 2025-03-02 22:01:01,093 basehttp "GET /reports HTTP/1.1" 301 0
+INFO 2025-03-02 22:01:01,164 basehttp "GET /reports/ HTTP/1.1" 200 10102
+INFO 2025-03-02 22:01:07,368 basehttp "GET /reports/reports HTTP/1.1" 301 0
+INFO 2025-03-02 22:01:07,441 basehttp "GET /reports/reports/ HTTP/1.1" 200 15083
+WARNING 2025-03-02 22:01:43,323 log Bad Request: /reports/reports/
+WARNING 2025-03-02 22:01:43,324 basehttp "POST /reports/reports/ HTTP/1.1" 400 15177
