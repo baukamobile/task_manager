@@ -4376,3 +4376,11 @@ INFO 2025-03-02 21:52:43,282 autoreload /Users/001/PycharmProjects/task_manager/
 INFO 2025-03-02 21:52:43,653 autoreload Watching for file changes with StatReloader
 INFO 2025-03-02 21:53:28,258 autoreload /Users/001/PycharmProjects/task_manager/users/views.py changed, reloading.
 INFO 2025-03-02 21:53:28,631 autoreload Watching for file changes with StatReloader
+INFO 2025-03-02 21:54:04,969 autoreload /Users/001/PycharmProjects/task_manager/users/urls.py changed, reloading.
+INFO 2025-03-02 21:54:05,336 autoreload Watching for file changes with StatReloader
+INFO 2025-03-02 21:54:06,391 basehttp "GET /users/department/ HTTP/1.1" 200 14144
+INFO 2025-03-02 21:54:23,944 basehttp "POST /users/department/ HTTP/1.1" 201 14142
+INFO 2025-03-02 21:54:30,425 basehttp "POST /users/department/ HTTP/1.1" 201 14134
+INFO 2025-03-02 21:54:38,669 basehttp "POST /users/department/ HTTP/1.1" 201 14136
+INFO 2025-03-02 21:54:53,849 autoreload /Users/001/PycharmProjects/task_manager/users/urls.py changed, reloading.
+INFO 2025-03-02 21:54:54,220 autoreload Watching for file changes with StatReloader
