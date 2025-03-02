@@ -4131,3 +4131,248 @@ INFO 2025-03-02 21:40:07,230 basehttp "POST /users/users/ HTTP/1.1" 201 15740
 INFO 2025-03-02 21:40:11,006 basehttp "GET /users/ HTTP/1.1" 200 10080
 INFO 2025-03-02 21:40:15,446 basehttp "GET /users/users HTTP/1.1" 301 0
 INFO 2025-03-02 21:40:15,480 basehttp "GET /users/users/ HTTP/1.1" 200 17184
+INFO 2025-03-02 21:41:07,712 autoreload Watching for file changes with StatReloader
+INFO 2025-03-02 21:46:54,356 autoreload /Users/001/PycharmProjects/task_manager/users/urls.py changed, reloading.
+INFO 2025-03-02 21:46:55,215 autoreload Watching for file changes with StatReloader
+ERROR 2025-03-02 21:47:02,321 log Internal Server Error: /users/company/
+Traceback (most recent call last):
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/renderers.py", line 727, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/renderers.py", line 658, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/renderers.py", line 565, in get_raw_data_form
+    data = serializer.data.copy()
+           ^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 571, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.get_initial()
+                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 421, in get_initial
+    for field in self.fields.values()
+                 ^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `__all__` is not valid for model `Company` in `users.serializers.CompanySerializer`.
+ERROR 2025-03-02 21:47:02,329 basehttp "GET /users/company/ HTTP/1.1" 500 126486
+INFO 2025-03-02 21:47:48,865 autoreload /Users/001/PycharmProjects/task_manager/users/serializers.py changed, reloading.
+INFO 2025-03-02 21:47:49,322 autoreload Watching for file changes with StatReloader
+ERROR 2025-03-02 21:47:50,035 log Internal Server Error: /users/company/
+Traceback (most recent call last):
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/renderers.py", line 727, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/renderers.py", line 658, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/renderers.py", line 565, in get_raw_data_form
+    data = serializer.data.copy()
+           ^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 571, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.get_initial()
+                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 421, in get_initial
+    for field in self.fields.values()
+                 ^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `department` is not valid for model `Company` in `users.serializers.CompanySerializer`.
+ERROR 2025-03-02 21:47:50,040 basehttp "GET /users/company/ HTTP/1.1" 500 127107
+INFO 2025-03-02 21:48:05,276 autoreload /Users/001/PycharmProjects/task_manager/users/serializers.py changed, reloading.
+INFO 2025-03-02 21:48:05,714 autoreload Watching for file changes with StatReloader
+INFO 2025-03-02 21:48:06,688 basehttp "GET /users/company/ HTTP/1.1" 200 13971
+INFO 2025-03-02 21:48:29,941 basehttp "POST /users/company/ HTTP/1.1" 201 14085
+WARNING 2025-03-02 21:48:44,961 log Bad Request: /users/company/
+WARNING 2025-03-02 21:48:44,961 basehttp "POST /users/company/ HTTP/1.1" 400 14196
+INFO 2025-03-02 21:48:55,139 basehttp "POST /users/company/ HTTP/1.1" 201 14077
+INFO 2025-03-02 21:49:02,402 basehttp "POST /users/company/ HTTP/1.1" 201 14081
+ERROR 2025-03-02 21:49:09,823 log Internal Server Error: /users/positions/
+Traceback (most recent call last):
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 523, in to_representation
+    for field in fields:
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `__all__` is not valid for model `Positions` in `users.serializers.PositionsSerializer`.
+ERROR 2025-03-02 21:49:09,829 basehttp "GET /users/positions/ HTTP/1.1" 500 139505
+INFO 2025-03-02 21:49:29,898 autoreload /Users/001/PycharmProjects/task_manager/users/serializers.py changed, reloading.
+INFO 2025-03-02 21:49:30,348 autoreload Watching for file changes with StatReloader
+INFO 2025-03-02 21:49:30,847 basehttp "GET /users/positions/ HTTP/1.1" 200 13424
+INFO 2025-03-02 21:49:43,898 basehttp "POST /users/positions/ HTTP/1.1" 201 13419
+INFO 2025-03-02 21:49:53,442 basehttp "POST /users/positions/ HTTP/1.1" 201 13425
+INFO 2025-03-02 21:50:07,577 basehttp "POST /users/positions/ HTTP/1.1" 201 13425
+ERROR 2025-03-02 21:50:11,858 log Internal Server Error: /users/roles/
+Traceback (most recent call last):
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 523, in to_representation
+    for field in fields:
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/001/PycharmProjects/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `__all__` is not valid for model `Roles` in `users.serializers.RolesSerializer`.
+ERROR 2025-03-02 21:50:11,864 basehttp "GET /users/roles/ HTTP/1.1" 500 140613
+INFO 2025-03-02 21:50:37,727 autoreload /Users/001/PycharmProjects/task_manager/users/serializers.py changed, reloading.
+INFO 2025-03-02 21:50:38,183 autoreload Watching for file changes with StatReloader
+INFO 2025-03-02 21:50:39,403 basehttp "GET /users/roles/ HTTP/1.1" 200 13677
+INFO 2025-03-02 21:50:49,269 basehttp "POST /users/roles/ HTTP/1.1" 201 13673
+INFO 2025-03-02 21:50:59,559 basehttp "POST /users/roles/ HTTP/1.1" 201 13671
+INFO 2025-03-02 21:51:08,508 basehttp "POST /users/roles/ HTTP/1.1" 201 13685
+WARNING 2025-03-02 21:51:18,388 log Not Found: /users/department/
+WARNING 2025-03-02 21:51:18,389 basehttp "GET /users/department/ HTTP/1.1" 404 10766
+INFO 2025-03-02 21:52:06,100 autoreload /Users/001/PycharmProjects/task_manager/users/serializers.py changed, reloading.
+INFO 2025-03-02 21:52:06,558 autoreload Watching for file changes with StatReloader
+WARNING 2025-03-02 21:52:07,394 log Not Found: /users/department/
+WARNING 2025-03-02 21:52:07,395 basehttp "GET /users/department/ HTTP/1.1" 404 10766
+INFO 2025-03-02 21:52:43,282 autoreload /Users/001/PycharmProjects/task_manager/users/urls.py changed, reloading.
+INFO 2025-03-02 21:52:43,653 autoreload Watching for file changes with StatReloader
+INFO 2025-03-02 21:53:28,258 autoreload /Users/001/PycharmProjects/task_manager/users/views.py changed, reloading.
+INFO 2025-03-02 21:53:28,631 autoreload Watching for file changes with StatReloader

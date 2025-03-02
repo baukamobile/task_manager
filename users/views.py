@@ -101,4 +101,18 @@ class LogoutView(APIView):
         }
         return respnse
 
+class RolesViewSet(ModelViewSet):
+    queryset = Roles.objects.all()
+    serializer_class = RolesSerializer
 
+class PositionsViewSet(ModelViewSet):
+    queryset = Positions.objects.all()
+    serializer_class = PositionsSerializer
+
+class CompanyViewSet(ModelViewSet):
+    queryset = Company.objects.all()
+    serializer_class = CompanySerializer
+
+class DepartmentViewSet(ModelViewSet):
+    queryset = Department.objects.all()
+    serializer_class = DepartmentSerializer
