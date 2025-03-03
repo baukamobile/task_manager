@@ -4463,3 +4463,59 @@ INFO 2025-03-02 22:23:04,830 basehttp "GET /notifications/ HTTP/1.1" 200 10168
 INFO 2025-03-02 22:23:08,816 basehttp "GET /notifications/notifications/ HTTP/1.1" 200 16428
 INFO 2025-03-03 09:03:41,407 autoreload Watching for file changes with StatReloader
 INFO 2025-03-03 09:07:00,403 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 09:23:51,565 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-03-03 09:28:20,918 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 09:31:11,906 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 09:36:16,738 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 09:36:42,965 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-03-03 09:36:44,157 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 09:37:07,232 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 09:37:30,719 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 09:37:50,692 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 09:40:22,600 autoreload C:\Users\User\Desktop\docs\taskmanager\news\urls.py changed, reloading.
+INFO 2025-03-03 09:40:23,297 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 09:40:38,736 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\urls.py changed, reloading.
+INFO 2025-03-03 09:40:39,377 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 09:40:52,513 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\urls.py changed, reloading.
+INFO 2025-03-03 09:40:53,110 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 09:41:05,422 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\urls.py changed, reloading.
+INFO 2025-03-03 09:41:06,065 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 09:41:08,800 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\urls.py changed, reloading.
+INFO 2025-03-03 09:41:09,554 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 09:41:12,289 autoreload C:\Users\User\Desktop\docs\taskmanager\reports\urls.py changed, reloading.
+INFO 2025-03-03 09:41:13,063 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 09:41:15,813 autoreload C:\Users\User\Desktop\docs\taskmanager\notifications\urls.py changed, reloading.
+INFO 2025-03-03 09:41:16,473 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 09:41:19,268 autoreload C:\Users\User\Desktop\docs\taskmanager\news\urls.py changed, reloading.
+INFO 2025-03-03 09:41:19,952 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 09:41:22,673 autoreload C:\Users\User\Desktop\docs\taskmanager\event_calendar\urls.py changed, reloading.
+INFO 2025-03-03 09:41:23,387 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 09:43:05,253 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 09:47:13,547 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 09:47:16,449 basehttp "GET / HTTP/1.1" 200 1223
+INFO 2025-03-03 09:47:16,637 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 200 38767
+INFO 2025-03-03 09:47:16,666 basehttp "GET /static/vue/dist/assets/index-CaVEL3aJ.js HTTP/1.1" 200 1549883
+INFO 2025-03-03 09:47:16,928 basehttp "GET /static/vue/dist/assets/PageFooter-i6VBsyFT.js HTTP/1.1" 200 750
+INFO 2025-03-03 09:47:16,929 basehttp "GET /static/vue/dist/assets/DashboardLayout-B3rshA3m.js HTTP/1.1" 200 49120
+INFO 2025-03-03 09:47:16,960 basehttp "GET /static/vue/dist/assets/Index-BS3FHTIh.css HTTP/1.1" 200 1848
+INFO 2025-03-03 09:47:16,961 basehttp "GET /static/vue/dist/assets/_plugin-vue_export-helper-DlAUqK2U.js HTTP/1.1" 200 92
+INFO 2025-03-03 09:47:16,992 basehttp "GET /static/vue/dist/assets/Index-5_JBARpf.js HTTP/1.1" 200 38147
+INFO 2025-03-03 09:47:17,001 basehttp "GET /static/vue/dist/assets/PageWrapper-DS28kFj-.js HTTP/1.1" 200 528
+WARNING 2025-03-03 09:47:17,291 base Session data corrupted
+INFO 2025-03-03 09:47:17,330 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3226
+WARNING 2025-03-03 09:47:17,409 base Session data corrupted
+INFO 2025-03-03 09:47:17,416 basehttp "GET /tasks/status/ HTTP/1.1" 200 248
+WARNING 2025-03-03 09:47:18,739 base Session data corrupted
+INFO 2025-03-03 09:47:18,763 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 367
+WARNING 2025-03-03 09:47:20,410 base Session data corrupted
+INFO 2025-03-03 09:47:20,421 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 200 904
+WARNING 2025-03-03 09:47:22,664 base Session data corrupted
+INFO 2025-03-03 09:47:22,674 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 200 904
+INFO 2025-03-03 09:50:07,692 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3227
+INFO 2025-03-03 09:50:07,744 basehttp "GET /tasks/status/ HTTP/1.1" 200 248
+INFO 2025-03-03 09:50:09,472 basehttp "OPTIONS /tasks/tasks/13/ HTTP/1.1" 200 0
+INFO 2025-03-03 09:50:09,538 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 368
+INFO 2025-03-03 09:50:10,698 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 367
+INFO 2025-03-03 09:50:14,288 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 367
+INFO 2025-03-03 09:50:15,870 basehttp "OPTIONS /tasks/tasks/8/ HTTP/1.1" 200 0
+INFO 2025-03-03 09:50:16,036 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 200 903

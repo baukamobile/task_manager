@@ -8,7 +8,7 @@ class News(models.Model):
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     documents = models.FileField(null=True, blank=True) #можно создать отделный модель пока так
-    tags = models.ManyToManyField('Tag', related_name='news', null=True,blank=True)  # related_name исправлен
+    tags = models.ManyToManyField('Tag', related_name='news',blank=True)  # related_name исправлен
     history = HistoricalRecords()
 
     def __str__(self):
