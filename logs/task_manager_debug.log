@@ -5452,3 +5452,206 @@ INFO 2025-03-03 14:57:14,973 basehttp "GET /tasks/status/ HTTP/1.1" 200 281
 INFO 2025-03-03 14:57:15,055 basehttp "GET /users/users/ HTTP/1.1" 200 5518
 INFO 2025-03-03 14:57:25,972 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 368
 INFO 2025-03-03 14:57:26,986 basehttp "PATCH /tasks/tasks/17/ HTTP/1.1" 200 401
+INFO 2025-03-03 15:04:09,360 basehttp "OPTIONS /tasks/status/ HTTP/1.1" 200 0
+INFO 2025-03-03 15:04:09,435 basehttp "POST /tasks/status/ HTTP/1.1" 201 42
+INFO 2025-03-03 15:04:09,489 basehttp "GET /tasks/status/ HTTP/1.1" 200 324
+INFO 2025-03-03 15:04:21,159 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4016
+INFO 2025-03-03 15:04:21,320 basehttp "GET /tasks/status/ HTTP/1.1" 200 324
+INFO 2025-03-03 15:04:21,398 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 15:04:23,058 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4016
+INFO 2025-03-03 15:04:23,112 basehttp "GET /tasks/status/ HTTP/1.1" 200 324
+INFO 2025-03-03 15:04:23,187 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 15:04:51,733 basehttp "POST /tasks/status/ HTTP/1.1" 201 38
+INFO 2025-03-03 15:04:51,889 basehttp "GET /tasks/status/ HTTP/1.1" 200 363
+WARNING 2025-03-03 15:08:55,431 base Session data corrupted
+INFO 2025-03-03 15:08:55,451 basehttp "GET /admin/ HTTP/1.1" 302 0
+WARNING 2025-03-03 15:08:55,503 base Session data corrupted
+INFO 2025-03-03 15:08:55,555 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3177
+INFO 2025-03-03 15:08:55,570 basehttp "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2025-03-03 15:08:55,570 basehttp "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+INFO 2025-03-03 15:08:55,571 basehttp "GET /static/vendor/bootswatch/slate/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-03-03 15:08:55,598 basehttp "GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+INFO 2025-03-03 15:08:55,605 basehttp "GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 304 0
+INFO 2025-03-03 15:08:55,605 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-03-03 15:08:55,631 basehttp "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-03-03 15:08:55,632 basehttp "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+INFO 2025-03-03 15:08:55,749 basehttp "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+WARNING 2025-03-03 15:09:02,173 base Session data corrupted
+INFO 2025-03-03 15:09:02,190 basehttp "GET /tasks/status/ HTTP/1.1" 200 10774
+INFO 2025-03-03 15:09:02,203 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-03-03 15:09:02,203 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-03-03 15:09:02,203 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-03-03 15:09:02,232 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-03-03 15:09:02,236 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-03-03 15:09:02,237 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-03-03 15:09:02,241 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-03-03 15:09:02,246 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-03-03 15:09:02,248 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-03-03 15:09:02,248 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-03-03 15:09:02,257 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-03-03 15:09:02,274 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING 2025-03-03 15:09:03,280 base Session data corrupted
+INFO 2025-03-03 15:09:03,326 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 20695
+WARNING 2025-03-03 15:09:04,228 log Not Found: /favicon.ico
+WARNING 2025-03-03 15:09:04,228 basehttp "GET /favicon.ico HTTP/1.1" 404 3408
+INFO 2025-03-03 15:17:00,170 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 368
+INFO 2025-03-03 15:17:02,306 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 368
+INFO 2025-03-03 15:18:19,851 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4016
+INFO 2025-03-03 15:18:19,906 basehttp "GET /tasks/status/ HTTP/1.1" 200 363
+INFO 2025-03-03 15:18:19,984 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 15:28:04,109 basehttp "OPTIONS /tasks/status/18/ HTTP/1.1" 200 0
+INFO 2025-03-03 15:28:04,177 basehttp "DELETE /tasks/status/18/ HTTP/1.1" 204 0
+INFO 2025-03-03 15:28:04,907 basehttp "OPTIONS /tasks/status/19/ HTTP/1.1" 200 0
+INFO 2025-03-03 15:28:04,966 basehttp "DELETE /tasks/status/19/ HTTP/1.1" 204 0
+INFO 2025-03-03 15:28:53,282 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4016
+INFO 2025-03-03 15:28:53,338 basehttp "GET /tasks/status/ HTTP/1.1" 200 279
+INFO 2025-03-03 15:28:53,420 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 15:29:47,584 basehttp "POST /tasks/status/ HTTP/1.1" 201 107
+INFO 2025-03-03 15:29:47,637 basehttp "GET /tasks/status/ HTTP/1.1" 200 387
+INFO 2025-03-03 15:31:22,725 basehttp "POST /tasks/status/ HTTP/1.1" 201 46
+INFO 2025-03-03 15:31:22,780 basehttp "GET /tasks/status/ HTTP/1.1" 200 434
+INFO 2025-03-03 15:31:39,988 basehttp "OPTIONS /tasks/status/20/ HTTP/1.1" 200 0
+INFO 2025-03-03 15:31:40,047 basehttp "DELETE /tasks/status/20/ HTTP/1.1" 204 0
+INFO 2025-03-03 15:31:42,347 basehttp "OPTIONS /tasks/status/22/ HTTP/1.1" 200 0
+INFO 2025-03-03 15:31:42,408 basehttp "DELETE /tasks/status/22/ HTTP/1.1" 204 0
+INFO 2025-03-03 15:31:44,923 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 368
+INFO 2025-03-03 15:31:48,390 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 368
+INFO 2025-03-03 15:31:49,577 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 367
+INFO 2025-03-03 15:31:51,711 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 367
+INFO 2025-03-03 15:31:56,934 basehttp "OPTIONS /tasks/status/17/ HTTP/1.1" 200 0
+INFO 2025-03-03 15:31:56,994 basehttp "DELETE /tasks/status/17/ HTTP/1.1" 204 0
+INFO 2025-03-03 15:34:45,164 basehttp "OPTIONS /tasks/tasks/17/ HTTP/1.1" 200 0
+INFO 2025-03-03 15:34:45,328 basehttp "PATCH /tasks/tasks/17/ HTTP/1.1" 200 402
+INFO 2025-03-03 15:34:47,529 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 368
+INFO 2025-03-03 15:35:35,971 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4016
+INFO 2025-03-03 15:35:36,021 basehttp "GET /tasks/status/ HTTP/1.1" 200 307
+INFO 2025-03-03 15:35:36,200 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 15:35:41,881 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4016
+INFO 2025-03-03 15:35:41,936 basehttp "GET /tasks/status/ HTTP/1.1" 200 307
+INFO 2025-03-03 15:35:42,013 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 15:36:44,111 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4016
+INFO 2025-03-03 15:36:44,162 basehttp "GET /tasks/status/ HTTP/1.1" 200 307
+INFO 2025-03-03 15:36:44,236 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 15:36:51,164 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 4016
+INFO 2025-03-03 15:36:51,320 basehttp "GET /tasks/status/ HTTP/1.1" 200 307
+INFO 2025-03-03 15:36:51,396 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 15:39:03,539 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 367
+INFO 2025-03-03 15:39:16,328 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 367
+INFO 2025-03-03 15:39:17,545 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 368
+INFO 2025-03-03 15:39:33,324 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 367
+INFO 2025-03-03 15:39:39,363 basehttp "DELETE /tasks/tasks/13/ HTTP/1.1" 204 0
+INFO 2025-03-03 15:40:35,629 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 367
+INFO 2025-03-03 15:40:38,380 basehttp "PATCH /tasks/tasks/17/ HTTP/1.1" 200 401
+INFO 2025-03-03 15:41:54,180 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 367
+INFO 2025-03-03 15:41:55,372 basehttp "PATCH /tasks/tasks/27/ HTTP/1.1" 200 248
+INFO 2025-03-03 15:46:43,295 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3646
+INFO 2025-03-03 15:46:43,348 basehttp "GET /tasks/status/ HTTP/1.1" 200 307
+INFO 2025-03-03 15:46:43,528 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 15:56:54,333 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 367
+INFO 2025-03-03 15:56:58,930 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 367
+INFO 2025-03-03 15:59:38,311 basehttp "POST /tasks/status/ HTTP/1.1" 201 46
+INFO 2025-03-03 15:59:38,366 basehttp "GET /tasks/status/ HTTP/1.1" 200 354
+INFO 2025-03-03 16:03:03,991 basehttp "PATCH /tasks/tasks/27/ HTTP/1.1" 200 249
+INFO 2025-03-03 16:14:50,536 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3647
+INFO 2025-03-03 16:14:50,703 basehttp "GET /tasks/status/ HTTP/1.1" 200 354
+INFO 2025-03-03 16:39:39,546 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3647
+INFO 2025-03-03 16:39:39,617 basehttp "GET /tasks/status/ HTTP/1.1" 200 354
+INFO 2025-03-03 16:39:39,710 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 16:48:16,874 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3647
+INFO 2025-03-03 16:48:16,928 basehttp "GET /tasks/status/ HTTP/1.1" 200 354
+INFO 2025-03-03 16:48:17,112 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 16:48:18,457 basehttp "OPTIONS /tasks/tasks/16/ HTTP/1.1" 200 0
+INFO 2025-03-03 16:48:18,544 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 367
+INFO 2025-03-03 16:48:20,287 basehttp "PATCH /tasks/tasks/17/ HTTP/1.1" 200 401
+INFO 2025-03-03 16:48:25,712 basehttp "OPTIONS /tasks/status/16/ HTTP/1.1" 200 0
+INFO 2025-03-03 16:48:25,775 basehttp "DELETE /tasks/status/16/ HTTP/1.1" 204 0
+INFO 2025-03-03 16:48:27,680 basehttp "OPTIONS /tasks/status/23/ HTTP/1.1" 200 0
+INFO 2025-03-03 16:48:27,751 basehttp "DELETE /tasks/status/23/ HTTP/1.1" 204 0
+INFO 2025-03-03 16:48:37,884 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 367
+INFO 2025-03-03 16:48:39,073 basehttp "OPTIONS /tasks/tasks/27/ HTTP/1.1" 200 0
+INFO 2025-03-03 16:48:39,132 basehttp "PATCH /tasks/tasks/27/ HTTP/1.1" 200 248
+INFO 2025-03-03 16:48:40,101 basehttp "PATCH /tasks/tasks/27/ HTTP/1.1" 200 248
+INFO 2025-03-03 16:48:41,315 basehttp "PATCH /tasks/tasks/17/ HTTP/1.1" 200 402
+INFO 2025-03-03 16:49:07,693 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 367
+INFO 2025-03-03 16:49:09,590 basehttp "PATCH /tasks/tasks/27/ HTTP/1.1" 200 248
+INFO 2025-03-03 16:49:10,764 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 367
+INFO 2025-03-03 16:56:01,982 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 367
+INFO 2025-03-03 16:56:05,617 basehttp "PATCH /tasks/tasks/27/ HTTP/1.1" 200 248
+INFO 2025-03-03 16:56:09,564 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 367
+INFO 2025-03-03 16:56:29,001 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3647
+INFO 2025-03-03 16:56:29,162 basehttp "GET /tasks/status/ HTTP/1.1" 200 260
+INFO 2025-03-03 16:56:29,239 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 16:56:44,919 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3647
+INFO 2025-03-03 16:56:44,992 basehttp "GET /tasks/status/ HTTP/1.1" 200 260
+INFO 2025-03-03 16:56:45,164 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 16:56:58,462 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3647
+INFO 2025-03-03 16:56:58,517 basehttp "GET /tasks/status/ HTTP/1.1" 200 260
+INFO 2025-03-03 16:56:58,615 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 16:57:02,449 basehttp "PATCH /tasks/tasks/27/ HTTP/1.1" 200 248
+INFO 2025-03-03 16:59:51,359 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3647
+INFO 2025-03-03 16:59:51,526 basehttp "GET /tasks/status/ HTTP/1.1" 200 260
+INFO 2025-03-03 16:59:51,622 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 17:00:12,278 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3647
+INFO 2025-03-03 17:00:12,446 basehttp "GET /tasks/status/ HTTP/1.1" 200 260
+INFO 2025-03-03 17:00:12,525 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 17:01:08,465 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3647
+INFO 2025-03-03 17:01:08,628 basehttp "GET /tasks/status/ HTTP/1.1" 200 260
+INFO 2025-03-03 17:01:08,722 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 17:01:25,808 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3647
+INFO 2025-03-03 17:01:25,867 basehttp "GET /tasks/status/ HTTP/1.1" 200 260
+INFO 2025-03-03 17:01:26,048 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 17:02:33,712 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 367
+INFO 2025-03-03 17:02:37,267 basehttp "PATCH /tasks/tasks/27/ HTTP/1.1" 200 248
+INFO 2025-03-03 17:02:57,945 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3647
+INFO 2025-03-03 17:02:57,999 basehttp "GET /tasks/status/ HTTP/1.1" 200 260
+INFO 2025-03-03 17:03:07,368 basehttp "PATCH /tasks/tasks/17/ HTTP/1.1" 200 402
+INFO 2025-03-03 17:03:08,772 basehttp "PATCH /tasks/tasks/27/ HTTP/1.1" 200 248
+INFO 2025-03-03 17:03:12,565 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3647
+INFO 2025-03-03 17:03:12,729 basehttp "GET /tasks/status/ HTTP/1.1" 200 260
+INFO 2025-03-03 17:03:12,808 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 17:03:14,284 basehttp "PATCH /tasks/tasks/27/ HTTP/1.1" 200 248
+INFO 2025-03-03 17:03:15,338 basehttp "PATCH /tasks/tasks/27/ HTTP/1.1" 200 248
+INFO 2025-03-03 17:03:16,412 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 367
+WARNING 2025-03-03 19:43:04,369 log Not Found: /userspositions/
+WARNING 2025-03-03 19:43:43,041 log Not Found: /userspositions/
+WARNING 2025-03-03 19:45:23,460 log Not Found: /userspositions/
+WARNING 2025-03-03 19:45:39,042 log Not Found: /userspositions/
+WARNING 2025-03-03 19:45:56,858 log Not Found: /userspositions/
+INFO 2025-03-03 19:46:26,690 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 19:46:29,060 basehttp "GET / HTTP/1.1" 200 1223
+INFO 2025-03-03 19:46:29,124 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 304 0
+INFO 2025-03-03 19:46:29,124 basehttp "GET /static/vue/dist/assets/index-CaVEL3aJ.js HTTP/1.1" 304 0
+INFO 2025-03-03 19:46:29,295 basehttp "GET /static/vue/dist/assets/DashboardLayout-B3rshA3m.js HTTP/1.1" 304 0
+INFO 2025-03-03 19:46:29,296 basehttp "GET /static/vue/dist/assets/PageFooter-i6VBsyFT.js HTTP/1.1" 304 0
+INFO 2025-03-03 19:46:29,298 basehttp "GET /static/vue/dist/assets/Index-BS3FHTIh.css HTTP/1.1" 304 0
+INFO 2025-03-03 19:46:29,302 basehttp "GET /static/vue/dist/assets/_plugin-vue_export-helper-DlAUqK2U.js HTTP/1.1" 304 0
+INFO 2025-03-03 19:46:29,304 basehttp "GET /static/vue/dist/assets/Index-5_JBARpf.js HTTP/1.1" 304 0
+INFO 2025-03-03 19:46:29,305 basehttp "GET /static/vue/dist/assets/PageWrapper-DS28kFj-.js HTTP/1.1" 304 0
+WARNING 2025-03-03 19:46:29,662 base Session data corrupted
+INFO 2025-03-03 19:46:29,698 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3647
+WARNING 2025-03-03 19:46:29,845 base Session data corrupted
+INFO 2025-03-03 19:46:29,860 basehttp "GET /tasks/status/ HTTP/1.1" 200 260
+WARNING 2025-03-03 19:46:35,807 base Session data corrupted
+INFO 2025-03-03 19:46:35,870 basehttp "GET /users/ HTTP/1.1" 200 5847
+INFO 2025-03-03 19:46:35,884 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-03-03 19:46:35,884 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-03-03 19:46:35,884 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-03-03 19:46:35,890 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-03-03 19:46:35,916 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-03-03 19:46:35,916 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-03-03 19:46:35,917 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-03-03 19:46:35,924 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-03-03 19:46:35,924 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-03-03 19:46:35,927 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-03-03 19:46:35,936 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-03-03 19:46:35,949 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING 2025-03-03 19:46:39,552 base Session data corrupted
+INFO 2025-03-03 19:46:39,642 basehttp "GET /users/positions/ HTTP/1.1" 200 13535
+WARNING 2025-03-03 19:46:39,900 log Not Found: /favicon.ico
+WARNING 2025-03-03 19:46:39,901 basehttp "GET /favicon.ico HTTP/1.1" 404 3408
+WARNING 2025-03-03 19:47:01,158 log Not Found: /sers/positions/
+WARNING 2025-03-03 19:47:42,295 log Not Found: /sers/positions/
+WARNING 2025-03-03 19:49:56,018 base Session data corrupted
+INFO 2025-03-03 19:49:56,027 basehttp "GET /users/positions/ HTTP/1.1" 200 13535
+WARNING 2025-03-03 19:57:34,137 base Session data corrupted
+INFO 2025-03-03 19:57:34,147 basehttp "GET /users/department/ HTTP/1.1" 200 9519

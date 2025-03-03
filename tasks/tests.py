@@ -107,3 +107,7 @@ class ProjectsApiTestApi(APITestCase):
         print("📢 Проекты API:", response.json())
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data), 1)
+
+
+
+
