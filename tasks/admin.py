@@ -14,8 +14,26 @@ class GetCommentMixin:
 
 
 
-class TaskAdmin(admin.ModelAdmin,GetCommentMixin):
-    list_display = ['task_name','assigned','projects','start_date','end_date','get_comments','agreed_with_managers']
+class TaskAdmin(admin.ModelAdmin, GetCommentMixin):
+    change_list_template = "tasks/task.html"
+    list_display = ['task_name', 'assigned', 'start_date', 'end_date', 'get_comments', 'agreed_with_managers']
+
+    def changelist_view(self, request, extra_context=None):
+        labels = []
+        values = []
+
+        task_projects = Projects.objects.all()
+        for project in task_projects:
+            labels.append(project.project_name)
+            count = Task.objects.filter(projects=project).count()
+            values.append(count)
+
+        if extra_context is None:
+            extra_context = {}
+        extra_context['labels'] = labels
+        extra_context['values'] = values
+
+        return super().changelist_view(request, extra_context=extra_context)
 
 
 admin.site.register(Task,TaskAdmin)
