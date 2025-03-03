@@ -19,13 +19,12 @@ class TaskAdmin(admin.ModelAdmin, GetCommentMixin):
     list_display = ['task_name', 'assigned', 'start_date', 'end_date', 'get_comments', 'agreed_with_managers']
 
     def changelist_view(self, request, extra_context=None):
+        task_statuses = Status.objects.all()
         labels = []
         values = []
-
-        task_projects = Projects.objects.all()
-        for project in task_projects:
-            labels.append(project.project_name)
-            count = Task.objects.filter(projects=project).count()
+        for status in task_statuses:
+            labels.append(status.status_name)  # или другой атрибут, который хранит название статуса
+            count = Task.objects.filter(status=status).count()
             values.append(count)
 
         if extra_context is None:

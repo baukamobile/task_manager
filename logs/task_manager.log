@@ -11863,3 +11863,223 @@ Traceback (most recent call last):
     )
 django.core.exceptions.FieldError: Cannot resolve keyword 'project' into field. Choices are: agreed_with_managers, assigned, assigned_id, comments, department, department_id, description, documents, end_date, id, priority, priority_id, projects, projects_id, start_date, status, status_id, task_name
 ERROR 2025-03-03 20:28:29,526 basehttp "GET /admin/tasks/task/ HTTP/1.1" 500 145122
+ERROR 2025-03-03 20:34:58,143 log Internal Server Error: /admin/tasks/task/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\contrib\admin\options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\tasks\admin.py", line 26, in changelist_view
+    labels.append(status.name)  # или другой атрибут, который хранит название статуса
+                  ^^^^^^^^^^^
+AttributeError: 'Status' object has no attribute 'name'
+ERROR 2025-03-03 20:34:58,148 basehttp "GET /admin/tasks/task/ HTTP/1.1" 500 95166
+WARNING 2025-03-03 20:36:06,432 log Not Found: /favicon.ico
+WARNING 2025-03-03 20:36:06,433 basehttp "GET /favicon.ico HTTP/1.1" 404 3408
+ERROR 2025-03-03 20:37:28,392 log Internal Server Error: /admin/tasks/task/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 74, in resolve_template
+    return get_template(template, using=self.using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: tasks/templates/tasks/task.html
+ERROR 2025-03-03 20:37:28,394 basehttp "GET /admin/tasks/task/ HTTP/1.1" 500 88117
+WARNING 2025-03-03 20:37:28,547 log Not Found: /favicon.ico
+WARNING 2025-03-03 20:37:28,547 basehttp "GET /favicon.ico HTTP/1.1" 404 3408
+ERROR 2025-03-03 20:40:08,600 log Internal Server Error: /admin/tasks/task/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 74, in resolve_template
+    return get_template(template, using=self.using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: tasks/templates/tasks/task.html
+ERROR 2025-03-03 20:40:08,602 basehttp "GET /admin/tasks/task/ HTTP/1.1" 500 88565
+ERROR 2025-03-03 20:40:09,511 log Internal Server Error: /admin/tasks/task/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 74, in resolve_template
+    return get_template(template, using=self.using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: tasks/templates/tasks/task.html
+ERROR 2025-03-03 20:40:09,513 basehttp "GET /admin/tasks/task/ HTTP/1.1" 500 88565
+ERROR 2025-03-03 20:40:34,590 log Internal Server Error: /admin/tasks/task/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 74, in resolve_template
+    return get_template(template, using=self.using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: /tasks/task.html
+ERROR 2025-03-03 20:40:34,592 basehttp "GET /admin/tasks/task/ HTTP/1.1" 500 82453
+WARNING 2025-03-03 20:40:34,737 log Not Found: /favicon.ico
+WARNING 2025-03-03 20:40:34,738 basehttp "GET /favicon.ico HTTP/1.1" 404 3408
+ERROR 2025-03-03 20:40:35,514 log Internal Server Error: /admin/tasks/task/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 74, in resolve_template
+    return get_template(template, using=self.using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: /tasks/task.html
+ERROR 2025-03-03 20:40:35,516 basehttp "GET /admin/tasks/task/ HTTP/1.1" 500 82453
+ERROR 2025-03-03 20:51:15,999 log Internal Server Error: /tasks/tasks/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Task' object has no attribute 'project'. Did you mean: 'projects'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `project` on serializer `TaskSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Task` instance.
+Original exception text was: 'Task' object has no attribute 'project'.
+ERROR 2025-03-03 20:51:16,038 basehttp "GET /tasks/tasks/ HTTP/1.1" 500 147884
+ERROR 2025-03-03 20:53:20,099 exception Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING 2025-03-03 20:53:20,153 log Bad Request: /jet_api/register/
+WARNING 2025-03-03 20:53:20,154 basehttp "GET /jet_api/register/ HTTP/1.1" 400 74292
+ERROR 2025-03-03 20:53:20,498 exception Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING 2025-03-03 20:53:20,514 log Bad Request: /favicon.ico
+WARNING 2025-03-03 20:53:20,516 basehttp "GET /favicon.ico HTTP/1.1" 400 73938
+WARNING 2025-03-03 20:53:59,907 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 20:53:59,907 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6// HTTP/1.1" 400 85
+WARNING 2025-03-03 20:54:00,788 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 20:54:00,789 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_wj4u&draft=1 HTTP/1.1" 400 85
+WARNING 2025-03-03 20:54:54,361 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 20:54:54,361 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6// HTTP/1.1" 400 85
+WARNING 2025-03-03 20:54:54,907 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 20:54:54,910 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 20:54:54,911 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_wj4u&draft=1 HTTP/1.1" 400 85
+WARNING 2025-03-03 20:54:54,911 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_7muy&draft=1 HTTP/1.1" 400 85
+WARNING 2025-03-03 20:56:10,448 log Forbidden: /jet_api/model_descriptions/
+WARNING 2025-03-03 20:56:10,449 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_wj4u&draft=1 HTTP/1.1" 403 104
+WARNING 2025-03-03 20:56:10,842 log Not Found: /favicon.ico
+WARNING 2025-03-03 20:56:10,843 basehttp "GET /favicon.ico HTTP/1.1" 404 3559
+WARNING 2025-03-03 20:57:06,419 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 20:57:06,422 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 20:57:06,422 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_7muy&draft=1 HTTP/1.1" 400 85
+WARNING 2025-03-03 20:57:06,423 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_wj4u&draft=1 HTTP/1.1" 400 85
+WARNING 2025-03-03 20:58:32,636 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 20:58:32,637 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 20:58:32,638 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_7muy&draft=1 HTTP/1.1" 400 85
+WARNING 2025-03-03 20:58:32,639 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_wj4u&draft=1 HTTP/1.1" 400 85
+WARNING 2025-03-03 21:01:17,743 log Not Found: /favicon.ico
+WARNING 2025-03-03 21:01:17,744 basehttp "GET /favicon.ico HTTP/1.1" 404 3559
+WARNING 2025-03-03 21:04:26,524 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 21:04:26,526 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 21:04:26,527 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_7muy&draft=1 HTTP/1.1" 400 85
+WARNING 2025-03-03 21:04:26,527 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_wj4u&draft=1 HTTP/1.1" 400 85
+WARNING 2025-03-03 21:04:34,089 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 21:04:34,091 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 21:04:34,092 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_7muy&draft=1 HTTP/1.1" 400 85
+WARNING 2025-03-03 21:04:34,092 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_wj4u&draft=1 HTTP/1.1" 400 85

@@ -45,8 +45,9 @@ ALLOWED_HOSTS = [os.getenv('ALLOWED_HOST'),'127.0.0.1']
 INSTALLED_APPS = [
     # 'daphne',
     'channels',
-    'jazzmin',
+    # 'jazzmin',
     # 'jet',
+    'jet_django',
     # 'jet.dashboard',
 # 'admin_berry.apps.AdminBerryConfig',
     'django.contrib.admin',
@@ -109,7 +110,9 @@ ROOT_URLCONF = 'taskmanager.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'static', 'vue', 'dist')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),
+                 os.path.join(BASE_DIR, 'tasks',),
+                 os.path.join(BASE_DIR, 'static', 'vue', 'dist')],
         #'dashboard','templates',
         'APP_DIRS': True,
         'OPTIONS': {

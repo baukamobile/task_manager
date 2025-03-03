@@ -25,7 +25,7 @@ urlpatterns = [
     # path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
     # path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS
     path('admin/', admin.site.urls),
-
+    path('jet_api/', include('jet_django.urls')),
     path('', TemplateView.as_view(template_name="index.html")),
     path('users/',include('users.urls')),
     # path("", include('admin_berry.urls')),

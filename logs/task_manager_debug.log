@@ -6305,3 +6305,408 @@ INFO 2025-03-03 20:28:53,723 autoreload C:\Users\User\Desktop\docs\taskmanager\t
 INFO 2025-03-03 20:28:54,507 autoreload Watching for file changes with StatReloader
 INFO 2025-03-03 20:28:55,579 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 33664
 INFO 2025-03-03 20:28:55,762 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-03 20:34:54,876 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\admin.py changed, reloading.
+INFO 2025-03-03 20:34:55,903 autoreload Watching for file changes with StatReloader
+ERROR 2025-03-03 20:34:58,143 log Internal Server Error: /admin/tasks/task/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\contrib\admin\options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\taskmanager\tasks\admin.py", line 26, in changelist_view
+    labels.append(status.name)  # или другой атрибут, который хранит название статуса
+                  ^^^^^^^^^^^
+AttributeError: 'Status' object has no attribute 'name'
+ERROR 2025-03-03 20:34:58,148 basehttp "GET /admin/tasks/task/ HTTP/1.1" 500 95166
+INFO 2025-03-03 20:35:31,752 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\admin.py changed, reloading.
+INFO 2025-03-03 20:35:32,476 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 20:35:33,428 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 33682
+INFO 2025-03-03 20:35:33,531 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-03 20:35:59,593 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-03-03 20:36:00,265 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 20:36:01,187 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 27213
+INFO 2025-03-03 20:36:01,314 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-03 20:36:01,352 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 0
+INFO 2025-03-03 20:36:01,362 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1704
+INFO 2025-03-03 20:36:01,364 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2934
+INFO 2025-03-03 20:36:01,365 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2960
+INFO 2025-03-03 20:36:01,367 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 18939
+INFO 2025-03-03 20:36:01,370 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3142
+INFO 2025-03-03 20:36:03,852 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 27213
+INFO 2025-03-03 20:36:03,941 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-03 20:36:06,152 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 27213
+INFO 2025-03-03 20:36:06,164 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 0
+INFO 2025-03-03 20:36:06,166 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2934
+INFO 2025-03-03 20:36:06,171 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 0
+INFO 2025-03-03 20:36:06,172 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1704
+INFO 2025-03-03 20:36:06,173 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2960
+INFO 2025-03-03 20:36:06,183 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 18939
+INFO 2025-03-03 20:36:06,184 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 0
+INFO 2025-03-03 20:36:06,184 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 355
+INFO 2025-03-03 20:36:06,184 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 6392
+INFO 2025-03-03 20:36:06,192 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 8280
+INFO 2025-03-03 20:36:06,192 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 296030
+INFO 2025-03-03 20:36:06,193 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1574
+INFO 2025-03-03 20:36:06,194 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 8056
+INFO 2025-03-03 20:36:06,199 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 563
+INFO 2025-03-03 20:36:06,201 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 331297
+INFO 2025-03-03 20:36:06,258 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-03 20:36:06,279 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3142
+INFO 2025-03-03 20:36:06,288 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 1008
+WARNING 2025-03-03 20:36:06,432 log Not Found: /favicon.ico
+WARNING 2025-03-03 20:36:06,433 basehttp "GET /favicon.ico HTTP/1.1" 404 3408
+INFO 2025-03-03 20:36:11,616 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-03-03 20:36:12,584 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 20:36:13,713 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 33682
+INFO 2025-03-03 20:36:13,879 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-03 20:36:13,881 basehttp "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 103017
+INFO 2025-03-03 20:36:13,886 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 355
+INFO 2025-03-03 20:36:13,887 basehttp "GET /static/jazzmin/css/main.css HTTP/1.1" 200 17896
+INFO 2025-03-03 20:36:13,890 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 0
+INFO 2025-03-03 20:36:13,893 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 0
+INFO 2025-03-03 20:36:13,894 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 6392
+INFO 2025-03-03 20:36:13,895 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 8280
+INFO 2025-03-03 20:36:13,897 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 8056
+INFO 2025-03-03 20:36:13,899 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 296030
+INFO 2025-03-03 20:36:13,902 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1574
+INFO 2025-03-03 20:36:13,905 basehttp "GET /static/vendor/bootswatch/slate/bootstrap.min.css HTTP/1.1" 200 171643
+INFO 2025-03-03 20:36:13,905 basehttp "GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 200 2637
+INFO 2025-03-03 20:36:13,908 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 563
+INFO 2025-03-03 20:36:13,909 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 331297
+INFO 2025-03-03 20:36:13,915 basehttp "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 200 1382986
+INFO 2025-03-03 20:36:13,921 basehttp "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 200 44250
+INFO 2025-03-03 20:36:13,922 basehttp "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 62446
+INFO 2025-03-03 20:36:13,938 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 1008
+INFO 2025-03-03 20:36:13,938 basehttp "GET /static/jazzmin/js/main.js HTTP/1.1" 200 2458
+INFO 2025-03-03 20:36:13,965 basehttp "GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 25392
+INFO 2025-03-03 20:36:13,966 basehttp "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 156400
+INFO 2025-03-03 20:36:14,040 basehttp "GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 200 2637
+INFO 2025-03-03 20:37:24,691 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\admin.py changed, reloading.
+INFO 2025-03-03 20:37:25,958 autoreload Watching for file changes with StatReloader
+ERROR 2025-03-03 20:37:28,392 log Internal Server Error: /admin/tasks/task/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 74, in resolve_template
+    return get_template(template, using=self.using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: tasks/templates/tasks/task.html
+ERROR 2025-03-03 20:37:28,394 basehttp "GET /admin/tasks/task/ HTTP/1.1" 500 88117
+WARNING 2025-03-03 20:37:28,547 log Not Found: /favicon.ico
+WARNING 2025-03-03 20:37:28,547 basehttp "GET /favicon.ico HTTP/1.1" 404 3408
+INFO 2025-03-03 20:40:05,529 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-03-03 20:40:06,299 autoreload Watching for file changes with StatReloader
+ERROR 2025-03-03 20:40:08,600 log Internal Server Error: /admin/tasks/task/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 74, in resolve_template
+    return get_template(template, using=self.using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: tasks/templates/tasks/task.html
+ERROR 2025-03-03 20:40:08,602 basehttp "GET /admin/tasks/task/ HTTP/1.1" 500 88565
+ERROR 2025-03-03 20:40:09,511 log Internal Server Error: /admin/tasks/task/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 74, in resolve_template
+    return get_template(template, using=self.using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: tasks/templates/tasks/task.html
+ERROR 2025-03-03 20:40:09,513 basehttp "GET /admin/tasks/task/ HTTP/1.1" 500 88565
+INFO 2025-03-03 20:40:18,897 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\admin.py changed, reloading.
+INFO 2025-03-03 20:40:19,701 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 20:40:20,593 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 33682
+INFO 2025-03-03 20:40:20,734 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-03 20:40:20,755 basehttp "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 103017
+INFO 2025-03-03 20:40:20,757 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 355
+INFO 2025-03-03 20:40:20,759 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 6392
+INFO 2025-03-03 20:40:20,761 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 0
+INFO 2025-03-03 20:40:20,763 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 8280
+INFO 2025-03-03 20:40:20,765 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 8056
+INFO 2025-03-03 20:40:20,770 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1574
+INFO 2025-03-03 20:40:20,772 basehttp "GET /static/jazzmin/css/main.css HTTP/1.1" 200 17896
+INFO 2025-03-03 20:40:20,774 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 0
+INFO 2025-03-03 20:40:20,776 basehttp "GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 200 2637
+INFO 2025-03-03 20:40:20,779 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 331297
+INFO 2025-03-03 20:40:20,781 basehttp "GET /static/vendor/bootswatch/slate/bootstrap.min.css HTTP/1.1" 200 171643
+INFO 2025-03-03 20:40:20,785 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 563
+INFO 2025-03-03 20:40:20,788 basehttp "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 200 1382986
+INFO 2025-03-03 20:40:20,795 basehttp "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 62446
+INFO 2025-03-03 20:40:20,815 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 296030
+INFO 2025-03-03 20:40:20,822 basehttp "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 200 44250
+INFO 2025-03-03 20:40:20,830 basehttp "GET /static/jazzmin/js/main.js HTTP/1.1" 200 2458
+INFO 2025-03-03 20:40:20,841 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 1008
+INFO 2025-03-03 20:40:20,857 basehttp "GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 25392
+INFO 2025-03-03 20:40:20,859 basehttp "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 156400
+INFO 2025-03-03 20:40:21,082 basehttp "GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 200 2637
+INFO 2025-03-03 20:40:31,179 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\admin.py changed, reloading.
+INFO 2025-03-03 20:40:32,138 autoreload Watching for file changes with StatReloader
+ERROR 2025-03-03 20:40:34,590 log Internal Server Error: /admin/tasks/task/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 74, in resolve_template
+    return get_template(template, using=self.using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: /tasks/task.html
+ERROR 2025-03-03 20:40:34,592 basehttp "GET /admin/tasks/task/ HTTP/1.1" 500 82453
+WARNING 2025-03-03 20:40:34,737 log Not Found: /favicon.ico
+WARNING 2025-03-03 20:40:34,738 basehttp "GET /favicon.ico HTTP/1.1" 404 3408
+ERROR 2025-03-03 20:40:35,514 log Internal Server Error: /admin/tasks/task/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\response.py", line 74, in resolve_template
+    return get_template(template, using=self.using)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: /tasks/task.html
+ERROR 2025-03-03 20:40:35,516 basehttp "GET /admin/tasks/task/ HTTP/1.1" 500 82453
+INFO 2025-03-03 20:40:38,576 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\admin.py changed, reloading.
+INFO 2025-03-03 20:40:39,551 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 20:40:40,594 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 33682
+INFO 2025-03-03 20:40:40,744 basehttp "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 103017
+INFO 2025-03-03 20:40:40,749 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 296030
+INFO 2025-03-03 20:40:40,754 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 355
+INFO 2025-03-03 20:40:40,756 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 6392
+INFO 2025-03-03 20:40:40,758 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 0
+INFO 2025-03-03 20:40:40,760 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 8280
+INFO 2025-03-03 20:40:40,762 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 8056
+INFO 2025-03-03 20:40:40,764 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1574
+INFO 2025-03-03 20:40:40,771 basehttp "GET /static/jazzmin/css/main.css HTTP/1.1" 200 17896
+INFO 2025-03-03 20:40:40,773 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 0
+INFO 2025-03-03 20:40:40,775 basehttp "GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 200 2637
+INFO 2025-03-03 20:40:40,780 basehttp "GET /static/vendor/bootswatch/slate/bootstrap.min.css HTTP/1.1" 200 171643
+INFO 2025-03-03 20:40:40,781 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 563
+INFO 2025-03-03 20:40:40,782 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 331297
+INFO 2025-03-03 20:40:40,792 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-03 20:40:40,793 basehttp "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 62446
+INFO 2025-03-03 20:40:40,798 basehttp "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 200 1382986
+INFO 2025-03-03 20:40:40,801 basehttp "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 200 44250
+INFO 2025-03-03 20:40:40,824 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 1008
+INFO 2025-03-03 20:40:40,824 basehttp "GET /static/jazzmin/js/main.js HTTP/1.1" 200 2458
+INFO 2025-03-03 20:40:40,851 basehttp "GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 25392
+INFO 2025-03-03 20:40:40,852 basehttp "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 156400
+INFO 2025-03-03 20:40:40,937 basehttp "GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 200 2637
+INFO 2025-03-03 20:41:20,244 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-03-03 20:41:21,046 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 20:41:33,628 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-03-03 20:42:19,302 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 20:42:21,615 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 33682
+INFO 2025-03-03 20:42:21,778 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-03 20:49:06,250 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-03-03 20:49:06,984 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 20:50:02,149 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-03-03 20:50:02,681 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 20:50:37,399 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 20:51:12,307 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 20:51:14,788 basehttp "GET / HTTP/1.1" 200 1223
+INFO 2025-03-03 20:51:14,848 basehttp "GET /static/vue/dist/assets/index-CaVEL3aJ.js HTTP/1.1" 304 0
+INFO 2025-03-03 20:51:14,848 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 304 0
+INFO 2025-03-03 20:51:15,030 basehttp "GET /static/vue/dist/assets/DashboardLayout-B3rshA3m.js HTTP/1.1" 304 0
+INFO 2025-03-03 20:51:15,032 basehttp "GET /static/vue/dist/assets/PageFooter-i6VBsyFT.js HTTP/1.1" 304 0
+INFO 2025-03-03 20:51:15,032 basehttp "GET /static/vue/dist/assets/Index-BS3FHTIh.css HTTP/1.1" 304 0
+INFO 2025-03-03 20:51:15,035 basehttp "GET /static/vue/dist/assets/_plugin-vue_export-helper-DlAUqK2U.js HTTP/1.1" 304 0
+INFO 2025-03-03 20:51:15,038 basehttp "GET /static/vue/dist/assets/PageWrapper-DS28kFj-.js HTTP/1.1" 304 0
+INFO 2025-03-03 20:51:15,038 basehttp "GET /static/vue/dist/assets/Index-5_JBARpf.js HTTP/1.1" 304 0
+ERROR 2025-03-03 20:51:15,999 log Internal Server Error: /tasks/tasks/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Task' object has no attribute 'project'. Did you mean: 'projects'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `project` on serializer `TaskSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Task` instance.
+Original exception text was: 'Task' object has no attribute 'project'.
+ERROR 2025-03-03 20:51:16,038 basehttp "GET /tasks/tasks/ HTTP/1.1" 500 147884
+INFO 2025-03-03 20:51:30,805 basehttp "GET /jet_api/register/ HTTP/1.1" 302 0
+ERROR 2025-03-03 20:53:20,099 exception Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING 2025-03-03 20:53:20,153 log Bad Request: /jet_api/register/
+WARNING 2025-03-03 20:53:20,154 basehttp "GET /jet_api/register/ HTTP/1.1" 400 74292
+ERROR 2025-03-03 20:53:20,498 exception Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING 2025-03-03 20:53:20,514 log Bad Request: /favicon.ico
+WARNING 2025-03-03 20:53:20,516 basehttp "GET /favicon.ico HTTP/1.1" 400 73938
+INFO 2025-03-03 20:53:35,895 basehttp "GET /jet_api/register/ HTTP/1.1" 302 0
+INFO 2025-03-03 20:53:59,872 basehttp "OPTIONS /jet_api/model_descriptions/?cid=task_manager_6// HTTP/1.1" 200 0
+WARNING 2025-03-03 20:53:59,907 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 20:53:59,907 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6// HTTP/1.1" 400 85
+INFO 2025-03-03 20:53:59,914 basehttp "OPTIONS /jet_api/ HTTP/1.1" 200 0
+INFO 2025-03-03 20:53:59,917 basehttp "GET /jet_api/ HTTP/1.1" 200 119
+INFO 2025-03-03 20:54:00,784 basehttp "GET /jet_api/ HTTP/1.1" 200 119
+INFO 2025-03-03 20:54:00,785 basehttp "OPTIONS /jet_api/model_descriptions/?cid=task_manager_6/prod/django_wj4u&draft=1 HTTP/1.1" 200 0
+WARNING 2025-03-03 20:54:00,788 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 20:54:00,789 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_wj4u&draft=1 HTTP/1.1" 400 85
+WARNING 2025-03-03 20:54:54,361 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 20:54:54,361 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6// HTTP/1.1" 400 85
+INFO 2025-03-03 20:54:54,370 basehttp "GET /jet_api/ HTTP/1.1" 200 119
+INFO 2025-03-03 20:54:54,902 basehttp "GET /jet_api/ HTTP/1.1" 200 119
+INFO 2025-03-03 20:54:54,905 basehttp "OPTIONS /jet_api/model_descriptions/?cid=task_manager_6/prod/django_7muy&draft=1 HTTP/1.1" 200 0
+WARNING 2025-03-03 20:54:54,907 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 20:54:54,910 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 20:54:54,911 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_wj4u&draft=1 HTTP/1.1" 400 85
+WARNING 2025-03-03 20:54:54,911 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_7muy&draft=1 HTTP/1.1" 400 85
+WARNING 2025-03-03 20:56:10,448 log Forbidden: /jet_api/model_descriptions/
+WARNING 2025-03-03 20:56:10,449 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_wj4u&draft=1 HTTP/1.1" 403 104
+WARNING 2025-03-03 20:56:10,842 log Not Found: /favicon.ico
+WARNING 2025-03-03 20:56:10,843 basehttp "GET /favicon.ico HTTP/1.1" 404 3559
+WARNING 2025-03-03 20:57:06,419 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 20:57:06,422 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 20:57:06,422 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_7muy&draft=1 HTTP/1.1" 400 85
+WARNING 2025-03-03 20:57:06,423 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_wj4u&draft=1 HTTP/1.1" 400 85
+INFO 2025-03-03 20:57:06,426 basehttp "GET /jet_api/ HTTP/1.1" 200 119
+WARNING 2025-03-03 20:58:32,636 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 20:58:32,637 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 20:58:32,638 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_7muy&draft=1 HTTP/1.1" 400 85
+WARNING 2025-03-03 20:58:32,639 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_wj4u&draft=1 HTTP/1.1" 400 85
+INFO 2025-03-03 20:58:32,642 basehttp "GET /jet_api/ HTTP/1.1" 200 119
+INFO 2025-03-03 21:01:15,556 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 27213
+INFO 2025-03-03 21:01:15,681 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-03 21:01:15,728 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 0
+INFO 2025-03-03 21:01:15,728 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2960
+INFO 2025-03-03 21:01:15,734 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1704
+INFO 2025-03-03 21:01:15,737 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2934
+INFO 2025-03-03 21:01:15,738 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 18939
+INFO 2025-03-03 21:01:15,741 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3142
+INFO 2025-03-03 21:01:17,260 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 27213
+INFO 2025-03-03 21:01:17,273 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 0
+INFO 2025-03-03 21:01:17,286 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2960
+INFO 2025-03-03 21:01:17,286 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1704
+INFO 2025-03-03 21:01:17,288 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 0
+INFO 2025-03-03 21:01:17,289 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2934
+INFO 2025-03-03 21:01:17,297 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 6392
+INFO 2025-03-03 21:01:17,297 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 355
+INFO 2025-03-03 21:01:17,298 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 18939
+INFO 2025-03-03 21:01:17,305 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 0
+INFO 2025-03-03 21:01:17,306 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 8280
+INFO 2025-03-03 21:01:17,308 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 296030
+INFO 2025-03-03 21:01:17,314 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1574
+INFO 2025-03-03 21:01:17,315 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 8056
+INFO 2025-03-03 21:01:17,320 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 563
+INFO 2025-03-03 21:01:17,325 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 331297
+INFO 2025-03-03 21:01:17,376 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-03 21:01:17,391 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3142
+INFO 2025-03-03 21:01:17,399 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 1008
+WARNING 2025-03-03 21:01:17,743 log Not Found: /favicon.ico
+WARNING 2025-03-03 21:01:17,744 basehttp "GET /favicon.ico HTTP/1.1" 404 3559
+WARNING 2025-03-03 21:04:26,524 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 21:04:26,526 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 21:04:26,527 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_7muy&draft=1 HTTP/1.1" 400 85
+WARNING 2025-03-03 21:04:26,527 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_wj4u&draft=1 HTTP/1.1" 400 85
+INFO 2025-03-03 21:04:26,530 basehttp "GET /jet_api/ HTTP/1.1" 200 119
+WARNING 2025-03-03 21:04:34,089 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 21:04:34,091 log Bad Request: /jet_api/model_descriptions/
+WARNING 2025-03-03 21:04:34,092 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_7muy&draft=1 HTTP/1.1" 400 85
+WARNING 2025-03-03 21:04:34,092 basehttp "GET /jet_api/model_descriptions/?cid=task_manager_6/prod/django_wj4u&draft=1 HTTP/1.1" 400 85
+INFO 2025-03-03 21:04:34,097 basehttp "GET /jet_api/ HTTP/1.1" 200 119
+INFO 2025-03-03 21:05:37,332 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-03-03 21:05:39,408 autoreload Watching for file changes with StatReloader
