@@ -4519,3 +4519,819 @@ INFO 2025-03-03 09:50:10,698 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 367
 INFO 2025-03-03 09:50:14,288 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 367
 INFO 2025-03-03 09:50:15,870 basehttp "OPTIONS /tasks/tasks/8/ HTTP/1.1" 200 0
 INFO 2025-03-03 09:50:16,036 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 200 903
+WARNING 2025-03-03 09:57:03,584 base Session data corrupted
+INFO 2025-03-03 09:57:03,597 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 367
+WARNING 2025-03-03 09:57:05,600 base Session data corrupted
+INFO 2025-03-03 09:57:05,615 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 200 903
+WARNING 2025-03-03 09:59:53,113 base Session data corrupted
+INFO 2025-03-03 09:59:53,129 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 200 904
+INFO 2025-03-03 10:00:22,087 basehttp "GET / HTTP/1.1" 200 1223
+INFO 2025-03-03 10:00:22,104 basehttp "GET /static/vue/dist/assets/index-CaVEL3aJ.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:00:22,104 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 304 0
+INFO 2025-03-03 10:00:22,260 basehttp "GET /static/vue/dist/assets/DashboardLayout-B3rshA3m.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:00:22,263 basehttp "GET /static/vue/dist/assets/_plugin-vue_export-helper-DlAUqK2U.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:00:22,267 basehttp "GET /static/vue/dist/assets/Index-BS3FHTIh.css HTTP/1.1" 304 0
+INFO 2025-03-03 10:00:22,267 basehttp "GET /static/vue/dist/assets/Index-5_JBARpf.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:00:22,271 basehttp "GET /static/vue/dist/assets/PageWrapper-DS28kFj-.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:00:22,272 basehttp "GET /static/vue/dist/assets/PageFooter-i6VBsyFT.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:00:22,563 basehttp "GET /static/vue/dist/favicon.ico HTTP/1.1" 200 33310
+WARNING 2025-03-03 10:00:22,584 base Session data corrupted
+INFO 2025-03-03 10:00:22,591 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3227
+WARNING 2025-03-03 10:00:22,658 base Session data corrupted
+INFO 2025-03-03 10:00:22,661 basehttp "GET /tasks/status/ HTTP/1.1" 200 248
+INFO 2025-03-03 10:00:31,522 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3227
+INFO 2025-03-03 10:00:31,691 basehttp "GET /tasks/status/ HTTP/1.1" 200 248
+INFO 2025-03-03 10:00:33,014 basehttp "OPTIONS /tasks/tasks/13/ HTTP/1.1" 200 0
+INFO 2025-03-03 10:00:33,077 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 367
+INFO 2025-03-03 10:00:34,837 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 368
+INFO 2025-03-03 10:00:36,337 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 367
+INFO 2025-03-03 10:02:03,025 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3227
+INFO 2025-03-03 10:02:03,097 basehttp "GET /tasks/status/ HTTP/1.1" 200 248
+INFO 2025-03-03 10:04:31,488 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3227
+INFO 2025-03-03 10:04:31,543 basehttp "GET /tasks/status/ HTTP/1.1" 200 248
+INFO 2025-03-03 10:13:06,981 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3227
+INFO 2025-03-03 10:13:07,035 basehttp "GET /tasks/status/ HTTP/1.1" 200 248
+INFO 2025-03-03 10:13:08,301 basehttp "OPTIONS /tasks/tasks/tasks/13/ HTTP/1.1" 200 0
+WARNING 2025-03-03 10:13:08,330 log Not Found: /tasks/tasks/tasks/13/
+WARNING 2025-03-03 10:13:08,330 basehttp "DELETE /tasks/tasks/tasks/13/ HTTP/1.1" 404 8634
+INFO 2025-03-03 10:13:34,205 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3227
+INFO 2025-03-03 10:13:34,259 basehttp "GET /tasks/status/ HTTP/1.1" 200 248
+INFO 2025-03-03 10:13:35,539 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 367
+INFO 2025-03-03 10:13:36,624 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 368
+INFO 2025-03-03 10:13:37,563 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 367
+INFO 2025-03-03 10:19:30,157 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 3227
+INFO 2025-03-03 10:19:30,321 basehttp "GET /tasks/status/ HTTP/1.1" 200 248
+WARNING 2025-03-03 10:20:00,346 base Session data corrupted
+INFO 2025-03-03 10:20:00,637 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 18527
+INFO 2025-03-03 10:20:00,671 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1234
+INFO 2025-03-03 10:20:00,672 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3663
+INFO 2025-03-03 10:20:00,682 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1846
+INFO 2025-03-03 10:20:00,689 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 846
+INFO 2025-03-03 10:20:00,691 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39685
+INFO 2025-03-03 10:20:00,692 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13660
+INFO 2025-03-03 10:20:00,695 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121462
+INFO 2025-03-03 10:20:00,696 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3929
+INFO 2025-03-03 10:20:00,703 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1315
+INFO 2025-03-03 10:20:00,705 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87535
+INFO 2025-03-03 10:20:00,718 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 62
+INFO 2025-03-03 10:20:00,725 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2025-03-03 10:20:01,100 log Not Found: /favicon.ico
+WARNING 2025-03-03 10:20:01,101 basehttp "GET /favicon.ico HTTP/1.1" 404 3408
+WARNING 2025-03-03 10:20:21,752 base Session data corrupted
+WARNING 2025-03-03 10:20:21,776 log Bad Request: /tasks/tasks/
+WARNING 2025-03-03 10:20:21,777 basehttp "POST /tasks/tasks/ HTTP/1.1" 400 13377
+WARNING 2025-03-03 10:20:29,009 base Session data corrupted
+INFO 2025-03-03 10:20:29,060 basehttp "POST /tasks/tasks/ HTTP/1.1" 201 14044
+WARNING 2025-03-03 10:20:54,486 base Session data corrupted
+INFO 2025-03-03 10:20:54,521 basehttp "POST /tasks/tasks/ HTTP/1.1" 201 14112
+WARNING 2025-03-03 10:21:12,082 base Session data corrupted
+INFO 2025-03-03 10:21:12,113 basehttp "POST /tasks/tasks/ HTTP/1.1" 201 13932
+WARNING 2025-03-03 10:21:36,641 base Session data corrupted
+INFO 2025-03-03 10:21:36,672 basehttp "POST /tasks/tasks/ HTTP/1.1" 201 14004
+WARNING 2025-03-03 10:22:18,352 base Session data corrupted
+INFO 2025-03-03 10:22:18,382 basehttp "POST /tasks/tasks/ HTTP/1.1" 201 13848
+WARNING 2025-03-03 10:22:40,956 base Session data corrupted
+INFO 2025-03-03 10:22:40,989 basehttp "POST /tasks/tasks/ HTTP/1.1" 201 13996
+WARNING 2025-03-03 10:23:06,274 base Session data corrupted
+INFO 2025-03-03 10:23:06,304 basehttp "POST /tasks/tasks/ HTTP/1.1" 201 13880
+WARNING 2025-03-03 10:23:25,656 base Session data corrupted
+INFO 2025-03-03 10:23:25,686 basehttp "POST /tasks/tasks/ HTTP/1.1" 201 13880
+WARNING 2025-03-03 10:23:44,450 base Session data corrupted
+INFO 2025-03-03 10:23:44,481 basehttp "POST /tasks/tasks/ HTTP/1.1" 201 14134
+WARNING 2025-03-03 10:24:12,087 base Session data corrupted
+INFO 2025-03-03 10:24:12,118 basehttp "POST /tasks/tasks/ HTTP/1.1" 201 14010
+WARNING 2025-03-03 10:24:37,001 base Session data corrupted
+WARNING 2025-03-03 10:24:37,024 log Bad Request: /tasks/tasks/
+WARNING 2025-03-03 10:24:37,024 basehttp "POST /tasks/tasks/ HTTP/1.1" 400 14124
+WARNING 2025-03-03 10:25:03,606 base Session data corrupted
+WARNING 2025-03-03 10:25:03,630 log Bad Request: /tasks/tasks/
+WARNING 2025-03-03 10:25:03,631 basehttp "POST /tasks/tasks/ HTTP/1.1" 400 13971
+WARNING 2025-03-03 10:25:38,674 base Session data corrupted
+WARNING 2025-03-03 10:25:38,698 log Bad Request: /tasks/tasks/
+WARNING 2025-03-03 10:25:38,699 basehttp "POST /tasks/tasks/ HTTP/1.1" 400 13830
+WARNING 2025-03-03 10:25:59,846 base Session data corrupted
+INFO 2025-03-03 10:25:59,873 basehttp "POST /tasks/tasks/ HTTP/1.1" 201 14070
+INFO 2025-03-03 10:26:04,529 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6988
+INFO 2025-03-03 10:26:04,585 basehttp "GET /tasks/status/ HTTP/1.1" 200 248
+INFO 2025-03-03 10:26:11,471 basehttp "OPTIONS /tasks/tasks/25/ HTTP/1.1" 200 0
+INFO 2025-03-03 10:26:11,538 basehttp "PATCH /tasks/tasks/25/ HTTP/1.1" 200 351
+INFO 2025-03-03 10:26:12,797 basehttp "OPTIONS /tasks/tasks/24/ HTTP/1.1" 200 0
+INFO 2025-03-03 10:26:12,854 basehttp "PATCH /tasks/tasks/24/ HTTP/1.1" 200 412
+INFO 2025-03-03 10:26:16,166 basehttp "OPTIONS /tasks/tasks/22/ HTTP/1.1" 200 0
+INFO 2025-03-03 10:26:16,226 basehttp "PATCH /tasks/tasks/22/ HTTP/1.1" 200 286
+INFO 2025-03-03 10:26:28,285 basehttp "OPTIONS /tasks/tasks/16/ HTTP/1.1" 200 0
+INFO 2025-03-03 10:26:28,342 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 367
+WARNING 2025-03-03 10:26:36,409 base Session data corrupted
+INFO 2025-03-03 10:26:36,441 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 25480
+INFO 2025-03-03 10:26:36,457 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-03-03 10:26:36,462 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-03-03 10:26:36,465 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:26:36,465 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-03-03 10:26:36,465 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:26:36,465 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:26:36,466 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-03-03 10:26:36,466 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:26:36,471 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:26:36,472 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:26:36,473 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:26:39,655 basehttp "GET / HTTP/1.1" 200 1223
+INFO 2025-03-03 10:26:39,682 basehttp "GET /static/vue/dist/assets/index-CaVEL3aJ.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:26:39,682 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 304 0
+INFO 2025-03-03 10:26:39,826 basehttp "GET /static/vue/dist/assets/DashboardLayout-B3rshA3m.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:26:39,826 basehttp "GET /static/vue/dist/assets/PageFooter-i6VBsyFT.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:26:39,827 basehttp "GET /static/vue/dist/assets/Index-BS3FHTIh.css HTTP/1.1" 304 0
+INFO 2025-03-03 10:26:39,827 basehttp "GET /static/vue/dist/assets/_plugin-vue_export-helper-DlAUqK2U.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:26:39,827 basehttp "GET /static/vue/dist/assets/Index-5_JBARpf.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:26:39,827 basehttp "GET /static/vue/dist/assets/PageWrapper-DS28kFj-.js HTTP/1.1" 304 0
+WARNING 2025-03-03 10:26:40,136 base Session data corrupted
+INFO 2025-03-03 10:26:40,142 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6990
+WARNING 2025-03-03 10:26:40,200 base Session data corrupted
+INFO 2025-03-03 10:26:40,203 basehttp "GET /tasks/status/ HTTP/1.1" 200 248
+WARNING 2025-03-03 10:26:46,182 base Session data corrupted
+INFO 2025-03-03 10:26:46,192 basehttp "PATCH /tasks/tasks/23/ HTTP/1.1" 200 286
+WARNING 2025-03-03 10:26:47,222 base Session data corrupted
+INFO 2025-03-03 10:26:47,232 basehttp "PATCH /tasks/tasks/21/ HTTP/1.1" 200 343
+WARNING 2025-03-03 10:26:48,623 base Session data corrupted
+INFO 2025-03-03 10:26:48,634 basehttp "PATCH /tasks/tasks/19/ HTTP/1.1" 200 348
+WARNING 2025-03-03 10:26:50,073 base Session data corrupted
+INFO 2025-03-03 10:26:50,085 basehttp "PATCH /tasks/tasks/17/ HTTP/1.1" 200 402
+WARNING 2025-03-03 10:26:51,774 base Session data corrupted
+INFO 2025-03-03 10:26:51,786 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 367
+WARNING 2025-03-03 10:26:52,581 base Session data corrupted
+INFO 2025-03-03 10:26:52,593 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 368
+INFO 2025-03-03 10:27:14,430 basehttp "OPTIONS /tasks/status/13/ HTTP/1.1" 200 0
+INFO 2025-03-03 10:27:14,597 basehttp "DELETE /tasks/status/13/ HTTP/1.1" 204 0
+INFO 2025-03-03 10:27:28,941 basehttp "GET / HTTP/1.1" 200 1223
+WARNING 2025-03-03 10:27:29,109 base Session data corrupted
+INFO 2025-03-03 10:27:29,118 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6998
+INFO 2025-03-03 10:27:29,163 basehttp "GET /static/vue/dist/favicon.ico HTTP/1.1" 304 0
+WARNING 2025-03-03 10:27:29,214 base Session data corrupted
+INFO 2025-03-03 10:27:29,217 basehttp "GET /tasks/status/ HTTP/1.1" 200 205
+INFO 2025-03-03 10:27:37,378 basehttp "PATCH /tasks/tasks/25/ HTTP/1.1" 200 351
+INFO 2025-03-03 10:27:38,229 basehttp "OPTIONS /tasks/status/12/ HTTP/1.1" 200 0
+INFO 2025-03-03 10:27:38,298 basehttp "DELETE /tasks/status/12/ HTTP/1.1" 204 0
+INFO 2025-03-03 10:27:52,430 basehttp "OPTIONS /tasks/tasks/21/ HTTP/1.1" 200 0
+INFO 2025-03-03 10:27:52,490 basehttp "PATCH /tasks/tasks/21/ HTTP/1.1" 200 343
+INFO 2025-03-03 10:27:53,685 basehttp "OPTIONS /tasks/tasks/23/ HTTP/1.1" 200 0
+INFO 2025-03-03 10:27:53,742 basehttp "PATCH /tasks/tasks/23/ HTTP/1.1" 200 285
+INFO 2025-03-03 10:27:54,589 basehttp "OPTIONS /tasks/tasks/19/ HTTP/1.1" 200 0
+INFO 2025-03-03 10:27:54,646 basehttp "PATCH /tasks/tasks/19/ HTTP/1.1" 200 348
+INFO 2025-03-03 10:27:55,453 basehttp "OPTIONS /tasks/tasks/18/ HTTP/1.1" 200 0
+INFO 2025-03-03 10:27:55,623 basehttp "PATCH /tasks/tasks/18/ HTTP/1.1" 200 311
+INFO 2025-03-03 10:27:56,301 basehttp "OPTIONS /tasks/tasks/17/ HTTP/1.1" 200 0
+INFO 2025-03-03 10:27:56,460 basehttp "PATCH /tasks/tasks/17/ HTTP/1.1" 200 402
+INFO 2025-03-03 10:28:10,919 basehttp "DELETE /tasks/tasks/23/ HTTP/1.1" 204 0
+INFO 2025-03-03 10:28:13,035 basehttp "DELETE /tasks/tasks/19/ HTTP/1.1" 204 0
+INFO 2025-03-03 10:32:37,552 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6360
+INFO 2025-03-03 10:32:37,608 basehttp "GET /tasks/status/ HTTP/1.1" 200 156
+INFO 2025-03-03 10:33:56,836 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6360
+INFO 2025-03-03 10:33:56,896 basehttp "GET /tasks/status/ HTTP/1.1" 200 156
+INFO 2025-03-03 10:34:25,492 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6360
+INFO 2025-03-03 10:34:25,551 basehttp "GET /tasks/status/ HTTP/1.1" 200 156
+INFO 2025-03-03 10:34:26,557 basehttp "OPTIONS /tasks/tasks/26/ HTTP/1.1" 200 0
+INFO 2025-03-03 10:34:26,621 basehttp "PATCH /tasks/tasks/26/ HTTP/1.1" 200 381
+INFO 2025-03-03 10:35:40,173 basehttp "PATCH /tasks/tasks/17/ HTTP/1.1" 200 401
+INFO 2025-03-03 10:35:41,459 basehttp "PATCH /tasks/tasks/13/ HTTP/1.1" 200 367
+INFO 2025-03-03 10:35:42,596 basehttp "OPTIONS /tasks/tasks/8/ HTTP/1.1" 200 0
+INFO 2025-03-03 10:35:42,653 basehttp "PATCH /tasks/tasks/8/ HTTP/1.1" 200 903
+INFO 2025-03-03 10:35:44,063 basehttp "PATCH /tasks/tasks/25/ HTTP/1.1" 200 350
+INFO 2025-03-03 10:36:17,161 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6357
+INFO 2025-03-03 10:36:17,234 basehttp "GET /tasks/status/ HTTP/1.1" 200 156
+INFO 2025-03-03 10:36:23,424 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6357
+INFO 2025-03-03 10:36:23,478 basehttp "GET /tasks/status/ HTTP/1.1" 200 156
+INFO 2025-03-03 10:37:37,452 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6357
+INFO 2025-03-03 10:37:37,510 basehttp "GET /tasks/status/ HTTP/1.1" 200 156
+INFO 2025-03-03 10:37:39,854 basehttp "OPTIONS /tasks/status/11/ HTTP/1.1" 200 0
+INFO 2025-03-03 10:37:40,029 basehttp "DELETE /tasks/status/11/ HTTP/1.1" 204 0
+INFO 2025-03-03 10:38:22,523 basehttp "GET /tasks/status HTTP/1.1" 301 0
+WARNING 2025-03-03 10:38:22,624 base Session data corrupted
+INFO 2025-03-03 10:38:22,642 basehttp "GET /tasks/status/ HTTP/1.1" 200 10047
+INFO 2025-03-03 10:38:22,679 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-03-03 10:38:22,685 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:38:22,686 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-03-03 10:38:22,689 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:38:22,694 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:38:22,695 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:38:22,699 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-03-03 10:38:22,701 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-03-03 10:38:22,702 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:38:22,706 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:38:22,714 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:38:22,723 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2025-03-03 10:38:22,772 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6359
+INFO 2025-03-03 10:38:22,865 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 10:38:29,026 basehttp "GET /tasks/status/status HTTP/1.1" 301 0
+WARNING 2025-03-03 10:38:29,086 base Session data corrupted
+WARNING 2025-03-03 10:38:29,098 log Not Found: /tasks/status/status/
+WARNING 2025-03-03 10:38:29,099 basehttp "GET /tasks/status/status/ HTTP/1.1" 404 11183
+WARNING 2025-03-03 10:38:36,344 base Session data corrupted
+INFO 2025-03-03 10:38:36,357 basehttp "GET /tasks/status/ HTTP/1.1" 200 10047
+WARNING 2025-03-03 10:38:48,102 base Session data corrupted
+INFO 2025-03-03 10:38:48,132 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 24025
+INFO 2025-03-03 10:38:52,507 basehttp "GET /tasks/tasks/tasks HTTP/1.1" 301 0
+WARNING 2025-03-03 10:38:52,561 base Session data corrupted
+WARNING 2025-03-03 10:38:52,582 log Not Found: /tasks/tasks/tasks/
+WARNING 2025-03-03 10:38:52,583 basehttp "GET /tasks/tasks/tasks/ HTTP/1.1" 404 14405
+WARNING 2025-03-03 10:39:19,651 base Session data corrupted
+WARNING 2025-03-03 10:39:19,670 log Not Found: /tasks/tasks/tasks/
+WARNING 2025-03-03 10:39:19,670 basehttp "PUT /tasks/tasks/tasks/ HTTP/1.1" 404 14405
+WARNING 2025-03-03 10:39:28,323 base Session data corrupted
+INFO 2025-03-03 10:39:28,351 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 24025
+WARNING 2025-03-03 10:39:45,155 base Session data corrupted
+INFO 2025-03-03 10:39:45,188 basehttp "POST /tasks/tasks/ HTTP/1.1" 201 13562
+INFO 2025-03-03 10:40:08,572 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 10:40:08,732 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 10:40:14,615 basehttp "GET /tasks/tasks/1 HTTP/1.1" 301 0
+WARNING 2025-03-03 10:40:14,672 base Session data corrupted
+WARNING 2025-03-03 10:40:14,695 log Not Found: /tasks/tasks/1/
+WARNING 2025-03-03 10:40:14,696 basehttp "GET /tasks/tasks/1/ HTTP/1.1" 404 14395
+WARNING 2025-03-03 10:40:19,735 base Session data corrupted
+INFO 2025-03-03 10:40:19,757 basehttp "GET /tasks/tasks/17/ HTTP/1.1" 200 15439
+WARNING 2025-03-03 10:40:27,854 base Session data corrupted
+INFO 2025-03-03 10:40:27,886 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 24564
+WARNING 2025-03-03 10:40:30,502 base Session data corrupted
+INFO 2025-03-03 10:40:30,515 basehttp "GET /tasks/status/ HTTP/1.1" 200 10047
+INFO 2025-03-03 10:40:34,386 basehttp "GET /tasks/status/7 HTTP/1.1" 301 0
+WARNING 2025-03-03 10:40:34,441 base Session data corrupted
+INFO 2025-03-03 10:40:34,455 basehttp "GET /tasks/status/7/ HTTP/1.1" 200 11256
+INFO 2025-03-03 10:41:56,015 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 10:41:56,175 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 10:41:58,454 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 10:41:58,509 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 10:41:59,732 basehttp "PATCH /tasks/tasks/24/ HTTP/1.1" 200 412
+WARNING 2025-03-03 10:42:01,527 base Session data corrupted
+WARNING 2025-03-03 10:42:01,537 log Bad Request: /tasks/tasks/26/
+WARNING 2025-03-03 10:42:01,537 basehttp "PATCH /tasks/tasks/26/ HTTP/1.1" 400 57
+WARNING 2025-03-03 10:42:02,751 base Session data corrupted
+WARNING 2025-03-03 10:42:02,755 log Not Found: /tasks/tasks/23/
+WARNING 2025-03-03 10:42:02,755 basehttp "PATCH /tasks/tasks/23/ HTTP/1.1" 404 45
+WARNING 2025-03-03 10:42:04,333 base Session data corrupted
+WARNING 2025-03-03 10:42:04,339 log Bad Request: /tasks/tasks/18/
+WARNING 2025-03-03 10:42:04,340 basehttp "PATCH /tasks/tasks/18/ HTTP/1.1" 400 57
+INFO 2025-03-03 10:42:08,015 basehttp "GET / HTTP/1.1" 200 1223
+INFO 2025-03-03 10:42:08,037 basehttp "GET /static/vue/dist/assets/index-CaVEL3aJ.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:42:08,037 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 304 0
+INFO 2025-03-03 10:42:08,156 basehttp "GET /static/vue/dist/assets/DashboardLayout-B3rshA3m.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:42:08,159 basehttp "GET /static/vue/dist/assets/PageFooter-i6VBsyFT.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:42:08,162 basehttp "GET /static/vue/dist/assets/Index-BS3FHTIh.css HTTP/1.1" 304 0
+INFO 2025-03-03 10:42:08,162 basehttp "GET /static/vue/dist/assets/_plugin-vue_export-helper-DlAUqK2U.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:42:08,164 basehttp "GET /static/vue/dist/assets/Index-5_JBARpf.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:42:08,167 basehttp "GET /static/vue/dist/assets/PageWrapper-DS28kFj-.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:42:08,389 basehttp "GET /static/vue/dist/favicon.ico HTTP/1.1" 304 0
+WARNING 2025-03-03 10:42:08,504 base Session data corrupted
+INFO 2025-03-03 10:42:08,510 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+WARNING 2025-03-03 10:42:08,569 base Session data corrupted
+INFO 2025-03-03 10:42:08,572 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+WARNING 2025-03-03 10:42:10,509 base Session data corrupted
+INFO 2025-03-03 10:42:10,520 basehttp "PATCH /tasks/tasks/27/ HTTP/1.1" 200 248
+WARNING 2025-03-03 10:42:11,620 base Session data corrupted
+INFO 2025-03-03 10:42:11,630 basehttp "PATCH /tasks/tasks/27/ HTTP/1.1" 200 248
+WARNING 2025-03-03 10:42:42,003 base Session data corrupted
+INFO 2025-03-03 10:42:42,016 basehttp "GET /tasks/status/ HTTP/1.1" 200 10047
+INFO 2025-03-03 10:43:57,684 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 10:43:57,842 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 10:45:42,651 basehttp "GET / HTTP/1.1" 200 1223
+WARNING 2025-03-03 10:45:42,969 base Session data corrupted
+INFO 2025-03-03 10:45:42,975 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+WARNING 2025-03-03 10:45:43,138 base Session data corrupted
+INFO 2025-03-03 10:45:43,141 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 10:47:04,051 basehttp "GET / HTTP/1.1" 200 1223
+WARNING 2025-03-03 10:47:04,216 base Session data corrupted
+INFO 2025-03-03 10:47:04,222 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+WARNING 2025-03-03 10:47:04,407 base Session data corrupted
+INFO 2025-03-03 10:47:04,410 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 10:48:03,344 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 10:48:03,403 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 10:48:08,138 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 10:48:08,192 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+WARNING 2025-03-03 10:48:10,388 log Bad Request: /tasks/status/
+WARNING 2025-03-03 10:48:10,389 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+INFO 2025-03-03 10:48:12,883 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 10:48:12,935 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+WARNING 2025-03-03 10:48:48,740 log Bad Request: /tasks/status/
+WARNING 2025-03-03 10:48:48,741 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 10:48:49,483 log Bad Request: /tasks/status/
+WARNING 2025-03-03 10:48:49,483 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 10:49:08,532 log Bad Request: /tasks/status/
+WARNING 2025-03-03 10:49:08,532 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+INFO 2025-03-03 10:49:19,001 autoreload Watching for file changes with StatReloader
+WARNING 2025-03-03 10:49:22,164 log Bad Request: /tasks/status/
+WARNING 2025-03-03 10:49:22,165 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 10:49:37,525 base Session data corrupted
+INFO 2025-03-03 10:49:37,585 basehttp "GET //tasks/status/ HTTP/1.1" 200 10047
+INFO 2025-03-03 10:49:37,603 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-03-03 10:49:37,613 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-03-03 10:49:37,614 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-03-03 10:49:37,622 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:49:37,623 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-03-03 10:49:37,624 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:49:37,626 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:49:37,629 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:49:37,629 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:49:37,630 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:49:37,631 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-03-03 10:49:37,642 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2025-03-03 10:52:20,859 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 10:52:20,916 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+WARNING 2025-03-03 10:52:24,316 log Bad Request: /tasks/status/
+WARNING 2025-03-03 10:52:24,316 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+INFO 2025-03-03 10:53:33,691 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 10:53:33,750 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+WARNING 2025-03-03 10:54:40,084 log Bad Request: /tasks/status/
+WARNING 2025-03-03 10:54:40,085 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+INFO 2025-03-03 10:56:01,541 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 10:56:01,600 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+WARNING 2025-03-03 10:56:04,587 log Bad Request: /tasks/status/
+WARNING 2025-03-03 10:56:04,588 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 10:56:23,131 log Bad Request: /tasks/status/
+WARNING 2025-03-03 10:56:23,132 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 10:56:24,787 log Bad Request: /tasks/status/
+WARNING 2025-03-03 10:56:24,787 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 10:56:25,275 log Bad Request: /tasks/status/
+WARNING 2025-03-03 10:56:25,275 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 10:57:00,211 log Bad Request: /tasks/status/
+WARNING 2025-03-03 10:57:00,212 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 10:57:02,043 log Bad Request: /tasks/status/
+WARNING 2025-03-03 10:57:02,043 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+INFO 2025-03-03 11:00:35,666 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:00:35,821 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:00:54,458 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:00:54,512 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:01:09,008 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:01:09,075 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:02:25,178 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:02:25,245 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:06:49,688 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:06:49,753 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:08:35,309 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:08:35,377 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:09:07,631 basehttp "PATCH /tasks/tasks/25/ HTTP/1.1" 200 350
+INFO 2025-03-03 11:10:22,206 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:10:22,363 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:10:52,567 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:10:52,619 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:11:16,232 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:11:16,283 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:11:41,042 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:11:41,099 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:13:12,196 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:13:12,251 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:13:15,835 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:13:15,889 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:13:24,170 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:13:24,322 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:14:02,468 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:14:02,522 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:14:30,605 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:14:30,660 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:16:57,294 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:16:57,392 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+WARNING 2025-03-03 11:18:28,000 base Session data corrupted
+INFO 2025-03-03 11:18:28,050 basehttp "GET /users/users/ HTTP/1.1" 200 17231
+INFO 2025-03-03 11:18:28,090 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-03-03 11:18:28,098 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-03-03 11:18:28,099 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-03-03 11:18:28,101 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-03-03 11:18:28,105 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-03-03 11:18:28,106 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-03-03 11:18:28,107 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-03-03 11:18:28,111 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-03-03 11:18:28,113 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-03-03 11:18:28,122 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-03-03 11:18:28,122 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-03-03 11:18:28,133 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING 2025-03-03 11:18:28,461 log Not Found: /favicon.ico
+WARNING 2025-03-03 11:18:28,462 basehttp "GET /favicon.ico HTTP/1.1" 404 3408
+INFO 2025-03-03 11:19:25,971 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:19:26,025 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:24:58,407 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:24:58,460 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:25:39,001 basehttp "GET /users/users/ HTTP/1.1" 200 3326
+INFO 2025-03-03 11:25:39,001 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:25:39,158 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+WARNING 2025-03-03 11:25:51,187 log Bad Request: /tasks/status/
+WARNING 2025-03-03 11:25:51,188 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+INFO 2025-03-03 11:26:07,022 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:26:07,022 basehttp "GET /users/users/ HTTP/1.1" 200 3326
+INFO 2025-03-03 11:26:07,177 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+WARNING 2025-03-03 11:26:11,107 log Bad Request: /tasks/status/
+WARNING 2025-03-03 11:26:11,107 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 11:26:20,154 log Bad Request: /tasks/status/
+WARNING 2025-03-03 11:26:20,154 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 11:26:22,017 log Bad Request: /tasks/status/
+WARNING 2025-03-03 11:26:22,018 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 11:26:55,858 log Bad Request: /tasks/status/
+WARNING 2025-03-03 11:26:55,859 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 11:28:19,765 base Session data corrupted
+INFO 2025-03-03 11:28:19,783 basehttp "GET /admin/ HTTP/1.1" 302 0
+WARNING 2025-03-03 11:28:19,834 base Session data corrupted
+INFO 2025-03-03 11:28:19,894 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3177
+INFO 2025-03-03 11:28:20,039 basehttp "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 103017
+INFO 2025-03-03 11:28:20,041 basehttp "GET /static/vendor/bootswatch/slate/bootstrap.min.css HTTP/1.1" 200 171643
+INFO 2025-03-03 11:28:20,049 basehttp "GET /static/jazzmin/css/main.css HTTP/1.1" 200 17896
+INFO 2025-03-03 11:28:20,059 basehttp "GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 200 2637
+INFO 2025-03-03 11:28:20,060 basehttp "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 62446
+INFO 2025-03-03 11:28:20,067 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 296030
+INFO 2025-03-03 11:28:20,076 basehttp "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 200 44250
+INFO 2025-03-03 11:28:20,079 basehttp "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 200 1382986
+INFO 2025-03-03 11:28:20,198 basehttp "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 156400
+WARNING 2025-03-03 11:28:23,436 base Session data corrupted
+INFO 2025-03-03 11:28:23,440 basehttp "GET /users/ HTTP/1.1" 200 5847
+INFO 2025-03-03 11:28:27,579 basehttp "GET /users/users HTTP/1.1" 301 0
+WARNING 2025-03-03 11:28:27,639 base Session data corrupted
+INFO 2025-03-03 11:28:27,656 basehttp "GET /users/users/ HTTP/1.1" 200 17231
+INFO 2025-03-03 11:34:42,571 autoreload C:\Users\User\Desktop\docs\taskmanager\users\serializers.py changed, reloading.
+INFO 2025-03-03 11:34:43,505 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 11:35:20,243 autoreload C:\Users\User\Desktop\docs\taskmanager\users\serializers.py changed, reloading.
+INFO 2025-03-03 11:35:20,962 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 11:35:30,274 autoreload C:\Users\User\Desktop\docs\taskmanager\users\serializers.py changed, reloading.
+INFO 2025-03-03 11:35:30,916 autoreload Watching for file changes with StatReloader
+WARNING 2025-03-03 11:35:33,063 base Session data corrupted
+ERROR 2025-03-03 11:35:33,228 log Internal Server Error: /users/users/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 523, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ~~~~~~~~~~~~~~~~^
+        source, info, model, depth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+    ...<2 lines>...
+    )
+django.core.exceptions.ImproperlyConfigured: Field name `roles` is not valid for model `User` in `users.serializers.UserSerializer`.
+ERROR 2025-03-03 11:35:33,235 basehttp "GET /users/users/ HTTP/1.1" 500 153170
+INFO 2025-03-03 11:35:58,177 autoreload C:\Users\User\Desktop\docs\taskmanager\users\serializers.py changed, reloading.
+INFO 2025-03-03 11:35:58,932 autoreload Watching for file changes with StatReloader
+WARNING 2025-03-03 11:35:59,878 base Session data corrupted
+INFO 2025-03-03 11:35:59,949 basehttp "GET /users/users/ HTTP/1.1" 200 25689
+INFO 2025-03-03 11:35:59,962 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-03-03 11:35:59,966 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-03-03 11:35:59,972 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-03-03 11:35:59,972 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-03-03 11:35:59,972 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-03-03 11:35:59,973 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-03-03 11:35:59,974 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-03-03 11:35:59,977 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-03-03 11:35:59,979 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-03-03 11:35:59,980 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-03-03 11:35:59,986 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-03-03 11:35:59,989 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2025-03-03 11:36:16,046 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:36:16,134 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:36:16,288 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+WARNING 2025-03-03 11:39:21,256 base Session data corrupted
+INFO 2025-03-03 11:39:21,283 basehttp "GET /users/users/ HTTP/1.1" 200 25689
+WARNING 2025-03-03 11:39:25,866 base Session data corrupted
+INFO 2025-03-03 11:39:25,875 basehttp "GET /users/positions/ HTTP/1.1" 200 13535
+INFO 2025-03-03 11:40:45,355 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:40:45,362 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:40:45,422 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:40:45,427 basehttp "GET /users/positions/ HTTP/1.1" 200 2984
+INFO 2025-03-03 11:41:13,935 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:41:13,935 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:41:14,020 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:41:14,020 basehttp "GET /users/positions/ HTTP/1.1" 200 2984
+INFO 2025-03-03 11:42:44,111 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:42:44,111 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:42:44,194 basehttp "GET /users/positions/ HTTP/1.1" 200 2984
+INFO 2025-03-03 11:42:44,207 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:42:55,878 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:42:55,879 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:42:55,962 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:47:33,800 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:47:33,812 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:47:33,874 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:47:37,758 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:47:37,758 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:47:37,817 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:48:26,467 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:48:26,477 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:48:26,548 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:49:15,191 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:49:15,191 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:49:15,355 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:51:34,507 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:51:34,524 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:51:34,675 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:52:02,517 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:52:02,568 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:52:02,624 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:52:05,178 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:52:05,201 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:52:05,260 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:52:43,941 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:52:44,045 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:52:44,101 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:53:04,939 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:53:04,939 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:53:05,004 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:53:16,715 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:53:16,716 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:53:16,775 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:53:44,188 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:53:44,189 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:53:44,342 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:53:56,101 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:53:56,105 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:53:56,256 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:54:25,570 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:54:25,675 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:54:25,730 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:54:47,812 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:54:47,864 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:54:47,925 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:55:13,054 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:55:13,156 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:55:13,207 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:55:25,299 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:55:25,304 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:55:25,353 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:55:45,675 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:55:45,675 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:55:45,732 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:55:47,537 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:55:47,537 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:55:47,591 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:56:08,496 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:56:08,511 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:56:08,572 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:56:09,397 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:56:09,403 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:56:09,454 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 11:56:46,626 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 11:56:46,627 basehttp "GET /users/users/ HTTP/1.1" 200 3898
+INFO 2025-03-03 11:56:46,788 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 12:01:20,406 autoreload C:\Users\User\Desktop\docs\taskmanager\users\serializers.py changed, reloading.
+INFO 2025-03-03 12:01:21,342 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 12:01:37,844 autoreload C:\Users\User\Desktop\docs\taskmanager\users\serializers.py changed, reloading.
+INFO 2025-03-03 12:01:38,648 autoreload Watching for file changes with StatReloader
+WARNING 2025-03-03 12:01:40,527 base Session data corrupted
+INFO 2025-03-03 12:01:40,619 basehttp "GET /users/users/ HTTP/1.1" 200 21532
+INFO 2025-03-03 12:01:40,635 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-03-03 12:01:40,642 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-03-03 12:01:40,644 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-03-03 12:01:40,647 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-03-03 12:01:40,648 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-03-03 12:01:40,648 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-03-03 12:01:40,649 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-03-03 12:01:40,650 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-03-03 12:01:40,651 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-03-03 12:01:40,652 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-03-03 12:01:40,655 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-03-03 12:01:40,669 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2025-03-03 12:03:06,050 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 12:03:06,057 basehttp "GET /users/users/ HTTP/1.1" 200 4548
+INFO 2025-03-03 12:03:06,108 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 12:04:42,945 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 12:04:42,958 basehttp "GET /users/users/ HTTP/1.1" 200 4548
+INFO 2025-03-03 12:04:43,004 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 12:04:44,575 basehttp "GET /users/users/ HTTP/1.1" 200 4548
+INFO 2025-03-03 12:04:44,659 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 12:04:44,716 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 12:05:29,288 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 12:05:29,300 basehttp "GET /users/users/ HTTP/1.1" 200 4548
+INFO 2025-03-03 12:05:29,345 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 12:05:34,395 basehttp "GET /users/users/ HTTP/1.1" 200 4548
+INFO 2025-03-03 12:05:34,490 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 12:05:34,655 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+WARNING 2025-03-03 12:05:37,684 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:05:37,684 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+INFO 2025-03-03 12:06:40,929 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 12:06:41,001 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 12:06:41,041 basehttp "GET /users/users/ HTTP/1.1" 200 4548
+INFO 2025-03-03 12:06:56,954 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 12:06:56,961 basehttp "GET /users/users/ HTTP/1.1" 200 4548
+INFO 2025-03-03 12:06:57,013 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 12:07:15,794 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 12:07:15,808 basehttp "GET /users/users/ HTTP/1.1" 200 4548
+INFO 2025-03-03 12:07:15,956 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 12:07:22,123 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 12:07:22,142 basehttp "GET /users/users/ HTTP/1.1" 200 4548
+INFO 2025-03-03 12:07:22,291 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 12:07:36,605 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 12:07:36,618 basehttp "GET /users/users/ HTTP/1.1" 200 4548
+INFO 2025-03-03 12:07:36,697 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 12:07:50,274 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 6608
+INFO 2025-03-03 12:07:50,290 basehttp "GET /users/users/ HTTP/1.1" 200 4548
+INFO 2025-03-03 12:07:50,330 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 12:08:28,362 autoreload Watching for file changes with StatReloader
+WARNING 2025-03-03 12:08:31,581 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:08:31,582 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 12:08:54,904 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:08:54,905 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 12:09:20,648 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:09:20,648 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 12:09:25,927 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:09:25,928 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 12:09:45,317 base Session data corrupted
+INFO 2025-03-03 12:09:45,380 basehttp "POST /tasks/status/ HTTP/1.1" 201 9901
+INFO 2025-03-03 12:11:02,667 autoreload C:\Users\User\Desktop\docs\taskmanager\users\serializers.py changed, reloading.
+INFO 2025-03-03 12:11:03,436 autoreload Watching for file changes with StatReloader
+WARNING 2025-03-03 12:11:04,495 base Session data corrupted
+INFO 2025-03-03 12:11:04,574 basehttp "GET /users/users/ HTTP/1.1" 200 24249
+WARNING 2025-03-03 12:11:44,106 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:11:44,107 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+INFO 2025-03-03 12:12:22,493 basehttp "DELETE /tasks/tasks/25/ HTTP/1.1" 204 0
+INFO 2025-03-03 12:12:31,608 basehttp "OPTIONS /tasks/tasks/20/ HTTP/1.1" 200 0
+INFO 2025-03-03 12:12:31,672 basehttp "DELETE /tasks/tasks/20/ HTTP/1.1" 204 0
+WARNING 2025-03-03 12:13:24,082 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:13:24,082 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 12:13:42,280 base Session data corrupted
+INFO 2025-03-03 12:13:42,294 basehttp "GET /tasks/status/ HTTP/1.1" 200 10173
+WARNING 2025-03-03 12:15:35,983 base Session data corrupted
+WARNING 2025-03-03 12:15:35,995 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:15:35,995 basehttp "POST /tasks/status/ HTTP/1.1" 400 10136
+INFO 2025-03-03 12:18:05,602 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:18:05,734 basehttp "GET /users/users/ HTTP/1.1" 200 5422
+INFO 2025-03-03 12:18:05,762 basehttp "GET /tasks/status/ HTTP/1.1" 200 158
+INFO 2025-03-03 12:18:09,541 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:18:09,561 basehttp "GET /users/users/ HTTP/1.1" 200 5422
+INFO 2025-03-03 12:18:09,599 basehttp "GET /tasks/status/ HTTP/1.1" 200 158
+WARNING 2025-03-03 12:18:18,320 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:18:18,321 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 12:18:40,864 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:18:40,864 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+INFO 2025-03-03 12:20:30,724 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:20:30,780 basehttp "GET /tasks/status/ HTTP/1.1" 200 158
+INFO 2025-03-03 12:20:30,841 basehttp "GET /users/users/ HTTP/1.1" 200 5422
+INFO 2025-03-03 12:20:47,779 basehttp "GET /users/users/ HTTP/1.1" 200 5422
+INFO 2025-03-03 12:20:47,865 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:20:47,924 basehttp "GET /tasks/status/ HTTP/1.1" 200 158
+INFO 2025-03-03 12:20:50,596 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:20:50,619 basehttp "GET /users/users/ HTTP/1.1" 200 5422
+INFO 2025-03-03 12:20:50,758 basehttp "GET /tasks/status/ HTTP/1.1" 200 158
+WARNING 2025-03-03 12:20:57,624 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:20:57,625 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+INFO 2025-03-03 12:21:23,633 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:21:23,656 basehttp "GET /users/users/ HTTP/1.1" 200 5422
+INFO 2025-03-03 12:21:23,692 basehttp "GET /tasks/status/ HTTP/1.1" 200 158
+WARNING 2025-03-03 12:21:28,760 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:21:28,760 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+INFO 2025-03-03 12:23:09,477 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:23:09,498 basehttp "GET /users/users/ HTTP/1.1" 200 5422
+INFO 2025-03-03 12:23:09,590 basehttp "GET /tasks/status/ HTTP/1.1" 200 158
+INFO 2025-03-03 12:23:12,864 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:23:12,894 basehttp "GET /users/users/ HTTP/1.1" 200 5422
+INFO 2025-03-03 12:23:12,930 basehttp "GET /tasks/status/ HTTP/1.1" 200 158
+WARNING 2025-03-03 12:23:23,944 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:23:23,945 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 12:24:38,721 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:24:38,722 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 12:24:42,952 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:24:42,953 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 12:25:10,215 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:25:10,216 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+INFO 2025-03-03 12:25:41,879 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:25:41,938 basehttp "GET /users/users/ HTTP/1.1" 200 5422
+INFO 2025-03-03 12:25:41,965 basehttp "GET /tasks/status/ HTTP/1.1" 200 158
+INFO 2025-03-03 12:25:45,241 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:25:45,262 basehttp "GET /users/users/ HTTP/1.1" 200 5422
+INFO 2025-03-03 12:25:45,303 basehttp "GET /tasks/status/ HTTP/1.1" 200 158
+WARNING 2025-03-03 12:25:56,993 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:25:56,993 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+INFO 2025-03-03 12:27:09,759 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:27:09,797 basehttp "GET /users/users/ HTTP/1.1" 200 5422
+INFO 2025-03-03 12:27:09,839 basehttp "GET /tasks/status/ HTTP/1.1" 200 158
+WARNING 2025-03-03 12:27:15,072 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:27:15,073 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+INFO 2025-03-03 12:27:40,999 basehttp "GET /users/users HTTP/1.1" 301 0
+INFO 2025-03-03 12:27:41,057 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:27:41,128 basehttp "GET /tasks/status/ HTTP/1.1" 200 158
+INFO 2025-03-03 12:27:52,726 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:27:52,750 basehttp "GET /users/users/ HTTP/1.1" 200 5422
+INFO 2025-03-03 12:27:52,890 basehttp "GET /tasks/status/ HTTP/1.1" 200 158
+INFO 2025-03-03 12:27:53,753 basehttp "OPTIONS /tasks/status/14/ HTTP/1.1" 200 0
+INFO 2025-03-03 12:27:53,918 basehttp "DELETE /tasks/status/14/ HTTP/1.1" 204 0
+WARNING 2025-03-03 12:27:58,569 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:27:58,569 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+INFO 2025-03-03 12:29:16,895 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:29:16,917 basehttp "GET /users/users/ HTTP/1.1" 200 5422
+INFO 2025-03-03 12:29:16,954 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 12:29:19,647 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:29:19,666 basehttp "GET /users/users/ HTTP/1.1" 200 5422
+INFO 2025-03-03 12:29:19,708 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+WARNING 2025-03-03 12:29:22,007 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:29:22,008 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+INFO 2025-03-03 12:30:20,242 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:30:20,365 basehttp "GET /users/users/ HTTP/1.1" 200 5422
+INFO 2025-03-03 12:30:20,413 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-03 12:37:22,439 autoreload C:\Users\User\Desktop\docs\taskmanager\users\serializers.py changed, reloading.
+INFO 2025-03-03 12:37:23,242 autoreload Watching for file changes with StatReloader
+WARNING 2025-03-03 12:37:24,139 base Session data corrupted
+INFO 2025-03-03 12:37:24,215 basehttp "GET /users/users/ HTTP/1.1" 200 24609
+INFO 2025-03-03 12:37:24,230 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-03-03 12:37:24,234 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-03-03 12:37:24,234 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-03-03 12:37:24,234 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-03-03 12:37:24,236 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-03-03 12:37:24,239 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-03-03 12:37:24,240 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-03-03 12:37:24,241 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-03-03 12:37:24,241 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-03-03 12:37:24,246 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-03-03 12:37:24,248 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-03-03 12:37:24,275 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING 2025-03-03 12:37:26,300 base Session data corrupted
+INFO 2025-03-03 12:37:26,335 basehttp "GET /users/users/ HTTP/1.1" 200 24609
+INFO 2025-03-03 12:37:33,537 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:37:33,556 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 12:37:33,601 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+WARNING 2025-03-03 12:37:40,087 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:37:40,088 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 12:38:51,786 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:38:51,787 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 12:39:22,949 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:39:22,952 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+WARNING 2025-03-03 12:39:28,798 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:39:28,799 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+INFO 2025-03-03 12:42:57,517 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\serializers.py changed, reloading.
+INFO 2025-03-03 12:42:58,326 autoreload Watching for file changes with StatReloader
+WARNING 2025-03-03 12:42:59,452 base Session data corrupted
+INFO 2025-03-03 12:42:59,516 basehttp "GET /tasks/status/ HTTP/1.1" 200 16060
+WARNING 2025-03-03 12:43:08,968 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:43:08,969 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+INFO 2025-03-03 12:43:12,448 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:43:12,469 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 12:43:12,555 basehttp "GET /tasks/status/ HTTP/1.1" 200 954
+WARNING 2025-03-03 12:43:16,455 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:43:16,456 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+INFO 2025-03-03 12:45:18,287 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:45:18,342 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 12:45:18,469 basehttp "GET /tasks/status/ HTTP/1.1" 200 954
+INFO 2025-03-03 12:45:21,726 basehttp "OPTIONS /tasks/status/ HTTP/1.1" 200 0
+WARNING 2025-03-03 12:45:21,729 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:45:21,729 basehttp "POST /tasks/status/ HTTP/1.1" 400 83
+INFO 2025-03-03 12:45:24,695 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:45:24,725 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 12:45:24,764 basehttp "GET /tasks/status/ HTTP/1.1" 200 954
+WARNING 2025-03-03 12:45:27,543 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:45:27,544 basehttp "POST /tasks/status/ HTTP/1.1" 400 83
+INFO 2025-03-03 12:45:48,592 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:45:48,622 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 12:45:48,660 basehttp "GET /tasks/status/ HTTP/1.1" 200 954
+WARNING 2025-03-03 12:45:52,071 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:45:52,071 basehttp "POST /tasks/status/ HTTP/1.1" 400 83
+WARNING 2025-03-03 12:50:39,072 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:50:39,073 basehttp "POST /tasks/status/ HTTP/1.1" 400 83
+INFO 2025-03-03 12:50:59,998 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:51:00,051 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 12:51:00,092 basehttp "GET /tasks/status/ HTTP/1.1" 200 954
+WARNING 2025-03-03 12:51:03,558 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:51:03,558 basehttp "POST /tasks/status/ HTTP/1.1" 400 78
+INFO 2025-03-03 12:51:20,274 basehttp "GET /tasks/status HTTP/1.1" 301 0
+WARNING 2025-03-03 12:51:20,337 base Session data corrupted
+INFO 2025-03-03 12:51:20,360 basehttp "GET /tasks/status/ HTTP/1.1" 200 16060
+INFO 2025-03-03 12:51:47,904 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\serializers.py changed, reloading.
+INFO 2025-03-03 12:51:48,557 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 12:51:52,938 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-03 12:51:52,978 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 5987
+INFO 2025-03-03 12:51:53,145 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+WARNING 2025-03-03 12:51:56,047 log Bad Request: /tasks/status/
+WARNING 2025-03-03 12:51:56,047 basehttp "POST /tasks/status/ HTTP/1.1" 400 78

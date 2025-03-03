@@ -1,12 +1,5 @@
 from rest_framework import serializers
 from users.models import User,Roles,Department,Positions,Company
-
-
-class UserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields = ( 'email','first_name','last_name','password','phone_number','telegram_id','is_active','is_superuser')
-
 class RolesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Roles
@@ -24,6 +17,19 @@ class PositionsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Positions
         fields = ['position_name']
+
+class UserSerializer(serializers.ModelSerializer):
+    position = PositionsSerializer()
+    department = DepartmentSerializer()
+    class Meta:
+        model = User
+        fields = ('id', 'email','first_name',
+                   'last_name','password','position','role_user','department',
+                   'phone_number','telegram_id',
+                   'is_active','is_superuser'
+                   )
+
+
 
 
 
