@@ -7,6 +7,7 @@ router.register(r'tasks',TaskViewSet),
 router.register(r'projects',ProjectViewSet)
 urlpatterns = [
     path('',include(router.urls)),
+    # path('api/task-stats/', task_statistics),
 
 
     # path('',taskpage),

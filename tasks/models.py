@@ -29,9 +29,13 @@ class Task(models.Model):
     def __str__(self):
         # logger.debug('shows task_name {}'.format(self.task_name))
         return self.task_name
+
     class Meta:
         verbose_name_plural='Task'
         ordering = ['-start_date']
+        #количество коментариев внутри задач
+    def comments_count(self):
+        return self.comments.count()
 
 
 
@@ -72,7 +76,7 @@ class Task_comments(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL,null=True)
     comment = models.TextField()
     documents = models.FileField(null=True, blank=True)
-    created_at = models.DateTimeField()
+    created_at = models.DateTimeField(auto_now_add=True)
     history = HistoricalRecords()
 
     def __str__(self):

@@ -6710,3 +6710,1164 @@ WARNING 2025-03-03 21:04:34,092 basehttp "GET /jet_api/model_descriptions/?cid=t
 INFO 2025-03-03 21:04:34,097 basehttp "GET /jet_api/ HTTP/1.1" 200 119
 INFO 2025-03-03 21:05:37,332 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
 INFO 2025-03-03 21:05:39,408 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 21:06:25,216 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 27213
+INFO 2025-03-03 21:06:25,310 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-03 21:06:39,739 autoreload C:\Users\User\Desktop\docs\taskmanager\taskmanager\settings.py changed, reloading.
+INFO 2025-03-03 21:06:40,627 autoreload Watching for file changes with StatReloader
+INFO 2025-03-03 21:06:42,526 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 33682
+INFO 2025-03-04 08:56:39,583 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 08:59:58,904 basehttp "GET / HTTP/1.1" 200 1223
+INFO 2025-03-04 08:59:59,007 basehttp "GET /static/vue/dist/assets/index-CaVEL3aJ.js HTTP/1.1" 304 0
+INFO 2025-03-04 08:59:59,008 basehttp "GET /static/vue/dist/assets/index-CegevDD2.css HTTP/1.1" 304 0
+INFO 2025-03-04 08:59:59,202 basehttp "GET /static/vue/dist/assets/Index-5_JBARpf.js HTTP/1.1" 304 0
+INFO 2025-03-04 08:59:59,204 basehttp "GET /static/vue/dist/assets/PageFooter-i6VBsyFT.js HTTP/1.1" 304 0
+INFO 2025-03-04 08:59:59,207 basehttp "GET /static/vue/dist/assets/Index-BS3FHTIh.css HTTP/1.1" 304 0
+INFO 2025-03-04 08:59:59,207 basehttp "GET /static/vue/dist/assets/DashboardLayout-B3rshA3m.js HTTP/1.1" 304 0
+INFO 2025-03-04 08:59:59,209 basehttp "GET /static/vue/dist/assets/_plugin-vue_export-helper-DlAUqK2U.js HTTP/1.1" 304 0
+INFO 2025-03-04 08:59:59,218 basehttp "GET /static/vue/dist/assets/PageWrapper-DS28kFj-.js HTTP/1.1" 304 0
+ERROR 2025-03-04 08:59:59,663 log Internal Server Error: /tasks/tasks/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Task' object has no attribute 'project'. Did you mean: 'projects'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `project` on serializer `TaskSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Task` instance.
+Original exception text was: 'Task' object has no attribute 'project'.
+ERROR 2025-03-04 08:59:59,684 basehttp "GET /tasks/tasks/ HTTP/1.1" 500 147573
+INFO 2025-03-04 09:00:05,999 basehttp "GET /static/vue/dist/assets/news-DPlVVwt1.js HTTP/1.1" 200 425
+INFO 2025-03-04 09:00:06,003 basehttp "GET /static/vue/dist/assets/apexcharts.common-XJ_S8PLJ.js HTTP/1.1" 200 492158
+INFO 2025-03-04 09:00:11,428 basehttp "GET /admin/ HTTP/1.1" 200 51692
+INFO 2025-03-04 09:00:11,447 basehttp "GET /static/vendor/bootswatch/slate/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-03-04 09:00:11,448 basehttp "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+INFO 2025-03-04 09:00:11,449 basehttp "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2025-03-04 09:00:11,476 basehttp "GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+INFO 2025-03-04 09:00:11,481 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-03-04 09:00:11,481 basehttp "GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 304 0
+INFO 2025-03-04 09:00:11,493 basehttp "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-03-04 09:00:11,494 basehttp "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+INFO 2025-03-04 09:00:11,513 basehttp "GET /static/jazzmin/js/main.js HTTP/1.1" 304 0
+INFO 2025-03-04 09:00:11,627 basehttp "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+INFO 2025-03-04 09:00:11,627 basehttp "GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
+INFO 2025-03-04 09:00:14,748 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 33682
+INFO 2025-03-04 09:00:14,769 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-03-04 09:00:14,778 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-03-04 09:00:14,779 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-03-04 09:00:14,784 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-03-04 09:00:14,784 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-03-04 09:00:14,791 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-03-04 09:00:14,792 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2025-03-04 09:00:14,793 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-03-04 09:00:14,799 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-03-04 09:00:14,805 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-03-04 09:00:14,873 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-03-04 09:00:18,857 log Internal Server Error: /tasks/tasks/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Task' object has no attribute 'project'. Did you mean: 'projects'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `project` on serializer `TaskSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Task` instance.
+Original exception text was: 'Task' object has no attribute 'project'.
+ERROR 2025-03-04 09:00:18,861 basehttp "GET /tasks/tasks/ HTTP/1.1" 500 147573
+INFO 2025-03-04 09:05:39,313 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 09:06:03,699 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 09:06:13,098 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 33682
+INFO 2025-03-04 09:06:13,199 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 09:06:15,193 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 33682
+INFO 2025-03-04 09:06:15,280 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-03-04 09:13:28,145 log Internal Server Error: /tasks/tasks/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Task' object has no attribute 'project'. Did you mean: 'projects'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `project` on serializer `TaskSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Task` instance.
+Original exception text was: 'Task' object has no attribute 'project'.
+ERROR 2025-03-04 09:13:28,161 basehttp "GET /tasks/tasks/ HTTP/1.1" 500 146948
+ERROR 2025-03-04 09:14:06,316 log Internal Server Error: /tasks/tasks/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Task' object has no attribute 'project'. Did you mean: 'projects'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `project` on serializer `TaskSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Task` instance.
+Original exception text was: 'Task' object has no attribute 'project'.
+ERROR 2025-03-04 09:14:06,321 basehttp "GET /tasks/tasks/ HTTP/1.1" 500 146948
+INFO 2025-03-04 09:14:18,524 basehttp "GET /admin/tasks/status/ HTTP/1.1" 200 26088
+INFO 2025-03-04 09:14:18,566 basehttp "GET /static/vendor/select2/css/select2.min.css HTTP/1.1" 304 0
+INFO 2025-03-04 09:14:18,606 basehttp "GET /static/jazzmin/js/change_list.js HTTP/1.1" 304 0
+INFO 2025-03-04 09:14:18,606 basehttp "GET /static/vendor/select2/js/select2.min.js HTTP/1.1" 304 0
+INFO 2025-03-04 09:14:18,677 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-03-04 09:16:47,056 log Internal Server Error: /tasks/tasks/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Task' object has no attribute 'project'. Did you mean: 'projects'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `project` on serializer `TaskSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Task` instance.
+Original exception text was: 'Task' object has no attribute 'project'.
+ERROR 2025-03-04 09:16:47,060 basehttp "GET /tasks/tasks/ HTTP/1.1" 500 146948
+ERROR 2025-03-04 09:16:51,990 log Internal Server Error: /tasks/tasks/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Task' object has no attribute 'project'. Did you mean: 'projects'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `project` on serializer `TaskSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Task` instance.
+Original exception text was: 'Task' object has no attribute 'project'.
+ERROR 2025-03-04 09:16:51,994 basehttp "GET /tasks/tasks/ HTTP/1.1" 500 146948
+ERROR 2025-03-04 09:16:53,868 log Internal Server Error: /tasks/tasks/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Task' object has no attribute 'project'. Did you mean: 'projects'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `project` on serializer `TaskSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Task` instance.
+Original exception text was: 'Task' object has no attribute 'project'.
+ERROR 2025-03-04 09:16:53,872 basehttp "GET /tasks/tasks/ HTTP/1.1" 500 146948
+ERROR 2025-03-04 09:16:54,922 log Internal Server Error: /tasks/tasks/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Task' object has no attribute 'project'. Did you mean: 'projects'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `project` on serializer `TaskSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Task` instance.
+Original exception text was: 'Task' object has no attribute 'project'.
+ERROR 2025-03-04 09:16:54,926 basehttp "GET /tasks/tasks/ HTTP/1.1" 500 146948
+ERROR 2025-03-04 09:23:10,045 log Internal Server Error: /tasks/tasks/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Task' object has no attribute 'project'. Did you mean: 'projects'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `project` on serializer `TaskSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Task` instance.
+Original exception text was: 'Task' object has no attribute 'project'.
+ERROR 2025-03-04 09:23:10,056 basehttp "GET /tasks/tasks/ HTTP/1.1" 500 146948
+ERROR 2025-03-04 09:24:41,541 log Internal Server Error: /tasks/tasks/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Task' object has no attribute 'project'. Did you mean: 'projects'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `project` on serializer `TaskSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Task` instance.
+Original exception text was: 'Task' object has no attribute 'project'.
+ERROR 2025-03-04 09:24:41,545 basehttp "GET /tasks/tasks/ HTTP/1.1" 500 146948
+ERROR 2025-03-04 09:26:31,192 log Internal Server Error: /tasks/tasks/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Task' object has no attribute 'project'. Did you mean: 'projects'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `project` on serializer `TaskSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Task` instance.
+Original exception text was: 'Task' object has no attribute 'project'.
+ERROR 2025-03-04 09:26:31,196 basehttp "GET /tasks/tasks/ HTTP/1.1" 500 146948
+ERROR 2025-03-04 09:26:35,667 log Internal Server Error: /tasks/tasks/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Task' object has no attribute 'project'. Did you mean: 'projects'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `project` on serializer `TaskSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Task` instance.
+Original exception text was: 'Task' object has no attribute 'project'.
+ERROR 2025-03-04 09:26:35,670 basehttp "GET /tasks/tasks/ HTTP/1.1" 500 147222
+INFO 2025-03-04 09:31:22,284 basehttp "GET / HTTP/1.1" 200 1223
+INFO 2025-03-04 09:31:22,666 basehttp "GET /static/vue/dist/favicon.ico HTTP/1.1" 304 0
+ERROR 2025-03-04 09:31:22,849 log Internal Server Error: /tasks/tasks/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Task' object has no attribute 'project'. Did you mean: 'projects'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `project` on serializer `TaskSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Task` instance.
+Original exception text was: 'Task' object has no attribute 'project'.
+ERROR 2025-03-04 09:31:22,853 basehttp "GET /tasks/tasks/ HTTP/1.1" 500 147573
+ERROR 2025-03-04 09:31:52,937 log Internal Server Error: /tasks/tasks/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Task' object has no attribute 'project'. Did you mean: 'projects'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\User\Desktop\docs\.venv\Lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `project` on serializer `TaskSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Task` instance.
+Original exception text was: 'Task' object has no attribute 'project'.
+ERROR 2025-03-04 09:31:52,941 basehttp "GET /tasks/tasks/ HTTP/1.1" 500 147803
+WARNING 2025-03-04 09:31:53,198 log Not Found: /favicon.ico
+WARNING 2025-03-04 09:31:53,199 basehttp "GET /favicon.ico HTTP/1.1" 404 3559
+INFO 2025-03-04 09:32:14,416 basehttp "GET /tasks/status/ HTTP/1.1" 200 10385
+INFO 2025-03-04 09:32:14,431 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-03-04 09:32:14,434 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-03-04 09:32:14,440 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-03-04 09:32:14,441 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-03-04 09:32:14,442 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-03-04 09:32:14,445 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-03-04 09:32:14,449 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-03-04 09:32:14,450 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-03-04 09:32:14,450 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-03-04 09:32:14,451 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-03-04 09:32:14,452 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-03-04 09:32:14,459 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2025-03-04 09:33:03,833 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\serializers.py changed, reloading.
+INFO 2025-03-04 09:33:06,762 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 09:33:10,401 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\serializers.py changed, reloading.
+INFO 2025-03-04 09:33:11,161 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 09:33:12,951 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 30416
+INFO 2025-03-04 09:33:19,911 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8819
+INFO 2025-03-04 09:33:19,970 basehttp "GET /tasks/status/ HTTP/1.1" 200 260
+INFO 2025-03-04 09:33:20,054 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 09:33:22,791 basehttp "OPTIONS /tasks/tasks/27/ HTTP/1.1" 200 0
+INFO 2025-03-04 09:33:22,872 basehttp "PATCH /tasks/tasks/27/ HTTP/1.1" 200 478
+INFO 2025-03-04 09:33:26,583 basehttp "PATCH /tasks/tasks/27/ HTTP/1.1" 200 479
+INFO 2025-03-04 09:33:28,888 basehttp "OPTIONS /tasks/tasks/16/ HTTP/1.1" 200 0
+INFO 2025-03-04 09:33:29,068 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 597
+INFO 2025-03-04 09:40:13,294 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 597
+INFO 2025-03-04 09:40:14,711 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 597
+INFO 2025-03-04 09:41:54,299 basehttp "OPTIONS /tasks/status/ HTTP/1.1" 200 0
+INFO 2025-03-04 09:41:54,461 basehttp "POST /tasks/status/ HTTP/1.1" 201 46
+INFO 2025-03-04 09:41:54,516 basehttp "GET /tasks/status/ HTTP/1.1" 200 307
+INFO 2025-03-04 09:42:12,135 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8820
+INFO 2025-03-04 09:42:12,194 basehttp "GET /tasks/status/ HTTP/1.1" 200 307
+INFO 2025-03-04 09:42:12,272 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 09:43:19,419 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8820
+INFO 2025-03-04 09:43:19,475 basehttp "GET /tasks/status/ HTTP/1.1" 200 307
+INFO 2025-03-04 09:43:19,663 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 09:43:50,937 basehttp "GET /users/users HTTP/1.1" 301 0
+INFO 2025-03-04 09:43:51,035 basehttp "GET /users/users/ HTTP/1.1" 200 24643
+INFO 2025-03-04 09:44:30,648 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8820
+INFO 2025-03-04 09:44:30,703 basehttp "GET /tasks/status/ HTTP/1.1" 200 307
+INFO 2025-03-04 09:44:30,785 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 09:44:56,942 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8820
+INFO 2025-03-04 09:44:56,996 basehttp "GET /tasks/status/ HTTP/1.1" 200 307
+INFO 2025-03-04 09:44:57,176 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 09:44:58,119 basehttp "OPTIONS /tasks/status/15/ HTTP/1.1" 200 0
+INFO 2025-03-04 09:44:58,179 basehttp "DELETE /tasks/status/15/ HTTP/1.1" 204 0
+WARNING 2025-03-04 09:44:59,969 log Not Found: /tasks/status/15/
+WARNING 2025-03-04 09:44:59,970 basehttp "DELETE /tasks/status/15/ HTTP/1.1" 404 47
+INFO 2025-03-04 09:45:01,606 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8822
+INFO 2025-03-04 09:45:01,657 basehttp "GET /tasks/status/ HTTP/1.1" 200 267
+INFO 2025-03-04 09:45:01,735 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 09:45:05,124 basehttp "OPTIONS /tasks/status/24/ HTTP/1.1" 200 0
+INFO 2025-03-04 09:45:05,297 basehttp "DELETE /tasks/status/24/ HTTP/1.1" 204 0
+INFO 2025-03-04 09:45:06,022 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8822
+INFO 2025-03-04 09:45:06,073 basehttp "GET /tasks/status/ HTTP/1.1" 200 220
+INFO 2025-03-04 09:45:06,258 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 09:45:13,208 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8822
+INFO 2025-03-04 09:45:13,260 basehttp "GET /tasks/status/ HTTP/1.1" 200 220
+INFO 2025-03-04 09:45:13,343 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 09:45:25,818 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 09:45:42,141 basehttp "POST /tasks/status/ HTTP/1.1" 201 44
+INFO 2025-03-04 09:45:42,194 basehttp "GET /tasks/status/ HTTP/1.1" 200 265
+INFO 2025-03-04 09:45:43,989 basehttp "OPTIONS /tasks/status/25/ HTTP/1.1" 200 0
+INFO 2025-03-04 09:45:44,051 basehttp "DELETE /tasks/status/25/ HTTP/1.1" 204 0
+INFO 2025-03-04 09:45:47,118 basehttp "OPTIONS /tasks/status/21/ HTTP/1.1" 200 0
+INFO 2025-03-04 09:45:47,280 basehttp "DELETE /tasks/status/21/ HTTP/1.1" 204 0
+INFO 2025-03-04 09:45:54,074 basehttp "POST /tasks/status/ HTTP/1.1" 201 40
+INFO 2025-03-04 09:45:54,126 basehttp "GET /tasks/status/ HTTP/1.1" 200 153
+INFO 2025-03-04 09:46:06,099 basehttp "POST /tasks/status/ HTTP/1.1" 201 41
+INFO 2025-03-04 09:46:06,153 basehttp "GET /tasks/status/ HTTP/1.1" 200 195
+INFO 2025-03-04 09:49:25,874 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8824
+INFO 2025-03-04 09:49:25,971 basehttp "GET /tasks/status/ HTTP/1.1" 200 195
+INFO 2025-03-04 09:49:26,072 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 09:50:33,629 basehttp "POST /tasks/status/ HTTP/1.1" 201 40
+INFO 2025-03-04 09:50:33,786 basehttp "GET /tasks/status/ HTTP/1.1" 200 236
+INFO 2025-03-04 09:53:03,797 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8824
+INFO 2025-03-04 09:53:03,852 basehttp "GET /tasks/status/ HTTP/1.1" 200 236
+INFO 2025-03-04 09:53:03,926 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 09:53:09,677 basehttp "POST /tasks/status/ HTTP/1.1" 201 41
+INFO 2025-03-04 09:53:09,729 basehttp "GET /tasks/status/ HTTP/1.1" 200 278
+INFO 2025-03-04 09:53:13,366 basehttp "OPTIONS /tasks/status/26/ HTTP/1.1" 200 0
+INFO 2025-03-04 09:53:13,530 basehttp "DELETE /tasks/status/26/ HTTP/1.1" 204 0
+INFO 2025-03-04 09:53:13,965 basehttp "OPTIONS /tasks/status/27/ HTTP/1.1" 200 0
+INFO 2025-03-04 09:53:14,025 basehttp "DELETE /tasks/status/27/ HTTP/1.1" 204 0
+INFO 2025-03-04 09:53:14,181 basehttp "OPTIONS /tasks/status/28/ HTTP/1.1" 200 0
+INFO 2025-03-04 09:53:14,239 basehttp "DELETE /tasks/status/28/ HTTP/1.1" 204 0
+INFO 2025-03-04 09:53:14,789 basehttp "OPTIONS /tasks/status/29/ HTTP/1.1" 200 0
+INFO 2025-03-04 09:53:14,847 basehttp "DELETE /tasks/status/29/ HTTP/1.1" 204 0
+INFO 2025-03-04 09:53:18,015 basehttp "POST /tasks/status/ HTTP/1.1" 201 40
+INFO 2025-03-04 09:53:18,069 basehttp "GET /tasks/status/ HTTP/1.1" 200 153
+INFO 2025-03-04 09:53:21,885 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 598
+INFO 2025-03-04 09:59:06,396 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 597
+INFO 2025-03-04 09:59:07,514 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 598
+INFO 2025-03-04 09:59:36,910 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8825
+INFO 2025-03-04 09:59:36,970 basehttp "GET /tasks/status/ HTTP/1.1" 200 153
+INFO 2025-03-04 09:59:37,052 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:00:07,229 basehttp "GET /admin/ HTTP/1.1" 200 51692
+INFO 2025-03-04 10:00:08,936 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 30281
+WARNING 2025-03-04 10:00:10,269 log Not Found: /favicon.ico
+WARNING 2025-03-04 10:00:10,272 basehttp "GET /favicon.ico HTTP/1.1" 404 3559
+INFO 2025-03-04 10:04:15,988 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8825
+INFO 2025-03-04 10:04:16,041 basehttp "GET /tasks/status/ HTTP/1.1" 200 153
+INFO 2025-03-04 10:04:16,115 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:08:43,947 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8825
+INFO 2025-03-04 10:08:44,000 basehttp "GET /tasks/status/ HTTP/1.1" 200 153
+INFO 2025-03-04 10:08:44,076 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:08:45,616 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 597
+INFO 2025-03-04 10:08:46,809 basehttp "PATCH /tasks/tasks/16/ HTTP/1.1" 200 597
+INFO 2025-03-04 10:08:48,118 basehttp "OPTIONS /tasks/tasks%7D/30/ HTTP/1.1" 200 0
+WARNING 2025-03-04 10:08:48,124 log Not Found: /tasks/tasks}/30/
+WARNING 2025-03-04 10:08:48,125 basehttp "DELETE /tasks/tasks%7D/30/ HTTP/1.1" 404 8772
+INFO 2025-03-04 10:08:50,673 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8824
+INFO 2025-03-04 10:08:50,727 basehttp "GET /tasks/status/ HTTP/1.1" 200 153
+INFO 2025-03-04 10:08:50,805 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+WARNING 2025-03-04 10:08:51,744 log Not Found: /tasks/tasks}/30/
+WARNING 2025-03-04 10:08:51,744 basehttp "DELETE /tasks/tasks%7D/30/ HTTP/1.1" 404 8772
+WARNING 2025-03-04 10:08:52,607 log Not Found: /tasks/tasks}/30/
+WARNING 2025-03-04 10:08:52,608 basehttp "DELETE /tasks/tasks%7D/30/ HTTP/1.1" 404 8772
+INFO 2025-03-04 10:08:53,382 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8824
+INFO 2025-03-04 10:08:53,540 basehttp "GET /tasks/status/ HTTP/1.1" 200 153
+INFO 2025-03-04 10:08:53,620 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:09:04,347 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8824
+INFO 2025-03-04 10:09:04,505 basehttp "GET /tasks/status/ HTTP/1.1" 200 153
+INFO 2025-03-04 10:09:04,580 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:09:05,339 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8824
+INFO 2025-03-04 10:09:05,394 basehttp "GET /tasks/status/ HTTP/1.1" 200 153
+INFO 2025-03-04 10:09:05,468 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:09:06,092 basehttp "OPTIONS /tasks/tasks%7D30/ HTTP/1.1" 200 0
+WARNING 2025-03-04 10:09:06,097 log Not Found: /tasks/tasks}30/
+WARNING 2025-03-04 10:09:06,097 basehttp "DELETE /tasks/tasks%7D30/ HTTP/1.1" 404 8769
+WARNING 2025-03-04 10:09:06,879 log Not Found: /tasks/tasks}30/
+WARNING 2025-03-04 10:09:06,880 basehttp "DELETE /tasks/tasks%7D30/ HTTP/1.1" 404 8769
+INFO 2025-03-04 10:09:08,271 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8824
+INFO 2025-03-04 10:09:08,326 basehttp "GET /tasks/status/ HTTP/1.1" 200 153
+INFO 2025-03-04 10:09:08,404 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+WARNING 2025-03-04 10:09:10,479 log Not Found: /tasks/tasks}30/
+WARNING 2025-03-04 10:09:10,480 basehttp "DELETE /tasks/tasks%7D30/ HTTP/1.1" 404 8769
+INFO 2025-03-04 10:09:11,948 basehttp "OPTIONS /tasks/tasks%7D7/ HTTP/1.1" 200 0
+WARNING 2025-03-04 10:09:11,954 log Not Found: /tasks/tasks}7/
+WARNING 2025-03-04 10:09:11,954 basehttp "DELETE /tasks/tasks%7D7/ HTTP/1.1" 404 8766
+INFO 2025-03-04 10:09:13,820 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8824
+INFO 2025-03-04 10:09:13,874 basehttp "GET /tasks/status/ HTTP/1.1" 200 153
+INFO 2025-03-04 10:09:13,959 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:09:15,852 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8824
+INFO 2025-03-04 10:09:15,906 basehttp "GET /tasks/status/ HTTP/1.1" 200 153
+INFO 2025-03-04 10:09:15,992 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:09:37,286 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8824
+INFO 2025-03-04 10:09:37,339 basehttp "GET /tasks/status/ HTTP/1.1" 200 153
+INFO 2025-03-04 10:09:37,420 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:09:40,035 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8824
+INFO 2025-03-04 10:09:40,108 basehttp "GET /tasks/status/ HTTP/1.1" 200 153
+INFO 2025-03-04 10:09:40,197 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:09:45,746 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8824
+INFO 2025-03-04 10:09:45,804 basehttp "GET /tasks/status/ HTTP/1.1" 200 153
+INFO 2025-03-04 10:09:45,978 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:09:46,671 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8824
+INFO 2025-03-04 10:09:46,727 basehttp "GET /tasks/status/ HTTP/1.1" 200 153
+INFO 2025-03-04 10:09:46,912 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:09:47,253 basehttp "OPTIONS /tasks/status/30/ HTTP/1.1" 200 0
+INFO 2025-03-04 10:09:47,412 basehttp "DELETE /tasks/status/30/ HTTP/1.1" 204 0
+INFO 2025-03-04 10:10:05,420 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8824
+INFO 2025-03-04 10:10:05,474 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-04 10:10:05,544 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:10:10,119 basehttp "POST /tasks/status/ HTTP/1.1" 201 43
+INFO 2025-03-04 10:10:10,172 basehttp "GET /tasks/status/ HTTP/1.1" 200 156
+INFO 2025-03-04 10:10:11,485 basehttp "OPTIONS /tasks/tasks/31/ HTTP/1.1" 200 0
+WARNING 2025-03-04 10:10:11,644 log Not Found: /tasks/tasks/31/
+WARNING 2025-03-04 10:10:11,644 basehttp "DELETE /tasks/tasks/31/ HTTP/1.1" 404 45
+INFO 2025-03-04 10:10:13,695 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8824
+INFO 2025-03-04 10:10:13,748 basehttp "GET /tasks/status/ HTTP/1.1" 200 156
+INFO 2025-03-04 10:10:13,827 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+WARNING 2025-03-04 10:10:16,323 log Not Found: /tasks/tasks/31/
+WARNING 2025-03-04 10:10:16,324 basehttp "DELETE /tasks/tasks/31/ HTTP/1.1" 404 45
+INFO 2025-03-04 10:10:28,995 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8824
+INFO 2025-03-04 10:10:29,157 basehttp "GET /tasks/status/ HTTP/1.1" 200 156
+INFO 2025-03-04 10:10:29,339 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:10:29,885 basehttp "OPTIONS /tasks/status/31/ HTTP/1.1" 200 0
+INFO 2025-03-04 10:10:29,945 basehttp "DELETE /tasks/status/31/ HTTP/1.1" 204 0
+INFO 2025-03-04 10:10:48,761 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8824
+INFO 2025-03-04 10:10:48,927 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-04 10:10:49,003 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:10:56,627 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 33574
+INFO 2025-03-04 10:10:56,794 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:11:03,962 basehttp "GET /admin/tasks/task/27/change/ HTTP/1.1" 200 38373
+INFO 2025-03-04 10:11:04,078 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:11:04,137 basehttp "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 0
+INFO 2025-03-04 10:11:04,138 basehttp "GET /static/admin/js/calendar.js HTTP/1.1" 200 9380
+INFO 2025-03-04 10:11:04,140 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 622
+INFO 2025-03-04 10:11:04,140 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 601
+INFO 2025-03-04 10:11:04,150 basehttp "GET /static/jazzmin/js/change_form.js HTTP/1.1" 200 6203
+INFO 2025-03-04 10:11:04,150 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 334
+INFO 2025-03-04 10:11:04,150 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 584
+INFO 2025-03-04 10:11:04,151 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 383
+INFO 2025-03-04 10:11:04,151 basehttp "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 395
+INFO 2025-03-04 10:11:11,079 basehttp "POST /admin/tasks/task/27/change/ HTTP/1.1" 302 0
+INFO 2025-03-04 10:11:11,289 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 34130
+INFO 2025-03-04 10:11:11,388 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:11:26,497 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 30200
+WARNING 2025-03-04 10:11:26,725 log Not Found: /favicon.ico
+WARNING 2025-03-04 10:11:26,726 basehttp "GET /favicon.ico HTTP/1.1" 404 3559
+INFO 2025-03-04 10:11:29,670 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8821
+INFO 2025-03-04 10:11:29,724 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-04 10:11:29,798 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:11:52,358 basehttp "POST /tasks/tasks/ HTTP/1.1" 201 17441
+INFO 2025-03-04 10:11:56,412 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 9432
+INFO 2025-03-04 10:11:56,466 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-04 10:11:56,543 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:12:19,438 basehttp "GET /admin/tasks/task/17/change/ HTTP/1.1" 200 38684
+INFO 2025-03-04 10:12:19,529 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:12:24,007 basehttp "POST /admin/tasks/task/17/change/ HTTP/1.1" 302 0
+INFO 2025-03-04 10:12:24,112 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 35232
+INFO 2025-03-04 10:12:24,212 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:12:25,992 basehttp "GET /admin/tasks/task/28/change/ HTTP/1.1" 200 38642
+INFO 2025-03-04 10:12:26,090 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:12:28,511 basehttp "POST /admin/tasks/task/28/change/ HTTP/1.1" 302 0
+INFO 2025-03-04 10:12:28,721 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 35211
+INFO 2025-03-04 10:12:28,818 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:12:30,501 basehttp "GET /admin/tasks/task/27/change/ HTTP/1.1" 200 38373
+INFO 2025-03-04 10:12:30,597 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:12:33,058 basehttp "POST /admin/tasks/task/27/change/ HTTP/1.1" 302 0
+INFO 2025-03-04 10:12:33,167 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 35074
+INFO 2025-03-04 10:12:33,346 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:12:35,984 basehttp "GET /admin/tasks/task/22/change/ HTTP/1.1" 200 38452
+INFO 2025-03-04 10:12:36,078 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:12:40,013 basehttp "POST /admin/tasks/task/22/change/ HTTP/1.1" 302 0
+INFO 2025-03-04 10:12:40,224 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 35116
+INFO 2025-03-04 10:12:40,321 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:12:42,657 basehttp "GET /admin/tasks/task/17/change/ HTTP/1.1" 200 38684
+INFO 2025-03-04 10:12:42,761 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:12:45,738 basehttp "POST /admin/tasks/task/17/change/ HTTP/1.1" 302 0
+INFO 2025-03-04 10:12:45,844 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 35232
+INFO 2025-03-04 10:12:45,951 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:12:49,851 basehttp "GET /admin/tasks/task/12/change/ HTTP/1.1" 200 38616
+INFO 2025-03-04 10:12:49,952 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:12:54,342 basehttp "POST /admin/tasks/task/12/change/ HTTP/1.1" 302 0
+INFO 2025-03-04 10:12:54,550 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 35198
+INFO 2025-03-04 10:12:54,651 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:12:58,325 basehttp "GET /admin/tasks/task/14/change/ HTTP/1.1" 200 38610
+INFO 2025-03-04 10:12:58,418 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:13:02,953 basehttp "POST /admin/tasks/task/14/change/ HTTP/1.1" 302 0
+INFO 2025-03-04 10:13:03,159 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 35195
+INFO 2025-03-04 10:13:03,269 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:13:05,439 basehttp "GET /admin/tasks/task/12/change/ HTTP/1.1" 200 38616
+INFO 2025-03-04 10:13:05,537 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:13:07,766 basehttp "POST /admin/tasks/task/12/change/ HTTP/1.1" 302 0
+INFO 2025-03-04 10:13:07,976 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 35198
+INFO 2025-03-04 10:13:08,070 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:13:09,546 basehttp "GET /admin/tasks/task/11/change/ HTTP/1.1" 200 38441
+INFO 2025-03-04 10:13:09,643 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:13:13,468 basehttp "POST /admin/tasks/task/11/change/ HTTP/1.1" 302 0
+INFO 2025-03-04 10:13:13,575 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 35110
+INFO 2025-03-04 10:13:13,678 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:13:15,854 basehttp "GET /admin/tasks/task/10/change/ HTTP/1.1" 200 38584
+INFO 2025-03-04 10:13:15,944 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:13:20,088 basehttp "POST /admin/tasks/task/10/change/ HTTP/1.1" 302 0
+INFO 2025-03-04 10:13:20,192 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 35126
+INFO 2025-03-04 10:13:20,372 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:13:22,681 basehttp "GET /admin/tasks/task/9/change/ HTTP/1.1" 200 38726
+INFO 2025-03-04 10:13:22,781 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:13:26,861 basehttp "POST /admin/tasks/task/9/change/ HTTP/1.1" 302 0
+INFO 2025-03-04 10:13:27,079 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 35161
+INFO 2025-03-04 10:13:27,181 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:13:30,184 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 9411
+INFO 2025-03-04 10:13:30,238 basehttp "GET /tasks/status/ HTTP/1.1" 200 112
+INFO 2025-03-04 10:13:30,327 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:13:35,325 basehttp "POST /tasks/status/ HTTP/1.1" 201 38
+INFO 2025-03-04 10:13:35,378 basehttp "GET /tasks/status/ HTTP/1.1" 200 151
+INFO 2025-03-04 10:13:41,660 basehttp "POST /tasks/status/ HTTP/1.1" 201 40
+INFO 2025-03-04 10:13:41,717 basehttp "GET /tasks/status/ HTTP/1.1" 200 192
+INFO 2025-03-04 10:13:46,340 basehttp "OPTIONS /tasks/tasks/28/ HTTP/1.1" 200 0
+INFO 2025-03-04 10:13:46,405 basehttp "PATCH /tasks/tasks/28/ HTTP/1.1" 200 611
+INFO 2025-03-04 10:13:47,605 basehttp "OPTIONS /tasks/tasks/22/ HTTP/1.1" 200 0
+INFO 2025-03-04 10:13:47,674 basehttp "PATCH /tasks/tasks/22/ HTTP/1.1" 200 516
+INFO 2025-03-04 10:13:50,892 basehttp "OPTIONS /tasks/tasks/14/ HTTP/1.1" 200 0
+INFO 2025-03-04 10:13:50,956 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 595
+INFO 2025-03-04 10:13:52,476 basehttp "OPTIONS /tasks/tasks/11/ HTTP/1.1" 200 0
+INFO 2025-03-04 10:13:52,645 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 200 1413
+INFO 2025-03-04 10:16:55,439 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 9415
+INFO 2025-03-04 10:16:55,592 basehttp "GET /tasks/status/ HTTP/1.1" 200 192
+INFO 2025-03-04 10:16:55,669 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:17:22,476 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 9415
+INFO 2025-03-04 10:17:22,536 basehttp "GET /tasks/status/ HTTP/1.1" 200 192
+INFO 2025-03-04 10:17:22,604 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:17:52,671 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 9415
+INFO 2025-03-04 10:17:52,731 basehttp "GET /tasks/status/ HTTP/1.1" 200 192
+INFO 2025-03-04 10:17:52,813 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:24:39,742 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 9415
+INFO 2025-03-04 10:24:39,901 basehttp "GET /tasks/status/ HTTP/1.1" 200 192
+INFO 2025-03-04 10:24:39,980 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:24:50,455 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 34559
+INFO 2025-03-04 10:24:50,568 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 10:27:10,918 basehttp "PATCH /tasks/tasks/22/ HTTP/1.1" 200 515
+INFO 2025-03-04 10:27:16,132 basehttp "OPTIONS /tasks/tasks/10/ HTTP/1.1" 200 0
+INFO 2025-03-04 10:27:16,300 basehttp "PATCH /tasks/tasks/10/ HTTP/1.1" 200 1172
+INFO 2025-03-04 10:27:30,962 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 9415
+INFO 2025-03-04 10:27:31,019 basehttp "GET /tasks/status/ HTTP/1.1" 200 192
+INFO 2025-03-04 10:27:31,192 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:29:09,902 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 9415
+INFO 2025-03-04 10:29:09,957 basehttp "GET /tasks/status/ HTTP/1.1" 200 192
+INFO 2025-03-04 10:29:10,141 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:29:19,421 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 9415
+INFO 2025-03-04 10:29:19,476 basehttp "GET /tasks/status/ HTTP/1.1" 200 192
+INFO 2025-03-04 10:29:19,556 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:29:37,792 basehttp "POST /tasks/status/ HTTP/1.1" 201 37
+INFO 2025-03-04 10:29:37,944 basehttp "GET /tasks/status/ HTTP/1.1" 200 230
+INFO 2025-03-04 10:29:40,701 basehttp "PATCH /tasks/tasks/27/ HTTP/1.1" 200 479
+INFO 2025-03-04 10:49:38,462 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 9416
+INFO 2025-03-04 10:49:38,521 basehttp "GET /tasks/status/ HTTP/1.1" 200 230
+INFO 2025-03-04 10:49:38,605 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:50:06,976 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 9416
+INFO 2025-03-04 10:50:07,142 basehttp "GET /tasks/status/ HTTP/1.1" 200 230
+INFO 2025-03-04 10:50:07,241 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:50:14,986 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 9416
+INFO 2025-03-04 10:50:15,150 basehttp "GET /tasks/status/ HTTP/1.1" 200 230
+INFO 2025-03-04 10:50:15,342 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:50:39,991 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 9416
+INFO 2025-03-04 10:50:40,050 basehttp "GET /tasks/status/ HTTP/1.1" 200 230
+INFO 2025-03-04 10:50:40,127 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 10:51:05,175 basehttp "POST /tasks/status/ HTTP/1.1" 201 41
+INFO 2025-03-04 10:51:05,228 basehttp "GET /tasks/status/ HTTP/1.1" 200 272
+INFO 2025-03-04 10:51:28,253 basehttp "DELETE /tasks/tasks/27/ HTTP/1.1" 204 0
+INFO 2025-03-04 10:52:41,597 basehttp "OPTIONS /tasks/tasks/17/ HTTP/1.1" 200 0
+INFO 2025-03-04 10:52:41,671 basehttp "PATCH /tasks/tasks/17/ HTTP/1.1" 200 632
+INFO 2025-03-04 10:52:42,806 basehttp "PATCH /tasks/tasks/14/ HTTP/1.1" 200 594
+INFO 2025-03-04 11:00:16,407 basehttp "GET /tasks/tasks/ HTTP/1.1" 200 8936
+INFO 2025-03-04 11:00:16,473 basehttp "GET /tasks/status/ HTTP/1.1" 200 272
+INFO 2025-03-04 11:00:16,548 basehttp "GET /users/users/ HTTP/1.1" 200 5518
+INFO 2025-03-04 11:00:18,043 basehttp "PATCH /tasks/tasks/10/ HTTP/1.1" 200 1171
+INFO 2025-03-04 11:00:21,363 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 200 1413
+INFO 2025-03-04 11:00:27,835 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 33929
+INFO 2025-03-04 11:00:27,938 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 11:00:45,581 basehttp "GET /admin/tasks/task/28/change/ HTTP/1.1" 200 38783
+INFO 2025-03-04 11:00:45,678 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 11:00:50,593 basehttp "POST /admin/tasks/task/28/change/ HTTP/1.1" 302 0
+INFO 2025-03-04 11:00:50,705 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 34622
+INFO 2025-03-04 11:00:50,804 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 11:00:54,513 basehttp "GET /admin/tasks/task_comments/ HTTP/1.1" 200 20880
+INFO 2025-03-04 11:00:54,612 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 11:00:56,806 basehttp "GET /admin/tasks/task_comments/add/ HTTP/1.1" 200 30364
+INFO 2025-03-04 11:00:56,897 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 11:01:08,747 basehttp "POST /admin/tasks/task_comments/add/ HTTP/1.1" 302 0
+INFO 2025-03-04 11:01:08,831 basehttp "GET /admin/tasks/task_comments/ HTTP/1.1" 200 25220
+INFO 2025-03-04 11:01:08,929 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 11:01:14,310 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 33946
+INFO 2025-03-04 11:01:14,409 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 11:03:38,768 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 11:03:43,834 basehttp "GET /admin/tasks/task_comments/ HTTP/1.1" 200 24638
+INFO 2025-03-04 11:03:43,943 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 11:03:45,675 basehttp "GET /admin/tasks/task_comments/add/ HTTP/1.1" 200 29150
+INFO 2025-03-04 11:03:45,773 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 11:03:53,220 basehttp "POST /admin/tasks/task_comments/add/ HTTP/1.1" 302 0
+INFO 2025-03-04 11:03:53,313 basehttp "GET /admin/tasks/task_comments/ HTTP/1.1" 200 25888
+INFO 2025-03-04 11:03:53,413 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 11:03:56,393 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 33950
+INFO 2025-03-04 11:03:56,581 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 11:04:54,160 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\models.py changed, reloading.
+INFO 2025-03-04 11:04:55,310 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 11:05:23,803 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\models.py changed, reloading.
+INFO 2025-03-04 11:05:24,772 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 11:05:33,698 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 33950
+INFO 2025-03-04 11:05:33,898 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-03-04 11:05:57,360 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\models.py changed, reloading.
+INFO 2025-03-04 11:05:58,218 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 11:24:18,349 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-03-04 11:24:20,205 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 11:24:45,349 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-03-04 11:24:46,109 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 11:25:08,473 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-03-04 11:25:09,264 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 11:25:28,190 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-03-04 11:25:29,015 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 11:26:07,934 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-03-04 11:26:08,716 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 11:26:50,265 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-03-04 11:26:51,141 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 11:27:07,387 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-03-04 11:27:08,456 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 11:27:37,634 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-03-04 11:27:38,628 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 11:27:56,756 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-03-04 11:27:57,636 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 11:28:28,530 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\urls.py changed, reloading.
+INFO 2025-03-04 11:28:29,418 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 11:28:33,735 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\urls.py changed, reloading.
+INFO 2025-03-04 11:28:34,916 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 11:28:41,725 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\urls.py changed, reloading.
+INFO 2025-03-04 11:28:42,476 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 11:28:49,845 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\urls.py changed, reloading.
+INFO 2025-03-04 11:28:50,589 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 11:29:15,039 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-03-04 11:29:16,217 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 11:43:32,460 basehttp "PATCH /tasks/tasks/22/ HTTP/1.1" 200 516
+INFO 2025-03-04 11:43:35,272 basehttp "PATCH /tasks/tasks/22/ HTTP/1.1" 200 515
+INFO 2025-03-04 11:43:37,152 basehttp "PATCH /tasks/tasks/11/ HTTP/1.1" 200 1413
+INFO 2025-03-04 11:43:38,206 basehttp "PATCH /tasks/tasks/28/ HTTP/1.1" 200 622
+INFO 2025-03-04 11:43:46,096 basehttp "PATCH /tasks/tasks/17/ HTTP/1.1" 200 632
+INFO 2025-03-04 11:43:46,954 basehttp "PATCH /tasks/tasks/28/ HTTP/1.1" 200 622
+INFO 2025-03-04 11:43:47,805 basehttp "PATCH /tasks/tasks/28/ HTTP/1.1" 200 622
+INFO 2025-03-04 11:46:44,716 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\views.py changed, reloading.
+INFO 2025-03-04 11:46:45,498 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 11:46:47,141 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 19
+INFO 2025-03-04 11:47:35,905 autoreload C:\Users\User\Desktop\docs\taskmanager\tasks\admin.py changed, reloading.
+INFO 2025-03-04 11:47:37,156 autoreload Watching for file changes with StatReloader
+INFO 2025-03-04 11:47:39,117 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 19
+INFO 2025-03-04 11:48:26,749 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 19
+INFO 2025-03-04 11:48:30,036 basehttp "GET /admin/tasks/ HTTP/1.1" 200 33002
+INFO 2025-03-04 11:48:30,058 basehttp "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+INFO 2025-03-04 11:48:30,063 basehttp "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2025-03-04 11:48:30,063 basehttp "GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 304 0
+INFO 2025-03-04 11:48:30,066 basehttp "GET /static/vendor/bootswatch/slate/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-03-04 11:48:30,069 basehttp "GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+INFO 2025-03-04 11:48:30,069 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-03-04 11:48:30,069 basehttp "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+INFO 2025-03-04 11:48:30,069 basehttp "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-03-04 11:48:30,088 basehttp "GET /static/jazzmin/js/main.js HTTP/1.1" 304 0
+INFO 2025-03-04 11:48:30,168 basehttp "GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
+INFO 2025-03-04 11:48:30,168 basehttp "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+INFO 2025-03-04 11:48:32,350 basehttp "GET /admin/tasks/task/ HTTP/1.1" 200 19

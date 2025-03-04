@@ -1,8 +1,7 @@
-from rest_framework.generics import ListAPIView,RetrieveAPIView,RetrieveUpdateAPIView,CreateAPIView,DestroyAPIView
+from rest_framework.decorators import api_view
 from rest_framework.viewsets import ModelViewSet
-
-from django.shortcuts import render
-from rest_framework.permissions import IsAuthenticated, IsAdminUser
+from django.db.models import Count
+from rest_framework.response import Response
 
 from tasks.models import Task, Status, Projects
 from tasks.serializers import TaskSerializer, StatusSerializer,ProjectSerializer
@@ -34,3 +33,15 @@ class ProjectViewSet(ModelViewSet):
     queryset = Projects.objects.all()
     serializer_class = ProjectSerializer
 
+#admin panel статиска не закончен нужен frontend vuejs
+# @api_view(['GET'])
+# def task_statistics(request):
+#     stats = Task.objects.annotate(task_count=Count('task'))
+#     data = [
+#         {
+#             "название задачи": task.title,
+#             "задачи": task.task_count
+#         }
+#         for task in stats
+#     ]
+#     return Response({"задачи": data})

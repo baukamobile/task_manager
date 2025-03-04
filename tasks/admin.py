@@ -18,21 +18,21 @@ class TaskAdmin(admin.ModelAdmin, GetCommentMixin):
     change_list_template = "tasks/task.html"
     list_display = ['task_name', 'assigned', 'start_date', 'end_date', 'get_comments', 'agreed_with_managers']
 
-    def changelist_view(self, request, extra_context=None):
-        task_statuses = Status.objects.all()
-        labels = []
-        values = []
-        for status in task_statuses:
-            labels.append(status.status_name)  # или другой атрибут, который хранит название статуса
-            count = Task.objects.filter(status=status).count()
-            values.append(count)
-
-        if extra_context is None:
-            extra_context = {}
-        extra_context['labels'] = labels
-        extra_context['values'] = values
-
-        return super().changelist_view(request, extra_context=extra_context)
+    # def changelist_view(self, request, extra_context=None):
+    #     task_statuses = Status.objects.all()
+    #     labels = []
+    #     values = []
+    #     for status in task_statuses:
+    #         labels.append(status.status_name)  # или другой атрибут, который хранит название статуса
+    #         count = Task.objects.filter(status=status).count()
+    #         values.append(count)
+    #
+    #     if extra_context is None:
+    #         extra_context = {}
+    #     extra_context['labels'] = labels
+    #     extra_context['values'] = values
+    #
+    #     return super().changelist_view(request, extra_context=extra_context)
 
 
 admin.site.register(Task,TaskAdmin)
