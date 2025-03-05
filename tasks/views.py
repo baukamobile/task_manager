@@ -2,6 +2,8 @@ from rest_framework.decorators import api_view
 from rest_framework.viewsets import ModelViewSet
 from django.db.models import Count
 from rest_framework.response import Response
+from rest_framework import status
+import json
 
 from tasks.models import Task, Status, Projects
 from tasks.serializers import TaskSerializer, StatusSerializer,ProjectSerializer
@@ -12,6 +14,16 @@ class TaskViewSet(ModelViewSet):  # Отдаёт список всех зада�
     serializer_class = TaskSerializer
     http_method_names = ['get','post','put','patch','delete']
 
+    def create(self, request, *args, **kwargs):
+        print("Полученные данные:", json.dumps(request.data, indent=4, ensure_ascii=False))  # ЛОГ ЗАПРОСА
+
+        serializer = self.get_serializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            print("💀 Ошибки сериализации:", serializer.errors)  # ЛОГ ОШИБОК
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 # class TaskDetailView(RetrieveUpdateAPIView):  # Отдаёт конкретную задачу
 #     queryset = Task.objects.all()
 #     serializer_class = TaskSerializer

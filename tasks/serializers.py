@@ -10,6 +10,11 @@ class ProjectSerializer(serializers.ModelSerializer):
 
 class TaskSerializer(serializers.ModelSerializer):
     # project = ProjectSerializer(source='projects')
+    # end_date = serializers.DateField(format="%Y-%m-%d", required=False, allow_null=True)
+
+    def validate_end_date(self, value):
+        print(f"end_date в сериализаторе: {value}")  # Посмотрим, что реально пришло
+        return value
     class Meta:
         model = Task
         fields = '__all__'

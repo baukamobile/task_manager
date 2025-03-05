@@ -19,7 +19,7 @@ class Task(models.Model):
     projects = models.ForeignKey('Projects',default=1,on_delete=models.SET_DEFAULT, blank=True, related_name='tasks')
     assigned = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,db_index=True)
     start_date = models.DateTimeField(auto_now_add=True)
-    end_date = models.DateTimeField()
+    end_date = models.DateTimeField(null=True, blank=True)
     status = models.ForeignKey('Status',on_delete=models.SET_NULL,null=True,blank=True,related_name='tasks')
     priority = models.ForeignKey('Priority', on_delete=models.SET_NULL, null=True, blank=True,related_name='tasks')
     agreed_with_managers = models.BooleanField(default=False)
