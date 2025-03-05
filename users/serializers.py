@@ -19,8 +19,8 @@ class PositionsSerializer(serializers.ModelSerializer):
         fields = ['position_name']
 
 class UserSerializer(serializers.ModelSerializer):
-    position = PositionsSerializer()
-    department = DepartmentSerializer()
+    # position = PositionsSerializer()
+    # department = DepartmentSerializer()
     class Meta:
         model = User
         fields = ('id', 'email','first_name',
