@@ -8,7 +8,7 @@ class RolesSerializer(serializers.ModelSerializer):
 class DepartmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Department
-        fields = ['department_name','department_head','deactivate','objects','activate']
+        fields = ['id','department_name','department_head','deactivate','objects','activate']
 class CompanySerializer(serializers.ModelSerializer):
     class Meta:
         model = Company
@@ -16,7 +16,7 @@ class CompanySerializer(serializers.ModelSerializer):
 class PositionsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Positions
-        fields = ['position_name']
+        fields = ['id','position_name']
 
 class UserSerializer(serializers.ModelSerializer):
     # position = PositionsSerializer()
