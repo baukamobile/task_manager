@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path,include
 import logging
 from django.views.generic import TemplateView
+from django.conf import settings
+from django.conf.urls.static import static
 logger = logging.getLogger('admin')
 # from jet.dashboard.dashboard_modules import google_analytics_views
 urlpatterns = [
@@ -36,5 +38,5 @@ urlpatterns = [
     path('events/',include('event_calendar.urls')),
     path('notifications/',include('notifications.urls')),
 
-]
+]+ static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
 

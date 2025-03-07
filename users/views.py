@@ -38,7 +38,7 @@ class RegisterView(APIView):
             first_name=serializer.validated_data.get('first_name', ''),
             last_name=serializer.validated_data.get('last_name', ''),
             password=serializer.validated_data['password'],
-            phone_number=serializer.validated_data['phone_number'],  # ✅ Теперь передается
+            phone_number=serializer.validated_data['phone_number'],  #  Теперь передается
             telegram_id=serializer.validated_data.get('telegram_id'),
             is_active=serializer.validated_data.get('is_active', True),
             is_superuser=serializer.validated_data.get('is_superuser', False),
