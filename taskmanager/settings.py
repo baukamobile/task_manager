@@ -15,9 +15,9 @@ import os
 import environ
 env = environ.Env()
 environ.Env.read_env()
-# from django.core.management.utils import get_random_secret_key
+from django.core.management.utils import get_random_secret_key
 #
-# print(get_random_secret_key())
+print(get_random_secret_key())
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -136,12 +136,12 @@ WSGI_APPLICATION = 'taskmanager.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env('DBNAME'),
-        'USER': env('DBUSER'),
-        'PASSWORD': env('DBPASSWORD'),
-        # 'NAME': 'taskmanagerdb',
-        # 'USER': 'nurbergen',
-        # 'PASSWORD': 'qwerty123',
+        # 'NAME': env('DBNAME'),
+        # 'USER': env('DBUSER'),
+        # 'PASSWORD': env('DBPASSWORD'),
+        'NAME': 'taskmanagerdb',
+        'USER': 'nurbergen',
+        'PASSWORD': 'qwerty123',
     }
 }
 
@@ -196,45 +196,45 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format': '{levelname} {asctime} {module} {message}',
-            'style': '{',
-        },
-    },
-    'handlers': {
-        'file': {
-            'level': 'WARNING',
-            'class': 'logging.FileHandler',
-            'filename': BASE_DIR / 'logs' / 'task_manager.log',  # Лог ошибок
-            'formatter': 'verbose',
-        },
-        'debug_file': {
-            'level': 'INFO',
-            'class': 'logging.FileHandler',
-            'filename': BASE_DIR / 'logs' / 'task_manager_debug.log',  # Лог для отладки
-            'formatter': 'verbose',
-        },
-'console':{
-            'level': 'INFO',
-            'class':'logging.StreamHandler',
-            'formatter': 'verbose',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['file','debug_file','console'],
-            'level': 'INFO',
-            'propagate': True,
-        },
-
-        'taskmanager': {
-            'handlers': ['debug_file'],  # debug_file
-            'level': 'INFO',
-            'propagate': False,
-        },
-    },
-}
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'formatters': {
+#         'verbose': {
+#             'format': '{levelname} {asctime} {module} {message}',
+#             'style': '{',
+#         },
+#     },
+#     'handlers': {
+#         'file': {
+#             'level': 'WARNING',
+#             'class': 'logging.FileHandler',
+#             'filename': BASE_DIR / 'logs' / 'task_manager.log',  # Лог ошибок
+#             'formatter': 'verbose',
+#         },
+#         'debug_file': {
+#             'level': 'INFO',
+#             'class': 'logging.FileHandler',
+#             'filename': BASE_DIR / 'logs' / 'task_manager_debug.log',  # Лог для отладки
+#             'formatter': 'verbose',
+#         },
+# 'console':{
+#             'level': 'INFO',
+#             'class':'logging.StreamHandler',
+#             'formatter': 'verbose',
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ['file','debug_file','console'],
+#             'level': 'INFO',
+#             'propagate': True,
+#         },
+#
+#         'taskmanager': {
+#             'handlers': ['debug_file'],  # debug_file
+#             'level': 'INFO',
+#             'propagate': False,
+#         },
+#     },
+# }

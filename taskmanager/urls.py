@@ -21,16 +21,11 @@ from django.views.generic import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
 logger = logging.getLogger('admin')
-# from jet.dashboard.dashboard_modules import google_analytics_views
 urlpatterns = [
 
-    # path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
-    # path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS
     path('admin/', admin.site.urls),
-    path('jet_api/', include('jet_django.urls')),
     path('', TemplateView.as_view(template_name="index.html")),
     path('users/',include('users.urls')),
-    # path("", include('admin_berry.urls')),
     path('tasks/',include('tasks.urls')),
     path('chat/',include('chat.urls')),
     path('news/',include('news.urls')),
