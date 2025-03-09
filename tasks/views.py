@@ -3,6 +3,7 @@ from rest_framework.viewsets import ModelViewSet
 from django.db.models import Count
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.permissions import AllowAny
 import json
 
 from tasks.models import Task, Status, Projects
@@ -12,6 +13,7 @@ from tasks.serializers import TaskSerializer, StatusSerializer,ProjectSerializer
 class TaskViewSet(ModelViewSet):  # Отдаёт список всех задач
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
+    permission_classes = [AllowAny]
     http_method_names = ['get','post','put','patch','delete']
 
     def create(self, request, *args, **kwargs):
