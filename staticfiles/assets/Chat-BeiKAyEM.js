@@ -1,1 +1,2 @@
 import{_ as s}from"./PageWrapper-OYEQfO_a.js";import"./apexcharts.common-DMbLDx2j.js";import{b as a,e as o,f as r,m as t}from"./index-FozDdB1Q.js";const c={__name:"Chat",setup(l){return(m,e)=>(o(),a(s,null,{header:r(()=>e[0]||(e[0]=[t("div",{class:"flex flex-col gap-4 md:flex-row md:items-center md:justify-between"},[t("h2",{class:"text-xl font-semibold leading-tight"},"Чаты")],-1)])),_:1}))}};export{c as default};
+
