@@ -182,14 +182,13 @@ USE_TZ = True
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-STATIC_URL = "/static/"
-
-# STATIC_ROOT и STATICFILES_DIRS не должны указывать на одно и то же
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")  # Сюда collectstatic будет копировать файлы
-
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static/vue/dist"),  # Откуда Django берет статику при разработке
+    BASE_DIR / "static/vue/dist",                          # Основная статика
+    # BASE_DIR / "static/vue/dist",                  # Путь к index.html
+    # BASE_DIR / "static/vue/dist/assets",           # Путь к ассетам Vue
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
