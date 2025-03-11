@@ -15,9 +15,9 @@ import os
 import environ
 env = environ.Env()
 environ.Env.read_env()
-from django.core.management.utils import get_random_secret_key
+# from django.core.management.utils import get_random_secret_key
 #
-print(get_random_secret_key())
+# print(get_random_secret_key())
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -136,12 +136,12 @@ WSGI_APPLICATION = 'taskmanager.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # 'NAME': env('DBNAME'),
-        # 'USER': env('DBUSER'),
-        # 'PASSWORD': env('DBPASSWORD'),
-        'NAME': 'taskmanagerdb',
-        'USER': 'nurbergen',
-        'PASSWORD': 'qwerty123',
+        'NAME': env('DBNAME'),
+        'USER': env('DBUSER'),
+        'PASSWORD': env('DBPASSWORD'),
+        # 'NAME': 'taskmanagerdb',
+        # 'USER': 'nurbergen',
+        # 'PASSWORD': 'qwerty123',
     }
 }
 
