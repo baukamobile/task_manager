@@ -19,21 +19,32 @@ class PositionsSerializer(serializers.ModelSerializer):
         fields = ['id','position_name']
 
 class UserSerializer(serializers.ModelSerializer):
-    # position = PositionsSerializer()
-    # department = DepartmentSerializer()
+    position = PositionsSerializer()
+    department = DepartmentSerializer()
     class Meta:
         model = User
         fields = ('id', 'email','first_name',
-                   'last_name','password','position','role_user','department',
+                   'last_name','password','position','role_user','department','image',
                    'phone_number','telegram_id',
                    'is_active','is_superuser'
                    )
-
-
-
-
-
-
-
-
+# class TagSerializer(serializers.ModelSerializer):
+#     tags = serializers.SlugRelatedField(
+#         many=True,
+#         slug_field='name',
+#         read_only=True
+#     )
+#
+#     class Meta:
+#         model = Tag
+#         fields = '__all__'
+#
+# class NewsSerializer(serializers.ModelSerializer):
+#     tags = TagSerializer(many=True,read_only=True)
+#     created_by = serializers.SerializerMethodField()
+#     class Meta:
+#         model = News
+#         fields = '__all__'
+#     def get_created_by(self,obj):
+#         return f"{obj.created_by.first_name} {obj.created_by.last_name}"
 
