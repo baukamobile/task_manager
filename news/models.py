@@ -10,7 +10,7 @@ class News(models.Model):
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     picture = models.ImageField(upload_to='News_images', null=True,blank=True)
-    documents = models.FileField(null=True, blank=True) #можно создать отделный модель пока так
+    documents = models.FileField(upload_to='news_documents', null=True, blank=True) #можно создать отделный модель пока так
     tags = models.ManyToManyField('Tag', related_name='news',blank=True)  # related_name исправлен
     history = HistoricalRecords()
 
