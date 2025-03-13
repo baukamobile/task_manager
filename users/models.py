@@ -104,8 +104,8 @@ class User(AbstractUser):
     is_superuser = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     is_owner = models.BooleanField(default=False) #владееть компании?
-    image = models.ImageField(blank=True, null=True)
-    background_profile_image = models.ImageField(blank=True, null=True)
+    image = models.ImageField(upload_to='Users_avatar', blank=True, null=True)
+    background_profile_image = models.ImageField(upload_to='Users_background_images', blank=True, null=True)
     date_joined = models.DateTimeField(default=timezone.now)
     history = HistoricalRecords() #simple history
     USERNAME_FIELD = 'email'  # Используем email для входа
