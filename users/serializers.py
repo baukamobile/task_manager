@@ -8,7 +8,8 @@ class RolesSerializer(serializers.ModelSerializer):
 class DepartmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Department
-        fields = ['id','department_name','department_head','deactivate','objects','activate']
+        fields = '__all__'
+            # ['id','department_name','department_head','deactivate','objects','activate']
 class CompanySerializer(serializers.ModelSerializer):
     class Meta:
         model = Company
@@ -16,35 +17,15 @@ class CompanySerializer(serializers.ModelSerializer):
 class PositionsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Positions
-        fields = ['id','position_name']
+        fields = '__all__'
 
 class UserSerializer(serializers.ModelSerializer):
-    position = PositionsSerializer()
-    department = DepartmentSerializer()
+    position = PositionsSerializer(read_only=True)
+    department = DepartmentSerializer(read_only=True)
     class Meta:
         model = User
         fields = ('id', 'email','first_name',
                    'last_name','password','position','role_user','department','image',
-                   'phone_number','telegram_id',
+                   'phone_number','telegram_id','status',
                    'is_active','is_superuser'
                    )
-# class TagSerializer(serializers.ModelSerializer):
-#     tags = serializers.SlugRelatedField(
-#         many=True,
-#         slug_field='name',
-#         read_only=True
-#     )
-#
-#     class Meta:
-#         model = Tag
-#         fields = '__all__'
-#
-# class NewsSerializer(serializers.ModelSerializer):
-#     tags = TagSerializer(many=True,read_only=True)
-#     created_by = serializers.SerializerMethodField()
-#     class Meta:
-#         model = News
-#         fields = '__all__'
-#     def get_created_by(self,obj):
-#         return f"{obj.created_by.first_name} {obj.created_by.last_name}"
-
