@@ -20,12 +20,20 @@ class PositionsSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class UserSerializer(serializers.ModelSerializer):
-    position = PositionsSerializer(read_only=True)
-    department = DepartmentSerializer(read_only=True)
+    position = serializers.PrimaryKeyRelatedField(queryset=Positions.objects.all())
+    department = serializers.PrimaryKeyRelatedField(queryset=Department.objects.all())
+    company = serializers.PrimaryKeyRelatedField(queryset=Company.objects.all())
     class Meta:
         model = User
         fields = ('id', 'email','first_name',
                    'last_name','password','position','role_user','department','image',
-                   'phone_number','telegram_id','status',
+                   'phone_number','telegram_id','status','company',
                    'is_active','is_superuser'
                    )
+    def to_reprsentation(self,instance):
+        """Чтобы в ответе возвращались вложенные данные"""
+        data = super().to_representation(instance)
+        data['position'] = PositionsSerializer(instance.position).data
+        data['department']= DepartmentSerializer(instance.department).data
+        data['company']=CompanySerializer(instance.company).data
+        return data

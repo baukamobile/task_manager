@@ -161,6 +161,8 @@ class ActiveDepartmentManager(models.Manager):
 class Department(models.Model):
     department_name = models.CharField(max_length=120)
     department_head = models.CharField(max_length=120)
+    # department_head_name = models.ForeignKey('User', on_delete=models.SET_NULL, null=True, blank=True,
+                                             # related_name="header_departments")
     deactivate = models.BooleanField(default=False)
     objects = models.Manager()
     activate = ActiveDepartmentManager()
