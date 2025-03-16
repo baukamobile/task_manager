@@ -30,7 +30,7 @@ class DepartmentAdmin(admin.ModelAdmin,GetEmployeesMixin):
 
 
 class CompanyAdmin(admin.ModelAdmin,GetEmployeesMixin):
-    list_display = ['company_name','director','has_admin','get_employees']
+    list_display = ['company_name','director','get_employees']
 
 admin.site.register(Department,DepartmentAdmin)
 admin.site.register(Company,CompanyAdmin)

@@ -14,14 +14,13 @@ from simple_history.models import HistoricalRecords
 
 class Task(models.Model):
     task_name = models.CharField(max_length=100)
-    description = models.TextField(null=True,blank=True)
+    description = models.TextField(null=True, blank=True)
     documents = models.FileField(upload_to='task_documents', null=True, blank=True)
-    projects = models.ForeignKey('Projects',default=1,on_delete=models.SET_DEFAULT, blank=True, related_name='tasks')
-    assigned = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,db_index=True)
-    start_date = models.DateTimeField(null=True,blank=True)
+    status = models.ForeignKey('Status', on_delete=models.CASCADE, related_name='tasks')  # Теперь только через статус
+    assigned = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, db_index=True)
+    start_date = models.DateTimeField(null=True, blank=True)
     end_date = models.DateTimeField(null=True, blank=True)
-    status = models.ForeignKey('Status',on_delete=models.SET_NULL,null=True,blank=True,related_name='tasks')
-    priority = models.ForeignKey('Priority', on_delete=models.SET_NULL, null=True, blank=True,related_name='tasks')
+    priority = models.ForeignKey('Priority', on_delete=models.SET_NULL, null=True, blank=True, related_name='tasks')
     agreed_with_managers = models.BooleanField(default=False)
     department = models.ForeignKey('users.Department', on_delete=models.CASCADE)
     history = HistoricalRecords()
@@ -42,7 +41,10 @@ class Task(models.Model):
 
 class Status(models.Model):
     status_name = models.CharField(max_length=100)
-    user = models.ForeignKey(User,on_delete=models.CASCADE,related_name='statususers')
+    # user = models.ForeignKey(User,on_delete=models.CASCADE,related_name='statususers')
+    project = models.ForeignKey('Projects', on_delete=models.CASCADE,
+                                related_name='statuses',null=True,blank=True)  # связь со статусами проекта
+
     def __str__(self):
         return self.status_name
     class Meta:
@@ -51,7 +53,8 @@ class Status(models.Model):
 
 class Priority(models.Model):
     priority_name = models.CharField(max_length=100)
-    user = models.ForeignKey(User,on_delete=models.CASCADE,related_name='priorityusers')
+    # user = models.ForeignKey(User,on_delete=models.CASCADE,related_name='priorityusers')
+    # project = models.ForeignKey('Projects', on_delete=models.CASCADE, related_name='statuses')
     def __str__(self):
         return self.priority_name
     class Meta:
@@ -65,6 +68,10 @@ class Projects(models.Model): #название проекта
     assigned = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,db_index=True)
     end_date = models.DateTimeField()
     history = HistoricalRecords()
+
+    @property
+    def tasks(self):
+        return Task.objects.filter(status__in=self.statuses.all())
 
     def __str__(self):
         return self.project_name

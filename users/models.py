@@ -92,15 +92,17 @@ class User(AbstractUser):
     last_name = models.CharField(max_length=40)
     email = models.EmailField(unique=True)  # Сделаем email обязательным и уникальным
     status = models.CharField(max_length=50,choices=STATUS_CHOICES, null=True, blank=True)
-    position = models.ForeignKey("Positions", on_delete=models.SET_NULL, null=True, blank=True,related_name="employees")
-    role_user = models.ForeignKey(Roles, on_delete=models.SET_NULL, null=True, blank=True,related_name='employees')
+    position = models.ForeignKey("Positions", on_delete=models.SET_NULL, null=True, blank=True,
+                                 related_name="position_employees")
+    role_user = models.ForeignKey(Roles, on_delete=models.SET_NULL, null=True, blank=True,
+                                  related_name='role_employees')
     date_of_birth = models.DateField(null=True, blank=True)
     address = models.TextField(null=True, blank=True)
-    department = models.ForeignKey("Department", on_delete=models.SET_NULL, null=True, blank=True,related_name='employees')
+    department = models.ForeignKey("Department", on_delete=models.SET_NULL, null=True, blank=True,related_name='department_employees')
     telegram_id = models.CharField(max_length=20, unique=True, null=True, blank=True)
     is_verified = models.BooleanField(default=False) #пользователь подвержден?
     on_vacation = models.BooleanField(default=False) #в отпуске?
-    company = models.ForeignKey("Company", on_delete=models.SET_NULL, null=True, blank=True,related_name='employees')
+    company = models.ForeignKey("Company", on_delete=models.SET_NULL, null=True, blank=True,related_name='company_employees')
     is_superuser = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     is_owner = models.BooleanField(default=False) #владееть компании?
@@ -135,7 +137,7 @@ class Company(models.Model):
     director = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name='director_company') #директор
     def __str__(self):
         return self.company_name
-    has_admin = models.BooleanField(default=False)
+    # has_admin = models.BooleanField(default=False)
     def __str__(self):
         return self.company_name
     class Meta:
@@ -160,23 +162,37 @@ class ActiveDepartmentManager(models.Manager):
 
 class Department(models.Model):
     department_name = models.CharField(max_length=120)
-    department_head = models.CharField(max_length=120)
+    department_head = models.ForeignKey('User', on_delete=models.SET_NULL, null=True, blank=True, related_name="header_departments")
     # department_head_name = models.ForeignKey('User', on_delete=models.SET_NULL, null=True, blank=True,
                                              # related_name="header_departments")
     deactivate = models.BooleanField(default=False)
     objects = models.Manager()
     activate = ActiveDepartmentManager()
+
     def __str__(self):
         return self.department_name
+
     def save(self, *args, **kwargs):
-        first_save=self.pk is None #проверяем объект новый?
-        super().save(*args, **kwargs) #Сначала сохраняем в Department
-        if not first_save: #обновляем пользователей если это не первое сохранение
-            if self.deactivate: #
-                User.objects.filter(department=self).update(is_active=False)  # Выключаем всех
+        first_save = self.pk is None  # Проверка, новый ли это объект
+        super().save(*args, **kwargs)  # Сначала сохраняем департамент
+
+        # Обновляем пользователей, если это не первое сохранение
+        if not first_save:
+            if self.deactivate:
+                # Отключаем всех, кроме суперюзеров и владельцев
+                User.objects.filter(
+                    department=self,
+                    is_superuser=False,
+                    is_owner=False
+                ).update(is_active=False)
             else:
-                User.objects.filter(department=self, status=User.ACTIVE).update(
-                is_active=True) #только активныx
+                # Включаем только активных, исключая суперюзеров и владельцев
+                User.objects.filter(
+                    department=self,
+                    status=User.ACTIVE,
+                    is_superuser=False,
+                    is_owner=False
+                ).update(is_active=True)
 
 
 

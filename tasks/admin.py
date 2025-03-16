@@ -8,10 +8,10 @@ class GetCommentMixin:
         comments = [task.comment for task in obj.comments.all()]  # обявляем переменную коментарий задаем длину
 
         return ', '.join(comment[:20] + '...' if len(comment) > 10 else comment for comment in comments)
-    def get_tasks_name(self,obj):
-        task_name= [task.task_name for task in obj.tasks.all()]
-        return ', '.join(comment[:8]+ '...' if len(comment) > 10 else comment for comment in task_name)
 
+    def get_tasks_name(self, obj):
+        task_names = [task.task_name for task in obj.tasks.all()]
+        return ', '.join(name[:8] + '...' if len(name) > 10 else name for name in task_names)
 
 
 class TaskAdmin(admin.ModelAdmin, GetCommentMixin):
