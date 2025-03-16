@@ -110,8 +110,9 @@ ROOT_URLCONF = 'taskmanager.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'),
-                 os.path.join(BASE_DIR, 'tasks',),
+        'DIRS': [
+            # os.path.join(BASE_DIR, 'templates'),
+                 # os.path.join(BASE_DIR, 'tasks',),
                  os.path.join(BASE_DIR, 'static', 'vue', 'dist')],
         #'dashboard','templates',
         'APP_DIRS': True,
