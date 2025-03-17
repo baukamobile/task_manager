@@ -88,6 +88,7 @@ class User(AbstractUser):
         (FIRED, 'УВОЛЕН'),
     ]
     phone_number = models.CharField(max_length=15, unique=True, null=True, blank=True)  # Можно оставить телефон, но как дополнительный параметр
+    # phone_number =
     first_name = models.CharField(max_length=40)
     last_name = models.CharField(max_length=40)
     email = models.EmailField(unique=True)  # Сделаем email обязательным и уникальным

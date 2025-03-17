@@ -15,9 +15,7 @@ class GetCommentMixin:
 
 
 class TaskAdmin(admin.ModelAdmin, GetCommentMixin):
-    # change_list_template = "tasks/task.html"
     list_display = ['task_name', 'assigned', 'start_date', 'end_date', 'get_comments', 'agreed_with_managers']
-
     # def changelist_view(self, request, extra_context=None):
     #     task_statuses = Status.objects.all()
     #     labels = []
@@ -60,7 +58,7 @@ class TaskCommentAdmin(admin.ModelAdmin):
 admin.site.register(Task_comments,TaskCommentAdmin)
 
 class ProjectAdmin(GetCommentMixin,admin.ModelAdmin):
-    list_display = ['project_name','get_tasks_name','department','start_date','assigned','end_date']
+    list_display = ['id','project_name','get_tasks_name','department','start_date','assigned','end_date']
     list_filter = ['department']
 
 
