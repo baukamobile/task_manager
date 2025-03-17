@@ -45,8 +45,9 @@ ALLOWED_HOSTS = [os.getenv('ALLOWED_HOST'),'127.0.0.1']
 INSTALLED_APPS = [
     # 'daphne',
     'channels',
-    'jazzmin',
-    # 'jet',
+    # 'jazzmin',
+"semantic_admin",
+    "semantic_forms",
     # 'jet_django',
     # 'jet.dashboard',
 # 'admin_berry.apps.AdminBerryConfig',
