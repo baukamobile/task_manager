@@ -15,7 +15,6 @@ class TaskViewSet(ModelViewSet):  # Отдаёт список всех зада�
     serializer_class = TaskSerializer
     permission_classes = [AllowAny]
     http_method_names = ['get','post','put','patch','delete']
-
     def create(self, request, *args, **kwargs):
         print("Полученные данные:", json.dumps(request.data, indent=4, ensure_ascii=False))  # ЛОГ ЗАПРОСА
 
@@ -26,6 +25,16 @@ class TaskViewSet(ModelViewSet):  # Отдаёт список всех зада�
         else:
             print("💀 Ошибки сериализации:", serializer.errors)  # ЛОГ ОШИБОК
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def get_queryset(self):
+        # получение статусов по айди проекта
+        project_id = self.request.query_params.get("project")
+        queryset = Task.objects.all()
+
+        if project_id:
+            queryset = queryset.filter(project__id=project_id)  # <-- Вот здесь исправил
+
+        return queryset
 # class TaskDetailView(RetrieveUpdateAPIView):  # Отдаёт конкретную задачу
 #     queryset = Task.objects.all()
 #     serializer_class = TaskSerializer
@@ -35,6 +44,15 @@ class StatusViewSet(ModelViewSet):
     # permission_classes = [IsAdminUser]
     queryset = Status.objects.all()
     serializer_class = StatusSerializer
+
+    def get_queryset(self):
+        project_id = self.request.query_params.get("project")
+        queryset = Status.objects.all()
+
+        if project_id:
+            queryset = queryset.filter(project_id=project_id)
+
+        return queryset
 
 # class StatusDetailView(RetrieveUpdateAPIView):
 #     # permission_classes = [IsAdminUser]
