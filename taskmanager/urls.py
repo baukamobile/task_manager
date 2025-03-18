@@ -24,7 +24,7 @@ logger = logging.getLogger('admin')
 urlpatterns = [
 
     path('admin/', admin.site.urls),
-    # path('', TemplateView.as_view(template_name="index.html")),
+    path('', TemplateView.as_view(template_name="index.html")),
     path('users/',include('users.urls')),
     path('tasks/',include('tasks.urls')),
     path('chat/',include('chat.urls')),

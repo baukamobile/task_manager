@@ -8,12 +8,17 @@ import json
 
 from tasks.models import Task, Status, Projects
 from tasks.serializers import TaskSerializer, StatusSerializer,ProjectSerializer
+from rest_framework.permissions import BasePermission
 
+class AllowAnyForTasks(BasePermission):
+    def has_permission(self, request, view):
+        return request.method in ['GET', 'POST', 'PUT', 'PATCH', 'DELETE']
 
 class TaskViewSet(ModelViewSet):  # Отдаёт список всех задач
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
-    permission_classes = [AllowAny]
+    # permission_classes = [AllowAny]
+    permission_classes = [AllowAnyForTasks]
     http_method_names = ['get','post','put','patch','delete']
     def create(self, request, *args, **kwargs):
         print("Полученные данные:", json.dumps(request.data, indent=4, ensure_ascii=False))  # ЛОГ ЗАПРОСА
@@ -44,6 +49,7 @@ class StatusViewSet(ModelViewSet):
     # permission_classes = [IsAdminUser]
     queryset = Status.objects.all()
     serializer_class = StatusSerializer
+
 
     def get_queryset(self):
         project_id = self.request.query_params.get("project")

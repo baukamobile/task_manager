@@ -1,1 +1,0 @@
-import{a as t}from"./index-C88pvD_q.js";const n="http://127.0.0.1:8000/tasks/tasks",c=async()=>(await t.get(`${n}/`)).data,e="http://127.0.0.1:8000/tasks/status",p=async()=>(await t.get(`${e}/`)).data;async function u(s,a){return(await t.patch(`${n}/${s}/`,{status:a})).data}async function i(s){return(await t.post(`${e}/`,s)).data}export{p as a,i as b,c as g,u};
