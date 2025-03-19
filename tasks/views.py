@@ -15,7 +15,7 @@ class AllowAnyForTasks(BasePermission):
 class TaskViewSet(ModelViewSet):  # Отдаёт список всех задач
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
-    logger.info('получение список tasks')
+    # logger.info('получение список tasks')
     # permission_classes = [AllowAny]
     permission_classes = [AllowAnyForTasks]
     http_method_names = ['get','post','put','patch','delete']
@@ -49,7 +49,7 @@ class StatusViewSet(ModelViewSet):
     # permission_classes = [IsAdminUser]
     queryset = Status.objects.all()
     serializer_class = StatusSerializer
-    logger.info('получение список tasks')
+    # logger.info('получение список tasks')
 
     def get_queryset(self):
         project_id = self.request.query_params.get("project")

@@ -7,7 +7,7 @@ logger = logging.getLogger('reports')
 class NotificationViewSet(ModelViewSet):
     queryset = Notification.objects.all()
     serializer_class = NotificationSerializer
-    logger.info('получение список reports')
+    # logger.info('получение список reports')
 
 from django.utils.translation import gettext_lazy as _
 

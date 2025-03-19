@@ -91,7 +91,7 @@ class User(AbstractUser):
     # phone_number =
     first_name = models.CharField(max_length=40)
     last_name = models.CharField(max_length=40)
-    email = models.EmailField(unique=True)  # Сделаем email обязательным и уникальным
+    email = models.EmailField(unique=True,blank=True)  # Сделаем email обязательным и уникальным
     status = models.CharField(max_length=50,choices=STATUS_CHOICES, null=True, blank=True)
     position = models.ForeignKey("Positions", on_delete=models.SET_NULL, null=True, blank=True,
                                  related_name="position_employees")
