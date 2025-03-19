@@ -56,24 +56,24 @@ class UserTests(TestCase):
         self.assertFalse(user.on_vacation)
         self.assertTrue(user.is_active)
 #
-# class CompanyModelTest(TestCase):
-#     @classmethod
-#     def setUpTestData(cls):
+class CompanyModelTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+
+    # def setUp(self):
+        cls.director = User.objects.create_user(email="test@gmail.com",first_name='Albert',phone_number=1651515)
+        cls.company = Company.objects.create(
+            company_name = 'some company',
+            director = cls.director
+        )
+    def test_company_creation(self):
+        self.company = Company.objects.get(id=self.company.id)
+        self.assertEqual(self.company.company_name,'some company')
+        self.assertEqual(self.company.director.first_name,'Albert')
+    def test_company_str(self):
+        self.assertEqual(str(self.company),'some company')
+
 #
-#     # def setUp(self):
-#         cls.director = User.objects.create(first_name='Albert')
-#         cls.company = Company.objects.create(
-#             company_name = 'some company',
-#             director = cls.director
-#         )
-#     def test_company_creation(self):
-#         self.company = Company.objects.get(id=self.company.id)
-#         self.assertEqual(self.company.company_name,'some company')
-#         self.assertEqual(self.company.director.first_name,'Albert')
-#     def test_company_str(self):
-#         self.assertEqual(str(self.company),'some company')
-
-
 class PositionsModelTest(TestCase):
     def setUp(self):
         self.position = Positions.objects.create(
@@ -84,51 +84,51 @@ class PositionsModelTest(TestCase):
     def test_position_str(self):
         self.assertEqual(str(self.position), 'some position')
 
-#
-# class DepartmentModelTest(TestCase):
-#     @classmethod
-#     def setUpTestData(cls):
-#         cls.user = User.objects.create(first_name="albert")
-#         cls.department = Department.objects.create(
-#             department_name="some department",
-#             department_head=cls.user,
-#             deactivate=False
-#         )
-#
-#     def test_department_creation(self):
-#         # Проверяем создание без лишнего запроса
-#         self.assertEqual(self.department.department_name, "some department")
-#         self.assertEqual(self.department.department_head.first_name, 'albert')  # Проверяем объект, а не имя
-#         self.assertFalse(self.department.deactivate)  # False вместо сравнения с False
-#
-#     def test_department_str(self):
-#         # Проверяем метод __str__
-#         self.assertEqual(str(self.department), "some department")
-#
-#     def test_save_deactivate_users(self):
-#         # Проверяем логику save() при deactivate=True
-#         user1 = User.objects.create(first_name="user1", department=self.department, is_active=True)
-#         user2 = User.objects.create(first_name="user2", department=self.department, is_active=True, is_superuser=True)
-#
-#         self.department.deactivate = True
-#         self.department.save()
-#
-#         user1.refresh_from_db()
-#         user2.refresh_from_db()
-#         self.assertFalse(user1.is_active)  # Обычный пользователь отключён
-#         self.assertTrue(user2.is_active)  # Суперюзер остался активным
-#
-#     def test_save_activate_users(self):
-#         # Проверяем логику save() при deactivate=False
-#         user1 = User.objects.create(first_name="user1", department=self.department, is_active=False, status=User.ACTIVE)
-#         user2 = User.objects.create(first_name="user2", department=self.department, is_active=False)
-#
-#         self.department.deactivate = False
-#         self.department.save()
-#
-#         user1.refresh_from_db()
-#         user2.refresh_from_db()
-#         self.assertTrue(user1.is_active)  # Активный статус — включён
-#         self.assertFalse(user2.is_active)  # Нет статуса ACTIVE — остался выключенным
+
+class DepartmentModelTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.user = User.objects.create_user(email="test@gmail.com",first_name='Albert',phone_number=1651515)
+        cls.department = Department.objects.create(
+            department_name="some department",
+            department_head=cls.user,
+            deactivate=False
+        )
+
+    def test_department_creation(self):
+        # Проверяем создание без лишнего запроса
+        self.assertEqual(self.department.department_name, "some department")
+        self.assertEqual(self.department.department_head.first_name, 'Albert')  # Проверяем объект, а не имя
+        self.assertFalse(self.department.deactivate)  # False вместо сравнения с False
+
+    def test_department_str(self):
+        # Проверяем метод __str__
+        self.assertEqual(str(self.department), "some department")
+
+    def test_save_deactivate_users(self):
+        # Проверяем логику save() при deactivate=True
+        user1 = User.objects.create_user(email="test3@gmail.com",phone_number=1659915,first_name="user1", department=self.department, is_active=True)
+        user2 = User.objects.create_user(email="test1@gmail.com",phone_number=1651505,first_name="user2", department=self.department, is_active=True, is_superuser=True)
+
+        self.department.deactivate = True
+        self.department.save()
+
+        user1.refresh_from_db()
+        user2.refresh_from_db()
+        self.assertFalse(user1.is_active)  # Обычный пользователь отключён
+        self.assertTrue(user2.is_active)  # Суперюзер остался активным
+
+    def test_save_activate_users(self):
+        # Проверяем логику save() при deactivate=False
+        user1 = User.objects.create_user(email="test2@gmail.com",phone_number=1653515,first_name="user1", department=self.department, is_active=False, status=User.ACTIVE)
+        user2 = User.objects.create_user(email="test12@gmail.com",phone_number=1681515,first_name="user2", department=self.department, is_active=False)
+
+        self.department.deactivate = False
+        self.department.save()
+
+        user1.refresh_from_db()
+        user2.refresh_from_db()
+        self.assertTrue(user1.is_active)  # Активный статус — включён
+        self.assertFalse(user2.is_active)  # Нет статуса ACTIVE — остался выключенным
 
 
