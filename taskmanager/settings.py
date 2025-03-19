@@ -13,6 +13,7 @@ from logging import StreamHandler
 from pathlib import Path
 import os
 import environ
+from pathlib import Path
 env = environ.Env()
 environ.Env.read_env()
 # from django.core.management.utils import get_random_secret_key
@@ -183,7 +184,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+LOG_DIR = BASE_DIR / 'logs'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static/vue/dist",                          # Основная статика
@@ -199,47 +200,71 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+if not os.path.exists(LOG_DIR):
+    os.makedirs(LOG_DIR)
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'WARNING',
+            'class': 'logging.FileHandler',
+            'filename': LOG_DIR / 'task_manager.log',  # Лог ошибок
+            'formatter': 'verbose',
+        },
+        'debug_file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': LOG_DIR / 'task_manager_debug.log',  # Лог для отладки
+            'formatter': 'verbose',
+        },
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file', 'debug_file', 'console'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'taskmanager': {
+            'handlers': ['debug_file'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    },
+}
 
-# LOGGING = {
-#     'version': 1,
-#     'disable_existing_loggers': False,
-#     'formatters': {
-#         'verbose': {
-#             'format': '{levelname} {asctime} {module} {message}',
-#             'style': '{',
-#         },
-#     },
-#     'handlers': {
-#         'file': {
-#             'level': 'WARNING',
-#             'class': 'logging.FileHandler',
-#             'filename': BASE_DIR / 'logs' / 'task_manager.log',  # Лог ошибок
-#             'formatter': 'verbose',
-#         },
-#         'debug_file': {
-#             'level': 'INFO',
-#             'class': 'logging.FileHandler',
-#             'filename': BASE_DIR / 'logs' / 'task_manager_debug.log',  # Лог для отладки
-#             'formatter': 'verbose',
-#         },
-# 'console':{
-#             'level': 'INFO',
-#             'class':'logging.StreamHandler',
-#             'formatter': 'verbose',
-#         },
-#     },
-#     'loggers': {
-#         'django': {
-#             'handlers': ['file','debug_file','console'],
-#             'level': 'INFO',
-#             'propagate': True,
-#         },
-#
-#         'taskmanager': {
-#             'handlers': ['debug_file'],  # debug_file
-#             'level': 'INFO',
-#             'propagate': False,
-#         },
-#     },
-# }
+# Список приложений
+APPS = [
+    'users',
+    'tasks',
+    'chat',
+    'news',
+    'reports',
+    'notifications',
+    'event_calendar',
+]
+
+# Добавляем обработчики и логгеры для каждого приложения
+for app in APPS:
+    LOGGING['handlers'][f'{app}_file'] = {
+        'class': 'logging.FileHandler',
+        'filename': LOG_DIR / f'{app}.log',  # Используем .log вместо .logs
+        'formatter': 'verbose',
+    }
+    LOGGING['loggers'][app] = {
+        'handlers': [f'{app}_file', 'console'],
+        'level': 'INFO',  # Добавляем уровень логирования
+        'propagate': False,
+    }

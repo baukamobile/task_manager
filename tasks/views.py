@@ -1,3 +1,5 @@
+import logging
+
 from rest_framework.decorators import api_view
 from rest_framework.viewsets import ModelViewSet
 from django.db.models import Count
@@ -5,10 +7,11 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.permissions import AllowAny
 import json
-
+import logging
 from tasks.models import Task, Status, Projects
 from tasks.serializers import TaskSerializer, StatusSerializer,ProjectSerializer
 from rest_framework.permissions import BasePermission
+logger = logging.getLogger('tasks')
 
 class AllowAnyForTasks(BasePermission):
     def has_permission(self, request, view):
@@ -17,6 +20,7 @@ class AllowAnyForTasks(BasePermission):
 class TaskViewSet(ModelViewSet):  # Отдаёт список всех задач
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
+    logger.info('получение список tasks')
     # permission_classes = [AllowAny]
     permission_classes = [AllowAnyForTasks]
     http_method_names = ['get','post','put','patch','delete']
@@ -26,6 +30,7 @@ class TaskViewSet(ModelViewSet):  # Отдаёт список всех зада�
         serializer = self.get_serializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
+            logger.info('получение список tasks')
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         else:
             print("💀 Ошибки сериализации:", serializer.errors)  # ЛОГ ОШИБОК
@@ -49,7 +54,7 @@ class StatusViewSet(ModelViewSet):
     # permission_classes = [IsAdminUser]
     queryset = Status.objects.all()
     serializer_class = StatusSerializer
-
+    logger.info('получение список tasks')
 
     def get_queryset(self):
         project_id = self.request.query_params.get("project")

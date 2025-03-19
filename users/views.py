@@ -15,7 +15,7 @@ import json
 
 
 
-logger = logging.getLogger('taskmanager')
+logger = logging.getLogger('users')
 
 
 
