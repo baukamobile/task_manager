@@ -3,7 +3,7 @@ from rest_framework.test import APITestCase
 from django.contrib.auth import get_user_model
 from django.utils.timezone import now
 import datetime
-from .models import Task, Projects, Status, Priority, Department
+from tasks.models import Task, Projects, Status, Priority, Department
 
 User = get_user_model()
 
