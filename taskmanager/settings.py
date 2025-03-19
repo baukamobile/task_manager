@@ -50,8 +50,6 @@ INSTALLED_APPS = [
 "semantic_admin",
     "semantic_forms",
     # 'jet_django',
-    # 'jet.dashboard',
-# 'admin_berry.apps.AdminBerryConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -71,16 +69,15 @@ INSTALLED_APPS = [
     "drf_spectacular",
     "drf_spectacular_sidecar",
     'corsheaders',
+    "debug_toolbar",
 ]
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_ALL_ORIGINS = True
-JAZZMIN_UI_TWEAKS = {
-    "theme": "slate",
-    # "theme": "cerulean",
+# JAZZMIN_UI_TWEAKS = {
+#     "theme": "slate",
+# }
+INTERNAL_IPS = ['127.0.0.1']
 
-
-    # "dark_mode_theme": "darkly",
-}
 '''
 cerulean,cosmo ,flatly ,journal ,
 litera ,lumen ,lux ,materia ,minty ,
@@ -105,6 +102,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'simple_history.middleware.HistoryRequestMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 CORS_ALLOWED_ORIGINS = ['http://localhost:5173']
 ROOT_URLCONF = 'taskmanager.urls'

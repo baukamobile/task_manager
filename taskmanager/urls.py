@@ -14,26 +14,37 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path,include
-import logging
-from django.views.generic import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
-logger = logging.getLogger('admin')
-urlpatterns = [
+from django.contrib import admin
+from django.urls import path, include
+from django.views.generic import TemplateView
 
+# Импорт для django-debug-toolbar
+if settings.DEBUG:
+    import debug_toolbar
+
+urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name="index.html")),
-    path('users/',include('users.urls')),
-    path('tasks/',include('tasks.urls')),
-    path('chat/',include('chat.urls')),
-    path('news/',include('news.urls')),
-    path('reports/',include('reports.urls')),
-    path('events/',include('event_calendar.urls')),
-    path('notifications/',include('notifications.urls')),
+    path('users/', include('users.urls')),
+    path('tasks/', include('tasks.urls')),
+    path('chat/', include('chat.urls')),
+    path('news/', include('news.urls')),
+    path('reports/', include('reports.urls')),
+    path('events/', include('event_calendar.urls')),
+    path('notifications/', include('notifications.urls')),
+]
 
-]+ static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
+# Добавляем debug_toolbar, если DEBUG = True
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # для документов и фото
+    urlpatterns += [
+        path('__debug__/', include(debug_toolbar.urls)),
+    ]
 
+# Статические файлы
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+# Медиафайлы (только в DEBUG)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
