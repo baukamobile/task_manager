@@ -1,5 +1,6 @@
 from django.contrib.gis.db.backends.postgis.const import BANDTYPE_PIXTYPE_MASK
 from django.core.exceptions import ValidationError
+from django.template.defaultfilters import title
 from django.test import TestCase
 from rest_framework.test import APITestCase
 from django.utils import timezone
@@ -130,5 +131,4 @@ class DepartmentModelTest(TestCase):
         user2.refresh_from_db()
         self.assertTrue(user1.is_active)  # Активный статус — включён
         self.assertFalse(user2.is_active)  # Нет статуса ACTIVE — остался выключенным
-
 

@@ -53,7 +53,8 @@ class StatusViewTest(APITestCase):
         cls.project = Projects.objects.create(
             project_name="test project",
             end_date=timezone.now(),
-            department=cls.department
+            department=cls.department,
+            assigned=cls.user,
         )
         cls.status1 = Status.objects.create(status_name="in progress", project=cls.project)
         cls.status2 = Status.objects.create(status_name="to delete", project=cls.project)
