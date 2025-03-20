@@ -18,14 +18,14 @@ class TaskApiTest(APITestCase):
             end_date=now() + datetime.timedelta(days=30)
         )
 
-        self.status = Status.objects.create(status_name="In Progress", user=self.user)
-        self.priority = Priority.objects.create(priority_name="High", user=self.user)
+        self.status = Status.objects.create(status_name="In Progress", project=self.project)
+        self.priority = Priority.objects.create(priority_name="High")
         self.end_date = now() + datetime.timedelta(days=7)
 
         self.task = Task.objects.create(
             task_name="Test Task",
             description="Some description",
-            projects=self.project,
+            project=self.project,
             assigned=self.user,
             status=self.status,
             priority=self.priority,
@@ -42,8 +42,19 @@ class TaskApiTest(APITestCase):
 
 class StatusApiTest(APITestCase):
     def setUp(self):
-        self.user = User.objects.create( first_name="testuser")
-        self.status = Status.objects.create(status_name='to delete', user=self.user)
+        self.user = User.objects.create(first_name="testuser")
+        self.department = Department.objects.create(
+            department_name = "some department",
+            department_head = self.user
+        )
+        self.project = Projects.objects.create(
+            project_name="Test Project",
+            description="some description",
+            department=self.department,
+            assigned = self.user,
+            end_date=now() + datetime.timedelta(days=30)
+        )
+        self.status = Status.objects.create(status_name='to delete', project=self.project)
 
     def test_get_status_list(self):
         print('status test начинается')
