@@ -11,13 +11,9 @@ import jwt
 from django.contrib.auth import authenticate
 from django.conf import settings
 import logging
-import json
-
-
+from users.tasks import send_mail_message
 
 logger = logging.getLogger('users')
-
-
 
 class UserViewSet(ModelViewSet): #Если рлдбзователь адинTaskViewSet
     # permission_classes = [IsAdminUser]
@@ -49,6 +45,7 @@ class RegisterView(APIView):
         )
         logger.info(f'Ползователь {user.email} прошел регистрацию успешно')
 
+        send_mail_message.delay(user.email)
         return Response(UserSerializer(user).data)
 
 

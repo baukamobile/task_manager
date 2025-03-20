@@ -12,7 +12,7 @@ def send_mail_message(user_email):
     send_mail(
         subject='Добро пожаловать!',
         message='Спасибо за регистрацию! Администратор подтвердит ваш email.',
-        from_email='bauyrzanbakbergen87@gmail.com',  # Проверь, что email правильный
+        from_email=env(EMAIL_HOST_USER),  # Проверь, что email правильный
         recipient_list=[user_email],  # Должен быть список
         fail_silently=False,
     )
