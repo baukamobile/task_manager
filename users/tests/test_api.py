@@ -26,9 +26,10 @@ class CompanyApiTest(APITestCase):
 
 class DepartmentApiTest(APITestCase):
     def setUp(self):
+        self.user = User.objects.create_user(first_name='biil',email="admin@gmail.com",password="password12#",phone_number='1234567890')
         self.department = Department.objects.create(
             department_name = 'GuideJet',
-            department_head = 'Bill Gates',
+            department_head = self.user,
             deactivate = True,
         )
     def test_get_department_list(self):
