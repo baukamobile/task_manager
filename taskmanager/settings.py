@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     # 'daphne',
     'channels',
     # 'jazzmin',
-"semantic_admin",
+    "semantic_admin",
     "semantic_forms",
     # 'jet_django',
     'django.contrib.admin',
@@ -67,7 +67,7 @@ INSTALLED_APPS = [
     'rest_framework',
     # 'celery',
     "drf_spectacular",
-    "drf_spectacular_sidecar",
+    # "drf_spectacular_sidecar",
     'corsheaders',
     "debug_toolbar",
     'celery',
@@ -147,7 +147,10 @@ DATABASES = {
     }
 }
 
-
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
+CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/0'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
