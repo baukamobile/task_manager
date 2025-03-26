@@ -10,3 +10,7 @@ app.conf.update( # Additional settings
     worker_prefetch_multiplier=1,  # Минимизируем загрузку процессов
 )
 # celery -A taskmanager worker --pool=solo --loglevel=info
+# (.venv) PS C:\Users\User\Desktop\docs\taskmanager> celery -A taskmanager.celery worker --pool=solo -l INFO
+
+#чтобы запускать мониторинг celery flower
+#(.venv) PS C:\Users\User\Desktop\docs\taskmanager> celery -A taskmanager.celery flower --port=5555
