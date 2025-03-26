@@ -18,7 +18,7 @@ class RolesAdmin(admin.ModelAdmin,GetEmployeesMixin):
     list_display = ['role_name','get_employees']
 admin.site.register(Roles,RolesAdmin)
 class PostitionAdmin(admin.ModelAdmin,GetEmployeesMixin):
-    list_display = ['position_name','get_employees']
+    list_display = ['position_name']
 
 admin.site.register(Positions,PostitionAdmin)
 
@@ -26,11 +26,11 @@ admin.site.register(Positions,PostitionAdmin)
 # admin.site.register(User)
 
 class DepartmentAdmin(admin.ModelAdmin,GetEmployeesMixin):
-    list_display = ['department_name','department_head','get_employees']
+    list_display = ['department_name','department_head']
 
 
 class CompanyAdmin(admin.ModelAdmin,GetEmployeesMixin):
-    list_display = ['company_name','director','get_employees']
+    list_display = ['company_name','director']
 
 admin.site.register(Department,DepartmentAdmin)
 admin.site.register(Company,CompanyAdmin)

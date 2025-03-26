@@ -10,6 +10,7 @@ from django.core.exceptions import ValidationError
 
 
 
+
 # ACTIVE= 'АКТИВЕН' IN_PROCESS= 'В ПРОЦЕССЕ' COMPLETED= 'ЗАКОНЧЕН'NON_ACTIVE='НЕ АКТИВЕН'TO_DELETE = 'К УДАЛЕНИЮ'STATUS_CHOICES = [(ACTIVE, 'АКТИВЕН'),(IN_PROCESS, 'В ПРОЦЕССЕ'),(COMPLETED, 'ЗАКОНЧЕН'),(NON_ACTIVE,'НЕ АКТИВЕН'),(TO_DELETE,'К УДАЛЕНИЮ')]
 # TECHNICAL_DEBT = 'ТЕХНИЧЕСКИЙ ДОЛГ'LOW='НИЗКИЙ'MEDIUM = 'СРЕДНИЙ'HIGH='ВЫСОКИЙ'CRITICAL='КРИТИЧЕСКИЙ'
 
@@ -29,6 +30,8 @@ class Task(models.Model):
     project = models.ForeignKey('Projects', on_delete=models.CASCADE, related_name='tasks',default=1)
     department = models.ForeignKey('users.Department', on_delete=models.CASCADE, related_name='tasks')
     history = HistoricalRecords()
+
+
 
     def __str__(self):
         return self.task_name
