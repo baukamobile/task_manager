@@ -45,7 +45,7 @@ class RegisterView(APIView):
         )
         logger.info(f'Ползователь {user.email} прошел регистрацию успешно')
 
-        send_mail_message.delay(user.email)
+        send_mail_message.delay(user.id)
         return Response(UserSerializer(user).data)
 
 

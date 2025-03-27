@@ -1,24 +1,35 @@
 from celery import shared_task
 from django.core.mail import send_mail
 import requests
+from django.apps import apps
 import json
 import environ
 from pathlib import Path
 env = environ.Env()
+
 environ.Env.read_env()
 # @shared-task
 # def send_email()
+# from django.contrib.auth import get_user_model
+# User = get_user_model()
 
 @shared_task
-def send_mail_message(user_email):
-    send_mail(
-        subject='Добро пожаловать!',
-        message='Спасибо за регистрацию! Администратор подтвердит ваш email.',
-        from_email=env(EMAIL_HOST_USER),  # Проверь, что email правильный
-        recipient_list=[user_email],  # Должен быть список
-        fail_silently=False,
-    )
-    return f'Email sent to {user_email}'
+def send_mail_message(user_id):
+    """Отправка email после регистрации"""
+    User = apps.get_model('users','User')
+    try:
+        user = User.objects.get(id=user_id)
+        send_mail(
+            subject='Добро пожаловать!',
+            message=f'Спасибо за регистрацию {user.first_name}! Администратор подтвердит ваш email.',
+            from_email=env('EMAIL_HOST_USER'),  # Проверь, что email правильный
+            recipient_list=[user.email],  # Должен быть список
+            fail_silently=False,
+        )
+
+        return f'Email sent to {user.email}'
+    except Exception as e:
+        return f' Ошибка при отправке сообщение на почту: {e}'
 @shared_task(ignore_result=True)
 def square(x,y):
     return x*y
