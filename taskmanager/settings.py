@@ -273,6 +273,6 @@ for app in APPS:
     }
     LOGGING['loggers'][app] = {
         'handlers': [f'{app}_file', 'console'],
-        'level': 'INFO',  # Добавляем уровень логирования
+        'level': 'WARNING',  # Добавляем уровень логирования
         'propagate': False,
     }
