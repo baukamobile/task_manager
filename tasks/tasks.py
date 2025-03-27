@@ -22,4 +22,8 @@ def sorting(n):
             if n[j] > n[j+1]:  # Если текущий элемент больше следующего, меняем местами
                 n[j], n[j+1] = n[j+1], n[j]
     print(n)
+@shared_task
+def sumnumbers(a,b):
+    return a+b
+
 
