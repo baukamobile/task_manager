@@ -25,5 +25,6 @@ def sorting(n):
 @shared_task
 def sumnumbers(a,b):
     return a+b
-
-
+@shared_task
+def my_periodic_task():
+    print('Эта задача выполняется каждые 1 секунд!')

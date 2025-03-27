@@ -71,6 +71,7 @@ INSTALLED_APPS = [
     'corsheaders',
     "debug_toolbar",
     'celery',
+    'django_celery_beat',
 ]
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_ALL_ORIGINS = True

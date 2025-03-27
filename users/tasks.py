@@ -6,12 +6,7 @@ import json
 import environ
 from pathlib import Path
 env = environ.Env()
-
 environ.Env.read_env()
-# @shared-task
-# def send_email()
-# from django.contrib.auth import get_user_model
-# User = get_user_model()
 
 @shared_task
 def send_mail_message(user_id):
@@ -32,7 +27,7 @@ def send_mail_message(user_id):
         return f' Ошибка при отправке сообщение на почту: {e}'
 @shared_task(ignore_result=True)
 def square(x,y):
-    return x*y
+    return x**y
 
 # @shared_task
 # def fetch_weather():
