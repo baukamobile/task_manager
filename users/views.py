@@ -11,7 +11,7 @@ import jwt
 from django.contrib.auth import authenticate
 from django.conf import settings
 import logging
-from users.tasks import send_mail_message
+from users.tasks import send_mail_message,periodic_send_mail
 
 logger = logging.getLogger('users')
 
@@ -83,6 +83,8 @@ class LoginView(APIView):
         response.data = {'jwt': token}
         logger.info(f'Ползователь с {user.email} вошел на сайт {user.id}')
         print(f'Ползователь с {user.email} вошел на сайт {user.id}')
+        # periodic_send_mail.delay(user.id) # фоновая задача периодический отправки сообщение на эмайл нового ползователя
+        send_mail_to_logged_user.delay(user.id)
         return response
 
 
