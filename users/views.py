@@ -119,3 +119,13 @@ class CompanyViewSet(ModelViewSet):
 class DepartmentViewSet(ModelViewSet):
     queryset = Department.objects.all()
     serializer_class = DepartmentSerializer
+
+
+
+
+
+
+
+
+
+
