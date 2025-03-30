@@ -11,7 +11,7 @@ import jwt
 from django.contrib.auth import authenticate
 from django.conf import settings
 import logging
-from users.tasks import send_mail_message,periodic_send_mail
+from users.tasks import send_mail_message
 
 logger = logging.getLogger('users')
 

@@ -23,7 +23,7 @@ class ReportsViewSet(ModelViewSet):
     queryset = Reports.objects.all()
     serializer_class = ReportSerializer
 
-def report_user_csv(request)
+# def report_user_csv(request)
 
 
 

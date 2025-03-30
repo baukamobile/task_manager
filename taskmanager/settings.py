@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'chat',
     'news',
     'reports',
+    'bpm', # Business process managment новое приложение для автоматизации процессов
     'notifications',
     'event_calendar',
     'simple_history',
