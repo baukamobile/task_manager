@@ -37,9 +37,9 @@ SECRET_KEY = env('DJSECRETKEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.getenv('ALLOWED_HOST'),'127.0.0.1']
+import os
 
-
+ALLOWED_HOSTS = [os.getenv('ALLOWED_HOST'), '127.0.0.1']
 
 # Application definition
 
@@ -141,12 +141,11 @@ WSGI_APPLICATION = 'taskmanager.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env('DBNAME'),
-        'USER': env('DBUSER'),
-        'PASSWORD': env('DBPASSWORD'),
-        # 'NAME': 'taskmanagerdb',
-        # 'USER': 'nurbergen',
-        # 'PASSWORD': 'qwerty123',
+        'NAME': os.getenv('POSTGRES_DB'),
+        'USER': os.getenv('POSTGRES_USER'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
+        'HOST': 'db',
+        'PORT': '5432',
     }
 }
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

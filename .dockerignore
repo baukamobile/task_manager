@@ -1,0 +1,22 @@
+# Файлы окружения
+const.py
+.env
+
+# логи
+logs/task_manager_debug.log
+logs/task_manager.log
+logs
+
+# статика и медиа
+media/
+staticfiles/
+
+# виртуальное окружение
+venv/
+
+# ide файлы
+.idea/
+
+# временные файлы
+__pycache__
+.pytest_cache
