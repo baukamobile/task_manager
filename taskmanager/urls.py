@@ -34,6 +34,7 @@ urlpatterns = [
     path('reports/', include('reports.urls')),
     path('events/', include('event_calendar.urls')),
     path('notifications/', include('notifications.urls')),
+    path('bpm/',include('bpm.urls')),
 ]
 
 # Добавляем debug_toolbar, если DEBUG = True
