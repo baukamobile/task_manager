@@ -76,7 +76,7 @@ INSTALLED_APPS = [
 ]
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_ALL_ORIGINS = True
-TEST_RUNNER = "pytest_django.runner.DiscoverRunner"
+TEST_RUNNER = "django.test.runner.DiscoverRunner"
 # JAZZMIN_UI_TWEAKS = {
 #     "theme": "slate",
 # }
