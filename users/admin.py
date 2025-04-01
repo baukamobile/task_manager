@@ -16,6 +16,8 @@ class GetEmployeesMixin:
 
 class RolesAdmin(admin.ModelAdmin,GetEmployeesMixin):
     list_display = ['role_name','get_employees']
+    filter_horizontal = ('permissions',)
+
 admin.site.register(Roles,RolesAdmin)
 class PostitionAdmin(admin.ModelAdmin,GetEmployeesMixin):
     list_display = ['position_name']
@@ -40,7 +42,7 @@ class MyUserAdmin(UserAdmin):
     model = User
     list_display = ('id', 'email','first_name','last_name','position', 'phone_number', 'company','department','address','date_of_birth', 'is_active', 'is_superuser')
     search_fields = ('email', 'phone_number', 'name')
-    list_filter = ('is_active', 'is_superuser','company','department','date_of_birth')
+    list_filter = ('role_user','is_active', 'is_superuser','company','department','date_of_birth')
     ordering = ('email',)
     filter_horizontal = ()
 
@@ -61,28 +63,22 @@ class MyUserAdmin(UserAdmin):
     )
 
 
-# @admin.register(User)
-# class UserAdmin(admin.ModelAdmin):
-#     list_display = ('id', 'phone_number', 'name', 'email', 'is_active', 'is_superuser')  # Выводимые поля
-#     search_fields = ('phone_number', 'name', 'email')
+
+# class GrafanaAdmin(admin.ModelAdmin):
+#     def grafana_dashboard(self, obj):
+#         base_url = "http://localhost:3000/d"
 #
-# admin.site.register(User, UserAdmin)
-
-class GrafanaAdmin(admin.ModelAdmin):
-    def grafana_dashboard(self, obj):
-        base_url = "http://localhost:3000/d"
-
-        # Если указан panel_id, значит, это solo-график
-        if obj.panel_id:
-            base_url += "-solo"
-            url = f"{base_url}/{obj.dashboard_uid}?panelId={obj.panel_id}&orgId=1&from=now-1h&to=now&kiosk"
-        else:
-            url = f"{base_url}/{obj.dashboard_uid}?orgId=1&from=now-1h&to=now"
-
-        return mark_safe(f'<iframe src="{url}" width="800" height="400" frameborder="0"></iframe>')
-
-    grafana_dashboard.short_description = "Grafana Dashboard"
-
-    list_display = ("name", "dashboard_uid", "panel_id", "grafana_dashboard")
-
-admin.site.register(GrafanaDashboard,GrafanaAdmin)
+#         # Если указан panel_id, значит, это solo-график
+#         if obj.panel_id:
+#             base_url += "-solo"
+#             url = f"{base_url}/{obj.dashboard_uid}?panelId={obj.panel_id}&orgId=1&from=now-1h&to=now&kiosk"
+#         else:
+#             url = f"{base_url}/{obj.dashboard_uid}?orgId=1&from=now-1h&to=now"
+#
+#         return mark_safe(f'<iframe src="{url}" width="800" height="400" frameborder="0"></iframe>')
+#
+#     grafana_dashboard.short_description = "Grafana Dashboard"
+#
+#     list_display = ("name", "dashboard_uid", "panel_id", "grafana_dashboard")
+#
+# admin.site.register(GrafanaDashboard,GrafanaAdmin)

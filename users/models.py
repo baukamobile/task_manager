@@ -4,7 +4,7 @@ from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils import timezone
-from django.utils.translation.trans_null import deactivate
+from django.contrib.auth.models import Permission
 from simple_history.models import HistoricalRecords
 
 
@@ -16,7 +16,7 @@ class Roles(models.Model): #роли пользователи
     role_name = models.CharField(max_length=120)
     description = models.TextField()
     # permissions = models.ForeignKey(Permission,on_delete=models.SET_NULL,null=True, blank=True)
-    permissions = models.ManyToManyField(Permission, blank=True)
+    permissions = models.ManyToManyField(Permission, blank=True)  # Связь с правами Django
     def __str__(self):
         return self.role_name
     class Meta:
@@ -118,6 +118,11 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.first_name
+    def get_permissions(self):
+        """Возвращает список всех прав, доступных пользователю через его роль"""
+        if self.role_user:
+            return self.role_user.permissions.all()
+        return []
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
@@ -128,7 +133,13 @@ class User(AbstractUser):
         # права юзер к ролью
         if self.role_user:
             self.user_permissions.set(self.role_user.permissions.all())
-
+    def has_perm(self,perm,obj=None):
+        """Проверяем, есть ли у пользователя право (учитываем роль)"""
+        if self.is_superuser: #если админ возвращаем что он и есть
+            return True
+        if self.role_user: # если не админ возвращаем все его/ее права
+            return self.role_user.permissions.filter(codename=perm).exists()
+        return False
     class Meta:
         ordering = ['-date_joined']
         verbose_name_plural = 'users'
@@ -144,18 +155,15 @@ class Company(models.Model):
     class Meta:
         verbose_name_plural='Company'
 
-    # @property
-    # def employees(self):
-    #     return self.employees.all()
-
 
 
 class Positions(models.Model):
     position_name = models.CharField(max_length=120,unique=True)
-    def __str__(self):
-        return self.position_name
+    department = models.ForeignKey('Department',on_delete=models.CASCADE,related_name='positions',null=True,blank=True)
     class Meta:
         verbose_name_plural='Positions'
+    def __str__(self):
+        return f'{self.position_name, self.department}'
 
 class ActiveDepartmentManager(models.Manager):
     def get_queryset(self):

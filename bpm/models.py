@@ -2,6 +2,7 @@ from django.db import models
 from users.models import Department,User
 from django.db import models
 from django.utils import timezone
+from users.models import User,Department,Positions
 # Create your models here.
 # class Process(models.Model):
 #     name = models.CharField(max_length=100)
@@ -12,16 +13,27 @@ from django.utils import timezone
 #
 #     def __str__(self):
 #         return self.name
-class WorkflowStep(models.Model): #Этапы
-    process = models.ForeignKey('Process', on_delete=models.CASCADE, related_name='steps',default='null')
+class WorkflowStep(models.Model):
+    ''' Этапы процессов.
+     модель для определения этапов процесса (шагов рабочего потока).
+     '''
+    process = models.ForeignKey('Process', on_delete=models.CASCADE, related_name='steps',null=True,blank=True)
     name = models.CharField(max_length=255)
     order = models.PositiveIntegerField()  # Определяет порядок этапов
     requires_approval = models.BooleanField(default=False)  # Нужен ли ручной контроль
+    responsible_position = models.ForeignKey(Positions,on_delete=models.SET_NULL,null=True,blank=True,related_name="steps")
+    assigned_to = models.ForeignKey(User, on_delete=models.SET_NULL,null=True,blank=True,related_name="assigned_steps") # Кто сейчас выполняет процесс
 
     def __str__(self):
         return f"{self.process.name} - {self.name}"
-
-
+class WorkflowRule(models.Model):
+    '''Правила переходов между этапами '''
+    process = models.ForeignKey('Process',on_delete=models.CASCADE,related_name="rules")
+    from_step = models.ForeignKey(WorkflowStep, on_delete=models.CASCADE, related_name='transitions_from')
+    to_step = models.ForeignKey(WorkflowStep, on_delete=models.CASCADE,related_name="transitions_to")
+    allowed_position = models.ForeignKey(Positions, on_delete=models.CASCADE)  # Кто может менять статус
+    def __str__(self):
+        return f"{self.from_step} → {self.to_step} ({self.allowed_position})"
 
 # class Department(models.Model):
 #     """Отделы компании"""
@@ -34,7 +46,11 @@ class WorkflowStep(models.Model): #Этапы
 
 
 class ProcessTemplate(models.Model):
-    """Шаблоны бизнес-процессов"""
+    """Шаблоны бизнес-процессов.
+     шаблоны бизнес-процессов, которые можно использовать для
+     создания конкретных экземпляров процессов. Связаны с отделами и пользователями.
+    """
+
     name = models.CharField(max_length=200)
     description = models.TextField()
     department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='templates',null=True,blank=True)
@@ -43,11 +59,14 @@ class ProcessTemplate(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"{self.name} - {self.department.name}"
+        return f"{self.name} - {self.department}"
 
 
 class ProcessStageTemplate(models.Model):
-    """Шаблоны этапов бизнес-процессов"""
+    """Шаблоны этапов бизнес-процессов
+     шаблоны этапов для каждого шаблона бизнес-процесса.
+     Содержат информацию о порядке, критериях завершения и SLA (часы на выполнение).
+    """
     template = models.ForeignKey(ProcessTemplate, on_delete=models.CASCADE, related_name='stages')
     name = models.CharField(max_length=200)
     description = models.TextField(blank=True, null=True)
@@ -64,12 +83,16 @@ class ProcessStageTemplate(models.Model):
 
 
 class Process(models.Model):
-    """Конкретные экземпляры бизнес-процессов (Kanban доски)"""
+    """Конкретные экземпляры бизнес-процессов (Kanban доски)
+     конкретные экземпляры бизнес-процессов, которые работают как Kanban-доски.
+      Могут быть созданы на основе шаблонов, иметь владельца и принадлежать определенному отделу.
+
+    """
     template = models.ForeignKey(ProcessTemplate, on_delete=models.SET_NULL, null=True, related_name='processes')
     name = models.CharField(max_length=200)
     description = models.TextField(blank=True, null=True)
     owner = models.ForeignKey(User, on_delete=models.CASCADE,null=True,blank=True, related_name='owned_processes')
-    department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='processes',default=1)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='processes',null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     is_completed = models.BooleanField(default=False)
@@ -81,7 +104,9 @@ class Process(models.Model):
 
 
 class ProcessStage(models.Model):
-    """Этапы конкретного бизнес-процесса (колонки Kanban)"""
+    """Этапы конкретного бизнес-процесса (колонки Kanban)
+     этапы конкретного бизнес-процесса (колонки Kanban-доски). Могут быть созданы на основе шаблонов этапов.
+    """
     process = models.ForeignKey(Process, on_delete=models.CASCADE, related_name='stages')
     template_stage = models.ForeignKey(ProcessStageTemplate, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=200)
@@ -100,7 +125,11 @@ class ProcessStage(models.Model):
 
 
 class Task(models.Model):
-    """Задачи (карточки Kanban)"""
+    """Задачи (карточки Kanban).
+     задачи (карточки Kanban),
+      которые перемещаются между этапами процесса. Включают статус, приоритет, исполнителя и другие атрибуты.
+
+    """
     STATUS_CHOICES = [
         ('not_started', 'Не начата'),
         ('in_progress', 'В работе'),
@@ -139,7 +168,10 @@ class Task(models.Model):
 
 
 class TaskStageHistory(models.Model):
-    """История перемещения задачи между этапами"""
+    """История перемещения задачи между этапами.
+     история перемещения задач между этапами, что позволяет отслеживать весь путь задачи.
+
+    """
     task = models.ForeignKey(Task, on_delete=models.CASCADE, related_name='stage_history')
     from_stage = models.ForeignKey(ProcessStage, on_delete=models.SET_NULL, null=True,
                                    related_name='from_stage_history')
@@ -156,10 +188,13 @@ class TaskStageHistory(models.Model):
 
 
 class AutoTaskRule(models.Model):
-    """Правила автоматического создания подзадач"""
+    """Правила автоматического создания подзадач.
+     правила для автоматического создания подзадач при достижении определенных этапов.
+
+    """
     trigger_stage = models.ForeignKey(ProcessStage, on_delete=models.CASCADE, related_name='triggered_rules')
-    source_department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='source_rules',default=1)
-    target_department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='target_rules',default=1)
+    source_department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='source_rules',null=True, blank=True)
+    target_department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='target_rules',null=True, blank=True)
     target_template = models.ForeignKey(ProcessTemplate, on_delete=models.CASCADE, related_name='rules')
     description = models.TextField()
     is_active = models.BooleanField(default=True)
@@ -169,7 +204,7 @@ class AutoTaskRule(models.Model):
 
 
 class Attachment(models.Model):
-    """Вложения к задачам"""
+    """Вложения к задачам,вложения к задачам (файлы)."""
     task = models.ForeignKey(Task, on_delete=models.CASCADE, related_name='attachments')
     file = models.FileField(upload_to='attachments/')
     filename = models.CharField(max_length=255)
@@ -181,7 +216,7 @@ class Attachment(models.Model):
 
 
 class Comment(models.Model):
-    """Комментарии к задачам"""
+    """Комментарии к задачам. Комментарии к задачам от пользователей."""
     task = models.ForeignKey(Task, on_delete=models.CASCADE, related_name='comments')
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     text = models.TextField()
@@ -196,7 +231,8 @@ class Comment(models.Model):
 
 
 class Notification(models.Model):
-    """Уведомления для пользователей"""
+    """Уведомления для пользователей. Уведомления для пользователей о различных событиях
+    (дедлайны, назначения задач и т.д.)."""
     TYPE_CHOICES = [
         ('deadline', 'Приближение дедлайна'),
         ('overdue', 'Просроченная задача'),
@@ -221,7 +257,7 @@ class Notification(models.Model):
 
 
 class UserDepartmentRole(models.Model):
-    """Роли пользователей в отделах"""
+    """Роли пользователей в отделах. Роли пользователей в отделах (руководитель, сотрудник, наблюдатель)."""
     ROLE_CHOICES = [
         ('head', 'Руководитель отдела'),
         ('member', 'Сотрудник отдела'),
@@ -229,18 +265,19 @@ class UserDepartmentRole(models.Model):
     ]
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='department_roles')
-    department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='user_roles',default=1)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='user_roles',null=True, blank=True)
     role = models.CharField(max_length=20, choices=ROLE_CHOICES, default='member')
 
     class Meta:
         unique_together = ('user', 'department')
 
     def __str__(self):
-        return f"{self.user.username} - {self.department.name} - {self.get_role_display()}"
+        return f"{self.user.first_name} - {self.department} - {self.get_role_display()}"
 
 
 class Dashboard(models.Model):
-    """Дашборды для руководства"""
+    """Дашборды для руководства. Модели для создания информационных
+    панелей с виджетами для руководства."""
     name = models.CharField(max_length=200)
     department = models.ForeignKey(Department, on_delete=models.SET_NULL, null=True, blank=True)
     owner = models.ForeignKey(User, on_delete=models.CASCADE,null=True, blank=True, related_name='dashboards')
@@ -251,7 +288,7 @@ class Dashboard(models.Model):
 
 
 class DashboardWidget(models.Model):
-    """Виджеты на дашбордах"""
+    """Виджеты на дашбордах, модели для создания информационных панелей с виджетами для руководства."""
     WIDGET_TYPES = [
         ('task_count', 'Количество задач'),
         ('process_time', 'Время выполнения процессов'),
@@ -266,8 +303,8 @@ class DashboardWidget(models.Model):
     department = models.ForeignKey(Department, on_delete=models.SET_NULL, null=True, blank=True)
     position_x = models.PositiveSmallIntegerField(default=0)
     position_y = models.PositiveSmallIntegerField(default=0)
-    width = models.PositiveSmallIntegerField(default=1)
-    height = models.PositiveSmallIntegerField(default=1)
+    width = models.PositiveSmallIntegerField(null=True, blank=True)
+    height = models.PositiveSmallIntegerField(null=True, blank=True)
     settings = models.JSONField(default=dict)
 
     def __str__(self):
