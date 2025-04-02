@@ -28,7 +28,8 @@ admin.site.register(Positions,PostitionAdmin)
 # admin.site.register(User)
 
 class DepartmentAdmin(admin.ModelAdmin,GetEmployeesMixin):
-    list_display = ['department_name','department_head']
+    list_display = ('department_name','department_head')
+    list_filter = ('department_with_access',)
 
 
 class CompanyAdmin(admin.ModelAdmin,GetEmployeesMixin):

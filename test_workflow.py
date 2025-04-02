@@ -1,6 +1,6 @@
 # test_workflow.py
 from users.models import Department, User, Positions
-from workflow.models import (Process, ProcessStage, ProcessTemplate, Task,
+from bpm.models import (Process, ProcessStage, ProcessTemplate, Task,
                              WorkflowStep, WorkflowRule, TaskStageHistory)
 from django.utils import timezone
 import random
