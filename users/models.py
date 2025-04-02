@@ -14,7 +14,7 @@ from django.contrib.auth.models import Permission
 # Create your models here.
 class Roles(models.Model): #роли пользователи
     role_name = models.CharField(max_length=120)
-    description = models.TextField()
+    description = models.TextField(null=True,blank=True)
     # permissions = models.ForeignKey(Permission,on_delete=models.SET_NULL,null=True, blank=True)
     permissions = models.ManyToManyField(Permission, blank=True)  # Связь с правами Django
     def __str__(self):
