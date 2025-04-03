@@ -66,7 +66,7 @@ INSTALLED_APPS = [
     'rest_framework',
     "drf_spectacular",
     'corsheaders',
-    "debug_toolbar",
+    # "debug_toolbar",
     'celery',
     'django_celery_beat',
     'channels',

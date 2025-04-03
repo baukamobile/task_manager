@@ -12,15 +12,15 @@ import logging
 from django.contrib.auth.models import Permission
 
 # Create your models here.
-class Roles(models.Model): #роли пользователи
-    role_name = models.CharField(max_length=120)
-    description = models.TextField(null=True,blank=True)
-    # permissions = models.ForeignKey(Permission,on_delete=models.SET_NULL,null=True, blank=True)
-    permissions = models.ManyToManyField(Permission, blank=True)  # Связь с правами Django
-    def __str__(self):
-        return self.role_name
-    class Meta:
-        verbose_name_plural = 'Roles'
+# class Roles(models.Model): #роли пользователи
+#     role_name = models.CharField(max_length=120)
+#     description = models.TextField(null=True,blank=True)
+#     # permissions = models.ForeignKey(Permission,on_delete=models.SET_NULL,null=True, blank=True)
+#     permissions = models.ManyToManyField(Permission, blank=True)  # Связь с правами Django
+#     def __str__(self):
+#         return self.role_name
+#     class Meta:
+#         verbose_name_plural = 'Roles'
 
 class UserCustomManager(BaseUserManager):
     # Указываем, что этот менеджер будет использоваться при миграциях
@@ -95,8 +95,8 @@ class User(AbstractUser):
     status = models.CharField(max_length=50,choices=STATUS_CHOICES, null=True, blank=True)
     position = models.ForeignKey("Positions", on_delete=models.SET_NULL, null=True, blank=True,
                                  related_name="position_employees")
-    role_user = models.ForeignKey(Roles, on_delete=models.SET_NULL, null=True, blank=True,
-                                  related_name='role_employees')
+    # role_user = models.ForeignKey(Roles, on_delete=models.SET_NULL, null=True, blank=True,
+    #                               related_name='role_employees')
     date_of_birth = models.DateField(null=True, blank=True)
     address = models.TextField(null=True, blank=True)
     department = models.ForeignKey("Department", on_delete=models.SET_NULL, null=True, blank=True,related_name='department_employees')

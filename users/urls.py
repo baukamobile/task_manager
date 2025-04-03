@@ -1,14 +1,14 @@
 from django.urls import path,include
 from users.views import (UserViewSet, RegisterView,
                          LoginView, LogoutView,
-                         PositionsViewSet,RolesViewSet,
+                         PositionsViewSet,#RolesViewSet,
                          CompanyViewSet,DepartmentViewSet)
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
 router.register(r'users',UserViewSet),
 router.register(r'positions',PositionsViewSet),
-router.register(r'roles',RolesViewSet),
+# router.register(r'roles',RolesViewSet),
 router.register(r'company',CompanyViewSet)
 router.register(r'department',DepartmentViewSet)
 
