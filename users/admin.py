@@ -15,7 +15,7 @@ class GetEmployeesMixin:
     get_employees.short_description = "Employee name"
 
 class RolesAdmin(admin.ModelAdmin,GetEmployeesMixin):
-    list_display = ['role_name','get_employees']
+    list_display = ['role_name',]
     filter_horizontal = ('permissions',)
 
 admin.site.register(Roles,RolesAdmin)

@@ -44,18 +44,15 @@ ALLOWED_HOSTS = [os.getenv('ALLOWED_HOST'), '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    # 'daphne',
-    'channels',
-    # 'jazzmin',
-    "semantic_admin",
-    "semantic_forms",
-    # 'jet_django',
+# "semantic_admin",
+# "semantic_forms",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #приложении
     'users',
     'tasks',
     'chat',
@@ -64,15 +61,19 @@ INSTALLED_APPS = [
     'bpm', # Business process managment новое приложение для автоматизации процессов
     'notifications',
     'event_calendar',
+    #пакеты
     'simple_history',
     'rest_framework',
-    # 'celery',
     "drf_spectacular",
-    # "drf_spectacular_sidecar",
     'corsheaders',
     "debug_toolbar",
     'celery',
     'django_celery_beat',
+    'channels',
+
+
+    # 'daphne',
+    'django_extensions',
 ]
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_ALL_ORIGINS = True

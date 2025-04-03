@@ -271,7 +271,7 @@ class DashboardWidget(models.Model):
     position_y = models.PositiveSmallIntegerField(default=0) # Координаты расположения виджета на дашборде
     width = models.PositiveSmallIntegerField(null=True, blank=True)
     height = models.PositiveSmallIntegerField(null=True, blank=True) #Ширина и высота виджета
-    settings = models.JSONField(default=dict) #JSON-поле для хранения дополнительных настроек виджета (фильтры, параметры отображения и т.д.)
+    settings = models.JSONField(default=dict,null=True,blank=True) #JSON-поле для хранения дополнительных настроек виджета (фильтры, параметры отображения и т.д.)
 
     def __str__(self):
         return f"{self.title} on {self.dashboard.name}"
