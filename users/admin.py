@@ -1,12 +1,62 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
-
+import logging
 # from django.contrib.auth.models import User
-from users.models import Roles, Positions, Company, Department,GrafanaDashboard
+from users.models import Roles, Positions, Company, Department
+from tasks.models import Task,Projects,Priority,Task_comments,Status
+from bpm.models import (Process,WorkflowStep,ProcessTemplate,ProcessStageTemplate,ProcessStage,
+                        Task as bpmTask,TaskStageHistory,AutoTaskRule,Attachment,
+                        Comment,Notification,UserDepartmentRole,Dashboard,DashboardWidget)
 from users.models import User
 from django.contrib.auth.admin import UserAdmin
+from django.contrib.auth.models import Group, Permission
+from django.contrib.contenttypes.models import ContentType
+from .models import Department  # Импортируем модель, для которой получаем права
+#Создание групп (ролей)
+logger = logging.getLogger('users')
 
-# Register your models here.
+admin_group, _ = Group.objects.get_or_create(name="Admin")
+department_head_group, _ = Group.objects.get_or_create(name="Department Head") #_ — это заглушка для второго значения (того самого True/False), которое нам все равно потому что мы не исползуем true false
+director_group, _ = Group.objects.get_or_create(name="Director")
+employee_group, _ = Group.objects.get_or_create(name="Employee")
+# Создаём или получаем группу
+# Получаем ContentType для модели Department
+# Берем ContentType для моделей
+department_content_type = ContentType.objects.get_for_model(Department)
+users_content_type = ContentType.objects.get_for_model(User)
+company_content_type = ContentType.objects.get_for_model(Company)
+roles_content_type = ContentType.objects.get_for_model(Roles)
+bpm_task_content_type = ContentType.objects.get_for_model(bpmTask)
+# Вытаскиваем права для каждой модели
+department_permissions = Permission.objects.filter(content_type=department_content_type)
+users_permissions = Permission.objects.filter(content_type=users_content_type)
+company_permissions = Permission.objects.filter(content_type=company_content_type)
+roles_permissions = Permission.objects.filter(content_type=roles_content_type)
+bpm_task_permissions = Permission.objects.filter(content_type=bpm_task_content_type)
+# Пихаем все права в группу
+admin_group.permissions.add(
+    *department_permissions,
+    *users_permissions,
+    *company_permissions,
+    *roles_permissions,
+    *bpm_task_permissions
+)
+director_group.permissions.add(
+*department_permissions,
+    *users_permissions,
+    *roles_permissions,
+    *bpm_task_permissions
+)
+logger.warning(f'Ползователь {admin_group.name} Права добавлены в группу')
+# Проверяем, добавлены ли права
+# print(f"Права добавлены в группу '{admin_group.name}'")
+
+
+
+# Добавление прав к группам
+
+
+
 
 class GetEmployeesMixin:
     #функция чтобы вывести список сотрудников
@@ -64,22 +114,3 @@ class MyUserAdmin(UserAdmin):
     )
 
 
-
-# class GrafanaAdmin(admin.ModelAdmin):
-#     def grafana_dashboard(self, obj):
-#         base_url = "http://localhost:3000/d"
-#
-#         # Если указан panel_id, значит, это solo-график
-#         if obj.panel_id:
-#             base_url += "-solo"
-#             url = f"{base_url}/{obj.dashboard_uid}?panelId={obj.panel_id}&orgId=1&from=now-1h&to=now&kiosk"
-#         else:
-#             url = f"{base_url}/{obj.dashboard_uid}?orgId=1&from=now-1h&to=now"
-#
-#         return mark_safe(f'<iframe src="{url}" width="800" height="400" frameborder="0"></iframe>')
-#
-#     grafana_dashboard.short_description = "Grafana Dashboard"
-#
-#     list_display = ("name", "dashboard_uid", "panel_id", "grafana_dashboard")
-#
-# admin.site.register(GrafanaDashboard,GrafanaAdmin)
