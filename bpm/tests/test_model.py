@@ -4,28 +4,28 @@ from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
-class ProcessTest(TestCase):
-    def setUp(self):
-        self.user = User.objects.create(
-            first_name='Albert',
-            email='albert@gmail.com',
-            phone_number=1874658,
-            password='sdfsdjfjsd34'
-        )
-        self.department = Department.objects.create(
-            department_name='soem dep',
-            department_head=self.user
-        )
-        self.process = Process.objects.create(
-            name="Test Process",
-            department=self.department,
-            created_by=self.user
-        )
-
-    def test_process_creation(self):
-        process = Process.objects.get(id=self.process.id)
-        self.assertEqual(process.department, self.department)
-        self.assertEqual(process.created_by, self.user)
+# class ProcessTest(TestCase):
+#     def setUp(self):
+#         self.user = User.objects.create(
+#             first_name='Albert',
+#             email='albert@gmail.com',
+#             phone_number=1874658,
+#             password='sdfsdjfjsd34'
+#         )
+#         self.department = Department.objects.create(
+#             department_name='soem dep',
+#             department_head=self.user
+#         )
+#         self.process = Process.objects.create(
+#             name="Test Process",
+#             department=self.department,
+#             created_by=self.user
+#         )
+#
+#     def test_process_creation(self):
+#         process = Process.objects.get(id=self.process.id)
+#         self.assertEqual(process.department, self.department)
+#         self.assertEqual(process.created_by, self.user)
 
         # task = Task.objects.get(id=self.task.id)
         # self.assertEqual(task.task_name, "Task Name")

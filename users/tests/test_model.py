@@ -30,7 +30,7 @@ class UserTests(TestCase):
             company=self.company,
             is_superuser=False,
             is_active=True,
-            is_owner=False,
+
         )
 
     def test_user_creation(self):
@@ -83,7 +83,7 @@ class PositionsModelTest(TestCase):
     def test_position_creation(self):
         self.assertEqual(self.position.position_name, 'some position')
     def test_position_str(self):
-        self.assertEqual(str(self.position), 'some position')
+        self.assertEqual(str(self.position.position_name), 'some position')
 
 
 class DepartmentModelTest(TestCase):

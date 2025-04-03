@@ -4,15 +4,7 @@ from django.db import models
 from django.utils import timezone
 from users.models import User,Department,Positions
 # Create your models here.
-# class Process(models.Model):
-#     name = models.CharField(max_length=100)
-#     department = models.ForeignKey(Department, on_delete=models.CASCADE,related_name='process',null=True,blank=True)
-#     created_by = models.ForeignKey(User, on_delete=models.CASCADE,related_name='created_process',null=True,blank=True)
-#     created_at = models.DateTimeField(null=True,blank=True)
-#     end_date = models.DateTimeField(null=True, blank=True)
-#
-#     def __str__(self):
-#         return self.name
+
 class WorkflowStep(models.Model):
     ''' Этапы процессов.
      модель для определения этапов процесса (шагов рабочего потока).
@@ -23,9 +15,9 @@ class WorkflowStep(models.Model):
     requires_approval = models.BooleanField(default=False)  # Нужен ли ручной контроль
     responsible_position = models.ForeignKey(Positions,on_delete=models.SET_NULL,null=True,blank=True,related_name="steps")
     assigned_to = models.ForeignKey(User, on_delete=models.SET_NULL,null=True,blank=True,related_name="assigned_steps") # Кто сейчас выполняет процесс
-
     def __str__(self):
         return f"{self.process.name} - {self.name}"
+
 class WorkflowRule(models.Model):
     '''Правила переходов между этапами '''
     process = models.ForeignKey('Process',on_delete=models.CASCADE,related_name="rules")
@@ -35,32 +27,19 @@ class WorkflowRule(models.Model):
     def __str__(self):
         return f"{self.from_step} → {self.to_step} ({self.allowed_position})"
 
-# class Department(models.Model):
-#     """Отделы компании"""
-#     name = models.CharField(max_length=100)
-#     description = models.TextField(blank=True, null=True)
-#     head = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='department_head',default=1)
-#
-#     def __str__(self):
-#         return self.name
-
-
 class ProcessTemplate(models.Model):
     """Шаблоны бизнес-процессов.
      шаблоны бизнес-процессов, которые можно использовать для
      создания конкретных экземпляров процессов. Связаны с отделами и пользователями.
     """
-
     name = models.CharField(max_length=200)
     description = models.TextField()
     department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='templates',null=True,blank=True)
     created_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
     def __str__(self):
         return f"{self.name} - {self.department}"
-
 
 class ProcessStageTemplate(models.Model):
     """Шаблоны этапов бизнес-процессов
@@ -81,12 +60,10 @@ class ProcessStageTemplate(models.Model):
     def __str__(self):
         return f"{self.template.name} - {self.name}"
 
-
 class Process(models.Model):
     """Конкретные экземпляры бизнес-процессов (Kanban доски)
      конкретные экземпляры бизнес-процессов, которые работают как Kanban-доски.
       Могут быть созданы на основе шаблонов, иметь владельца и принадлежать определенному отделу.
-
     """
     template = models.ForeignKey(ProcessTemplate, on_delete=models.SET_NULL, null=True, related_name='processes')
     name = models.CharField(max_length=200)
@@ -98,10 +75,16 @@ class Process(models.Model):
     is_completed = models.BooleanField(default=False)
     is_recurring = models.BooleanField(default=False)  # повторяющийся процесс
     recurring_interval = models.CharField(max_length=50, blank=True, null=True)  # cron-выражение для повторения
-
     def __str__(self):
         return self.name
+    class Meta:
+        permissions = [
+            ('start_process','Может запускать процесс'),
+            ('approve_process', 'Может одобрять  процесс'),
+            ('execute_process', 'Может выполнять  процесс'),
+            ('finish_process', 'Может завершать  процесс'),
 
+        ]
 
 class ProcessStage(models.Model):
     """Этапы конкретного бизнес-процесса (колонки Kanban)
@@ -116,10 +99,8 @@ class ProcessStage(models.Model):
     completion_criteria = models.TextField(blank=True, null=True)
     sla_hours = models.PositiveIntegerField(default=24)
     is_custom = models.BooleanField(default=False)  # кастомный этап или из шаблона
-
     class Meta:
         ordering = ['order']
-
     def __str__(self):
         return f"{self.process.name} - {self.name}"
 
@@ -128,7 +109,6 @@ class Task(models.Model):
     """Задачи (карточки Kanban).
      задачи (карточки Kanban),
       которые перемещаются между этапами процесса. Включают статус, приоритет, исполнителя и другие атрибуты.
-
     """
     STATUS_CHOICES = [
         ('not_started', 'Не начата'),
@@ -137,14 +117,12 @@ class Task(models.Model):
         ('completed', 'Выполнена'),
         ('returned', 'Возвращена на доработку'),
     ]
-
     PRIORITY_CHOICES = [
         ('low', 'Низкий'),
         ('medium', 'Средний'),
         ('high', 'Высокий'),
         ('urgent', 'Срочный'),
     ]
-
     process = models.ForeignKey(Process, on_delete=models.CASCADE, related_name='tasks')
     current_stage = models.ForeignKey(ProcessStage, on_delete=models.CASCADE, related_name='tasks')
     title = models.CharField(max_length=200)
@@ -157,20 +135,16 @@ class Task(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     parent_task = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True, related_name='subtasks')
-
     def __str__(self):
         return self.title
-
     def is_overdue(self):
         if self.due_date and timezone.now() > self.due_date:
             return True
         return False
 
-
 class TaskStageHistory(models.Model):
     """История перемещения задачи между этапами.
      история перемещения задач между этапами, что позволяет отслеживать весь путь задачи.
-
     """
     task = models.ForeignKey(Task, on_delete=models.CASCADE, related_name='stage_history')
     from_stage = models.ForeignKey(ProcessStage, on_delete=models.SET_NULL, null=True,
@@ -179,18 +153,15 @@ class TaskStageHistory(models.Model):
     changed_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     changed_at = models.DateTimeField(auto_now_add=True)
     comments = models.TextField(blank=True, null=True)
-
     class Meta:
         ordering = ['-changed_at']
 
     def __str__(self):
         return f"Task {self.task.id}: {self.from_stage} -> {self.to_stage}"
 
-
 class AutoTaskRule(models.Model):
     """Правила автоматического создания подзадач.
      правила для автоматического создания подзадач при достижении определенных этапов.
-
     """
     trigger_stage = models.ForeignKey(ProcessStage, on_delete=models.CASCADE, related_name='triggered_rules')
     source_department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='source_rules',null=True, blank=True)
@@ -202,7 +173,6 @@ class AutoTaskRule(models.Model):
     def __str__(self):
         return f"Rule: {self.source_department} -> {self.target_department} on {self.trigger_stage.name}"
 
-
 class Attachment(models.Model):
     """Вложения к задачам,вложения к задачам (файлы)."""
     task = models.ForeignKey(Task, on_delete=models.CASCADE, related_name='attachments')
@@ -213,7 +183,6 @@ class Attachment(models.Model):
 
     def __str__(self):
         return self.filename
-
 
 class Comment(models.Model):
     """Комментарии к задачам. Комментарии к задачам от пользователей."""
@@ -254,8 +223,6 @@ class Notification(models.Model):
 
     def __str__(self):
         return f"Notification for {self.user}: {self.message[:30]}..."
-
-
 class UserDepartmentRole(models.Model):
     """Роли пользователей в отделах. Роли пользователей в отделах (руководитель, сотрудник, наблюдатель)."""
     ROLE_CHOICES = [
@@ -286,26 +253,25 @@ class Dashboard(models.Model):
     def __str__(self):
         return self.name
 
-
 class DashboardWidget(models.Model):
     """Виджеты на дашбордах, модели для создания информационных панелей с виджетами для руководства."""
     WIDGET_TYPES = [
-        ('task_count', 'Количество задач'),
-        ('process_time', 'Время выполнения процессов'),
-        ('overdue_tasks', 'Просроченные задачи'),
-        ('efficiency', 'Эффективность сотрудников'),
-        ('bottlenecks', 'Узкие места'),
+        ('task_count', 'Количество задач'), #Показывает количество задач (например, общее, по статусам, по исполнителям)
+        ('process_time', 'Время выполнения процессов'), #Отображает время выполнения процессов (например, среднее время прохождения задачи по всем этапам)
+        ('overdue_tasks', 'Просроченные задачи'), #Показывает просроченные задачи (те, которые вышли за дедлайн)
+        ('efficiency', 'Эффективность сотрудников'), #Визуализирует эффективность сотрудников (например, количество выполненных задач, время выполнения)
+        ('bottlenecks', 'Узкие места'), #Выявляет "узкие места" в процессах (этапы, на которых задачи застревают дольше всего)
     ]
 
-    dashboard = models.ForeignKey(Dashboard, on_delete=models.CASCADE, related_name='widgets')
+    dashboard = models.ForeignKey(Dashboard, on_delete=models.CASCADE, related_name='widgets') #Связь с дашбордом, на котором размещен виджет
     title = models.CharField(max_length=100)
     widget_type = models.CharField(max_length=20, choices=WIDGET_TYPES)
     department = models.ForeignKey(Department, on_delete=models.SET_NULL, null=True, blank=True)
     position_x = models.PositiveSmallIntegerField(default=0)
-    position_y = models.PositiveSmallIntegerField(default=0)
+    position_y = models.PositiveSmallIntegerField(default=0) # Координаты расположения виджета на дашборде
     width = models.PositiveSmallIntegerField(null=True, blank=True)
-    height = models.PositiveSmallIntegerField(null=True, blank=True)
-    settings = models.JSONField(default=dict)
+    height = models.PositiveSmallIntegerField(null=True, blank=True) #Ширина и высота виджета
+    settings = models.JSONField(default=dict,null=True,blank=True) #JSON-поле для хранения дополнительных настроек виджета (фильтры, параметры отображения и т.д.)
 
     def __str__(self):
         return f"{self.title} on {self.dashboard.name}"

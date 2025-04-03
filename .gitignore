@@ -3,6 +3,5 @@ const.py
 
 .env
 
-logs/task_manager_debug.log
-logs/task_manager.log
+
 logs

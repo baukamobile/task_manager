@@ -14,7 +14,7 @@ from django.contrib.auth.models import Permission
 # Create your models here.
 class Roles(models.Model): #роли пользователи
     role_name = models.CharField(max_length=120)
-    description = models.TextField()
+    description = models.TextField(null=True,blank=True)
     # permissions = models.ForeignKey(Permission,on_delete=models.SET_NULL,null=True, blank=True)
     permissions = models.ManyToManyField(Permission, blank=True)  # Связь с правами Django
     def __str__(self):
@@ -106,7 +106,7 @@ class User(AbstractUser):
     company = models.ForeignKey("Company", on_delete=models.SET_NULL, null=True, blank=True,related_name='company_employees')
     is_superuser = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
-    is_owner = models.BooleanField(default=False) #владееть компании?
+    # is_owner = models.BooleanField(default=False) #владееть компании?
     image = models.ImageField(upload_to='Users_avatar', blank=True, null=True)
     background_profile_image = models.ImageField(upload_to='Users_background_images', blank=True, null=True)
     date_joined = models.DateTimeField(default=timezone.now)
@@ -174,6 +174,10 @@ class Department(models.Model):
     department_head = models.ForeignKey('User', on_delete=models.SET_NULL, null=True, blank=True, related_name="header_departments")
     # department_head_name = models.ForeignKey('User', on_delete=models.SET_NULL, null=True, blank=True,
                                              # related_name="header_departments")
+    department_with_access = models.ManyToManyField("self",blank=True, related_name="accesible_by",symmetrical=False)
+    '''Отдел может иметь доступ к другим отделам 
+    но symmetrical=False значит если отдел А имееть доступ к отделу B 
+    то второй необязательно имееть доступ к первому'''
     deactivate = models.BooleanField(default=False)
     objects = models.Manager()
     activate = ActiveDepartmentManager()
@@ -191,16 +195,14 @@ class Department(models.Model):
                 # Отключаем всех, кроме суперюзеров и владельцев
                 User.objects.filter(
                     department=self,
-                    is_superuser=False,
-                    is_owner=False
+                    is_superuser=False
                 ).update(is_active=False)
             else:
                 # Включаем только активных, исключая суперюзеров и владельцев
                 User.objects.filter(
                     department=self,
                     status=User.ACTIVE,
-                    is_superuser=False,
-                    is_owner=False
+                    is_superuser=False
                 ).update(is_active=True)
 
 
