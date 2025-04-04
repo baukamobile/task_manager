@@ -3,6 +3,7 @@ from users.models import Department,User
 from django.db import models
 from django.utils import timezone
 from users.models import User,Department,Positions
+# from django.simple_history import History
 # Create your models here.
 
 class WorkflowStep(models.Model):
@@ -83,7 +84,6 @@ class Process(models.Model):
             ('approve_process', 'Может одобрять  процесс'),
             ('execute_process', 'Может выполнять  процесс'),
             ('finish_process', 'Может завершать  процесс'),
-
         ]
 
 class ProcessStage(models.Model):
