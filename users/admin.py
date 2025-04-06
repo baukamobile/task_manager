@@ -56,7 +56,7 @@ director_group.permissions.add(
     # *roles_permissions,
     *bpm_task_permissions
 )
-logger.warning(f'Ползователь {admin_group.name} Права добавлены в группу')
+# logger.warning(f'Ползователь {admin_group.name} Права добавлены в группу')
 # Проверяем, добавлены ли права
 # print(f"Права добавлены в группу '{admin_group.name}'")
 
@@ -110,7 +110,7 @@ class MyUserAdmin(UserAdmin):
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
         ('Personal Info', {'fields': ('first_name','last_name', 'phone_number', 'telegram_id', 'date_of_birth', 'address', 'status', 'position', 'department', 'company', 'image')}), #'role_user',
-        ('Permissions', {'fields': ('is_active', 'is_verified', 'on_vacation', 'is_superuser', 'is_owner')}),
+        ('Permissions', {'fields': ('is_active', 'is_verified', 'on_vacation', 'is_superuser')}),
         ('Important Dates', {'fields': ('date_joined',)}),
     )
 

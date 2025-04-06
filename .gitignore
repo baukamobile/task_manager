@@ -3,5 +3,6 @@ const.py
 
 .env
 
-
-logs
+static/
+staticfiles/
+logs/

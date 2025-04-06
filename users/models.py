@@ -118,28 +118,28 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.first_name
-    def get_permissions(self):
-        """Возвращает список всех прав, доступных пользователю через его роль"""
-        if self.role_user:
-            return self.role_user.permissions.all()
-        return []
-
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
-        if self.role_user:
-            self.set_permissions_from_role()
-
-    def set_permissions_from_role(self):
-        # права юзер к ролью
-        if self.role_user:
-            self.user_permissions.set(self.role_user.permissions.all())
-    def has_perm(self,perm,obj=None):
-        """Проверяем, есть ли у пользователя право (учитываем роль)"""
-        if self.is_superuser: #если админ возвращаем что он и есть
-            return True
-        if self.role_user: # если не админ возвращаем все его/ее права
-            return self.role_user.permissions.filter(codename=perm).exists()
-        return False
+    # def get_permissions(self):
+    #     """Возвращает список всех прав, доступных пользователю через его роль"""
+    #     if self.role_user:
+    #         return self.role_user.permissions.all()
+    #     return []
+    #
+    # def save(self, *args, **kwargs):
+    #     super().save(*args, **kwargs)
+    #     if self.role_user:
+    #         self.set_permissions_from_role()
+    #
+    # def set_permissions_from_role(self):
+    #     # права юзер к ролью
+    #     if self.role_user:
+    #         self.user_permissions.set(self.role_user.permissions.all())
+    # def has_perm(self,perm,obj=None):
+    #     """Проверяем, есть ли у пользователя право (учитываем роль)"""
+    #     if self.is_superuser: #если админ возвращаем что он и есть
+    #         return True
+    #     if self.role_user: # если не админ возвращаем все его/ее права
+    #         return self.role_user.permissions.filter(codename=perm).exists()
+    #     return False
     class Meta:
         ordering = ['-date_joined']
         verbose_name_plural = 'users'
