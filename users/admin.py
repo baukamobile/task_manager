@@ -6,7 +6,7 @@ from users.models import Positions, Company, Department #Roles,
 from tasks.models import Task,Projects,Priority,Task_comments,Status
 from bpm.models import (Process,WorkflowStep,ProcessTemplate,ProcessStageTemplate,ProcessStage,
                         Task as bpmTask,TaskStageHistory,AutoTaskRule,Attachment,
-                        Comment,Notification,UserDepartmentRole,Dashboard,DashboardWidget)
+                        Comment,Notification,Dashboard,DashboardWidget)
 from users.models import User
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import Group, Permission

@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from bpm.models import (Process,WorkflowStep,ProcessTemplate,ProcessStageTemplate,ProcessStage,
                         Task,TaskStageHistory,AutoTaskRule,Attachment,
-                        Comment,Notification,UserDepartmentRole,Dashboard,DashboardWidget)
+                        Comment,Notification,Dashboard,DashboardWidget)
 
 class ProcessSerializer(serializers.ModelSerializer):
     class Meta:
@@ -48,10 +48,10 @@ class NotificationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Notification
         fields = '__all__'
-class UserDepartmentRoleSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = UserDepartmentRole
-        fields = '__all__'
+# class UserDepartmentRoleSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = UserDepartmentRole
+#         fields = '__all__'
 class DashboardSerializer(serializers.ModelSerializer):
     class Meta:
         model = Dashboard

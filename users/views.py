@@ -73,10 +73,9 @@ class LoginView(APIView):
             'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=90),
             'iat': datetime.datetime.utcnow()
         }
-
         SECRET = getattr(settings, 'JWT_SECRET_KEY', settings.SECRET_KEY)
         token = jwt.encode(payload, SECRET, algorithm='HS256')
-        logger.info(f'Ползователь с {user.email} вошел на сайт {user.id}')
+        logger.info(f'Ползователь с {user.email} вошел на сайт id-{user.id}')
         # print(f'Ползователь с {user.email} паролем {user.password} вошел на сайт {user.id}')
         response = Response()
         response.set_cookie(key='jwt', value=token, httponly=True)
@@ -86,8 +85,6 @@ class LoginView(APIView):
         # periodic_send_mail.delay(user.id) # фоновая задача периодический отправки сообщение на эмайл нового ползователя
         # send_mail_to_logged_user.delay(user.id)
         return response
-
-
 
 class LogoutView(APIView):
     def post(self,request):

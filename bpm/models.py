@@ -223,23 +223,23 @@ class Notification(models.Model):
 
     def __str__(self):
         return f"Notification for {self.user}: {self.message[:30]}..."
-class UserDepartmentRole(models.Model):
-    """Роли пользователей в отделах. Роли пользователей в отделах (руководитель, сотрудник, наблюдатель)."""
-    ROLE_CHOICES = [
-        ('head', 'Руководитель отдела'),
-        ('member', 'Сотрудник отдела'),
-        ('viewer', 'Наблюдатель'),
-    ]
-
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='department_roles')
-    department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='user_roles',null=True, blank=True)
-    role = models.CharField(max_length=20, choices=ROLE_CHOICES, default='member')
-
-    class Meta:
-        unique_together = ('user', 'department')
-
-    def __str__(self):
-        return f"{self.user.first_name} - {self.department} - {self.get_role_display()}"
+# class UserDepartmentRole(models.Model):
+#     """Роли пользователей в отделах. Роли пользователей в отделах (руководитель, сотрудник, наблюдатель)."""
+#     ROLE_CHOICES = [
+#         ('head', 'Руководитель отдела'),
+#         ('member', 'Сотрудник отдела'),
+#         ('viewer', 'Наблюдатель'),
+#     ]
+#
+#     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='department_roles')
+#     department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='user_roles',null=True, blank=True)
+#     role = models.CharField(max_length=20, choices=ROLE_CHOICES, default='member')
+#
+#     class Meta:
+#         unique_together = ('user', 'department')
+#
+#     def __str__(self):
+#         return f"{self.user.first_name} - {self.department} - {self.get_role_display()}"
 
 
 class Dashboard(models.Model):
@@ -267,8 +267,8 @@ class DashboardWidget(models.Model):
     title = models.CharField(max_length=100)
     widget_type = models.CharField(max_length=20, choices=WIDGET_TYPES)
     department = models.ForeignKey(Department, on_delete=models.SET_NULL, null=True, blank=True)
-    position_x = models.PositiveSmallIntegerField(default=0)
-    position_y = models.PositiveSmallIntegerField(default=0) # Координаты расположения виджета на дашборде
+    position_x = models.PositiveSmallIntegerField(default=0,null=True, blank=True)
+    position_y = models.PositiveSmallIntegerField(default=0,null=True,blank=True) # Координаты расположения виджета на дашборде
     width = models.PositiveSmallIntegerField(null=True, blank=True)
     height = models.PositiveSmallIntegerField(null=True, blank=True) #Ширина и высота виджета
     settings = models.JSONField(default=dict,null=True,blank=True) #JSON-поле для хранения дополнительных настроек виджета (фильтры, параметры отображения и т.д.)

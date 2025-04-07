@@ -2,7 +2,7 @@ from django.shortcuts import render
 from bpm.models import *
 from bpm.serializers import (ProcessSerializer,WorkflowStepSerializer,ProcessTemplateSerializer,ProcessStageSerializer,TaskSerializer,
 TaskStageHistorySerializer,ProcessStageTemplateSerializer,AutoTaskRuleSerializer,AttachmentSerializer,
-CommentSerializer,NotificationSerializer,UserDepartmentRoleSerializer,DashboardSerializer,DashboardWidgetSerizalizer
+CommentSerializer,NotificationSerializer,DashboardSerializer,DashboardWidgetSerizalizer
                              )
 from rest_framework.viewsets import ModelViewSet
 # Create your views here.
@@ -41,9 +41,9 @@ class CommentViewSet(ModelViewSet):
 class NotificationViewSet(ModelViewSet):
     queryset = Notification.objects.all()
     serializer_class = NotificationSerializer
-class UserDepartmentRoleViewSet(ModelViewSet):
-    queryset = UserDepartmentRole.objects.all()
-    serializer_class = UserDepartmentRoleSerializer
+# class UserDepartmentRoleViewSet(ModelViewSet):
+#     queryset = UserDepartmentRole.objects.all()
+#     serializer_class = UserDepartmentRoleSerializer
 class DashboardWidgetViewSet(ModelViewSet):
     queryset = DashboardWidget.objects.all()
     serializer_class = DashboardWidgetSerizalizer
