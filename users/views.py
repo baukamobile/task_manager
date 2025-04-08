@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.generics import ListAPIView
-from rest_framework.permissions import IsAuthenticated, IsAdminUser
+from rest_framework.permissions import IsAuthenticated, IsAdminUser,AllowAny
 from rest_framework.views import APIView
 from rest_framework.viewsets import ModelViewSet
 from users.serializers import *
@@ -23,9 +23,10 @@ class UserViewSet(ModelViewSet): #Если рлдбзователь адинTask
     serializer_class = UserSerializer
 #Получение данные о авторизованного пользователя
 @api_view(['GET'])
-# @permission_classes([IsAuthenticated])
-
+@permission_classes([IsAuthenticated])
+# @permission_classes([AllowAny])
 def get_user_info(request): ##функция чтобы получить данные авторизованного пользователя
+    print('Request headers: ',request.headers)
     return Response({
         "id": request.user.id,
         "email": request.user.email,
@@ -132,15 +133,16 @@ class LogoutView(APIView):
 class PositionsViewSet(ModelViewSet):
     queryset = Positions.objects.all()
     serializer_class = PositionsSerializer
+    permission_classes = [AllowAny]
 
 class CompanyViewSet(ModelViewSet):
     queryset = Company.objects.all()
     serializer_class = CompanySerializer
-
+    permission_classes = [AllowAny]
 class DepartmentViewSet(ModelViewSet):
     queryset = Department.objects.all()
     serializer_class = DepartmentSerializer
-
+    permission_classes = [AllowAny]
 
 
 

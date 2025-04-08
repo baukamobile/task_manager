@@ -6,3 +6,18 @@ const.py
 static/
 staticfiles/
 logs/
+
+
+# статика и медиа
+media/
+
+
+# виртуальное окружение
+venv/
+
+# ide файлы
+.idea/
+
+# временные файлы
+__pycache__
+.pytest_cache

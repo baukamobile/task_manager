@@ -24,7 +24,6 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 # Импорт для django-debug-toolbar
 if settings.DEBUG:
     import debug_toolbar
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name="index.html")),
