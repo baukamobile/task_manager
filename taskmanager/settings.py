@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from logging import StreamHandler
 from pathlib import Path
 import os
+from datetime import timedelta
 import environ
 from pathlib import Path
 env = environ.Env()
@@ -64,6 +65,7 @@ INSTALLED_APPS = [
     #пакеты
     'simple_history',
     'rest_framework',
+    'rest_framework_simplejwt',
     "drf_spectacular",
     'corsheaders',
     # "debug_toolbar",
@@ -109,6 +111,12 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
 # CORS_ALLOWED_ORIGINS = ['http://localhost:5173']
 ROOT_URLCONF = 'taskmanager.urls'
 
@@ -190,7 +198,12 @@ USE_I18N = True
 
 USE_TZ = True
 
-
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'ROTATE_REFRESH_TOKENS': False,
+    'BLACKLIST_AFTER_ROTATION': True,
+}
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
