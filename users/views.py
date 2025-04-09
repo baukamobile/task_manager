@@ -18,7 +18,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 logger = logging.getLogger('users')
 
 class UserViewSet(ModelViewSet): #Если рлдбзователь адинTaskViewSet
-    # permission_classes = [IsAdminUser]
+    permission_classes = [IsAuthenticated]
     queryset = User.objects.all()
     serializer_class = UserSerializer
 #Получение данные о авторизованного пользователя
