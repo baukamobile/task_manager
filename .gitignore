@@ -3,5 +3,21 @@ const.py
 
 .env
 
+static/
+staticfiles/
+logs/
 
-logs
+
+# статика и медиа
+media/
+
+
+# виртуальное окружение
+venv/
+
+# ide файлы
+.idea/
+
+# временные файлы
+__pycache__
+.pytest_cache

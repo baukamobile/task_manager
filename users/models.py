@@ -12,15 +12,15 @@ import logging
 from django.contrib.auth.models import Permission
 
 # Create your models here.
-class Roles(models.Model): #роли пользователи
-    role_name = models.CharField(max_length=120)
-    description = models.TextField(null=True,blank=True)
-    # permissions = models.ForeignKey(Permission,on_delete=models.SET_NULL,null=True, blank=True)
-    permissions = models.ManyToManyField(Permission, blank=True)  # Связь с правами Django
-    def __str__(self):
-        return self.role_name
-    class Meta:
-        verbose_name_plural = 'Roles'
+# class Roles(models.Model): #роли пользователи
+#     role_name = models.CharField(max_length=120)
+#     description = models.TextField(null=True,blank=True)
+#     # permissions = models.ForeignKey(Permission,on_delete=models.SET_NULL,null=True, blank=True)
+#     permissions = models.ManyToManyField(Permission, blank=True)  # Связь с правами Django
+#     def __str__(self):
+#         return self.role_name
+#     class Meta:
+#         verbose_name_plural = 'Roles'
 
 class UserCustomManager(BaseUserManager):
     # Указываем, что этот менеджер будет использоваться при миграциях
@@ -95,8 +95,8 @@ class User(AbstractUser):
     status = models.CharField(max_length=50,choices=STATUS_CHOICES, null=True, blank=True)
     position = models.ForeignKey("Positions", on_delete=models.SET_NULL, null=True, blank=True,
                                  related_name="position_employees")
-    role_user = models.ForeignKey(Roles, on_delete=models.SET_NULL, null=True, blank=True,
-                                  related_name='role_employees')
+    # role_user = models.ForeignKey(Roles, on_delete=models.SET_NULL, null=True, blank=True,
+    #                               related_name='role_employees')
     date_of_birth = models.DateField(null=True, blank=True)
     address = models.TextField(null=True, blank=True)
     department = models.ForeignKey("Department", on_delete=models.SET_NULL, null=True, blank=True,related_name='department_employees')
@@ -118,28 +118,28 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.first_name
-    def get_permissions(self):
-        """Возвращает список всех прав, доступных пользователю через его роль"""
-        if self.role_user:
-            return self.role_user.permissions.all()
-        return []
-
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
-        if self.role_user:
-            self.set_permissions_from_role()
-
-    def set_permissions_from_role(self):
-        # права юзер к ролью
-        if self.role_user:
-            self.user_permissions.set(self.role_user.permissions.all())
-    def has_perm(self,perm,obj=None):
-        """Проверяем, есть ли у пользователя право (учитываем роль)"""
-        if self.is_superuser: #если админ возвращаем что он и есть
-            return True
-        if self.role_user: # если не админ возвращаем все его/ее права
-            return self.role_user.permissions.filter(codename=perm).exists()
-        return False
+    # def get_permissions(self):
+    #     """Возвращает список всех прав, доступных пользователю через его роль"""
+    #     if self.role_user:
+    #         return self.role_user.permissions.all()
+    #     return []
+    #
+    # def save(self, *args, **kwargs):
+    #     super().save(*args, **kwargs)
+    #     if self.role_user:
+    #         self.set_permissions_from_role()
+    #
+    # def set_permissions_from_role(self):
+    #     # права юзер к ролью
+    #     if self.role_user:
+    #         self.user_permissions.set(self.role_user.permissions.all())
+    # def has_perm(self,perm,obj=None):
+    #     """Проверяем, есть ли у пользователя право (учитываем роль)"""
+    #     if self.is_superuser: #если админ возвращаем что он и есть
+    #         return True
+    #     if self.role_user: # если не админ возвращаем все его/ее права
+    #         return self.role_user.permissions.filter(codename=perm).exists()
+    #     return False
     class Meta:
         ordering = ['-date_joined']
         verbose_name_plural = 'users'

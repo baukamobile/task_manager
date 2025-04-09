@@ -13,7 +13,7 @@ router.register(r'auto-task-rule',AutoTaskRuleViewSet),
 router.register(r'attachment',AttachmentViewSet),
 router.register(r'comment',CommentViewSet),
 router.register(r'notification',NotificationViewSet),
-router.register(r'user-department-role',UserDepartmentRoleViewSet),
+# router.register(r'user-department-role',UserDepartmentRoleViewSet),
 router.register(r'dashboard',DashboardViewSet),
 router.register(r'dashboard-widget',DashboardWidgetViewSet),
 # admin.site.register(WorkflowStep)

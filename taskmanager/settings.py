@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from logging import StreamHandler
 from pathlib import Path
 import os
+from datetime import timedelta
 import environ
 from pathlib import Path
 env = environ.Env()
@@ -64,9 +65,10 @@ INSTALLED_APPS = [
     #пакеты
     'simple_history',
     'rest_framework',
+    'rest_framework_simplejwt',
     "drf_spectacular",
     'corsheaders',
-    "debug_toolbar",
+    # "debug_toolbar",
     'celery',
     'django_celery_beat',
     'channels',
@@ -75,13 +77,23 @@ INSTALLED_APPS = [
     # 'daphne',
     'django_extensions',
 ]
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+]
+
+CORS_ALLOW_CREDENTIALS = True #работа с куками
 TEST_RUNNER = "django.test.runner.DiscoverRunner"
-# JAZZMIN_UI_TWEAKS = {
-#     "theme": "slate",
-# }
-# INTERNAL_IPS = ['127.0.0.1']
+# ; Надо удалить corss перед pull/push
+#
+# ; CORS_ORIGIN_ALLOW_ALL = True
+# ; CORS_ALLOW_ALL_ORIGINS = True
+# ; CORS_ALLOWED_ORIGINS = [
+# ;     'http://localhost:5173/'
+# ; ]
+# ;
+# ; CORS_ALLOW_CREDENTIALS = True #работа с куками
 
 '''
 cerulean,cosmo ,flatly ,journal ,
@@ -109,7 +121,16 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
-CORS_ALLOWED_ORIGINS = ['http://localhost:5173']
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+'DEFAULT_PERMISSION_CLASSES': (
+   'rest_framework.permissions.AllowAny',
+)
+}
+# CORS_ALLOWED_ORIGINS = ['http://localhost:5173']
 ROOT_URLCONF = 'taskmanager.urls'
 
 TEMPLATES = [
@@ -190,7 +211,12 @@ USE_I18N = True
 
 USE_TZ = True
 
-
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=50),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'ROTATE_REFRESH_TOKENS': False,
+    'BLACKLIST_AFTER_ROTATION': True,
+}
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 

@@ -98,7 +98,7 @@ class LogoutView(APIView):
         respnse.data = {
             "message":"success"
         }
-        return reponse
+        return response
 
 
 

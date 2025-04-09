@@ -52,11 +52,11 @@ class NotificationAdmin(admin.ModelAdmin):
     list_filter = ('user','type','created_at','is_read')
     list_display = ('id', 'user', 'task', 'type','message', 'created_at', 'is_read')
 admin.site.register(Notification,NotificationAdmin)
-class UserDepartmentRoleAdmin(admin.ModelAdmin):
-    list_display = ('user','department','role')
-    list_filter = ('user','department','role')
-
-admin.site.register(UserDepartmentRole,UserDepartmentRoleAdmin)
+# class UserDepartmentRoleAdmin(admin.ModelAdmin):
+#     list_display = ('user','department','role')
+#     list_filter = ('user','department','role')
+#
+# admin.site.register(UserDepartmentRole,UserDepartmentRoleAdmin)
 class DashboardAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'department', 'owner', 'is_public')
     list_filter = ('department', 'owner', 'is_public')

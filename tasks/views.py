@@ -1,5 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated,IsAdminUser,AllowAny
 from rest_framework import status
 import json
 import logging
@@ -16,8 +17,9 @@ class TaskViewSet(ModelViewSet):  # Отдаёт список всех зада�
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
     # logger.info('получение список tasks')
-    # permission_classes = [AllowAny]
-    permission_classes = [AllowAnyForTasks]
+    permission_classes = [AllowAny]
+    # permission_classes = [IsAdminUser]
+    # permission_classes = [AllowAnyForTasks]
     http_method_names = ['get','post','put','patch','delete']
     def create(self, request, *args, **kwargs):
         print("Полученные данные:", json.dumps(request.data, indent=4, ensure_ascii=False))  # ЛОГ ЗАПРОСА
@@ -46,7 +48,7 @@ class TaskViewSet(ModelViewSet):  # Отдаёт список всех зада�
 
 
 class StatusViewSet(ModelViewSet):
-    # permission_classes = [IsAdminUser]
+    permission_classes = [AllowAny]
     queryset = Status.objects.all()
     serializer_class = StatusSerializer
     # logger.info('получение список tasks')
@@ -70,6 +72,7 @@ class StatusViewSet(ModelViewSet):
 class ProjectViewSet(ModelViewSet):
     queryset = Projects.objects.all()
     serializer_class = ProjectSerializer
+    permission_classes = [AllowAny]
 
 #admin panel статиска не закончен нужен frontend vuejs
 # @api_view(['GET'])
