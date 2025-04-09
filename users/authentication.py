@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from rest_framework.exceptions import AuthenticationFailed
+from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.generics import ListAPIView
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.views import APIView
@@ -11,6 +12,7 @@ import jwt
 from django.contrib.auth import authenticate
 from django.conf import settings
 import logging
+from users.models import User
 from users.tasks import send_mail_message,send_mail_to_logged_user
 
 logger = logging.getLogger('users')
@@ -40,69 +42,75 @@ class RegisterView(APIView):
             is_superuser=serializer.validated_data.get('is_superuser', False),
         )
         logger.info(f'Ползователь {user.email} прошел регистрацию успешно')
-
-        send_mail_message.delay(user.id)  # фоновая задача отправки сообщение на эмайл нового ползователя
-        return Response(UserSerializer(user).data)
+        refresh = RefreshToken.for_user(user)
+        # send_mail_message.delay(user.id)  # фоновая задача отправки сообщение на эмайл нового ползователя
+        #Возвращаем даааные вместе с токенами
+        return Response({
+            'user': UserSerializer(user).data,
+            'jwt': str(refresh.access_token),
+            'refresh': str(refresh)
+        })
 
 
 
 class LoginView(APIView):
     def post(self, request):
-        logger.info("Ползователь пытается войти")
-        # print('Ползователь пытается войти')
+        logger.info("Пользователь пытается войти")
         email = request.data.get('email')
         password = request.data.get('password')
 
         if not email or not password:
             logger.warning("Попытка входа без почты и пароля")
-            # print("Попытка входа без почты и пароля")
             raise AuthenticationFailed('Email and password are required')
 
         user = authenticate(username=email, password=password)
         if user is None:
-            logger.warning(f'Неудачный вход {user.email} неверные данные')
-            # print(f'Неудачный вход {user.email} неверные данные')
+            logger.warning(f'Неудачный вход {email} неверные данные')
             raise AuthenticationFailed('Invalid credentials')
 
-        payload = {
-            'id': user.id,
-            'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=90),
-            'iat': datetime.datetime.utcnow()
-        }
+        # Создаем токен с помощью simplejwt
+        refresh = RefreshToken.for_user(user)
+        access_token = str(refresh.access_token)
 
-        SECRET = getattr(settings, 'JWT_SECRET_KEY', settings.SECRET_KEY)
-        token = jwt.encode(payload, SECRET, algorithm='HS256')
-        logger.info(f'Ползователь с {user.email} вошел на сайт {user.id}')
-        # print(f'Ползователь с {user.email} паролем {user.password} вошел на сайт {user.id}')
-        response = Response()
-        response.set_cookie(key='jwt', value=token, httponly=True)
-        response.data = {'jwt': token}
-        logger.info(f'Ползователь с {user.email} вошел на сайт {user.id}')
-        print(f'Ползователь с {user.email} вошел на сайт {user.id}')
-        # periodic_send_mail.delay(user.id) # фоновая задача периодический отправки сообщение на эмайл нового ползователя
-        send_mail_to_logged_user.delay(user.id)
-        return response
+        logger.info(f'Пользователь {user.email} успешно вошел на сайт')
+
+        # Отправляем ответ с токенами
+        return Response({
+            'access': access_token,
+            'refresh': str(refresh)
+        })
 
 
 
 class LogoutView(APIView):
     def post(self,request):
-        token = request.COOKIES.get('jwt')
-        if not token:
-            logger.warning('Пытается выйти без токена')
-            return Response({'error':'unauthenticated'}, status=401)
-        logger.info('Пользователь вышел из системы')
 
-        respnse = Response()
-        respnse.delete_cookie('jwt')
-        respnse.data = {
-            "message":"success"
-        }
-        return response
+        try:
+            refresh_token = request.data.get('refresh')
+            if refresh_token:
+                token = RefreshToken(refresh_token)
+                token.blacklist() #чтобы token больше не работали, даже если ещё живы по сроку.
+            logger.info('Пользователь вышел из системы')
+            return Response({
+                'message': 'Success'
+            },status=200)
+        except Exception as e:
+            logger('Ошибка при выходе из аккаунта: ',str(e))
+            return Response({f'error: ', str(e)}, status=401)
 
 
+class UserProfileView(APIView):
+    permission_classes = [IsAuthenticated]
+    def get(self,request):
+        user = request.user
+        return Response({
+            'id': user.id,
+            'email': user.email,
+            'first_name': user.first_name,
+            'last_name': user.last_name,
+            'is_active': user.is_active,
 
-
+        })
 
 
 

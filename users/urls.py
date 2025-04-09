@@ -2,7 +2,7 @@ from django.urls import path,include
 from users.views import (UserViewSet,
                          PositionsViewSet,
                          CompanyViewSet,DepartmentViewSet)
-from users.authentication import (RegisterView,LoginView, LogoutView)
+from users.authentication import (RegisterView,LoginView, LogoutView,UserProfileView)
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
@@ -17,6 +17,7 @@ urlpatterns = [
     path('api/register/', RegisterView.as_view()),
     path('api/login/',LoginView.as_view()),
     path('api/logout/',LogoutView.as_view()),
+    path('api/me/',UserProfileView.as_view(), name='user-profile')
 ]
 
 
