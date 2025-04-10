@@ -107,7 +107,51 @@ class ProcessStage(models.Model):
     def __str__(self):
         return f"{self.process.name} - {self.name}"
 
-
+    # def move_task(task, new_stage, user):
+    #     current_rule = WorkflowRule.objects.filter(
+    #         process=task.process,
+    #         stages=task.current_stage,
+    #         allowed_position=user.position
+    #     ).first()
+    #     new_rule = WorkflowRule.objects.filter(
+    #         process=task.process,
+    #         stages=new_stage,
+    #         allowed_position=user.position
+    #     ).first()
+    #     if current_rule and new_rule and current_rule == new_rule:
+    #         if new_stage.order > task.current_stage.order:  # Проверяем порядок
+    #             task.current_stage = new_stage
+    #             task.save()
+    #         else:
+    #             raise Exception("Назад нельзя!")
+    #     else:
+    #         raise Exception("Нет прав или правила!")
+    # def move_task(task, new_stage, user):
+    #     current = task.current_stage
+    #     if new_stage.order <= current.order:
+    #         raise Exception("Назад нельзя!")
+    #
+    #     # Если оба этапа ключевые, проверяем правило
+    #     if current.is_key_stage and new_stage.is_key_stage:
+    #         rule = WorkflowRule.objects.filter(
+    #             process=task.process,
+    #             from_step=current,
+    #             to_step=new_stage,
+    #             allowed_position=user.position
+    #         ).first()
+    #         if not rule:
+    #             raise Exception("Нет прав или правила!")
+    #
+    #     # Проверяем, что новый этап следующий по порядку
+    #     next_stage = ProcessStage.objects.filter(
+    #         process=task.process,
+    #         order__gt=current.order
+    #     ).order_by('order').first()
+    #     if next_stage == new_stage:
+    #         task.current_stage = new_stage
+    #         task.save()
+    #     else:
+    #         raise Exception("Скачки запрещены!")
 class Task(models.Model):
     """Задачи (карточки Kanban).
      задачи (карточки Kanban),
