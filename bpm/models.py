@@ -133,6 +133,9 @@ class Task(models.Model):
     assigned_to = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='assigned_tasks')
     created_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='created_tasks')
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='not_started')
+    '''это про внутреннее состояние задачи. На том же этапе "Проверка" она может быть "Не начата" 
+     (лежит мёртвым грузом), "В работе" (кто-то её ковыряет) или 
+     "Заблокирована" (ждёт, пока Вася принесёт документы).'''
     priority = models.CharField(max_length=10, choices=PRIORITY_CHOICES, default='medium')
     due_date = models.DateTimeField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
