@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from bpm.models import (Process,WorkflowStep,ProcessTemplate,ProcessStageTemplate,ProcessStage,
+from bpm.models import (Process,ProcessTemplate,ProcessStageTemplate,ProcessStage,
                         Task,TaskStageHistory,AutoTaskRule,Attachment,
                         Comment,Notification,Dashboard,DashboardWidget)
 
@@ -7,10 +7,10 @@ class ProcessSerializer(serializers.ModelSerializer):
     class Meta:
         model = Process
         fields = '__all__'
-class WorkflowStepSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = WorkflowStep
-        fields = '__all__'
+# class WorkflowStepSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = WorkflowStep
+#         fields = '__all__'
 
 class ProcessTemplateSerializer(serializers.ModelSerializer):
     class Meta:

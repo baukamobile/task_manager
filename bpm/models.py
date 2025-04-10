@@ -6,24 +6,24 @@ from users.models import User,Department,Positions
 # from django.simple_history import History
 # Create your models here.
 
-class WorkflowStep(models.Model):
-    ''' Этапы процессов.
-     модель для определения этапов процесса (шагов рабочего потока).
-     '''
-    process = models.ForeignKey('Process', on_delete=models.CASCADE, related_name='steps',null=True,blank=True)
-    name = models.CharField(max_length=255)
-    order = models.PositiveIntegerField()  # Определяет порядок этапов
-    requires_approval = models.BooleanField(default=False)  # Нужен ли ручной контроль
-    responsible_position = models.ForeignKey(Positions,on_delete=models.SET_NULL,null=True,blank=True,related_name="steps")
-    assigned_to = models.ForeignKey(User, on_delete=models.SET_NULL,null=True,blank=True,related_name="assigned_steps") # Кто сейчас выполняет процесс
-    def __str__(self):
-        return f"{self.process.name} - {self.name}"
+# class WorkflowStep(models.Model):
+#     ''' Этапы процессов.
+#      модель для определения этапов процесса (шагов рабочего потока).
+#      '''
+#     process = models.ForeignKey('Process', on_delete=models.CASCADE, related_name='steps',null=True,blank=True)
+#     name = models.CharField(max_length=255)
+#     order = models.PositiveIntegerField()  # Определяет порядок этапов
+#     requires_approval = models.BooleanField(default=False)  # Нужен ли ручной контроль
+#     responsible_position = models.ForeignKey(Positions,on_delete=models.SET_NULL,null=True,blank=True,related_name="steps")
+#     assigned_to = models.ForeignKey(User, on_delete=models.SET_NULL,null=True,blank=True,related_name="assigned_steps") # Кто сейчас выполняет процесс
+#     def __str__(self):
+#         return f"{self.process.name} - {self.name}"
 
 class WorkflowRule(models.Model):
     '''Правила переходов между этапами '''
     process = models.ForeignKey('Process',on_delete=models.CASCADE,related_name="rules")
-    from_step = models.ForeignKey(WorkflowStep, on_delete=models.CASCADE, related_name='transitions_from')
-    to_step = models.ForeignKey(WorkflowStep, on_delete=models.CASCADE,related_name="transitions_to")
+    from_step = models.ForeignKey('ProcessStage', on_delete=models.CASCADE, related_name='transitions_from')
+    to_step = models.ForeignKey('ProcessStage', on_delete=models.CASCADE,related_name="transitions_to")
     allowed_position = models.ForeignKey(Positions, on_delete=models.CASCADE)  # Кто может менять статус
     def __str__(self):
         return f"{self.from_step} → {self.to_step} ({self.allowed_position})"
@@ -47,13 +47,13 @@ class ProcessStageTemplate(models.Model):
      шаблоны этапов для каждого шаблона бизнес-процесса.
      Содержат информацию о порядке, критериях завершения и SLA (часы на выполнение).
     """
-    template = models.ForeignKey(ProcessTemplate, on_delete=models.CASCADE, related_name='stages')
+    template = models.ForeignKey(ProcessTemplate,null=True,blank=True, on_delete=models.CASCADE, related_name='stages')
     name = models.CharField(max_length=200)
     description = models.TextField(blank=True, null=True)
     order = models.PositiveIntegerField()
     is_required = models.BooleanField(default=True)  # нельзя пропустить этап
     completion_criteria = models.TextField(blank=True, null=True)  # условия для завершения этапа
-    sla_hours = models.PositiveIntegerField(default=24)  # часы на выполнение этапа
+    sla_hours = models.PositiveIntegerField(default=24)  # SLA (Service Level Agreement — соглашение об уровне обслуживания
 
     class Meta:
         ordering = ['order']
@@ -66,7 +66,7 @@ class Process(models.Model):
      конкретные экземпляры бизнес-процессов, которые работают как Kanban-доски.
       Могут быть созданы на основе шаблонов, иметь владельца и принадлежать определенному отделу.
     """
-    template = models.ForeignKey(ProcessTemplate, on_delete=models.SET_NULL, null=True, related_name='processes')
+    template = models.ForeignKey(ProcessTemplate, on_delete=models.SET_NULL, null=True,blank=True, related_name='processes')
     name = models.CharField(max_length=200)
     description = models.TextField(blank=True, null=True)
     owner = models.ForeignKey(User, on_delete=models.CASCADE,null=True,blank=True, related_name='owned_processes')
@@ -76,6 +76,8 @@ class Process(models.Model):
     is_completed = models.BooleanField(default=False)
     is_recurring = models.BooleanField(default=False)  # повторяющийся процесс
     recurring_interval = models.CharField(max_length=50, blank=True, null=True)  # cron-выражение для повторения
+    #Когда поле is_recurring установлено как True, поле
+    # recurring_interval содержит cron-выражение, которое описывает, как часто должен повторяться этот бизнес-процесс.
     def __str__(self):
         return self.name
     class Meta:
@@ -91,14 +93,15 @@ class ProcessStage(models.Model):
      этапы конкретного бизнес-процесса (колонки Kanban-доски). Могут быть созданы на основе шаблонов этапов.
     """
     process = models.ForeignKey(Process, on_delete=models.CASCADE, related_name='stages')
-    template_stage = models.ForeignKey(ProcessStageTemplate, on_delete=models.SET_NULL, null=True)
+    template_stage = models.ForeignKey(ProcessStageTemplate, on_delete=models.SET_NULL, null=True,blank=True)
     name = models.CharField(max_length=200)
     description = models.TextField(blank=True, null=True)
     order = models.PositiveIntegerField()
     is_required = models.BooleanField(default=True)
     completion_criteria = models.TextField(blank=True, null=True)
-    sla_hours = models.PositiveIntegerField(default=24)
+    sla_hours = models.PositiveIntegerField(default=24) #SLA (Service Level Agreement — соглашение об уровне обслуживания
     is_custom = models.BooleanField(default=False)  # кастомный этап или из шаблона
+    is_key_stage = models.BooleanField(default=False)  # Ключевой этап или промежуточный
     class Meta:
         ordering = ['order']
     def __str__(self):
@@ -223,24 +226,6 @@ class Notification(models.Model):
 
     def __str__(self):
         return f"Notification for {self.user}: {self.message[:30]}..."
-# class UserDepartmentRole(models.Model):
-#     """Роли пользователей в отделах. Роли пользователей в отделах (руководитель, сотрудник, наблюдатель)."""
-#     ROLE_CHOICES = [
-#         ('head', 'Руководитель отдела'),
-#         ('member', 'Сотрудник отдела'),
-#         ('viewer', 'Наблюдатель'),
-#     ]
-#
-#     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='department_roles')
-#     department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='user_roles',null=True, blank=True)
-#     role = models.CharField(max_length=20, choices=ROLE_CHOICES, default='member')
-#
-#     class Meta:
-#         unique_together = ('user', 'department')
-#
-#     def __str__(self):
-#         return f"{self.user.first_name} - {self.department} - {self.get_role_display()}"
-
 
 class Dashboard(models.Model):
     """Дашборды для руководства. Модели для создания информационных
@@ -275,3 +260,21 @@ class DashboardWidget(models.Model):
 
     def __str__(self):
         return f"{self.title} on {self.dashboard.name}"
+
+    # class UserDepartmentRole(models.Model):
+    #     """Роли пользователей в отделах. Роли пользователей в отделах (руководитель, сотрудник, наблюдатель)."""
+    #     ROLE_CHOICES = [
+    #         ('head', 'Руководитель отдела'),
+    #         ('member', 'Сотрудник отдела'),
+    #         ('viewer', 'Наблюдатель'),
+    #     ]
+    #
+    #     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='department_roles')
+    #     department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='user_roles',null=True, blank=True)
+    #     role = models.CharField(max_length=20, choices=ROLE_CHOICES, default='member')
+    #
+    #     class Meta:
+    #         unique_together = ('user', 'department')
+    #
+    #     def __str__(self):
+    #         return f"{self.user.first_name} - {self.department} - {self.get_role_display()}"

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from bpm.models import *
-from bpm.serializers import (ProcessSerializer,WorkflowStepSerializer,ProcessTemplateSerializer,ProcessStageSerializer,TaskSerializer,
+from bpm.serializers import (ProcessSerializer,ProcessTemplateSerializer,ProcessStageSerializer,TaskSerializer,
 TaskStageHistorySerializer,ProcessStageTemplateSerializer,AutoTaskRuleSerializer,AttachmentSerializer,
 CommentSerializer,NotificationSerializer,DashboardSerializer,DashboardWidgetSerizalizer
                              )
@@ -10,9 +10,9 @@ class ProcessViewSet(ModelViewSet):
     queryset = Process.objects.all()
     serializer_class = ProcessSerializer
 
-class WorkflowStepViewSet(ModelViewSet):
-    queryset = WorkflowStep.objects.all()
-    serializer_class = WorkflowStepSerializer
+# class WorkflowStepViewSet(ModelViewSet):
+#     queryset = WorkflowStep.objects.all()
+#     serializer_class = WorkflowStepSerializer
 
 class ProcessTemplateViewSet(ModelViewSet):
     queryset = ProcessTemplate.objects.all()

@@ -3,7 +3,7 @@ from rest_framework.routers import DefaultRouter
 from bpm.views import *
 router = DefaultRouter()
 router.register(r'process',ProcessViewSet),
-router.register(r'workflow',WorkflowStepViewSet),
+# router.register(r'workflow',WorkflowStepViewSet),
 router.register(r'process-template',ProcessTemplateViewSet),
 router.register(r'process-stage-template',ProcessStageTemplateViewSet),
 router.register(r'process-stage',ProcessStageViewSet),

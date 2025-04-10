@@ -4,7 +4,7 @@ import logging
 # from django.contrib.auth.models import User
 from users.models import Positions, Company, Department #Roles,
 from tasks.models import Task,Projects,Priority,Task_comments,Status
-from bpm.models import (Process,WorkflowStep,ProcessTemplate,ProcessStageTemplate,ProcessStage,
+from bpm.models import (Process,ProcessTemplate,ProcessStageTemplate,ProcessStage,
                         Task as bpmTask,TaskStageHistory,AutoTaskRule,Attachment,
                         Comment,Notification,Dashboard,DashboardWidget)
 from users.models import User

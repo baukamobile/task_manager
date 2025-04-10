@@ -7,11 +7,11 @@ from bpm.models import *
 
 
 
-class WorkflowStepAdmin(admin.ModelAdmin):
-    list_display = ('id', 'process', 'name', 'order','requires_approval','responsible_position')
-    list_filter = ('process', 'order','requires_approval')
-    search_fields = ('name', 'process__name')
-admin.site.register(WorkflowStep,WorkflowStepAdmin)
+# class WorkflowStepAdmin(admin.ModelAdmin):
+#     list_display = ('id', 'process', 'name', 'order','requires_approval','responsible_position')
+#     list_filter = ('process', 'order','requires_approval')
+#     search_fields = ('name', 'process__name')
+# admin.site.register(WorkflowStep,WorkflowStepAdmin)
 
 class ProcessAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'template', 'created_at')
@@ -32,6 +32,10 @@ class TaskAdmin(admin.ModelAdmin):
     list_display = ('id', 'process', 'current_stage', 'title', 'description', 'assigned_to', 'created_by','status', 'priority', 'due_date', 'created_at', 'updated_at')
     list_filter = ('process','current_stage','assigned_to','created_by','created_at','due_date','updated_at')
 admin.site.register(Task,TaskAdmin)
+class ProcessStageAdmin(admin.ModelAdmin):
+    list_display = ('id','process','template_stage','name','description','order','is_required','completion_criteria','sla_hours','is_custom')
+    list_filter = ('id','process','template_stage','name','description','order','is_required','completion_criteria','sla_hours','is_custom')
+admin.site.register(ProcessStage,ProcessStageAdmin)
 class TaskStageHistoryAdmin(admin.ModelAdmin):
     list_display = ('id', 'task', 'from_stage', 'to_stage', 'changed_by', 'changed_at', 'comments')
     list_filter = ('task', 'from_stage', 'to_stage', 'changed_by', 'changed_at')
@@ -66,3 +70,8 @@ class DashboardWidgetAdmin(admin.ModelAdmin):
     list_display = ('id', 'dashboard', 'title', 'widget_type', 'department', 'position_x', 'position_y', 'width', 'height')
     list_filter = ('dashboard', 'department', 'widget_type')
 admin.site.register(DashboardWidget,DashboardWidgetAdmin)
+
+class WorkflowRuleAdmin(admin.ModelAdmin):
+    list_display =('id','from_step','to_step','allowed_position')
+    list_filter = ('id','from_step','to_step','allowed_position')
+admin.site.register(WorkflowRule,WorkflowRuleAdmin)
