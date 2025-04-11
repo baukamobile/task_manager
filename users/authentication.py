@@ -95,7 +95,7 @@ class LogoutView(APIView):
                 'message': 'Success'
             },status=200)
         except Exception as e:
-            logger('Ошибка при выходе из аккаунта: ',str(e))
+            logger(f'Ошибка при выходе из аккаунта: ,{str(e)}')
             return Response({f'error: ', str(e)}, status=401)
 
 

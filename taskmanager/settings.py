@@ -24,6 +24,7 @@ environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # import os
 
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # путь до корня проекта
@@ -133,14 +134,16 @@ REST_FRAMEWORK = {
 }
 # CORS_ALLOWED_ORIGINS = ['http://localhost:5173']
 ROOT_URLCONF = 'taskmanager.urls'
-
+VUE_PATH = os.path.join(BASE_DIR,'static','vue','dist')
+print(f'Путь к vue file',(os.path.exists(VUE_PATH)))
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            os.path.join(BASE_DIR, 'templates'),
-                 # os.path.join(BASE_DIR, 'tasks',),
-                 os.path.join(BASE_DIR, 'static', 'vue', 'dist')],
+        'DIRS': [VUE_PATH],
+        # [
+        #     os.path.join(BASE_DIR, 'templates'),
+        #          # os.path.join(BASE_DIR, 'tasks',),
+        #          os.path.join(BASE_DIR, 'static', 'vue', 'dist')],
         #'dashboard','templates',
         'APP_DIRS': True,
         'OPTIONS': {
@@ -214,7 +217,7 @@ USE_TZ = True
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=120),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
     'ROTATE_REFRESH_TOKENS': False,
     'BLACKLIST_AFTER_ROTATION': True,
 }
@@ -222,6 +225,7 @@ SIMPLE_JWT = {
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 LOG_DIR = BASE_DIR / 'logs'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
