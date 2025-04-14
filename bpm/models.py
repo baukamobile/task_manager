@@ -6,19 +6,6 @@ from users.models import User,Department,Positions
 # from django.simple_history import History
 # Create your models here.
 
-# class WorkflowStep(models.Model):
-#     ''' Этапы процессов.
-#      модель для определения этапов процесса (шагов рабочего потока).
-#      '''
-#     process = models.ForeignKey('Process', on_delete=models.CASCADE, related_name='steps',null=True,blank=True)
-#     name = models.CharField(max_length=255)
-#     order = models.PositiveIntegerField()  # Определяет порядок этапов
-#     requires_approval = models.BooleanField(default=False)  # Нужен ли ручной контроль
-#     responsible_position = models.ForeignKey(Positions,on_delete=models.SET_NULL,null=True,blank=True,related_name="steps")
-#     assigned_to = models.ForeignKey(User, on_delete=models.SET_NULL,null=True,blank=True,related_name="assigned_steps") # Кто сейчас выполняет процесс
-#     def __str__(self):
-#         return f"{self.process.name} - {self.name}"
-
 class WorkflowRule(models.Model):
     '''Правила переходов между этапами '''
     process = models.ForeignKey('Process',on_delete=models.CASCADE,related_name="rules")
@@ -308,20 +295,56 @@ class DashboardWidget(models.Model):
     def __str__(self):
         return f"{self.title} on {self.dashboard.name}"
 
-    # class UserDepartmentRole(models.Model):
-    #     """Роли пользователей в отделах. Роли пользователей в отделах (руководитель, сотрудник, наблюдатель)."""
-    #     ROLE_CHOICES = [
-    #         ('head', 'Руководитель отдела'),
-    #         ('member', 'Сотрудник отдела'),
-    #         ('viewer', 'Наблюдатель'),
-    #     ]
-    #
-    #     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='department_roles')
-    #     department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='user_roles',null=True, blank=True)
-    #     role = models.CharField(max_length=20, choices=ROLE_CHOICES, default='member')
-    #
-    #     class Meta:
-    #         unique_together = ('user', 'department')
-    #
-    #     def __str__(self):
-    #         return f"{self.user.first_name} - {self.department} - {self.get_role_display()}"
+
+class ProcessElement(models.Model):
+    """Визуальные элементы на диаграмме процесса (start event, task, end event и т.д.)"""
+    ELEMENT_TYPES = [
+        ('start_event', 'Начальное событие'),
+        ('end_event', 'Конечное событие'),
+        ('task', 'Задача'),
+        # Можно позже добавить другие типы: 'gateway', 'parallel_task' и т.д.
+    ]
+
+    process = models.ForeignKey(Process, on_delete=models.CASCADE, related_name='elements')
+    element_type = models.CharField(max_length=20, choices=ELEMENT_TYPES)
+    name = models.CharField(max_length=200)
+    description = models.TextField(blank=True, null=True)
+    position_x = models.IntegerField(default=0)  # Координаты на диаграмме
+    position_y = models.IntegerField(default=0)
+    assigned_role = models.ForeignKey(Positions, on_delete=models.SET_NULL, null=True, blank=True)  # Кто выполняет
+    stage = models.ForeignKey(ProcessStage, on_delete=models.SET_NULL, null=True, blank=True, related_name='elements')
+
+    def __str__(self):
+        return f"{self.get_element_type_display()}: {self.name}"
+
+class ElementConnection(models.Model):
+    """Связи между элементами процесса (стрелки на диаграмме)"""
+    source = models.ForeignKey(ProcessElement, on_delete=models.CASCADE, related_name='outgoing_connections')
+    target = models.ForeignKey(ProcessElement, on_delete=models.CASCADE, related_name='incoming_connections')
+    label = models.CharField(max_length=100, blank=True, null=True)  # Подпись на стрелке
+    condition = models.TextField(blank=True, null=True)  # Условие перехода (для будущего использования)
+
+    def __str__(self):
+        return f"{self.source.name} → {self.target.name}"
+
+class ProcessExecution(models.Model):
+    """Экземпляр выполнения процесса"""
+    process = models.ForeignKey(Process, on_delete=models.CASCADE, related_name='executions')
+    started_at = models.DateTimeField(auto_now_add=True)
+    completed_at = models.DateTimeField(null=True, blank=True)
+    current_element = models.ForeignKey(ProcessElement, on_delete=models.SET_NULL, null=True, related_name='executions')
+    status = models.CharField(max_length=20, default='active', choices=[
+        ('active', 'Активен'),
+        ('completed', 'Завершен'),
+        ('terminated', 'Прерван'),
+    ])
+
+    def __str__(self):
+        return f"Execution of {self.process.name} ({self.status})"
+
+
+
+
+
+
+

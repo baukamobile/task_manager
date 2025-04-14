@@ -163,7 +163,8 @@ class Positions(models.Model):
     class Meta:
         verbose_name_plural='Positions'
     def __str__(self):
-        return f'{self.position_name, self.department}'
+        return f'{self.position_name} ({self.department or "без отдела"})'
+
 
 class ActiveDepartmentManager(models.Manager):
     def get_queryset(self):

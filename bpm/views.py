@@ -1,8 +1,10 @@
+from idlelib.multicall import MC_DESTROY
+
 from django.shortcuts import render
 from bpm.models import *
 from bpm.serializers import (ProcessSerializer,ProcessTemplateSerializer,ProcessStageSerializer,TaskSerializer,
 TaskStageHistorySerializer,ProcessStageTemplateSerializer,AutoTaskRuleSerializer,AttachmentSerializer,
-CommentSerializer,NotificationSerializer,DashboardSerializer,DashboardWidgetSerizalizer
+CommentSerializer,NotificationSerializer,DashboardSerializer,DashboardWidgetSerizalizer,ProcessElementSerializer,ElementConnectionSerializer,ProcessExecutionSerializer
                              )
 from rest_framework.viewsets import ModelViewSet
 # Create your views here.
@@ -50,6 +52,16 @@ class DashboardWidgetViewSet(ModelViewSet):
 class DashboardViewSet(ModelViewSet):
     queryset = Dashboard.objects.all()
     serializer_class = DashboardSerializer
+
+class ProcessElementViewSet(ModelViewSet):
+    queryset = ProcessElement.objects.all()
+    serializer_class = ProcessElementSerializer
+class ElementConnectionViewSet(ModelViewSet):
+    queryset = ElementConnection.objects.all()
+    serializer_class = ElementConnectionSerializer
+class ProcessExecutionViewSet(ModelViewSet):
+    queryset = ProcessExecution.objects.all()
+    serializer_class = ProcessExecutionSerializer
 
 
 

@@ -75,3 +75,16 @@ class WorkflowRuleAdmin(admin.ModelAdmin):
     list_display =('id','from_step','to_step','allowed_position')
     list_filter = ('id','from_step','to_step','allowed_position')
 admin.site.register(WorkflowRule,WorkflowRuleAdmin)
+
+class ProcessElementAdmin(admin.ModelAdmin):
+    list_display = ('id','process','element_type','name','description','position_x','position_y')
+    list_filter = ('id','process','element_type','name','description','position_x','position_y')
+admin.site.register(ProcessElement,ProcessElementAdmin)
+class ElementConnectionAdmin(admin.ModelAdmin):
+    list_display = ('id','source','target','label','condition')
+admin.site.register(ElementConnection,ElementConnectionAdmin)
+class ProcessExecutionAdmin(admin.ModelAdmin):
+    list_display = ('id','process','started_at','completed_at','current_element','status')
+admin.site.register(ProcessExecution,ProcessExecutionAdmin)
+
+

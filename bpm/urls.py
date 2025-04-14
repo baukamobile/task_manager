@@ -16,22 +16,12 @@ router.register(r'notification',NotificationViewSet),
 # router.register(r'user-department-role',UserDepartmentRoleViewSet),
 router.register(r'dashboard',DashboardViewSet),
 router.register(r'dashboard-widget',DashboardWidgetViewSet),
+router.register(r'process-element',ProcessElementViewSet),
+router.register(r'element-connection',ElementConnectionViewSet),
+router.register(r'process-execution',ProcessExecutionViewSet)
+
 # admin.site.register(WorkflowStep)
 
 urlpatterns = [
     path('',include(router.urls)),
 ]
-# admin.site.register(WorkflowStep)
-# admin.site.register(ProcessTemplate)
-# admin.site.register(ProcessStageTemplate)
-# admin.site.register(Process)
-# admin.site.register(ProcessStage)
-# admin.site.register(Task)
-# admin.site.register(TaskStageHistory)
-# admin.site.register(AutoTaskRule)
-# admin.site.register(Attachment)
-# admin.site.register(Comment)
-# admin.site.register(Notification)
-# admin.site.register(UserDepartmentRole)
-# admin.site.register(Dashboard)
-# admin.site.register(DashboardWidget)
