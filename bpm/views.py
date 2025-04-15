@@ -66,6 +66,7 @@ class ProcessElementViewSet(ModelViewSet):
 class ElementConnectionViewSet(ModelViewSet):
     queryset = ElementConnection.objects.all()
     serializer_class = ElementConnectionSerializer
+    serializer_class = ElementConnectionSerializer
 class ProcessExecutionViewSet(ModelViewSet):
     queryset = ProcessExecution.objects.all()
     serializer_class = ProcessExecutionSerializer
