@@ -18,7 +18,8 @@ router.register(r'dashboard',DashboardViewSet),
 router.register(r'dashboard-widget',DashboardWidgetViewSet),
 router.register(r'process-element',ProcessElementViewSet),
 router.register(r'element-connection',ElementConnectionViewSet),
-router.register(r'process-execution',ProcessExecutionViewSet)
+router.register(r'process-execution',ProcessExecutionViewSet),
+router.register(r'xml-process',BpmXmlProcessViewSet),
 
 # admin.site.register(WorkflowStep)
 

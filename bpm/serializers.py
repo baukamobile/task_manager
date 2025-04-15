@@ -1,16 +1,12 @@
 from rest_framework import serializers
 from bpm.models import (Process,ProcessTemplate,ProcessStageTemplate,ProcessStage,
                         Task,TaskStageHistory,AutoTaskRule,Attachment,
-                        Comment,Notification,Dashboard,DashboardWidget,ProcessElement,ElementConnection,ProcessExecution)
-
-class ProcessSerializer(serializers.ModelSerializer):
+                        Comment,Notification,Dashboard,DashboardWidget,
+                        ProcessElement,ElementConnection,ProcessExecution,BpmnXmlProcess)
+class BpmnXmlProcessSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Process
+        model = BpmnXmlProcess
         fields = '__all__'
-# class WorkflowStepSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = WorkflowStep
-#         fields = '__all__'
 
 class ProcessTemplateSerializer(serializers.ModelSerializer):
     class Meta:
@@ -69,7 +65,18 @@ class ProcessExecutionSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProcessExecution
         fields = '__all__'
+class ProcessSerializer(serializers.ModelSerializer):
+    # bpmn_xml = BpmnXmlProcessSerializer()
 
+    class Meta:
+        model = Process
+        fields = '__all__'
+
+    # def to_representation(self, instance):
+    #     """Чтобы в ответе возвращались вложенные данные"""
+    #     data = super().to_representation(instance)
+    #     data['bpmn_xml'] = BpmnXmlProcessSerializer(instance.bpmn_xml).data if instance.bpmn_xml else None
+    #     return data
 
 
 

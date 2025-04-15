@@ -2,11 +2,18 @@ from idlelib.multicall import MC_DESTROY
 
 from django.shortcuts import render
 from bpm.models import *
-from bpm.serializers import (ProcessSerializer,ProcessTemplateSerializer,ProcessStageSerializer,TaskSerializer,
-TaskStageHistorySerializer,ProcessStageTemplateSerializer,AutoTaskRuleSerializer,AttachmentSerializer,
-CommentSerializer,NotificationSerializer,DashboardSerializer,DashboardWidgetSerizalizer,ProcessElementSerializer,ElementConnectionSerializer,ProcessExecutionSerializer
+from bpm.serializers import (ProcessSerializer, ProcessTemplateSerializer, ProcessStageSerializer, TaskSerializer,
+                             TaskStageHistorySerializer, ProcessStageTemplateSerializer, AutoTaskRuleSerializer,
+                             AttachmentSerializer,
+                             CommentSerializer, NotificationSerializer, DashboardSerializer, DashboardWidgetSerizalizer,
+                             ProcessElementSerializer, ElementConnectionSerializer, ProcessExecutionSerializer,
+                             BpmnXmlProcessSerializer
                              )
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.decorators import api_view
+from rest_framework import status
+from django.views.decorators.csrf import csrf_exempt
+from rest_framework.response import Response
 # Create your views here.
 class ProcessViewSet(ModelViewSet):
     queryset = Process.objects.all()
@@ -63,5 +70,11 @@ class ProcessExecutionViewSet(ModelViewSet):
     queryset = ProcessExecution.objects.all()
     serializer_class = ProcessExecutionSerializer
 
-
-
+class BpmXmlProcessViewSet(ModelViewSet):
+    queryset = BpmnXmlProcess.objects.all()
+    serializer_class = BpmnXmlProcessSerializer
+    @csrf_exempt
+    def create(self, request, *args, **kwargs):
+        xml = request.data.get('xml')
+        instance = BpmnXmlProcess.objects.create(xml=xml)
+        return Response({'status': 'ok', 'id': instance.id}, status=status.HTTP_201_CREATED)

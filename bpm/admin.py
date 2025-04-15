@@ -87,4 +87,6 @@ class ProcessExecutionAdmin(admin.ModelAdmin):
     list_display = ('id','process','started_at','completed_at','current_element','status')
 admin.site.register(ProcessExecution,ProcessExecutionAdmin)
 
-
+class BpmnXmlProcessAdmin(admin.ModelAdmin):
+    list_display = ('id','xml')
+admin.site.register(BpmnXmlProcess,BpmnXmlProcessAdmin)
