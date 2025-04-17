@@ -23,7 +23,7 @@ class UserViewSet(ModelViewSet): #Если рлдбзователь адинTask
     serializer_class = UserSerializer
 #Получение данные о авторизованного пользователя
 @api_view(['GET'])
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 # @permission_classes([AllowAny])
 def get_user_info(request): ##функция чтобы получить данные авторизованного пользователя
     print('Request headers: ',request.headers)
@@ -54,16 +54,16 @@ def get_tokens_for_user(user): #тестовая функция
 class PositionsViewSet(ModelViewSet):
     queryset = Positions.objects.all()
     serializer_class = PositionsSerializer
-    permission_classes = [AllowAny]
+    # permission_classes = [AllowAny]
 
 class CompanyViewSet(ModelViewSet):
     queryset = Company.objects.all()
     serializer_class = CompanySerializer
-    permission_classes = [AllowAny]
+    # permission_classes = [AllowAny]
 class DepartmentViewSet(ModelViewSet):
     queryset = Department.objects.all()
     serializer_class = DepartmentSerializer
-    permission_classes = [AllowAny]
+    # permission_classes = [AllowAny]
 
 
 

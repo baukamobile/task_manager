@@ -1,8 +1,11 @@
+from email.policy import default
+
 from django.db import models
 from users.models import Department,User
 from django.db import models
 from django.utils import timezone
 from users.models import User,Department,Positions
+import xml
 # from django.simple_history import History
 # Create your models here.
 
@@ -68,6 +71,14 @@ class Process(models.Model):
     # recurring_interval содержит cron-выражение, которое описывает, как часто должен повторяться этот бизнес-процесс.
     def __str__(self):
         return self.name
+    def save(self,*args,**kwargs):
+        '''При создании процесса
+        автоматический создается новый пустой bpmn xml чтобы когда пользователь меняет диаграмму не исчезло данные'''
+        if not self.bpmn_xml:
+            xml_obj = BpmnXmlProcess.objects.create()
+            self.bpmn_xml = xml_obj
+        super().save(*args,**kwargs)
+
     class Meta:
         permissions = [
             ('start_process','Может запускать процесс'),
@@ -169,7 +180,7 @@ class Task(models.Model):
      (лежит мёртвым грузом), "В работе" (кто-то её ковыряет) или 
      "Заблокирована" (ждёт, пока Вася принесёт документы).'''
     priority = models.CharField(max_length=10, choices=PRIORITY_CHOICES, default='medium')
-    due_date = models.DateTimeField(null=True, blank=True)
+    due_date = models.DateTimeField(null=True, blank=True) # дедлайн
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     parent_task = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True, related_name='subtasks')
@@ -343,8 +354,10 @@ class ProcessExecution(models.Model):
     def __str__(self):
         return f"Execution of {self.process.name} ({self.status})"
 
+def empty_xml():
+        return '<?xml version="1.0" encoding="UTF-8"?> <bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn"> <bpmn:process id="Process_1" isExecutable="true"> </bpmn:process> <bpmndi:BPMNDiagram id="BPMNDiagram_1"> <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1"> </bpmndi:BPMNPlane> </bpmndi:BPMNDiagram> </bpmn:definitions>'
 class BpmnXmlProcess(models.Model):
-    xml = models.TextField(null=True)
+    xml = models.TextField(default=empty_xml)
 
 
 

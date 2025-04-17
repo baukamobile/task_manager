@@ -10,18 +10,17 @@ from bpm.serializers import (ProcessSerializer, ProcessTemplateSerializer, Proce
                              BpmnXmlProcessSerializer
                              )
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.permissions import AllowAny
 from rest_framework.decorators import api_view
 from rest_framework import status
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.response import Response
+
 # Create your views here.
 class ProcessViewSet(ModelViewSet):
     queryset = Process.objects.all()
     serializer_class = ProcessSerializer
-
-# class WorkflowStepViewSet(ModelViewSet):
-#     queryset = WorkflowStep.objects.all()
-#     serializer_class = WorkflowStepSerializer
+    permission_classes = [AllowAny]
 
 class ProcessTemplateViewSet(ModelViewSet):
     queryset = ProcessTemplate.objects.all()
@@ -66,7 +65,7 @@ class ProcessElementViewSet(ModelViewSet):
 class ElementConnectionViewSet(ModelViewSet):
     queryset = ElementConnection.objects.all()
     serializer_class = ElementConnectionSerializer
-    serializer_class = ElementConnectionSerializer
+    # serializer_class = ElementConnectionSerializer
 class ProcessExecutionViewSet(ModelViewSet):
     queryset = ProcessExecution.objects.all()
     serializer_class = ProcessExecutionSerializer

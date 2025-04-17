@@ -21,3 +21,4 @@ venv/
 # временные файлы
 __pycache__
 .pytest_cache
+# python manage.py graph_models -a -o my_er_diagram.pn
