@@ -88,5 +88,5 @@ class ProcessExecutionAdmin(admin.ModelAdmin):
 admin.site.register(ProcessExecution,ProcessExecutionAdmin)
 
 class BpmnXmlProcessAdmin(admin.ModelAdmin):
-    list_display = ('id','xml')
+    list_display = ('id',)
 admin.site.register(BpmnXmlProcess,BpmnXmlProcessAdmin)
