@@ -56,17 +56,24 @@ class Process(models.Model):
      конкретные экземпляры бизнес-процессов, которые работают как Kanban-доски.
       Могут быть созданы на основе шаблонов, иметь владельца и принадлежать определенному отделу.
     """
-    template = models.ForeignKey(ProcessTemplate, on_delete=models.SET_NULL, null=True,blank=True, related_name='processes')
+    STATUS_CHOICES = [
+        ('pending', 'Ожидает'),
+        ('running', 'Выполняется'),
+        ('completed', 'Завершён'),
+    ]
+    # template = models.ForeignKey(ProcessTemplate, on_delete=models.SET_NULL, null=True,blank=True, related_name='processes')
     name = models.CharField(max_length=200)
     description = models.TextField(blank=True, null=True)
     owner = models.ForeignKey(User, on_delete=models.CASCADE,null=True,blank=True, related_name='owned_processes')
     department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='processes',null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    current_task = models.ForeignKey('Task',on_delete=models.SET_NULL,null=True,blank=True, related_name='tasks')
     bpmn_xml = models.ForeignKey('BpmnXmlProcess', null=True,blank=True, on_delete=models.SET_NULL,related_name='processes')
-    is_completed = models.BooleanField(default=False)
-    is_recurring = models.BooleanField(default=False)  # повторяющийся процесс
-    recurring_interval = models.CharField(max_length=50, blank=True, null=True)  # cron-выражение для повторения
+    # is_completed = models.BooleanField(default=False)
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='not_started')
+    # is_recurring = models.BooleanField(default=False)  # повторяющийся процесс
+    # recurring_interval = models.CharField(max_length=50, blank=True, null=True)  # cron-выражение для повторения
     #Когда поле is_recurring установлено как True, поле
     # recurring_interval содержит cron-выражение, которое описывает, как часто должен повторяться этот бизнес-процесс.
     def __str__(self):
@@ -169,21 +176,31 @@ class Task(models.Model):
         ('high', 'Высокий'),
         ('urgent', 'Срочный'),
     ]
+    RETURN_REASON = [
+        ('incorrect_execution', 'Неправильное выполнение'),
+        ('deadline_ignored', 'Нарушен срок выполнения'),
+        ('not_what_was_requested', 'Сделано не то, что просили'),
+        ('missing_data', 'Отсутствуют данные или документы'),
+        ('approval_failed', 'Не прошло согласование'),
+        ('incomplete_task', 'Задача выполнена не полностью'),
+    ]
     process = models.ForeignKey(Process, on_delete=models.CASCADE, related_name='tasks')
-    current_stage = models.ForeignKey(ProcessStage, on_delete=models.CASCADE, related_name='tasks')
+    # current_stage = models.ForeignKey(ProcessStage, on_delete=models.CASCADE,null=True,blank=True, related_name='tasks')
     title = models.CharField(max_length=200)
-    description = models.TextField(blank=True, null=True)
+    # description = models.TextField(blank=True, null=True)
     assigned_to = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='assigned_tasks')
     created_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='created_tasks')
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='not_started')
+    return_reason = models.CharField(max_length=50,choices=RETURN_REASON,default='incorrect_execution')
     '''это про внутреннее состояние задачи. На том же этапе "Проверка" она может быть "Не начата" 
      (лежит мёртвым грузом), "В работе" (кто-то её ковыряет) или 
      "Заблокирована" (ждёт, пока Вася принесёт документы).'''
-    priority = models.CharField(max_length=10, choices=PRIORITY_CHOICES, default='medium')
+    # priority = models.CharField(max_length=10, choices=PRIORITY_CHOICES, default='medium')
+
     due_date = models.DateTimeField(null=True, blank=True) # дедлайн
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    parent_task = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True, related_name='subtasks')
+    # parent_task = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True, related_name='subtasks')
     def __str__(self):
         return self.title
     def is_overdue(self):

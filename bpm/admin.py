@@ -14,9 +14,9 @@ from bpm.models import *
 # admin.site.register(WorkflowStep,WorkflowStepAdmin)
 
 class ProcessAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'template', 'created_at')
-    list_filter = ('template', 'created_at')
-    search_fields = ('name', 'template__name')
+    list_display = ('id', 'name', 'created_at')
+    list_filter = ( 'created_at',)
+    search_fields = ('name',)
 admin.site.register(Process, ProcessAdmin)
 
 class ProcessTemplateAdmin(admin.ModelAdmin):
@@ -29,8 +29,8 @@ class ProcessStageTemplateAdmin(admin.ModelAdmin):
     search_fields = ('template__name', 'name')
 admin.site.register(ProcessStageTemplate,ProcessStageTemplateAdmin)
 class TaskAdmin(admin.ModelAdmin):
-    list_display = ('id', 'process', 'current_stage', 'title', 'description', 'assigned_to', 'created_by','status', 'priority', 'due_date', 'created_at', 'updated_at')
-    list_filter = ('process','current_stage','assigned_to','created_by','created_at','due_date','updated_at')
+    list_display = ('id', 'process', 'title', 'assigned_to', 'created_by','status', 'due_date', 'created_at', 'updated_at')
+    list_filter = ('process','assigned_to','created_by','created_at','due_date','updated_at')
 admin.site.register(Task,TaskAdmin)
 class ProcessStageAdmin(admin.ModelAdmin):
     list_display = ('id','process','template_stage','name','description','order','is_required','completion_criteria','sla_hours','is_custom')
