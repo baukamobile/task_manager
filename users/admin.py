@@ -4,9 +4,7 @@ import logging
 # from django.contrib.auth.models import User
 from users.models import Positions, Company, Department #Roles,
 from tasks.models import Task,Projects,Priority,Task_comments,Status
-from bpm.models import (Process,ProcessTemplate,ProcessStageTemplate,ProcessStage,
-                        Task as bpmTask,TaskStageHistory,AutoTaskRule,Attachment,
-                        Comment,Notification,Dashboard,DashboardWidget)
+from bpm.models import *
 from users.models import User
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import Group, Permission
@@ -35,13 +33,13 @@ department_content_type = ContentType.objects.get_for_model(Department)
 users_content_type = ContentType.objects.get_for_model(User)
 company_content_type = ContentType.objects.get_for_model(Company)
 # roles_content_type = ContentType.objects.get_for_model(Roles)
-bpm_task_content_type = ContentType.objects.get_for_model(bpmTask)
+# bpm_task_content_type = ContentType.objects.get_for_model(bpmTask)
 # Вытаскиваем права для каждой модели
 department_permissions = Permission.objects.filter(content_type=department_content_type)
 # users_permissions = Permission.objects.filter(content_type=users_content_type)
 company_permissions = Permission.objects.filter(content_type=company_content_type)
 # roles_permissions = Permission.objects.filter(content_type=roles_content_type)
-bpm_task_permissions = Permission.objects.filter(content_type=bpm_task_content_type)
+# bpm_task_permissions = Permission.objects.filter(content_type=bpm_task_content_type)
 # Пихаем все права в группу
 admin_group.permissions.add(
     *department_permissions,
@@ -54,7 +52,7 @@ director_group.permissions.add(
 *department_permissions,
     *user_permissions,
     # *roles_permissions,
-    *bpm_task_permissions
+    # *bpm_task_permissions
 )
 # logger.warning(f'Ползователь {admin_group.name} Права добавлены в группу')
 # Проверяем, добавлены ли права
