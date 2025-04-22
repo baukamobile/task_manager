@@ -2,17 +2,16 @@ from django.db import models
 from django.db import models
 from django.utils import timezone
 from users.models import User,Department,Positions
+import logging
+
+logger = logging.getLogger('bpm')
+
 class Process(models.Model):
-    """Конкретные экземпляры бизнес-процессов (Kanban доски)
-     конкретные экземпляры бизнес-процессов, которые работают как Kanban-доски.
-      Могут быть созданы на основе шаблонов, иметь владельца и принадлежать определенному отделу.
-    """
     STATUS_CHOICES = [
         ('pending', 'Ожидает'),
         ('running', 'Выполняется'),
         ('completed', 'Завершён'),
     ]
-    # template = models.ForeignKey(ProcessTemplate, on_delete=models.SET_NULL, null=True,blank=True, related_name='processes')
     name = models.CharField(max_length=200)
     description = models.TextField(blank=True, null=True)
     owner = models.ForeignKey(User, on_delete=models.CASCADE,null=True,blank=True, related_name='owned_processes')
@@ -31,6 +30,7 @@ class Process(models.Model):
         if not self.bpmn_xml:
             xml_obj = BpmnXmlProcess.objects.create()
             self.bpmn_xml = xml_obj
+            logger.info('При создании процесса автоматический создается новый пустой bpmn xml')
         super().save(*args,**kwargs)
 
     class Meta:
@@ -40,12 +40,7 @@ class Process(models.Model):
             ('execute_process', 'Может выполнять  процесс'),
             ('finish_process', 'Может завершать  процесс'),
         ]
-
 class Task(models.Model):
-    """Задачи (карточки Kanban).
-     задачи (карточки Kanban),
-      которые перемещаются между этапами процесса. Включают статус, приоритет, исполнителя и другие атрибуты.
-    """
     STATUS_CHOICES = [
         ('not_started', 'Не начата'),
         ('in_progress', 'В работе'),
