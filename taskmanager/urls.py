@@ -37,7 +37,7 @@ urlpatterns = [
     path('bpm/',include('bpm.urls')),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    re_path(r'^(?!api/).*$', TemplateView.as_view(template_name='index.html'), name='spa'),
+    re_path(r'^(?!api/|static/|media/|assets/).*$', TemplateView.as_view(template_name='index.html'), name='spa'),
 ]
 
 # Добавляем debug_toolbar, если DEBUG = True
