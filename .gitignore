@@ -6,6 +6,9 @@ const.py
 static/
 staticfiles/
 logs/
+.venv
+.venv_python313
+.idea
 
 
 # статика и медиа

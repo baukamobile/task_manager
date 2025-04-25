@@ -30,10 +30,11 @@ class UserSerializer(serializers.ModelSerializer):
                    'phone_number','telegram_id','status','company',
                    'is_active','is_superuser'
                    )
-    def to_reprsentation(self,instance):
+
+    def to_representation(self, instance):
         """Чтобы в ответе возвращались вложенные данные"""
         data = super().to_representation(instance)
         data['position'] = PositionsSerializer(instance.position).data
-        data['department']= DepartmentSerializer(instance.department).data
-        data['company']=CompanySerializer(instance.company).data
+        data['department'] = DepartmentSerializer(instance.department).data
+        data['company'] = CompanySerializer(instance.company).data
         return data
