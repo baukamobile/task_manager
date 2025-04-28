@@ -239,7 +239,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 if not os.path.exists(LOG_DIR):
     os.makedirs(LOG_DIR)
-
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -253,14 +252,16 @@ LOGGING = {
         'file': {
             'level': 'WARNING',
             'class': 'logging.FileHandler',
-            'filename': LOG_DIR / 'task_manager.log',  # Лог ошибок
+            'filename': LOG_DIR / 'task_manager.log',
             'formatter': 'verbose',
+            'encoding': 'utf-8',  # Указали кодировку
         },
         'debug_file': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'filename': LOG_DIR / 'task_manager_debug.log',  # Лог для отладки
+            'filename': LOG_DIR / 'task_manager_debug.log',
             'formatter': 'verbose',
+            'encoding': 'utf-8',  # Указали кодировку
         },
         'console': {
             'level': 'INFO',
@@ -281,8 +282,6 @@ LOGGING = {
         },
     },
 }
-
-# Список приложений
 APPS = [
     'users',
     'tasks',
@@ -291,17 +290,20 @@ APPS = [
     'reports',
     'notifications',
     'event_calendar',
+    'bpm',
 ]
 
 # Добавляем обработчики и логгеры для каждого приложения
 for app in APPS:
+    log_filename = LOG_DIR / f'{app}.log'
     LOGGING['handlers'][f'{app}_file'] = {
         'class': 'logging.FileHandler',
-        'filename': LOG_DIR / f'{app}.log',  # Используем .log вместо .logs
+        'filename': log_filename,
         'formatter': 'verbose',
+        'encoding': 'utf-8',  # Указали кодировку
     }
     LOGGING['loggers'][app] = {
         'handlers': [f'{app}_file', 'console'],
-        'level': 'WARNING',  # Добавляем уровень логирования
+        'level': 'WARNING',
         'propagate': False,
     }
