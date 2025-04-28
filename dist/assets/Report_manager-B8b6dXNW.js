@@ -1,0 +1,1 @@
+import{f as t}from"./tasks-BvUq67hy.js";import{r as e,o as a}from"./index-BlCUlzV6.js";function n(){const r=e([]);return a(async()=>{try{const o=await t();o&&(r.value=o,console.log("Данные закгружены: ",r.value))}catch(o){console.log("Error по загрузке данных: ",o)}}),{projects:r}}export{n as P};

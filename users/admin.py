@@ -13,6 +13,7 @@ from .models import Department  # Импортируем модель, для к
 #Создание групп (ролей)
 logger = logging.getLogger('users')
 
+<<<<<<< HEAD
 admin_group, _ = Group.objects.get_or_create(name="Admin")
 department_head_group, _ = Group.objects.get_or_create(name="Department Head") #_ — это заглушка для второго значения (того самого True/False), которое нам все равно потому что мы не исползуем true false
 director_group, _ = Group.objects.get_or_create(name="Director")
@@ -54,6 +55,49 @@ director_group.permissions.add(
     # *roles_permissions,
     # *bpm_task_permissions
 )
+=======
+# admin_group, _ = Group.objects.get_or_create(name="Admin")
+# department_head_group, _ = Group.objects.get_or_create(name="Department Head") #_ — это заглушка для второго значения (того самого True/False), которое нам все равно потому что мы не исползуем true false
+# director_group, _ = Group.objects.get_or_create(name="Director")
+# employee_group, _ = Group.objects.get_or_create(name="Employee")
+# # Создаём или получаем группу
+# # Получаем ContentType для модели Department
+#
+# #Общий модел из одного приложение
+# # Получаем все ContentType для моделей из приложения bpm
+# bpm_model_type = ContentType.objects.filter(app_label='bpm')
+# user_model_type = ContentType.objects.filter(app_label='users')
+# # Получаем все права для моделей из приложении
+# bpm_permissions = Permission.objects.filter(content_type__in=bpm_model_type)
+# user_permissions = Permission.objects.filter(content_type__in=user_model_type)
+#
+# # Берем ContentType для моделей
+# department_content_type = ContentType.objects.get_for_model(Department)
+# users_content_type = ContentType.objects.get_for_model(User)
+# company_content_type = ContentType.objects.get_for_model(Company)
+# # roles_content_type = ContentType.objects.get_for_model(Roles)
+# bpm_task_content_type = ContentType.objects.get_for_model(bpmTask)
+# # Вытаскиваем права для каждой модели
+# department_permissions = Permission.objects.filter(content_type=department_content_type)
+# # users_permissions = Permission.objects.filter(content_type=users_content_type)
+# company_permissions = Permission.objects.filter(content_type=company_content_type)
+# # roles_permissions = Permission.objects.filter(content_type=roles_content_type)
+# bpm_task_permissions = Permission.objects.filter(content_type=bpm_task_content_type)
+# # Пихаем все права в группу
+# admin_group.permissions.add(
+#     *department_permissions,
+#     *user_permissions,
+#     *company_permissions,
+#     # *roles_permissions,
+#     *bpm_permissions
+# )
+# director_group.permissions.add(
+# *department_permissions,
+#     *user_permissions,
+#     # *roles_permissions,
+#     *bpm_task_permissions
+# )
+>>>>>>> ae69cb7 (s)
 # logger.warning(f'Ползователь {admin_group.name} Права добавлены в группу')
 # Проверяем, добавлены ли права
 # print(f"Права добавлены в группу '{admin_group.name}'")
