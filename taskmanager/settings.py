@@ -9,16 +9,13 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-from logging import StreamHandler
-from pathlib import Path
-import os
 from datetime import timedelta
 import environ
 from pathlib import Path
 env = environ.Env()
 environ.Env.read_env()
 # from django.core.management.utils import get_random_secret_key
-#
+
 # print(get_random_secret_key()) ..
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -133,7 +130,7 @@ REST_FRAMEWORK = {
 # CORS_ALLOWED_ORIGINS = ['http://localhost:5173']
 ROOT_URLCONF = 'taskmanager.urls'
 VUE_PATH = os.path.join(BASE_DIR,'static','vue','dist')
-print(f'Путь к vue file',(os.path.exists(VUE_PATH)))
+# print(f'Путь к vue file',(os.path.exists(VUE_PATH)))
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

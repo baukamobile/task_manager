@@ -14,7 +14,7 @@ from bpm.models import *
 # admin.site.register(WorkflowStep,WorkflowStepAdmin)
 
 class ProcessAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'created_at')
+    list_display = ('name','id',  'created_at')
     list_filter = ( 'created_at',)
     search_fields = ('name',)
 admin.site.register(Process, ProcessAdmin)

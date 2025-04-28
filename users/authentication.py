@@ -13,7 +13,7 @@ from django.contrib.auth import authenticate
 from django.conf import settings
 import logging
 from users.models import User
-from users.tasks import send_mail_message,send_mail_to_logged_user
+# from users.tasks import send_mail_message,send_mail_to_logged_user
 
 logger = logging.getLogger('users')
 
