@@ -18,7 +18,7 @@ router.register(r'task',TaskViewSet),
 # router.register(r'task-stage-history',TaskStageHistoryViewSet),
 # router.register(r'auto-task-rule',AutoTaskRuleViewSet),
 #
-# router.register(r'process-element',ProcessElementViewSet),
+router.register(r'process-element',ProcessElementViewSet),
 # router.register(r'element-connection',ElementConnectionViewSet),
 # router.register(r'process-execution',ProcessExecutionViewSet),
 

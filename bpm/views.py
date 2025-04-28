@@ -1,24 +1,29 @@
-from idlelib.multicall import MC_DESTROY
 
-from django.shortcuts import render
-from bpm.models import *
-from bpm.serializers import (ProcessSerializer, TaskSerializer,
-                             AttachmentSerializer,
-                             CommentSerializer, NotificationSerializer, DashboardSerializer, DashboardWidgetSerizalizer,
-                             BpmnXmlProcessSerializer
-                             )
+from bpm.serializers import *
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import AllowAny
-from rest_framework.decorators import api_view
-from rest_framework import status
 from django.views.decorators.csrf import csrf_exempt
+from bpm.bpmn_parser import parse_bpmn_xml_and_save
 from rest_framework.response import Response
-
 # Create your views here.
 class ProcessViewSet(ModelViewSet):
     queryset = Process.objects.all()
     serializer_class = ProcessSerializer
     permission_classes = [AllowAny]
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        process = serializer.save()
+        parse_bpmn_xml_and_save(process)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    def update(self, request, *args, **kwargs):
+        instance = self.get_object()
+        serializer = self.get_serializer(instance, data=request.data, partial=True)
+        serializer.is_valid(raise_exception=True)
+        process = serializer.save()
+        parse_bpmn_xml_and_save(process)
+        return Response(serializer.data)
 class BpmXmlProcessViewSet(ModelViewSet):
     queryset = BpmnXmlProcess.objects.all()
     serializer_class = BpmnXmlProcessSerializer
@@ -45,6 +50,11 @@ class DashboardWidgetViewSet(ModelViewSet):
 class DashboardViewSet(ModelViewSet):
     queryset = Dashboard.objects.all()
     serializer_class = DashboardSerializer
+class ProcessElementViewSet(ModelViewSet):
+    queryset = ProcessElement.objects.all()
+    serializer_class = ProcessElementSerializer
+
+
 #         return Response({'status': 'ok', 'id': instance.id}, status=status.HTTP_201_CREATED)
 # class ProcessTemplateViewSet(ModelViewSet):
 #     queryset = ProcessTemplate.objects.all()
@@ -67,9 +77,7 @@ class DashboardViewSet(ModelViewSet):
 # #     serializer_class = UserDepartmentRoleSerializer
 #
 #
-# class ProcessElementViewSet(ModelViewSet):
-#     queryset = ProcessElement.objects.all()
-#     serializer_class = ProcessElementSerializer
+
 # class ElementConnectionViewSet(ModelViewSet):
 #     queryset = ElementConnection.objects.all()
 #     serializer_class = ElementConnectionSerializer

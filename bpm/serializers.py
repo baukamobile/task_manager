@@ -55,10 +55,10 @@ class ProcessSerializer(serializers.ModelSerializer):
 #     class Meta:
 #         model = AutoTaskRule
 #         fields = '__all__'
-# class ProcessElementSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = ProcessElement
-#         fields = '__all__'
+class ProcessElementSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProcessElement
+        fields = '__all__'
 # class ElementConnectionSerializer(serializers.ModelSerializer):
 #     class Meta:
 #         model = ElementConnection

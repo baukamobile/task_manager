@@ -1,7 +1,7 @@
 from django.db import models
 from django.db import models
 from django.utils import timezone
-from users.models import User,Department,Positions
+from users.models import User,Department
 import logging
 import xml.etree.ElementTree as et
 
@@ -90,10 +90,18 @@ class ProcessElement(models.Model):
     element_id = models.CharField(max_length=100)
     element_type = models.CharField(max_length=20, choices=ELEMENT_TYPES)
     name = models.CharField(max_length=100,null=True,blank=True)
-    next_element = models.JSONField(default=list)
+    next_element = models.JSONField(default=list,null=True,blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return f"{self.get_element_type_display()}: {self.name}"
+    # def save(self,*args,**kwargs):
+    #     super().save(*args,**kwargs)
+        # parse_bpmn_xml_and_save(self)
+class ProcessLink(models.Model):
+    start_element = models.ForeignKey(ProcessElement, related_name='start_element', on_delete=models.CASCADE)
+    end_element = models.ForeignKey(ProcessElement, related_name='end_element', on_delete=models.CASCADE)
+    link_type = models.CharField(max_length=100, default='sequenceFlow')
+    created_at = models.DateTimeField(auto_now_add=True)
 
 class Attachment(models.Model):
     """Вложения к задачам,вложения к задачам (файлы)."""
