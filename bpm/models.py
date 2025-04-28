@@ -3,6 +3,7 @@ from django.db import models
 from django.utils import timezone
 from users.models import User,Department,Positions
 import logging
+import xml.etree.ElementTree as et
 
 logger = logging.getLogger('bpm')
 
@@ -75,6 +76,24 @@ def empty_xml():
     return '<?xml version="1.0" encoding="UTF-8"?> <bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" targetNamespace="http://bpmn.io/schema/bpmn" id="Definitions_1"> <bpmn:process id="Process_1" isExecutable="false"> <bpmn:startEvent id="StartEvent_1"/> </bpmn:process> <bpmndi:BPMNDiagram id="BPMNDiagram_1"> <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1"> <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1"> <dc:Bounds height="36.0" width="36.0" x="173.0" y="102.0"/></bpmndi:BPMNShape></bpmndi:BPMNPlane></bpmndi:BPMNDiagram></bpmn:definitions>'
 class BpmnXmlProcess(models.Model):
     xml = models.TextField(default=empty_xml)
+
+class ProcessElement(models.Model):
+
+    ELEMENT_TYPES = [
+        ('start_event', 'Начальное событие'),
+        ('end_event', 'Конечное событие'),
+        ('task', 'Задача'),
+        ('parallel gateway', 'Параллельный шлюз')
+        # Можно позже добавить другие типы: 'gateway' и т.д.
+    ]
+    process = models.ForeignKey(Process, on_delete=models.CASCADE, related_name='elements')
+    element_id = models.CharField(max_length=100)
+    element_type = models.CharField(max_length=20, choices=ELEMENT_TYPES)
+    name = models.CharField(max_length=100,null=True,blank=True)
+    next_element = models.JSONField(default=list)
+    created_at = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return f"{self.get_element_type_display()}: {self.name}"
 
 class Attachment(models.Model):
     """Вложения к задачам,вложения к задачам (файлы)."""
@@ -299,7 +318,7 @@ class DashboardWidget(models.Model):
 
 
 # class ProcessElement(models.Model):
-#     """Визуальные элементы на диаграмме процесса (start event, task, end event и т.д.)"""
+
 #     ELEMENT_TYPES = [
 #         ('start_event', 'Начальное событие'),
 #         ('end_event', 'Конечное событие'),
