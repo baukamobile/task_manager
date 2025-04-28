@@ -1,17 +1,11 @@
-from django.shortcuts import render
-from rest_framework.exceptions import AuthenticationFailed
-from rest_framework.generics import ListAPIView
 from rest_framework.permissions import IsAuthenticated, IsAdminUser,AllowAny
-from rest_framework.views import APIView
 from rest_framework.viewsets import ModelViewSet
 from users.serializers import *
-import datetime
-from rest_framework.response import Response
-import jwt
-from django.contrib.auth import authenticate
-from django.conf import settings
 import logging
+<<<<<<< HEAD
 # from users.tasks import send_mail_message,send_mail_to_logged_user
+=======
+>>>>>>> ee8d268 (s)
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework_simplejwt.tokens import RefreshToken
