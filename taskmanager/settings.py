@@ -239,6 +239,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 if not os.path.exists(LOG_DIR):
     os.makedirs(LOG_DIR)
+import logging
+import sys
+from pathlib import Path
+
+LOG_DIR = Path('logs')  # Предполагается, что LOG_DIR определен
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -250,23 +256,24 @@ LOGGING = {
     },
     'handlers': {
         'file': {
-            'level': 'WARNING',
+            'level': 'INFO',
             'class': 'logging.FileHandler',
             'filename': LOG_DIR / 'task_manager.log',
             'formatter': 'verbose',
-            'encoding': 'utf-8',  # Указали кодировку
+            'encoding': 'utf-8',
         },
         'debug_file': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
             'filename': LOG_DIR / 'task_manager_debug.log',
             'formatter': 'verbose',
-            'encoding': 'utf-8',  # Указали кодировку
+            'encoding': 'utf-8',
         },
         'console': {
             'level': 'INFO',
             'class': 'logging.StreamHandler',
             'formatter': 'verbose',
+            'stream': sys.stdout,  # Явно указываем stdout
         },
     },
     'loggers': {
@@ -282,6 +289,8 @@ LOGGING = {
         },
     },
 }
+
+# Добавляем обработчики и логгеры для каждого приложения
 APPS = [
     'users',
     'tasks',
@@ -293,17 +302,16 @@ APPS = [
     'bpm',
 ]
 
-# Добавляем обработчики и логгеры для каждого приложения
 for app in APPS:
     log_filename = LOG_DIR / f'{app}.log'
     LOGGING['handlers'][f'{app}_file'] = {
         'class': 'logging.FileHandler',
         'filename': log_filename,
         'formatter': 'verbose',
-        'encoding': 'utf-8',  # Указали кодировку
+        'encoding': 'utf-8',
     }
     LOGGING['loggers'][app] = {
         'handlers': [f'{app}_file', 'console'],
-        'level': 'WARNING',
+        'level': 'INFO',
         'propagate': False,
     }

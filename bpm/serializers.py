@@ -4,6 +4,11 @@ class BpmnXmlProcessSerializer(serializers.ModelSerializer):
     class Meta:
         model = BpmnXmlProcess
         fields = '__all__'
+class ProcessElementSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProcessElement
+        fields = '__all__'
+
 class TaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
@@ -55,10 +60,7 @@ class ProcessSerializer(serializers.ModelSerializer):
 #     class Meta:
 #         model = AutoTaskRule
 #         fields = '__all__'
-class ProcessElementSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = ProcessElement
-        fields = '__all__'
+
 # class ElementConnectionSerializer(serializers.ModelSerializer):
 #     class Meta:
 #         model = ElementConnection

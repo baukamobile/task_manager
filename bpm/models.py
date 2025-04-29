@@ -3,6 +3,7 @@ from django.db import models
 from django.utils import timezone
 from users.models import User,Department
 import logging
+from simple_history.models import HistoricalRecords
 import xml.etree.ElementTree as et
 
 logger = logging.getLogger('bpm')
@@ -23,6 +24,7 @@ class Process(models.Model):
     bpmn_xml = models.ForeignKey('BpmnXmlProcess', null=True,blank=True, on_delete=models.SET_NULL,related_name='processes')
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
     bpmn_process_id = models.CharField(max_length=100,null=True)
+    history = HistoricalRecords()
     def __str__(self):
         return self.name
     def save(self,*args,**kwargs):
@@ -80,10 +82,11 @@ class BpmnXmlProcess(models.Model):
 class ProcessElement(models.Model):
 
     ELEMENT_TYPES = [
-        ('start_event', 'Начальное событие'),
-        ('end_event', 'Конечное событие'),
+        ('startEvent', 'Начальное событие'),
+        ('endEvent', 'Конечное событие'),
         ('task', 'Задача'),
-        ('parallel gateway', 'Параллельный шлюз')
+        ('parallelGateway', 'И'),
+        ('exclusiveGateway', 'ИЛИ'),
         # Можно позже добавить другие типы: 'gateway' и т.д.
     ]
     process = models.ForeignKey(Process, on_delete=models.CASCADE, related_name='elements')
@@ -146,7 +149,7 @@ class Notification(models.Model):
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     is_read = models.BooleanField(default=False)
-
+    history = HistoricalRecords()
     class Meta:
         ordering = ['-created_at']
 
