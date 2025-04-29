@@ -22,7 +22,7 @@ class Process(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     current_task = models.ForeignKey('Task',on_delete=models.SET_NULL,null=True,blank=True, related_name='current_task')
     bpmn_xml = models.ForeignKey('BpmnXmlProcess', null=True,blank=True, on_delete=models.SET_NULL,related_name='processes')
-    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending',null=True,blank=True)
     bpmn_process_id = models.CharField(max_length=100,null=True)
     history = HistoricalRecords()
     def __str__(self):

@@ -17,7 +17,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-def parse_xml(xml_str, process_instance):
+def parse_xml(self,xml_str, process_instance):
     ns = {
         'bpmn': 'http://www.omg.org/spec/BPMN/20100524/MODEL',
         'bpmndi': 'http://www.omg.org/spec/BPMN/20100524/DI',
