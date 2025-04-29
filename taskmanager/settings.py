@@ -14,7 +14,14 @@ import environ
 from pathlib import Path
 env = environ.Env()
 environ.Env.read_env()
+<<<<<<< HEAD
 # from django.core.management.utils import get_random_secret_key
+=======
+from django.core.management.utils import get_random_secret_key
+#
+print(get_random_secret_key())
+
+>>>>>>> bb49d46 (;)
 
 # print(get_random_secret_key()) ..
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -75,7 +82,13 @@ INSTALLED_APPS = [
     'django_extensions',
 ]
 # CORS_ORIGIN_ALLOW_ALL = True
+<<<<<<< HEAD
 
+=======
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOW_ALL_ORIGINS = True
+>>>>>>> d71f201 (s)
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
 ]
@@ -92,20 +105,11 @@ TEST_RUNNER = "django.test.runner.DiscoverRunner"
 # ;
 # ; CORS_ALLOW_CREDENTIALS = True #работа с куками
 
-'''
-cerulean,cosmo ,flatly ,journal ,
-litera ,lumen ,lux ,materia ,minty ,
-pulse ,sandstone ,simplex ,sketchy ,spacelab ,united ,yeti preview
-'''
-    # 'light-violet'
-# JET_INDEX_DASHBOARD = 'jet.dashboard.dashboard.DefaultIndexDashboard'
-JET_MODULE_GOOGLE_ANALYTICS_CLIENT_SECRETS_FILE = os.path.join(PROJECT_DIR, 'client_secrets.json')
 
 
 ASGI_APPLICATION = 'taskmanager.asgi.application'
 # CHANNEL_LAYERS = {}
 AUTH_USER_MODEL = 'users.User'
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -167,6 +171,12 @@ DATABASES = {
         'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
         # 'HOST': 'db',
         # 'PORT': '5432',
+        # 'NAME': env('DBNAME'),
+        # 'USER': env('DBUSER'),
+        # 'PASSWORD': env('DBPASSWORD'),
+        'NAME': 'taskmanagerdb',
+        'USER': 'nurbergen',
+        'PASSWORD': 'qwerty123',
     }
 }
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -220,19 +230,17 @@ SIMPLE_JWT = {
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 LOG_DIR = BASE_DIR / 'logs'
 STATIC_URL = '/static/'
+
+STATIC_URL = "/static/"
+
+# STATIC_ROOT и STATICFILES_DIRS не должны указывать на одно и то же
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")  # Сюда collectstatic будет копировать файлы
+
 STATICFILES_DIRS = [
-    BASE_DIR / "static/vue/dist",                          # Основная статика
-    # BASE_DIR / "static/vue/dist",                  # Путь к index.html
-    # BASE_DIR / "static/vue/dist/assets",           # Путь к ассетам Vue
+    os.path.join(BASE_DIR, "static/vue/dist"),  # Откуда Django берет статику при разработке
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
