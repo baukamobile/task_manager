@@ -10,6 +10,7 @@ logs/
 .venv_python313
 .idea
 
+taskmanager/__pycache__
 
 # статика и медиа
 media/
