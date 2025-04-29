@@ -54,7 +54,7 @@ class ProcessViewSet(ModelViewSet):
             logger.error(f"Ошибка парсинга XML: {e}")
             raise
         element_mapping = {}
-        element_order = ['startEvent', 'task', 'parallelGateway', 'exclusiveGateway', 'endEvent']
+        element_order = ['startEvent', 'task', 'parallelGateway', 'exclusiveGateway','textAnnotation','sequenceFlow','endEvent']
         for tag in element_order:
             for elem in tree.findall(f".//bpmn:{tag}", namespaces=ns):
                 el_id = elem.attrib['id']
@@ -65,7 +65,7 @@ class ProcessViewSet(ModelViewSet):
                         element_id=el_id,
                         defaults={
                             'element_type': tag,
-                            'name': name
+                            'name': name,
                         }
                     )
                     element_mapping[el_id] = element
@@ -110,18 +110,19 @@ class ProcessUpdateXmlView(APIView):
             logger.error(f"Ошибка парсинга XML: {e}")
             raise
         element_mapping = {}
-        element_order = ['startEvent', 'task', 'parallelGateway', 'exclusiveGateway', 'endEvent']
+        element_order = ['startEvent', 'task', 'parallelGateway', 'exclusiveGateway','textAnnotation','sequenceFlow','endEvent']
         for tag in element_order:
             for elem in tree.findall(f".//bpmn:{tag}", namespaces=ns):
                 el_id = elem.attrib['id']
                 name = elem.attrib.get('name')
+
                 try:
                     element, _ = ProcessElement.objects.update_or_create(
                         process=process_instance,
                         element_id=el_id,
                         defaults={
                             'element_type': tag,
-                            'name': name
+                            'name': name,
                         }
                     )
                     element_mapping[el_id] = element
@@ -147,34 +148,27 @@ class ProcessUpdateXmlView(APIView):
             except Exception as e:
                 logger.error(f"Ошибка при создании линка {source_ref} -> {target_ref}: {e}")
                 raise
-
     def patch(self, request, pk):
         logger.debug(f"request.data: {request.data}")
         try:
-            logger.debug(f"Получен запрос для обновления XML: {request.data}")
-            # Get the process instance using the pk parameter
-            try:
-                process_instance = Process.objects.get(pk=pk)
-            except Process.DoesNotExist:
-                logger.error(f"Процесс с id={pk} не найден")
-                return Response({"error": f"Процесс с id={pk} не найден"}, status=404)
+            process_instance = Process.objects.get(pk=pk)
+        except Process.DoesNotExist:
+            logger.error(f"Процесс с id={pk} не найден")
+            return Response({"error": f"Процесс с id={pk} не найден"}, status=404)
 
-            xml_data = BpmnXmlProcess.objects.filter(id=request.data.get("bpmn_xml")).values_list("xml", flat=True).first()
-            if not xml_data:
-                logger.error("XML не передан в запросе")
-                return Response({"error": "XML не передан"}, status=400)
+        xml_str = request.data.get("xml")
+        if not xml_str:
+            logger.error("XML не передан в теле запроса")
+            return Response({"error": "XML не передан"}, status=400)
 
-            logger.debug(f"Обновляем XML для процесса {process_instance.id}")
-            # Update the XML content
-            process_instance.bpmn_xml.xml = xml_data
-            process_instance.bpmn_xml.save()
+        logger.debug(f"Обновляем XML для процесса {process_instance.id}")
+        process_instance.bpmn_xml.xml = xml_str
+        process_instance.bpmn_xml.save()
 
-            # Parse and sync the updated XML
-            self.parse_and_sync_xml(process_instance)
-            return Response({"message": "XML обновлён и элементы синхронизированы"})
-        except Exception as e:
-            logger.error(f"Ошибка при обновлении XML: {e}")
-            return Response({"error": str(e)}, status=500)
+        self.parse_and_sync_xml(process_instance)
+        return Response({"message": "XML обновлён и элементы синхронизированы"})
+
+
 
 class BpmXmlProcessViewSet(ModelViewSet):
     queryset = BpmnXmlProcess.objects.all()
