@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # from celery import shared_task
 # from django.core.mail import send_mail
 # import requests
@@ -26,34 +25,32 @@
 #     except Exception as e:
 #         return f' Ошибка при отправке сообщение на почту: {e}'
 #
-=======
-from celery import shared_task
-from django.core.mail import send_mail
-from django.apps import apps
-import json
-import environ
-from pathlib import Path
-env = environ.Env()
-environ.Env.read_env()
-
-@shared_task
-def send_mail_message(user_id):
-    """Отправка email после регистрации"""
-    User = apps.get_model('users','User')
-    try:
-        user = User.objects.get(id=user_id)
-        send_mail(
-            subject='Добро пожаловать!',
-            message=f'Спасибо за регистрацию {user.first_name}! Администратор подтвердит ваш email.',
-            from_email=env('EMAIL_HOST_USER'),  # Проверька эмейл
-            recipient_list=[user.email],  # Должен быть список
-            fail_silently=False,
-        )
-        return f'Email sent to {user.email}'
-    except Exception as e:
-        return f' Ошибка при отправке сообщение на почту: {e}'
-
->>>>>>> ee8d268 (s)
+# from celery import shared_task
+# from django.core.mail import send_mail
+# from django.apps import apps
+# import json
+# import environ
+# from pathlib import Path
+# env = environ.Env()
+# environ.Env.read_env()
+#
+# @shared_task
+# def send_mail_message(user_id):
+#     """Отправка email после регистрации"""
+#     User = apps.get_model('users','User')
+#     try:
+#         user = User.objects.get(id=user_id)
+#         send_mail(
+#             subject='Добро пожаловать!',
+#             message=f'Спасибо за регистрацию {user.first_name}! Администратор подтвердит ваш email.',
+#             from_email=env('EMAIL_HOST_USER'),  # Проверька эмейл
+#             recipient_list=[user.email],  # Должен быть список
+#             fail_silently=False,
+#         )
+#         return f'Email sent to {user.email}'
+#     except Exception as e:
+#         return f' Ошибка при отправке сообщение на почту: {e}'
+#
 
 # @shared_task
 # def periodic_send_mail(user_id):

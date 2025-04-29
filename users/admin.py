@@ -13,7 +13,6 @@ from .models import Department  # Импортируем модель, для к
 #Создание групп (ролей)
 logger = logging.getLogger('users')
 
-<<<<<<< HEAD
 admin_group, _ = Group.objects.get_or_create(name="Admin")
 department_head_group, _ = Group.objects.get_or_create(name="Department Head") #_ — это заглушка для второго значения (того самого True/False), которое нам все равно потому что мы не исползуем true false
 director_group, _ = Group.objects.get_or_create(name="Director")
@@ -55,7 +54,6 @@ director_group.permissions.add(
     # *roles_permissions,
     # *bpm_task_permissions
 )
-=======
 # admin_group, _ = Group.objects.get_or_create(name="Admin")
 # department_head_group, _ = Group.objects.get_or_create(name="Department Head") #_ — это заглушка для второго значения (того самого True/False), которое нам все равно потому что мы не исползуем true false
 # director_group, _ = Group.objects.get_or_create(name="Director")
@@ -97,7 +95,6 @@ director_group.permissions.add(
 #     # *roles_permissions,
 #     *bpm_task_permissions
 # )
->>>>>>> ae69cb7 (s)
 # logger.warning(f'Ползователь {admin_group.name} Права добавлены в группу')
 # Проверяем, добавлены ли права
 # print(f"Права добавлены в группу '{admin_group.name}'")

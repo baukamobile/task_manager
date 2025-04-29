@@ -14,14 +14,11 @@ import environ
 from pathlib import Path
 env = environ.Env()
 environ.Env.read_env()
-<<<<<<< HEAD
 # from django.core.management.utils import get_random_secret_key
-=======
 from django.core.management.utils import get_random_secret_key
 #
 # print(get_random_secret_key())
 
->>>>>>> bb49d46 (;)
 
 # print(get_random_secret_key()) ..
 # Build paths inside the project like this: BASE_DIR / 'subdir'.

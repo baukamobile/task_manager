@@ -2,10 +2,7 @@ from rest_framework.permissions import IsAuthenticated, IsAdminUser,AllowAny
 from rest_framework.viewsets import ModelViewSet
 from users.serializers import *
 import logging
-<<<<<<< HEAD
 # from users.tasks import send_mail_message,send_mail_to_logged_user
-=======
->>>>>>> ee8d268 (s)
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework_simplejwt.tokens import RefreshToken
