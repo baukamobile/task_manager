@@ -79,13 +79,13 @@ INSTALLED_APPS = [
     'django_extensions',
 ]
 # CORS_ORIGIN_ALLOW_ALL = True
-<<<<<<< HEAD
 
-=======
+
+
 CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOW_ALL_ORIGINS = True
->>>>>>> d71f201 (s)
+
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
 ]
