@@ -163,17 +163,10 @@ WSGI_APPLICATION = 'taskmanager.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # 'NAME': os.getenv('POSTGRES_DB'),
-        # 'USER': os.getenv('POSTGRES_USER'),
-        # 'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
-        # 'HOST': 'db',
-        # 'PORT': '5432',
-        'NAME': env('DBNAME'),
-        'USER': env('DBUSER'),
-        'PASSWORD': env('DBPASSWORD'),
-        # 'NAME': 'taskmanagerdb',
-        # 'USER': 'nurbergen',
-        # 'PASSWORD': 'qwerty123',
+        'NAME': os.getenv('POSTGRES_DB'),
+        'USER': os.getenv('POSTGRES_USER'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
+
     }
 }
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
