@@ -9,6 +9,9 @@ logs/
 .venv
 .venv_python313
 .idea
+.venv_python313
+__pycache__
+.pytest_cache
 
 taskmanager/__pycache__
 
