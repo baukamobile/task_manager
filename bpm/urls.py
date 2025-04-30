@@ -2,6 +2,7 @@
 from django.urls import path,include
 from rest_framework.routers import DefaultRouter
 from bpm.views import *
+from bpm.bpmn_parser import *
 router = DefaultRouter()
 router.register(r'process',ProcessViewSet),
 

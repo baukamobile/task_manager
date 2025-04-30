@@ -15,7 +15,7 @@ class GetCommentMixin:
 
 
 class TaskAdmin(admin.ModelAdmin, GetCommentMixin):
-    list_display = ['task_name', 'assigned', 'start_date', 'end_date', 'get_comments', 'agreed_with_managers']
+    list_display = ['task_name', 'assigned', 'start_date', 'end_date', 'get_comments', 'agreed_with_managers','id']
     # def changelist_view(self, request, extra_context=None):
     #     task_statuses = Status.objects.all()
     #     labels = []

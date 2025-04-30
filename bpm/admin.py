@@ -19,19 +19,19 @@ class ProcessAdmin(admin.ModelAdmin):
     search_fields = ('name',)
 admin.site.register(Process, ProcessAdmin)
 class TaskAdmin(admin.ModelAdmin):
-    list_display = ('id', 'process', 'assigned_to','status', 'due_date', 'created_at', 'updated_at')
+    list_display = ('process', 'assigned_to','status', 'due_date', 'created_at', 'updated_at','id')
     list_filter = ('process','assigned_to','created_at','due_date','updated_at')
 admin.site.register(Task,TaskAdmin)
 class AttachmentAdmin(admin.ModelAdmin):
-    list_display = ('id', 'task', 'filename', 'file', 'uploaded_by','uploaded_at')
+    list_display = ('task', 'filename', 'file', 'uploaded_by','uploaded_at','id')
     list_filter = ('task','uploaded_by','uploaded_at')
 admin.site.register(Attachment,AttachmentAdmin)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('id', 'task', 'author', 'text', 'created_at', 'updated_at')
+    list_display = ('task', 'author', 'text', 'created_at', 'updated_at','id')
     list_filter = ('task', 'author', 'created_at', 'updated_at')
 admin.site.register(Comment,CommentAdmin)
 class NotificationAdmin(admin.ModelAdmin):
-    list_filter = ('user','type','created_at','is_read')
+    list_filter = ('user','type','created_at','is_read','id')
     list_display = ('id', 'user', 'task', 'type','message', 'created_at', 'is_read')
 admin.site.register(Notification,NotificationAdmin)
 class DashboardAdmin(admin.ModelAdmin):
@@ -45,6 +45,10 @@ admin.site.register(DashboardWidget,DashboardWidgetAdmin)
 class BpmnXmlProcessAdmin(admin.ModelAdmin):
     list_display = ('id',)
 admin.site.register(BpmnXmlProcess,BpmnXmlProcessAdmin)
+class ProcessLinkAdmin(admin.ModelAdmin):
+    list_display = ('link_type','start_element','end_element','created_at','id')
+admin.site.register(ProcessLink,ProcessLinkAdmin)
+
 
 
 

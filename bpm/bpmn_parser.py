@@ -1,29 +1,166 @@
+from bpm.models import *
+from rest_framework.views import APIView
+
+from bpm.serializers import *
+from rest_framework.permissions import AllowAny
+from rest_framework.response import Response
+from rest_framework import status
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.viewsets import ModelViewSet
+import logging
+
+
 import xml.etree.ElementTree as ET
-from bpm.models import ProcessElement
 
-def parse_bpmn_xml_and_save(process):
-    """Парсит BPMN XML и сохраняет элементы в базу."""
-    xml_content = process.bpmn_xml.xml
-    tree = ET.ElementTree(ET.fromstring(xml_content))
-    root = tree.getroot()
+logger = logging.getLogger('bpm')
 
-    # Прочитаем все элементы
-    for elem in root.iter():
-        tag = elem.tag.split('}')[-1]  # Убираем неймспейсы типа {http://...}
+class ProcessViewSet(ModelViewSet):
+    queryset = Process.objects.all()
+    serializer_class = ProcessSerializer
+    permission_classes = [AllowAny]
+    def create(self, request, *args, **kwargs):
+        logger.info(f"Received create request: {request.data}")
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        process_instance = serializer.save()
+        self._parse_and_sync_xml(process_instance)
+        return Response(serializer.data, status=201)
 
-        if tag in ['startEvent', 'endEvent', 'task', 'userTask', 'parallelGateway']:
-            element_id = elem.attrib.get('id')
-            name = elem.attrib.get('name', None)
+    def update(self, request, *args, **kwargs):
+        logger.info(f"Received update request: {request.data}")
+        instance = self.get_object()
+        serializer = self.get_serializer(instance, data=request.data, partial=True)
+        serializer.is_valid(raise_exception=True)
+        process_instance = serializer.save()
+        self._parse_and_sync_xml(process_instance)
+        return Response(serializer.data)
+    def _parse_and_sync_xml(self, process_instance):
+        bpmn_xml_obj = process_instance.bpmn_xml
+        xml_str = bpmn_xml_obj.xml
+        ns = {
+            'bpmn': 'http://www.omg.org/spec/BPMN/20100524/MODEL',
+            'bpmndi': 'http://www.omg.org/spec/BPMN/20100524/DI',
+            'di': 'http://www.omg.org/spec/DD/20100524/DI'
+        }
+        try:
+            tree = ET.fromstring(xml_str)
+            logger.info(f"XML распарсен для процесса: {process_instance}")
+        except ET.ParseError as e:
+            logger.error(f"Ошибка парсинга XML: {e}")
+            raise
+        element_mapping = {}
+        element_order = ['startEvent', 'task', 'parallelGateway', 'exclusiveGateway','textAnnotation','sequenceFlow','endEvent']
+        for tag in element_order:
+            for elem in tree.findall(f".//bpmn:{tag}", namespaces=ns):
+                el_id = elem.attrib['id']
+                name = elem.attrib.get('name')
+                try:
+                    element, _ = ProcessElement.objects.update_or_create(
+                        process=process_instance,
+                        element_id=el_id,
+                        defaults={
+                            'element_type': tag,
+                            'name': name,
+                        }
+                    )
+                    element_mapping[el_id] = element
+                    logger.info(f"{'Создан' if _ else 'Обновлён'} элемент: {el_id} - {name}")
+                except Exception as e:
+                    logger.error(f"Ошибка при сохранении элемента {el_id}: {e}")
+                    raise
+        # Удаляем старые линки перед созданием новых, иначе будут дубли
+        ProcessLink.objects.filter(start_element__process=process_instance).delete()
+        for flow in tree.findall(".//bpmn:sequenceFlow", namespaces=ns):
+            source_ref = flow.attrib['sourceRef']
+            target_ref = flow.attrib['targetRef']
+            try:
+                if source_ref in element_mapping and target_ref in element_mapping:
+                    ProcessLink.objects.create(
+                        start_element=element_mapping[source_ref],
+                        end_element=element_mapping[target_ref],
+                        link_type='sequenceFlow'
+                    )
+                    logger.info(f"Линк создан: {source_ref} -> {target_ref}")
+                else:
+                    logger.warning(f"Пропущен линк, не найдены элементы: {source_ref} или {target_ref}")
+            except Exception as e:
+                logger.error(f"Ошибка при создании линка {source_ref} -> {target_ref}: {e}")
+                raise
 
-            if tag == 'userTask' or tag == 'task':
-                element_type = 'task'
-            else:
-                element_type = tag.lower()  # start_event, end_event, parallel_gateway
 
-            ProcessElement.objects.create(
-                process=process,
-                element_id=element_id,
-                name=name,
-                element_type=element_type,
-                next_elements=[]  # пока пусто, потом заполним
-            )
+class ProcessUpdateXmlView(APIView):
+    def parse_and_sync_xml(self, process_instance):
+        # Get XML string directly
+        xml_str = process_instance.bpmn_xml.xml
+
+        ns = {
+            'bpmn': 'http://www.omg.org/spec/BPMN/20100524/MODEL',
+            'bpmndi': 'http://www.omg.org/spec/BPMN/20100524/DI',
+            'di': 'http://www.omg.org/spec/DD/20100524/DI'
+        }
+        try:
+            tree = ET.fromstring(xml_str)
+            logger.info(f"XML распарсен для процесса: {process_instance}")
+        except ET.ParseError as e:
+            logger.error(f"Ошибка парсинга XML: {e}")
+            raise
+        element_mapping = {}
+        element_order = ['startEvent', 'task', 'parallelGateway', 'exclusiveGateway','textAnnotation','sequenceFlow','endEvent']
+        for tag in element_order:
+            for elem in tree.findall(f".//bpmn:{tag}", namespaces=ns):
+                el_id = elem.attrib['id']
+                name = elem.attrib.get('name')
+
+                try:
+                    element, _ = ProcessElement.objects.update_or_create(
+                        process=process_instance,
+                        element_id=el_id,
+                        defaults={
+                            'element_type': tag,
+                            'name': name,
+                        }
+                    )
+                    element_mapping[el_id] = element
+                    logger.info(f"{'Создан' if _ else 'Обновлён'} элемент: {el_id} - {name}")
+                except Exception as e:
+                    logger.error(f"Ошибка при сохранении элемента {el_id}: {e}")
+                    raise
+        # Удаляем старые линки перед созданием новых, иначе будут дубли
+        ProcessLink.objects.filter(start_element__process=process_instance).delete()
+        for flow in tree.findall(".//bpmn:sequenceFlow", namespaces=ns):
+            source_ref = flow.attrib['sourceRef']
+            target_ref = flow.attrib['targetRef']
+            try:
+                if source_ref in element_mapping and target_ref in element_mapping:
+                    ProcessLink.objects.create(
+                        start_element=element_mapping[source_ref],
+                        end_element=element_mapping[target_ref],
+                        link_type='sequenceFlow'
+                    )
+                    logger.info(f"Линк создан: {source_ref} -> {target_ref}")
+                else:
+                    logger.warning(f"Пропущен линк, не найдены элементы: {source_ref} или {target_ref}")
+            except Exception as e:
+                logger.error(f"Ошибка при создании линка {source_ref} -> {target_ref}: {e}")
+                raise
+    def patch(self, request, pk):
+        logger.debug(f"request.data: {request.data}")
+        try:
+            process_instance = Process.objects.get(pk=pk)
+        except Process.DoesNotExist:
+            logger.error(f"Процесс с id={pk} не найден")
+            return Response({"error": f"Процесс с id={pk} не найден"}, status=404)
+
+        xml_str = request.data.get("xml")
+        if not xml_str:
+            logger.error("XML не передан в теле запроса")
+            return Response({"error": "XML не передан"}, status=400)
+
+        logger.debug(f"Обновляем XML для процесса {process_instance.id}")
+        process_instance.bpmn_xml.xml = xml_str
+        process_instance.bpmn_xml.save()
+
+        self.parse_and_sync_xml(process_instance)
+        return Response({"message": "XML обновлён и элементы синхронизированы"})
+

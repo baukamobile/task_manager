@@ -118,7 +118,7 @@ class GetEmployeesMixin:
 
 # admin.site.register(Roles,RolesAdmin)
 class PostitionAdmin(admin.ModelAdmin,GetEmployeesMixin):
-    list_display = ['position_name']
+    list_display = ['position_name','id']
 
 admin.site.register(Positions,PostitionAdmin)
 
@@ -126,7 +126,7 @@ admin.site.register(Positions,PostitionAdmin)
 # admin.site.register(User)
 
 class DepartmentAdmin(admin.ModelAdmin,GetEmployeesMixin):
-    list_display = ('department_name','department_head')
+    list_display = ('department_name','department_head','id')
     list_filter = ('department_with_access',)
 
 
@@ -139,7 +139,7 @@ admin.site.register(Company,CompanyAdmin)
 @admin.register(User)
 class MyUserAdmin(UserAdmin):
     model = User
-    list_display = ('id', 'email','first_name','last_name','position', 'phone_number', 'company','department','address','date_of_birth', 'is_active', 'is_superuser')
+    list_display = ('email','first_name','last_name','position', 'phone_number', 'company','department','address','date_of_birth', 'is_active', 'is_superuser','id')
     search_fields = ('email', 'phone_number', 'name')
     list_filter = ('is_active', 'is_superuser','company','department','date_of_birth') #'role_user',
     ordering = ('email',)
