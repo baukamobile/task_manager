@@ -46,7 +46,7 @@ class BpmnXmlProcessAdmin(admin.ModelAdmin):
     list_display = ('id',)
 admin.site.register(BpmnXmlProcess,BpmnXmlProcessAdmin)
 class ProcessLinkAdmin(admin.ModelAdmin):
-    list_display = ('link_type','start_element','end_element','created_at','id')
+    list_display = ('process','link_type','start_element','end_element','created_at','id')
 admin.site.register(ProcessLink,ProcessLinkAdmin)
 
 
@@ -83,8 +83,8 @@ admin.site.register(ProcessLink,ProcessLinkAdmin)
 #     list_filter = ('id','from_step','to_step','allowed_position')
 # admin.site.register(WorkflowRule,WorkflowRuleAdmin)
 class ProcessElementAdmin(admin.ModelAdmin):
-    list_display = ('id','process','element_id','element_type','name','next_element','created_at')
-    list_filter = ('id','process','element_id','element_type','name','next_element','created_at')
+    list_display = ('id','process','element_id','element_type','name','created_at')
+    list_filter = ('id','process','element_id','element_type','name','created_at')
 admin.site.register(ProcessElement,ProcessElementAdmin)
 
 # class ElementConnectionAdmin(admin.ModelAdmin):

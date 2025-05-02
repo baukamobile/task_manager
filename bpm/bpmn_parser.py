@@ -77,6 +77,7 @@ class ProcessViewSet(ModelViewSet):
             try:
                 if source_ref in element_mapping and target_ref in element_mapping:
                     ProcessLink.objects.create(
+                        process = process_instance,
                         start_element=element_mapping[source_ref],
                         end_element=element_mapping[target_ref],
                         link_type='sequenceFlow'
@@ -134,6 +135,7 @@ class ProcessUpdateXmlView(APIView):
             try:
                 if source_ref in element_mapping and target_ref in element_mapping:
                     ProcessLink.objects.create(
+                        process = process_instance,
                         start_element=element_mapping[source_ref],
                         end_element=element_mapping[target_ref],
                         link_type='sequenceFlow'

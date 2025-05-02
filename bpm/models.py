@@ -99,7 +99,7 @@ class ProcessElement(models.Model):
     documentation = models.TextField(blank=True, null=True)  # For <bpmn:documentation>
     annotation = models.TextField(blank=True, null=True)  # For <bpmn:textAnnotation>
     attributes = models.JSONField(blank=True, null=True)
-    next_element = models.JSONField(default=list,null=True,blank=True)
+    # next_element = models.JSONField(default=list,null=True,blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return f"{self.get_element_type_display()}: {self.name}"
@@ -107,6 +107,7 @@ class ProcessElement(models.Model):
     #     super().save(*args,**kwargs)
         # parse_bpmn_xml_and_save(self)
 class ProcessLink(models.Model):
+    process = models.ForeignKey(Process, on_delete=models.CASCADE)
     start_element = models.ForeignKey(ProcessElement, related_name='start_element', on_delete=models.CASCADE)
     end_element = models.ForeignKey(ProcessElement, related_name='end_element', on_delete=models.CASCADE)
     link_type = models.CharField(max_length=100, default='sequenceFlow')
