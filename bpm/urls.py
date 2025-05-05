@@ -14,8 +14,7 @@ router.register(r'dashboard',DashboardViewSet),
 router.register(r'dashboard-widget',DashboardWidgetViewSet),
 router.register(r'task',TaskViewSet),
 router.register(r'process-element',ProcessElementViewSet),
-# router.register(r'element-connection',ElementConnectionViewSet),
-# router.register(r'process-execution',ProcessExecutionViewSet),
+
 
 
 # admin.site.register(WorkflowStep)

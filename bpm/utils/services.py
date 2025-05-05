@@ -16,7 +16,7 @@ def parse_and_sync_xml(process_instance): #функция для парсинг�
     }
     try:
         tree = ET.fromstring(xml_str)
-        logger.info(f"XML распарсен для процесса: {process_instance}")
+        logger.info(f"XML парсуется для процесса: {process_instance}")
     except ET.ParseError as e:
         logger.error(f"Ошибка парсинга XML: {e}")
         raise
@@ -35,11 +35,11 @@ def parse_and_sync_xml(process_instance): #функция для парсинг�
                     defaults={
                         'element_type': tag,
                         'name': name,
-                        'annotation': annotation,
+                        'annotation': annotation
                     }
                 )
                 element_mapping[el_id] = element
-                logger.info(f"{'Создан' if _ else 'Обновлён'} элемент: {el_id} - {name} - {annotation}")
+                logger.info(f"{'Создан' if _ else 'Обновлён'} элемент: {el_id} - {name} {annotation}")
                 if tag == 'task':
                     task,created = Task.objects.update_or_create(
                         process = process_instance,
