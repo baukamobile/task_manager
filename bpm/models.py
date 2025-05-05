@@ -97,9 +97,8 @@ class ProcessElement(models.Model):
     element_id = models.CharField(max_length=100)
     element_type = models.CharField(max_length=20, choices=ELEMENT_TYPES)
     name = models.CharField(max_length=100,null=True,blank=True)
-    documentation = models.TextField(blank=True, null=True)  # For <bpmn:documentation>
     annotation = models.TextField(blank=True, null=True)  # For <bpmn:textAnnotation>
-    attributes = models.JSONField(blank=True, null=True)
+
     # next_element = models.JSONField(default=list,null=True,blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     def __str__(self):
