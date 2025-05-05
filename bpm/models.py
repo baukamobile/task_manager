@@ -54,6 +54,7 @@ class Task(models.Model):
     process = models.ForeignKey(Process, on_delete=models.CASCADE, related_name='tasks')
     # title = models.CharField(max_length=200)
     assigned_to = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='assigned_tasks')
+    assigned_department = models.ForeignKey(Department,on_delete=models.SET_NULL,null=True,related_name='assigned_department')
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='not_started')
     return_reason = models.TextField(null=True,blank=True)
     '''это про внутреннее состояние задачи. На том же этапе "Проверка" она может быть "Не начата" 
@@ -110,7 +111,10 @@ class ProcessLink(models.Model):
     process = models.ForeignKey(Process, on_delete=models.CASCADE)
     start_element = models.ForeignKey(ProcessElement, related_name='start_element', on_delete=models.CASCADE)
     end_element = models.ForeignKey(ProcessElement, related_name='end_element', on_delete=models.CASCADE)
+    source_type = models.CharField(max_length=100,null=True)
+    target_type = models.CharField(max_length=100,null=True)
     link_type = models.CharField(max_length=100, default='sequenceFlow')
+    condition_expression = models.TextField(null=True,blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
 class Attachment(models.Model):

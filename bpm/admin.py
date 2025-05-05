@@ -19,8 +19,8 @@ class ProcessAdmin(admin.ModelAdmin):
     search_fields = ('name',)
 admin.site.register(Process, ProcessAdmin)
 class TaskAdmin(admin.ModelAdmin):
-    list_display = ('process', 'assigned_to','status', 'due_date', 'created_at', 'updated_at','id')
-    list_filter = ('process','assigned_to','created_at','due_date','updated_at')
+    list_display = ('process', 'assigned_to','status', 'due_date','return_reason', 'created_at', 'updated_at','completed_at','id')
+    list_filter = ('process', 'assigned_to','status', 'due_date','return_reason', 'created_at', 'updated_at','completed_at','id')
 admin.site.register(Task,TaskAdmin)
 class AttachmentAdmin(admin.ModelAdmin):
     list_display = ('task', 'filename', 'file', 'uploaded_by','uploaded_at','id')
@@ -46,7 +46,7 @@ class BpmnXmlProcessAdmin(admin.ModelAdmin):
     list_display = ('id',)
 admin.site.register(BpmnXmlProcess,BpmnXmlProcessAdmin)
 class ProcessLinkAdmin(admin.ModelAdmin):
-    list_display = ('process','link_type','start_element','end_element','created_at','id')
+    list_display = ('process','link_type','start_element','end_element','source_type','target_type','created_at','id')
 admin.site.register(ProcessLink,ProcessLinkAdmin)
 
 
@@ -83,7 +83,7 @@ admin.site.register(ProcessLink,ProcessLinkAdmin)
 #     list_filter = ('id','from_step','to_step','allowed_position')
 # admin.site.register(WorkflowRule,WorkflowRuleAdmin)
 class ProcessElementAdmin(admin.ModelAdmin):
-    list_display = ('id','process','element_id','element_type','name','created_at')
+    list_display = ('process','element_id','element_type','name','created_at','id',)
     list_filter = ('id','process','element_id','element_type','name','created_at')
 admin.site.register(ProcessElement,ProcessElementAdmin)
 
