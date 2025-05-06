@@ -34,52 +34,11 @@ class TaskViewSet(ModelViewSet):
 class AttachmentViewSet(ModelViewSet):
     queryset = Attachment.objects.all()
     serializer_class = AttachmentSerializer
-class CommentViewSet(ModelViewSet):
-    queryset = Comment.objects.all()
-    serializer_class = CommentSerializer
+
 class NotificationViewSet(ModelViewSet):
     queryset = Notification.objects.all()
     serializer_class = NotificationSerializer
-class DashboardWidgetViewSet(ModelViewSet):
-    queryset = DashboardWidget.objects.all()
-    serializer_class = DashboardWidgetSerizalizer
-class DashboardViewSet(ModelViewSet):
-    queryset = Dashboard.objects.all()
-    serializer_class = DashboardSerializer
+
 class ProcessElementViewSet(ModelViewSet):
     queryset = ProcessElement.objects.all()
     serializer_class = ProcessElementSerializer
-
-
-#         return Response({'status': 'ok', 'id': instance.id}, status=status.HTTP_201_CREATED)
-# class ProcessTemplateViewSet(ModelViewSet):
-#     queryset = ProcessTemplate.objects.all()
-#     serializer_class = ProcessTemplateSerializer
-# class ProcessStageTemplateViewSet(ModelViewSet):
-#     queryset = ProcessStageTemplate.objects.all()
-#     serializer_class = ProcessStageTemplateSerializer
-# class ProcessStageViewSet(ModelViewSet):
-#     queryset = ProcessStage.objects.all()
-#     serializer_class = ProcessStageSerializer
-# class TaskStageHistoryViewSet(ModelViewSet):
-#     queryset = TaskStageHistory.objects.all()
-#     serializer_class = TaskStageHistorySerializer
-# class AutoTaskRuleViewSet(ModelViewSet):
-#     queryset = AutoTaskRule.objects.all()
-#     serializer_class = AutoTaskRuleSerializer
-#
-# # class UserDepartmentRoleViewSet(ModelViewSet):
-# #     queryset = UserDepartmentRole.objects.all()
-# #     serializer_class = UserDepartmentRoleSerializer
-#
-#
-
-# class ElementConnectionViewSet(ModelViewSet):
-#     queryset = ElementConnection.objects.all()
-#     serializer_class = ElementConnectionSerializer
-#     # serializer_class = ElementConnectionSerializer
-# class ProcessExecutionViewSet(ModelViewSet):
-#     queryset = ProcessExecution.objects.all()
-#     serializer_class = ProcessExecutionSerializer
-
-

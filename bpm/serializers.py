@@ -17,22 +17,19 @@ class AttachmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Attachment
         fields = '__all__'
-class CommentSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Comment
-        fields = '__all__'
+
 class NotificationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Notification
         fields = '__all__'
-class DashboardSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Dashboard
-        fields = '__all__'
-class DashboardWidgetSerizalizer(serializers.ModelSerializer):
-    class Meta:
-        model = DashboardWidget
-        fields = '__all__'
+# class DashboardSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Dashboard
+#         fields = '__all__'
+# class DashboardWidgetSerizalizer(serializers.ModelSerializer):
+#     class Meta:
+#         model = DashboardWidget
+#         fields = '__all__'
 class ProcessSerializer(serializers.ModelSerializer):
     # bpmn_xml = BpmnXmlProcessSerializer()
     class Meta:
