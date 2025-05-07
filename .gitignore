@@ -36,3 +36,5 @@ news/__pycache__/
 notifications/__pycache__/
 # python manage.py graph_models -a -o my_er_diagram.pn
 #<bpmndi:BPMNEdge id="Flow_04jfzdf_di" bpmnElement="Flow_04jfzdf" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+#миграционные файлы
+bpm/migrations/
