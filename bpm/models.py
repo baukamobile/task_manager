@@ -68,7 +68,6 @@ class Task(models.Model):
     completed_at = models.DateTimeField(null=True,blank=True)
     bpmn_task_id = models.CharField(max_length=100,null=True)
     is_completed = models.BooleanField(default=False)
-
     def __str__(self):
         return self.status
     def is_overdue(self):
@@ -117,6 +116,7 @@ class ProcessElement(models.Model):
 class ProcessLink(models.Model):
     process = models.ForeignKey(Process, on_delete=models.CASCADE)
     start_element = models.ForeignKey(ProcessElement, related_name='start_element', on_delete=models.CASCADE)
+    element_id = models.CharField(max_length=100,default='sequenceFlow')
     end_element = models.ForeignKey(ProcessElement, related_name='end_element', on_delete=models.CASCADE)
     source_type = models.CharField(max_length=100,null=True)
     target_type = models.CharField(max_length=100,null=True)

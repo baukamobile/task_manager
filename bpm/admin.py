@@ -7,7 +7,7 @@ class ProcessAdmin(admin.ModelAdmin):
     search_fields = ('name',)
 admin.site.register(Process, ProcessAdmin)
 class TaskAdmin(admin.ModelAdmin):
-    list_display = ('process', 'assigned_to','status','element', 'due_date','return_reason', 'created_at','completed_at','bpmn_task_id','id')
+    list_display = ('process', 'assigned_to','status','is_completed','element', 'due_date','return_reason', 'created_at','completed_at','bpmn_task_id','id')
     list_filter = ('process', 'assigned_to','status', 'due_date','return_reason', 'created_at', 'updated_at','completed_at','id')
 admin.site.register(Task,TaskAdmin)
 class AttachmentAdmin(admin.ModelAdmin):
@@ -24,7 +24,7 @@ class BpmnXmlProcessAdmin(admin.ModelAdmin):
     list_display = ('id',)
 admin.site.register(BpmnXmlProcess,BpmnXmlProcessAdmin)
 class ProcessLinkAdmin(admin.ModelAdmin):
-    list_display = ('process','link_type','start_element','end_element','source_type','target_type','created_at','id')
+    list_display = ('process','link_type','element_id','start_element','end_element','source_type','target_type','created_at','id')
 admin.site.register(ProcessLink,ProcessLinkAdmin)
 class ProcessElementAdmin(admin.ModelAdmin):
     list_display = ('process','element_id','element_type','name','assigned','annotation','created_at','id',)

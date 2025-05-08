@@ -7,15 +7,11 @@ from bpm.serializers import *
 from rest_framework.viewsets import ModelViewSet
 logger = logging.getLogger('bpm')
 from collections import deque
-import xml.etree.ElementTree as ET
-import logging
-from collections import deque
-logger = logging.getLogger(__name__)
 
 def parse_and_sync_xml(process_instance):
     bpmn_xml_obj = process_instance.bpmn_xml
-    xml_str = bpmn_xml_obj.xml
-    ns = {
+    xml_str = bpmn_xml_obj.xml #Вытаскиваем сырой XML из объекта процесса
+    ns = { #Пространства имён XML  необходимое для поиска элементов через XPath.
         'bpmn': 'http://www.omg.org/spec/BPMN/20100524/MODEL',
         'bpmndi': 'http://www.omg.org/spec/BPMN/20100524/DI',
         'di': 'http://www.omg.org/spec/DD/20100524/DI'
@@ -27,12 +23,12 @@ def parse_and_sync_xml(process_instance):
         logger.error(f"Ошибка парсинга XML: {e}")
         raise
 
-    element_mapping = {}
-    graph = {}
-    flows = []
+    element_mapping = {} #для связи id элемента BPMN с объектом ProcessElement.
+    graph = {} #структура для хранения информации об элементах и их исходящих связях.
+    flows = [] #список связей между элементами, которые будут обрабатываться отдельно
     for elem in tree.findall(".//bpmn:*", namespaces=ns):
         tag = elem.tag.split('}')[-1]
-        if tag in ['startEvent', 'task', 'parallelGateway', 'exclusiveGateway', 'textAnnotation', 'endEvent']:
+        if tag in ['startEvent', 'task', 'parallelGateway', 'exclusiveGateway', 'textAnnotation', 'endEvent']: #узлы bpmn
             el_id = elem.attrib['id']
             name = elem.attrib.get('name', '')
             annotation = elem.find("bpmn:text", namespaces=ns).text if elem.find("bpmn:text", namespaces=ns) is not None else ''
@@ -42,16 +38,17 @@ def parse_and_sync_xml(process_instance):
                 'annotation': annotation,
                 'outgoing': []
             }
-        elif tag == 'sequenceFlow':
+        elif tag == 'sequenceFlow': #ребра
             source_ref = elem.attrib['sourceRef']
             target_ref = elem.attrib['targetRef']
-            flows.append((source_ref, target_ref))
+            flow_id = elem.attrib['id']
+            flows.append((source_ref, target_ref,flow_id))
 
-    for source_ref, target_ref in flows:
+    for source_ref, target_ref, flow_id in flows:
         if source_ref in graph and target_ref in graph:
             graph[source_ref]['outgoing'].append(target_ref)
         else:
-            logger.warning(f"Пропущена связь: {source_ref} -> {target_ref}")
+            logger.warning(f"Пропущена связь: {source_ref} -> {target_ref} (flow id: {flow_id})")
 
     start_event = None
     for el_id, data in graph.items():
@@ -106,18 +103,19 @@ def parse_and_sync_xml(process_instance):
                 queue.append(next_id)
 
     ProcessLink.objects.filter(start_element__process=process_instance).delete()
-    for source_ref, target_ref in flows:
+    for source_ref, target_ref,flow_id in flows:
         try:
             if source_ref in element_mapping and target_ref in element_mapping:
                 ProcessLink.objects.update_or_create(
                     process=process_instance,
                     start_element=element_mapping[source_ref],
                     end_element=element_mapping[target_ref],
+                    element_id=flow_id,
                     link_type='sequenceFlow',
                     source_type=element_mapping[source_ref].element_type,
                     target_type=element_mapping[target_ref].element_type,
                 )
-                logger.info(f"Связь создана: {source_ref} -> {target_ref}")
+                logger.info(f"Связь создана: {source_ref} -> {target_ref}, {flow_id}")
             else:
                 logger.warning(f"Пропущена связь, не найдены элементы: {source_ref} или {target_ref}")
         except Exception as e:

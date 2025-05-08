@@ -36,7 +36,7 @@ class ProcessViewSet(ModelViewSet):
 
 class ProcessUpdateXmlView(APIView):
 
-    def patch(self, request, pk):
+    def put(self, request, pk):
         logger.debug(f"request.data: {request.data}")
         try:
             process_instance = Process.objects.get(pk=pk)
