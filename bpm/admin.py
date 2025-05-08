@@ -7,7 +7,7 @@ class ProcessAdmin(admin.ModelAdmin):
     search_fields = ('name',)
 admin.site.register(Process, ProcessAdmin)
 class TaskAdmin(admin.ModelAdmin):
-    list_display = ('process', 'assigned_to','status','element', 'due_date','return_reason', 'created_at', 'updated_at','completed_at','id')
+    list_display = ('process', 'assigned_to','status','element', 'due_date','return_reason', 'created_at','completed_at','bpmn_task_id','id')
     list_filter = ('process', 'assigned_to','status', 'due_date','return_reason', 'created_at', 'updated_at','completed_at','id')
 admin.site.register(Task,TaskAdmin)
 class AttachmentAdmin(admin.ModelAdmin):
