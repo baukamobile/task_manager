@@ -62,12 +62,12 @@ class Task(models.Model):
      (лежит мёртвым грузом), "В работе" (кто-то её ковыряет) или 
      "Заблокирована" (ждёт, пока Вася принесёт документы).'''
     element = models.ForeignKey('ProcessElement', on_delete=models.CASCADE, related_name='tasks', null=True)
-    due_date = models.DateTimeField(null=True, blank=True) # дедлайн
+    deadline = models.DateTimeField(null=True, blank=True) # дедлайн
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     completed_at = models.DateTimeField(null=True,blank=True)
     bpmn_task_id = models.CharField(max_length=100,null=True)
-    is_completed = models.BooleanField(default=False)
+    is_complete = models.BooleanField(default=False)
     def __str__(self):
         return self.status
     def is_overdue(self):
@@ -79,7 +79,18 @@ class Task(models.Model):
             pass
 
 def empty_xml():
-    return '<?xml version="1.0" encoding="UTF-8"?> <bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" targetNamespace="http://bpmn.io/schema/bpmn" id="Definitions_1"> <bpmn:process id="Process_1" isExecutable="false"> <bpmn:startEvent id="StartEvent_1"/> </bpmn:process> <bpmndi:BPMNDiagram id="BPMNDiagram_1"> <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1"> <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1"> <dc:Bounds height="36.0" width="36.0" x="173.0" y="102.0"/></bpmndi:BPMNShape></bpmndi:BPMNPlane></bpmndi:BPMNDiagram></bpmn:definitions>'
+    return ('<?xml version="1.0" encoding="UTF-8"?>'
+            ' <bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"'
+            ' xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" '
+            'xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"'
+            ' xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" '
+            'targetNamespace="http://bpmn.io/schema/bpmn" id="Definitions_1"> '
+            '<bpmn:process id="Process_1" isExecutable="false"> <bpmn:startEvent id="StartEvent_1"/> '
+            '</bpmn:process> <bpmndi:BPMNDiagram id="BPMNDiagram_1"> '
+            '<bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1"> '
+            '<bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1"> '
+            '<dc:Bounds height="36.0" width="36.0" x="173.0" y="102.0"/>'
+            '</bpmndi:BPMNShape></bpmndi:BPMNPlane></bpmndi:BPMNDiagram></bpmn:definitions>')
 class BpmnXmlProcess(models.Model):
     xml = models.TextField(default=empty_xml)
 
